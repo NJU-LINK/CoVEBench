@@ -1,0 +1,38 @@
+# MLLM Checklist Judge
+
+This module runs the CoVEBench subjective checklist with a vLLM-served video MLLM and aggregates the resulting judgments into `UAS`, `IFS`, `VRS`, and `SEM`.
+
+## Files
+
+```text
+eval_checklist.py          # vLLM inference and checkpointed checklist writing
+aggregate_subjective.py    # checklist_evaluated.json -> task-level CSV
+prompts/                   # AB-MCQ, Single-TF, Dual-TF, Score-MCQ prompts
+```
+
+## Low-Level Inference
+
+```bash
+uv run metrics/subjective/mllm_checklist/eval_checklist.py \
+  --base-path outputs/my_model_subjective_work \
+  --model-path weights/hf/subjective_judge \
+  --tensor-parallel-size 2
+```
+
+`--base-path` must contain `checklist.json`. The script writes `checklist_evaluated.json`, `processed_q_ids.txt`, and `failed_evaluation_log.txt`.
+
+The script supports checkpointed resume. If `checklist_evaluated.json` already exists, it is loaded as the starting point, and questions listed in `processed_q_ids.txt` are skipped.
+
+## Low-Level Aggregation
+
+```bash
+uv run metrics/subjective/mllm_checklist/aggregate_subjective.py \
+  --input outputs/my_model_subjective_work/checklist_evaluated.json \
+  --output outputs/my_model_subjective_with_task_id.csv
+```
+
+For normal use, prefer the one-command wrapper:
+
+```bash
+uv run scripts/run_subjective.py ...
+```

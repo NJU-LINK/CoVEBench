@@ -1,0 +1,7 @@
+model_name: demo_model
+edited_dir: data/my_model
+source_dir: data/source
+output_csv: outputs/demo_model_scores.csv
+work_dir: outputs/demo_model_work
+device: cuda:0
+frame_count: 10

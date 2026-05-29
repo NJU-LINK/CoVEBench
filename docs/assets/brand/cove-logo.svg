@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 64" role="img" aria-labelledby="title desc">
+  <title id="title">CoVE logo</title>
+  <desc id="desc">Stylized CoVE wordmark with a play mark in the letter o and three horizontal bars.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-20%" y="-25%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.2" flood-color="#0b1c21" flood-opacity="0.38" />
+    </filter>
+    <linearGradient id="aqua" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#bff5ff" />
+      <stop offset="0.48" stop-color="#78d9ef" />
+      <stop offset="1" stop-color="#55bfd6" />
+    </linearGradient>
+  </defs>
+  <g filter="url(#soft-shadow)">
+    <text
+      x="10"
+      y="46"
+      fill="url(#aqua)"
+      stroke="#ffffff"
+      stroke-width="2.6"
+      paint-order="stroke fill"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="43"
+      font-weight="700"
+      letter-spacing="-2"
+    >CoV</text>
+    <path
+      d="M97 45 113 18"
+      fill="none"
+      stroke="#ffffff"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+    <path
+      d="M97 45 113 18"
+      fill="none"
+      stroke="url(#aqua)"
+      stroke-width="4.3"
+      stroke-linecap="round"
+    />
+    <path d="M54 31v13l12-6.5z" fill="#ffffff" stroke="#0b4350" stroke-width="1.4" />
+    <path
+      d="M118 24h29M116 34h31M114 44h33"
+      fill="none"
+      stroke="#ffffff"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+    <path
+      d="M118 24h29M116 34h31M114 44h33"
+      fill="none"
+      stroke="url(#aqua)"
+      stroke-width="4.4"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CoVEBench is a diagnostic benchmark for compositional instruction-guided video editing."
+    />
+    <title>CoVEBench | Compositional Video Editing Benchmark</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="CoVEBench home">
+        <img class="brand-logo" src="assets/brand/cove-logo.svg" alt="" />
+        <span>CoVEBench</span>
+      </a>
+      <nav class="nav" aria-label="Page navigation">
+        <a href="#benchmark">Benchmark</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#results">Results</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Compositional video editing evaluation</p>
+          <h1>CoVEBench: Can Video Editing Models Handle Complex Instructions?</h1>
+          <p class="lead">
+            A diagnostic benchmark for real-world, multi-point video editing prompts, with fine-grained
+            checklist evaluation across instruction compliance, video quality, and source fidelity.
+          </p>
+          <div class="actions" aria-label="Project links">
+            <a class="button primary" href="assets/paper/CoVEBench.pdf">
+              <span class="icon icon-arxiv" aria-hidden="true">arXiv</span>
+              <span>Paper</span>
+            </a>
+            <a class="button" href="https://github.com/NJU-LINK/CoVEBench">
+              <svg class="icon icon-github" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 1.8c-5.7 0-10.2 4.6-10.2 10.2 0 4.5 2.9 8.3 7 9.7.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5.1 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.8 1.1.8-.2 1.7-.3 2.6-.3.9 0 1.8.1 2.6.3 2-1.3 2.8-1.1 2.8-1.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.8 0 3.9-2.4 4.8-4.7 5.1.4.3.7 1 .7 2v3c0 .3.2.6.7.5 4.1-1.4 7-5.2 7-9.7 0-5.6-4.5-10.2-10.2-10.2Z"
+                />
+              </svg>
+              <span>Code</span>
+            </a>
+            <a class="button" href="https://huggingface.co/datasets/NJU-LINK/CoVEBench">
+              <span class="icon icon-hf" aria-hidden="true">HF</span>
+              <span>Dataset</span>
+            </a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/figures/overview.png" alt="Overview of the CoVEBench evaluation framework" />
+          <figcaption>
+            CoVEBench diagnoses compositional editing through structured prompts and checklist-based
+            evaluation.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="metrics-strip" aria-label="Benchmark summary">
+        <div>
+          <strong>416</strong>
+          <span>curated source videos</span>
+        </div>
+        <div>
+          <strong>626</strong>
+          <span>multi-point instructions</span>
+        </div>
+        <div>
+          <strong>9,990</strong>
+          <span>fine-grained checklist items</span>
+        </div>
+        <div>
+          <strong>10</strong>
+          <span>evaluated editing models</span>
+        </div>
+      </section>
+
+      <section id="benchmark" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Benchmark construction</p>
+          <h2>Designed for complex editing workflows</h2>
+          <p>
+            The benchmark emphasizes realistic compositional instructions instead of isolated, single-edit
+            prompts. Videos are filtered for visual quality, editability, duration, resolution, and duplicate
+            removal before being paired with diverse instructions and verifiable checklist questions.
+          </p>
+        </div>
+
+        <div class="benchmark-figures">
+          <figure class="media-panel figure-centered pipeline-figure">
+            <img src="assets/figures/datapipe.png" alt="Three-stage data curation pipeline" />
+            <figcaption>Three-stage curation: source video filtering, instruction generation, and checklist refinement.</figcaption>
+          </figure>
+          <figure class="media-panel figure-centered statistics-figure">
+            <img src="assets/figures/data_statistics.png" alt="Data statistics covering edit types and video properties" />
+            <figcaption>Diverse edit dimensions, prompt lengths, edit counts, durations, and resolutions.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="evaluation" class="section section-tint">
+        <div class="section-heading">
+          <p class="eyebrow">Evaluation protocol</p>
+          <h2>Three complementary dimensions</h2>
+          <p>
+            CoVEBench separates whether an edit was executed, whether the output remains visually plausible,
+            and whether unrelated source content is preserved, enabling failures to be localized beyond a
+            single aggregate score.
+          </p>
+        </div>
+
+        <figure class="table-figure matrix-figure">
+          <img src="assets/tables/evaluation_matrix.png" alt="Evaluation matrix of CoVEBench metrics" />
+          <figcaption>Primary holistic indicators are UAS for instruction compliance, VQR for video quality, and SEM for fidelity.</figcaption>
+        </figure>
+      </section>
+
+      <section id="results" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Main results</p>
+          <h2>Complex instructions remain difficult</h2>
+          <p>
+            Strong proprietary systems lead the benchmark, but absolute union accuracy remains far below
+            individual instruction-following and realism scores. This gap indicates that models can partially
+            execute requested changes while still failing the full compositional requirement.
+          </p>
+        </div>
+
+        <figure class="table-figure">
+          <img src="assets/tables/main_results.png" alt="Quantitative results across instruction compliance, video quality, and video fidelity" />
+          <figcaption>Quantitative comparison across closed-source and open-source video editing models.</figcaption>
+        </figure>
+
+        <div class="finding-grid">
+          <article class="finding">
+            <span>Finding 1</span>
+            <h3>Closed-source models are stronger, but not solved</h3>
+            <p>
+              Wan2.7 and HappyHorse1.0 reach the best UAS scores, yet even the strongest model remains under
+              57% union accuracy on compositional edits.
+            </p>
+          </article>
+          <article class="finding">
+            <span>Finding 2</span>
+            <h3>Execution and preservation are in tension</h3>
+            <p>
+              Some systems improve instruction following by making stronger edits, but this can reduce semantic
+              preservation and alter regions that should remain unchanged.
+            </p>
+          </article>
+          <article class="finding">
+            <span>Finding 3</span>
+            <h3>Joint editing outperforms stepwise decomposition</h3>
+            <p>
+              Joint editing achieves 30.63% UAS versus 23.70% for sequential editing, avoiding error accumulation
+              and overwriting from intermediate generations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="analysis" class="section section-tint">
+        <div class="section-heading">
+          <p class="eyebrow">Further analysis</p>
+          <h2>Robustness, validity, and failure modes</h2>
+          <p>
+            Additional experiments show that longer temporal spans, more edit points, and longer instructions
+            amplify the difficulty. Metric-human agreement remains high, supporting the evaluation protocol.
+          </p>
+        </div>
+
+        <div class="analysis-layout">
+          <figure class="media-panel wide">
+            <img src="assets/figures/accuracy_line_chart_final.png" alt="Model robustness under increasing temporal and editing complexity" />
+            <figcaption>Accuracy declines as generated frames, source duration, edit count, and instruction length increase.</figcaption>
+          </figure>
+          <figure class="media-panel wide preference-figure">
+            <img src="assets/tables/metric_consistency.png" alt="Human preference consistency of metrics" />
+            <figcaption>All reported metrics align with human preferences by more than 85%.</figcaption>
+          </figure>
+          <figure class="media-panel centered-wide efficiency-figure">
+            <img src="assets/tables/efficiency.png" alt="Inference efficiency comparison across open-source models" />
+            <figcaption>Efficiency varies sharply across open-source systems, affecting deployment feasibility.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Diagnostic views</p>
+          <h2>Fine-grained categories expose hidden weaknesses</h2>
+          <p>
+            Aggregate scores hide important differences between editing categories. Camera control, motion edits,
+            and subject operations remain particularly challenging, while style and background changes are more
+            tractable for current models.
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <figure class="media-panel wide">
+            <img src="assets/figures/metric_correlation_and_category_polar.png" alt="Metric correlation and category-level performance analysis" />
+            <figcaption>Metric complementarity and category-level performance across representative editing dimensions.</figcaption>
+          </figure>
+          <figure class="media-panel centered-wide error-figure">
+            <img src="assets/figures/error.png" alt="High-level error analysis of five video editing models" />
+            <figcaption>Execution inadequacy is the dominant bottleneck, with preservation and physical grounding also recurring.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section examples">
+        <div class="section-heading">
+          <p class="eyebrow">Examples</p>
+          <h2>Representative samples and qualitative comparisons</h2>
+          <p>
+            CoVEBench pairs visual samples with detailed checklist supervision, enabling model outputs to be
+            inspected beyond a single global score.
+          </p>
+        </div>
+
+        <figure class="media-panel wide">
+          <img src="assets/figures/datasamples_six_frames.png" alt="Representative frames sampled from CoVEBench videos" />
+          <figcaption>Representative frame samples from benchmark source videos.</figcaption>
+        </figure>
+        <figure class="media-panel wide">
+          <img src="assets/figures/example1.png" alt="Qualitative model comparison example" />
+          <figcaption>Qualitative comparison showing how different models handle the same complex editing instruction.</figcaption>
+        </figure>
+      </section>
+
+      <section id="citation" class="section citation-section">
+        <div class="section-heading">
+          <p class="eyebrow">Citation</p>
+          <h2>Cite CoVEBench</h2>
+          <p>
+            If you find this benchmark useful for your research, please cite the project.
+          </p>
+        </div>
+        <pre class="citation-box"><code>@article{wu2026covebench,
+  title  = {CoVEBench: Can Video Editing Models Handle Complex Instructions?},
+  author = {Jiangtao Wu and others},
+  year   = {2026}
+}</code></pre>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>CoVEBench</strong>
+        <span>Compositional video editing benchmark for diagnostic model evaluation.</span>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>

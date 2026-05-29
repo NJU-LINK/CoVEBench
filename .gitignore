@@ -1,0 +1,9 @@
+.venv/
+external/
+weights/
+outputs/
+logs/
+tmp/
+*.pyc
+__pycache__/
+
