@@ -1,9 +1,38 @@
+# --- Python ---
 .venv/
+venv/
+env/
+*.py[cod]
+__pycache__/
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- Project ---
 external/
 weights/
 outputs/
 logs/
 tmp/
-*.pyc
-__pycache__/
 
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Editors / IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
