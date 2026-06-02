@@ -9,7 +9,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "src"))
-from covebench_eval.common import discover_videos, equal_indices, filter_videos  # noqa: E402
+from covebench_eval.common import discover_videos, equal_indices, filter_videos, load_id_list  # noqa: E402
+
+DEFAULT_EXCLUDE_LIST = ROOT / "configs" / "filters" / "mf_ssim_exclude_indices.txt"
 
 
 def load_video_tensor(path: Path, frames: int, size: int) -> torch.Tensor:
@@ -70,6 +72,7 @@ def main() -> None:
     parser.add_argument("--alpha", type=float, default=0.5)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--id-list")
+    parser.add_argument("--exclude-list", default=str(DEFAULT_EXCLUDE_LIST), help="Task ids to exclude from MF evaluation.")
     parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
 
@@ -86,6 +89,9 @@ def main() -> None:
     predictor = CoTrackerPredictor(checkpoint=args.checkpoint, offline=True).to(device).eval()
     sources = dict(discover_videos(Path(args.source_dir)))
     videos = filter_videos(discover_videos(Path(args.video_dir)), args.id_list, args.limit)
+    exclude_ids = load_id_list(args.exclude_list) or set()
+    if exclude_ids:
+        videos = [(task_id, path) for task_id, path in videos if task_id not in exclude_ids]
     if not videos:
         raise SystemExit(f"No numbered videos found in {args.video_dir}")
     dmax = math.sqrt(2.0) * args.size
