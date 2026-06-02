@@ -321,6 +321,15 @@ def main() -> None:
     if Path(str(args.dino_model)).is_absolute() and not Path(str(args.dino_model)).exists():
         args.dino_model = "facebook/dinov2-small"
 
+    # Masks are extracted at pipeline.FRAME_FPS, but compute_src_score re-samples the
+    # videos at args.fps and pairs frames with masks by index. If the two disagree the
+    # masks silently align to the wrong frames and the score is meaningless — so refuse.
+    if args.fps != FRAME_FPS:
+        raise SystemExit(
+            f"--fps {args.fps} must equal the mask sampling rate FRAME_FPS={FRAME_FPS} "
+            f"(set in src_pipeline.py); masks and frames are paired by index."
+        )
+
     source_videos = dict(filter_videos(discover_videos(args.source_dir), args.id_list, args.limit))
     edited_videos = dict(filter_videos(discover_videos(args.video_dir), args.id_list, args.limit))
     task_ids = sorted(set(source_videos) & set(edited_videos))
