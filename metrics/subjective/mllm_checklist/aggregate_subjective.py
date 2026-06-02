@@ -144,52 +144,64 @@ def scale_sem(value: float | None, mode: str) -> float | None:
     return value * 10.0 if mode == "percent" else value
 
 
-def aggregate_task(item: dict[str, Any], accuracy_scale: str, sem_scale: str) -> dict[str, str]:
-    ifs_scores: list[float] = []
-    vrs_scores: list[float] = []
+def aggregate_overall(checklist: list[dict[str, Any]], accuracy_scale: str, sem_scale: str) -> dict[str, str]:
+    ifs_correct = 0
+    ifs_total = 0
+    vrs_correct = 0
+    vrs_total = 0
+    objective_correct = 0
+    objective_total = 0
     sem_scores: list[float] = []
 
-    for group in item.get("evaluation_groups", []):
-        for question in group.get("questions", []):
-            metric = classify_question(group, question)
-            score = score_question(question)
-            if metric is None or score is None:
-                continue
-            if metric == "IFS":
-                ifs_scores.append(score)
-            elif metric == "VRS":
-                vrs_scores.append(score)
-            elif metric == "SEM":
-                sem_scores.append(score)
+    for item in checklist:
+        for group in item.get("evaluation_groups", []):
+            for question in group.get("questions", []):
+                metric = classify_question(group, question)
+                score = score_question(question)
+                if metric is None or score is None:
+                    continue
 
-    ifs = mean(ifs_scores)
-    vrs = mean(vrs_scores)
+                if metric == "IFS":
+                    ifs_correct += int(score == 1.0)
+                    ifs_total += 1
+                    objective_correct += int(score == 1.0)
+                    objective_total += 1
+                elif metric == "VRS":
+                    vrs_correct += int(score == 1.0)
+                    vrs_total += 1
+                    objective_correct += int(score == 1.0)
+                    objective_total += 1
+                elif metric == "SEM":
+                    sem_scores.append(score)
+
+    uas = objective_correct / objective_total if objective_total else None
+    ifs = ifs_correct / ifs_total if ifs_total else None
+    vrs = vrs_correct / vrs_total if vrs_total else None
     sem = mean(sem_scores)
-    uas: float | None
-    if ifs_scores and vrs_scores:
-        uas = 1.0 if all(score == 1.0 for score in [*ifs_scores, *vrs_scores]) else 0.0
-    else:
-        uas = None
 
     return {
-        "task_id": str(item.get("id", "")),
+        "task_id": "ALL",
         "UAS": fmt(scale_accuracy(uas, accuracy_scale)),
         "IFS": fmt(scale_accuracy(ifs, accuracy_scale)),
         "VRS": fmt(scale_accuracy(vrs, accuracy_scale)),
         "SEM": fmt(scale_sem(sem, sem_scale)),
-        "ifs_count": str(len(ifs_scores)),
-        "vrs_count": str(len(vrs_scores)),
+        "ifs_correct": str(ifs_correct),
+        "ifs_total": str(ifs_total),
+        "vrs_correct": str(vrs_correct),
+        "vrs_total": str(vrs_total),
+        "objective_correct": str(objective_correct),
+        "objective_total": str(objective_total),
         "sem_count": str(len(sem_scores)),
     }
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Aggregate evaluated CoVEBench checklist JSON into UAS/IFS/VRS/SEM CSV.")
+    parser = argparse.ArgumentParser(description="Aggregate evaluated CoVEBench checklist JSON into model-level UAS/IFS/VRS/SEM CSV.")
     parser.add_argument("--input", required=True, help="checklist_evaluated.json")
-    parser.add_argument("--output", required=True, help="CSV with task_id,UAS,IFS,VRS,SEM")
+    parser.add_argument("--output", required=True, help="Model-level CSV with task_id,UAS,IFS,VRS,SEM")
     parser.add_argument("--id-list")
     parser.add_argument("--accuracy-scale", choices=["percent", "unit"], default="percent")
-    parser.add_argument("--sem-scale", choices=["raw", "percent"], default="raw")
+    parser.add_argument("--sem-scale", choices=["raw", "percent"], default="percent")
     parser.add_argument("--debug-output", default="", help="Optional CSV including question counts for auditing.")
     args = parser.parse_args()
 
@@ -197,14 +209,11 @@ def main() -> None:
         checklist = json.load(f)
     id_filter = load_id_list(args.id_list)
 
-    rows = []
-    debug_rows = []
-    for item in checklist:
-        if id_filter is not None and str(item.get("id")) not in id_filter:
-            continue
-        row = aggregate_task(item, args.accuracy_scale, args.sem_scale)
-        rows.append({key: row[key] for key in ["task_id", "UAS", "IFS", "VRS", "SEM"]})
-        debug_rows.append(row)
+    filtered_checklist = [
+        item for item in checklist if id_filter is None or str(item.get("id")) in id_filter
+    ]
+    row = aggregate_overall(filtered_checklist, args.accuracy_scale, args.sem_scale)
+    rows = [{key: row[key] for key in ["task_id", "UAS", "IFS", "VRS", "SEM"]}]
 
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -217,11 +226,27 @@ def main() -> None:
         debug_output = Path(args.debug_output)
         debug_output.parent.mkdir(parents=True, exist_ok=True)
         with open(debug_output, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["task_id", "UAS", "IFS", "VRS", "SEM", "ifs_count", "vrs_count", "sem_count"])
+            writer = csv.DictWriter(
+                f,
+                fieldnames=[
+                    "task_id",
+                    "UAS",
+                    "IFS",
+                    "VRS",
+                    "SEM",
+                    "ifs_correct",
+                    "ifs_total",
+                    "vrs_correct",
+                    "vrs_total",
+                    "objective_correct",
+                    "objective_total",
+                    "sem_count",
+                ],
+            )
             writer.writeheader()
-            writer.writerows(debug_rows)
+            writer.writerow(row)
 
-    print(f"Wrote {output} ({len(rows)} tasks)")
+    print(f"Wrote {output} ({len(filtered_checklist)} tasks aggregated)")
 
 
 if __name__ == "__main__":

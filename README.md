@@ -105,7 +105,7 @@ UAS,IFS,VRS,SEM
 ...
 ```
 
-Both runners also write a `_with_task_id.csv` file for task-level inspection and keep intermediate logs/caches under `--work-dir`.
+The objective runner also writes a `_with_task_id.csv` file for task-level inspection. The subjective runner writes model-level aggregate scores. Both runners keep intermediate logs/caches under `--work-dir`.
 
 ## Repository Layout
 
@@ -132,7 +132,7 @@ Metric-specific details:
 - `SSIM`, `MF`, and `SRC` compare source and edited videos by matched task id.
 - `SRC` can use a provided source-mask cache via `--source-mask-root`; otherwise run the SRC script directly with `--allow-llm` and `LLM_API_KEY`.
 - `TQ` uses the DOVER++ technical score, not the overall DOVER++ score.
-- `UAS`, `IFS`, and `VRS` are percentages by default; `SEM` is raw 1-10 by default.
+- Subjective `UAS`, `IFS`, `VRS`, and `SEM` are reported on a 0-100 scale by default, using global question-level aggregation.
 
 ## Citation
 

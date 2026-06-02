@@ -94,7 +94,7 @@ def main() -> None:
     parser.add_argument("--gpu-memory-utilization", type=float, default=0.9)
     parser.add_argument("--allowed-media-dir", default="", help="Optional vLLM local media allowlist root. Defaults to inferred common video root.")
     parser.add_argument("--accuracy-scale", choices=["percent", "unit"], default="percent", help="CSV scale for UAS/IFS/VRS.")
-    parser.add_argument("--sem-scale", choices=["raw", "percent"], default="raw", help="CSV scale for SEM.")
+    parser.add_argument("--sem-scale", choices=["raw", "percent"], default="percent", help="CSV scale for SEM.")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--aggregate-only", action="store_true", help="Skip vLLM inference and aggregate an existing checklist_evaluated.json in work-dir.")
     parser.add_argument("--dry-run", action="store_true", help="Print commands without running inference/aggregation.")

@@ -9,39 +9,39 @@ This directory contains the CoVEBench subjective benchmark metrics. They are imp
 | Instruction Compliance | Union Accuracy | `UAS` | 0-100 by default | higher is better |
 | Instruction Compliance | Instruction Following Score | `IFS` | 0-100 by default | higher is better |
 | Instruction Compliance | Video Realism Score | `VRS` | 0-100 by default | higher is better |
-| Video Fidelity | Semantic Consistency | `SEM` | 1-10 by default | higher is better |
+| Video Fidelity | Semantic Consistency | `SEM` | 0-100 by default | higher is better |
 
 `PhysicsLaws` and `AIArtifacts` prompts are not included here because they are not part of the released main benchmark scores.
 
 ## Definitions
 
-For task `i`, let `Q_i^ifs` be instruction-following checklist questions, `Q_i^vrs` be realism checklist questions, and `Q_i^sem` be semantic-consistency questions.
+The released aggregate scores are computed globally over all evaluated checklist questions, matching the historical CoVEBench scoring script.
 
 Instruction Following Score:
 
 ```text
-IFS_i = mean_{q in Q_i^ifs} Acc(q)
+IFS = correct Execution Accuracy questions / total Execution Accuracy questions
 ```
 
 Video Realism Score:
 
 ```text
-VRS_i = mean_{q in Q_i^vrs} Acc(q)
+VRS = correct Physical Logic questions / total Physical Logic questions
 ```
 
 Union Accuracy:
 
 ```text
-UAS_i = 1 if every q in Q_i^ifs union Q_i^vrs is correct, otherwise 0
+UAS = correct non-Score-MCQ objective questions / total non-Score-MCQ objective questions
 ```
 
 Semantic Consistency:
 
 ```text
-SEM_i = mean_{q in Q_i^sem} s_q, where s_q is an integer score in [1, 10]
+SEM = mean_{q in Semantic Preservation} (s_q * 10), where s_q is the judge score
 ```
 
-The released model score is the mean over all evaluated tasks. The default CSV stores `UAS`, `IFS`, and `VRS` as percentages and `SEM` in its raw 1-10 scale. Use `--accuracy-scale unit` or `--sem-scale percent` if a different display scale is required.
+The default CSV stores all four columns on a 0-100 scale. Use `--accuracy-scale unit` or `--sem-scale raw` if a different display scale is required.
 
 ## Run One Model
 
@@ -67,7 +67,7 @@ uv run scripts/run_subjective.py \
 
 Replace `<released-qwen-judge-repo>` with the exact released CoVEBench judge model. If your released judge is already available locally, skip model download and pass that path to `--model-path`.
 
-The final user-facing CSV contains one row per task and only the four benchmark columns:
+The final user-facing CSV contains one aggregate row and only the four benchmark columns:
 
 ```csv
 UAS,IFS,VRS,SEM
@@ -114,4 +114,4 @@ Each task should contain `id`, `videoA_path`, `videoB_path`, `editing_instructio
 | `Dual-TF` | Instruction or realism checklist accuracy | source and edited videos |
 | `Score-MCQ` | Semantic consistency | source and edited videos |
 
-The aggregator first uses explicit metadata fields such as `metric`, `dimension`, `category`, `score_type`, `name`, `tag`, or `tags` to map questions to `IFS`, `VRS`, or `SEM`. If no metadata is available, `Score-MCQ` defaults to `SEM`, and other supported checklist questions default to `IFS`.
+The aggregator first uses the checklist `dimension` field: `Execution Accuracy` maps to `IFS`, `Physical Logic` maps to `VRS`, and `Semantic Preservation` maps to `SEM`. If no dimension is available, it falls back to metadata keywords; `Score-MCQ` defaults to `SEM`, and other supported checklist questions default to `IFS`.

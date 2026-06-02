@@ -6,7 +6,7 @@ This module runs the CoVEBench subjective checklist with a vLLM-served video MLL
 
 ```text
 eval_checklist.py          # vLLM inference and checkpointed checklist writing
-aggregate_subjective.py    # checklist_evaluated.json -> task-level CSV
+aggregate_subjective.py    # checklist_evaluated.json -> model-level CSV
 prompts/                   # AB-MCQ, Single-TF, Dual-TF, Score-MCQ prompts
 ```
 
