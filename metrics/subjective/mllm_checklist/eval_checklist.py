@@ -10,6 +10,8 @@ from typing import Any
 
 os.environ.setdefault("VLLM_WORKER_MULTIPROC_METHOD", "spawn")
 
+DEFAULT_SUBJECTIVE_MODEL = "Qwen/Qwen3.5-122B-A10B"
+
 ARRAY_OUTPUT_TYPES = {"AB-MCQ", "Single-TF", "Dual-TF", "Score-MCQ"}
 PROMPT_FILES = {
     "AB-MCQ": "AB-MCQ.txt",
@@ -273,7 +275,11 @@ def write_answers(task: dict[str, Any], parsed_json: list[dict[str, Any]], recor
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate CoVEBench MLLM checklist questions with vLLM.")
     parser.add_argument("--base-path", required=True, help="Directory containing checklist.json and evaluation outputs.")
-    parser.add_argument("--model-path", required=True, help="Path or HF id of the Qwen video MLLM served through vLLM.")
+    parser.add_argument(
+        "--model-path",
+        required=True,
+        help=f"Path or HF id of the Qwen video MLLM served through vLLM. Released judge: {DEFAULT_SUBJECTIVE_MODEL}.",
+    )
     parser.add_argument("--prompt-dir", default="", help="Prompt directory. Defaults to ./prompts next to this script.")
     parser.add_argument("--input-json", default="checklist.json")
     parser.add_argument("--output-json", default="checklist_evaluated.json")

@@ -55,6 +55,8 @@ HF_SNAPSHOT_MODELS = [
     },
 ]
 
+DEFAULT_SUBJECTIVE_MODEL_REPO = "Qwen/Qwen3.5-122B-A10B"
+
 
 
 def run_git(args: list[str], cwd: Path | None = None) -> None:
@@ -106,8 +108,8 @@ def main() -> None:
     parser.add_argument("--include-subjective", action="store_true", help="Also download the MLLM judge model for subjective metrics.")
     parser.add_argument(
         "--subjective-model-repo",
-        default=os.environ.get("SUBJECTIVE_MODEL_REPO", ""),
-        help="HF repo id for the subjective MLLM judge, e.g. the exact released CoVEBench Qwen judge model.",
+        default=os.environ.get("SUBJECTIVE_MODEL_REPO", DEFAULT_SUBJECTIVE_MODEL_REPO),
+        help=f"HF repo id for the subjective MLLM judge. Default: {DEFAULT_SUBJECTIVE_MODEL_REPO}.",
     )
     parser.add_argument(
         "--subjective-model-dir",
@@ -152,7 +154,7 @@ def main() -> None:
             if not args.subjective_model_repo:
                 raise SystemExit(
                     "--include-subjective requires --subjective-model-repo or SUBJECTIVE_MODEL_REPO. "
-                    "Pass the exact released CoVEBench judge model repo."
+                    f"The released CoVEBench judge model is {DEFAULT_SUBJECTIVE_MODEL_REPO}."
                 )
             local = root / args.subjective_model_dir
             if not local.exists() or not any(local.iterdir()):

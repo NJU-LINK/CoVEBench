@@ -10,6 +10,8 @@ from pathlib import Path
 from .common import discover_videos, project_root, run_command
 
 SUBJECTIVE_COLUMNS = ["UAS", "IFS", "VRS", "SEM"]
+# Released CoVEBench subjective judge model used by the MLLM checklist.
+DEFAULT_SUBJECTIVE_MODEL = "Qwen/Qwen3.5-122B-A10B"
 
 
 def write_json(path: Path, payload: object) -> None:
@@ -85,7 +87,11 @@ def main() -> None:
     parser.add_argument("--work-dir", default="", help="Intermediate checklist/log/cache directory.")
     parser.add_argument("--source-dir", help="Optional source-video directory named by task id.")
     parser.add_argument("--edited-dir", help="Optional edited-video directory named by task id.")
-    parser.add_argument("--model-path", default="", help="Qwen video-MLLM path used by vLLM. Required unless --aggregate-only or --dry-run.")
+    parser.add_argument(
+        "--model-path",
+        default=DEFAULT_SUBJECTIVE_MODEL,
+        help=f"Qwen video-MLLM path or HF id used by vLLM. Default: {DEFAULT_SUBJECTIVE_MODEL}.",
+    )
     parser.add_argument("--prompt-dir", default=str(root / "metrics" / "subjective" / "mllm_checklist" / "prompts"))
     parser.add_argument("--tensor-parallel-size", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=16)
@@ -121,7 +127,10 @@ def main() -> None:
 
     if not args.aggregate_only:
         if not args.model_path and not args.dry_run:
-            raise SystemExit("--model-path is required unless --aggregate-only or --dry-run is set.")
+            raise SystemExit(
+                f"--model-path is empty. Pass a local checkpoint path or use the released judge model "
+                f"{DEFAULT_SUBJECTIVE_MODEL}."
+            )
         judge_cmd = [
             sys.executable,
             str(root / "metrics" / "subjective" / "mllm_checklist" / "eval_checklist.py"),

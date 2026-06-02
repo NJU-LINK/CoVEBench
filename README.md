@@ -72,22 +72,25 @@ uv run scripts/run_model.py \
 
 Run subjective MLLM-checklist metrics:
 
+The released subjective judge is `Qwen/Qwen3.5-122B-A10B`. `scripts/run_subjective.py` uses this HF id by default; pass `--model-path` only when using a local checkpoint directory.
+
 ```bash
 bash scripts/setup_env.sh --subjective
 HF_ENDPOINT=https://hf-mirror.com uv run scripts/download_weights.py \
   --include-subjective \
-  --subjective-model-repo <released-qwen-judge-repo>
+  --subjective-model-repo Qwen/Qwen3.5-122B-A10B
 uv run scripts/run_subjective.py \
   --source-dir data/source \
   --edited-dir data/my_model \
   --checklist data/checklist.json \
-  --model-path weights/hf/subjective_judge \
   --output-csv outputs/my_model_subjective.csv \
   --work-dir outputs/my_model_subjective_work \
   --tensor-parallel-size 2
 ```
 
-If the judge model is already available locally, skip `--include-subjective` and pass the local checkpoint path to `--model-path`.
+If the judge model is already available locally, skip `--include-subjective` and pass the local checkpoint path, for example `--model-path weights/hf/subjective_judge`.
+
+The released `data/checklist.json` stores source-video paths as relative placeholders. The one-command runners match videos by numeric task id from `--source-dir` and `--edited-dir`, then write a materialized checklist under `--work-dir` with the actual paths used for evaluation.
 
 ## Outputs
 

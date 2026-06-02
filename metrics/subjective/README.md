@@ -47,11 +47,13 @@ The default CSV stores all four columns on a 0-100 scale. Use `--accuracy-scale 
 
 Install the subjective environment and download or provide a judge model:
 
+The released subjective judge is `Qwen/Qwen3.5-122B-A10B`. The one-command wrapper uses this HF id by default; only pass `--model-path` when using a local checkpoint directory.
+
 ```bash
 bash scripts/setup_env.sh --subjective
 HF_ENDPOINT=https://hf-mirror.com uv run scripts/download_weights.py \
   --include-subjective \
-  --subjective-model-repo <released-qwen-judge-repo>
+  --subjective-model-repo Qwen/Qwen3.5-122B-A10B
 ```
 
 ```bash
@@ -59,13 +61,14 @@ uv run scripts/run_subjective.py \
   --source-dir data/source \
   --edited-dir data/my_model \
   --checklist data/checklist.json \
-  --model-path weights/hf/subjective_judge \
   --output-csv outputs/my_model_subjective.csv \
   --work-dir outputs/my_model_subjective_work \
   --tensor-parallel-size 2
 ```
 
-Replace `<released-qwen-judge-repo>` with the exact released CoVEBench judge model. If your released judge is already available locally, skip model download and pass that path to `--model-path`.
+If your released judge is already available locally, skip model download and pass that path to `--model-path`, for example `--model-path weights/hf/subjective_judge`.
+
+`data/checklist.json` keeps source-video paths as relative placeholders. During normal evaluation, `scripts/run_subjective.py` matches source and edited videos by numeric task id from `--source-dir` and `--edited-dir`, then writes the concrete paths into the work-dir checklist.
 
 The final user-facing CSV contains one aggregate row and only the four benchmark columns:
 
