@@ -2,7 +2,7 @@
 
 **CoVEBench** is a diagnostic benchmark for compositional instruction-guided video editing. Unlike single-operation editing benchmarks, CoVEBench evaluates realistic multi-point instructions that require models to modify requested content while preserving unrelated source-video semantics and temporal coherence.
 
-[Project Page](docs/index.html) | [Paper](docs/assets/paper/CoVEBench.pdf) | [Evaluation Code](metrics)
+[Project Page](https://nju-link.github.io/CoVEBench/) | [Paper](docs/assets/paper/CoVEBench.pdf) | [Evaluation Code](metrics)
 
 ![CoVEBench overview](docs/assets/figures/overview.png)
 
