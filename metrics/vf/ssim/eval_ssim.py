@@ -9,7 +9,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "src"))
-from covebench_eval.common import discover_videos, equal_indices, filter_videos  # noqa: E402
+from covebench_eval.common import discover_videos, equal_indices, filter_videos, load_id_list  # noqa: E402
+
+DEFAULT_EXCLUDE_LIST = ROOT / "configs" / "filters" / "ssim_exclude_indices.txt"
 
 
 def sample_grays(path: Path, count: int, size: tuple[int, int]) -> list[np.ndarray]:
@@ -42,6 +44,9 @@ def main() -> None:
 
     sources = dict(discover_videos(Path(args.source_dir)))
     videos = filter_videos(discover_videos(Path(args.video_dir)), args.id_list, args.limit)
+    exclude_ids = load_id_list(DEFAULT_EXCLUDE_LIST) or set()
+    if exclude_ids:
+        videos = [(task_id, path) for task_id, path in videos if task_id not in exclude_ids]
     if not videos:
         raise SystemExit(f"No numbered videos found in {args.video_dir}")
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)

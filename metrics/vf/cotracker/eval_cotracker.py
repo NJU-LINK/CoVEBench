@@ -72,7 +72,6 @@ def main() -> None:
     parser.add_argument("--alpha", type=float, default=0.5)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--id-list")
-    parser.add_argument("--exclude-list", default=str(DEFAULT_EXCLUDE_LIST), help="Task ids to exclude from MF evaluation.")
     parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
 
@@ -89,7 +88,7 @@ def main() -> None:
     predictor = CoTrackerPredictor(checkpoint=args.checkpoint, offline=True).to(device).eval()
     sources = dict(discover_videos(Path(args.source_dir)))
     videos = filter_videos(discover_videos(Path(args.video_dir)), args.id_list, args.limit)
-    exclude_ids = load_id_list(args.exclude_list) or set()
+    exclude_ids = load_id_list(DEFAULT_EXCLUDE_LIST) or set()
     if exclude_ids:
         videos = [(task_id, path) for task_id, path in videos if task_id not in exclude_ids]
     if not videos:
