@@ -32,7 +32,7 @@ VRS = correct Physical Logic questions / total Physical Logic questions
 Union Accuracy:
 
 ```text
-UAS = correct non-Score-MCQ objective questions / total non-Score-MCQ objective questions
+UAS = groups with all Execution Accuracy and Physical Logic questions correct / evaluated objective groups
 ```
 
 Semantic Consistency:

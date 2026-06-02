@@ -149,32 +149,41 @@ def aggregate_overall(checklist: list[dict[str, Any]], accuracy_scale: str, sem_
     ifs_total = 0
     vrs_correct = 0
     vrs_total = 0
-    objective_correct = 0
-    objective_total = 0
+    union_correct = 0
+    union_total = 0
+    union_skipped = 0
     sem_scores: list[float] = []
 
     for item in checklist:
         for group in item.get("evaluation_groups", []):
+            union_scores: list[float] = []
+            has_union_questions = False
             for question in group.get("questions", []):
                 metric = classify_question(group, question)
                 score = score_question(question)
+                if metric in {"IFS", "VRS"}:
+                    has_union_questions = True
                 if metric is None or score is None:
                     continue
 
                 if metric == "IFS":
                     ifs_correct += int(score == 1.0)
                     ifs_total += 1
-                    objective_correct += int(score == 1.0)
-                    objective_total += 1
+                    union_scores.append(score)
                 elif metric == "VRS":
                     vrs_correct += int(score == 1.0)
                     vrs_total += 1
-                    objective_correct += int(score == 1.0)
-                    objective_total += 1
+                    union_scores.append(score)
                 elif metric == "SEM":
                     sem_scores.append(score)
+            if union_scores:
+                union_total += 1
+                if all(score == 1.0 for score in union_scores):
+                    union_correct += 1
+            elif has_union_questions:
+                union_skipped += 1
 
-    uas = objective_correct / objective_total if objective_total else None
+    uas = union_correct / union_total if union_total else None
     ifs = ifs_correct / ifs_total if ifs_total else None
     vrs = vrs_correct / vrs_total if vrs_total else None
     sem = mean(sem_scores)
@@ -189,8 +198,9 @@ def aggregate_overall(checklist: list[dict[str, Any]], accuracy_scale: str, sem_
         "ifs_total": str(ifs_total),
         "vrs_correct": str(vrs_correct),
         "vrs_total": str(vrs_total),
-        "objective_correct": str(objective_correct),
-        "objective_total": str(objective_total),
+        "union_correct": str(union_correct),
+        "union_total": str(union_total),
+        "union_skipped": str(union_skipped),
         "sem_count": str(len(sem_scores)),
     }
 
@@ -238,8 +248,9 @@ def main() -> None:
                     "ifs_total",
                     "vrs_correct",
                     "vrs_total",
-                    "objective_correct",
-                    "objective_total",
+                    "union_correct",
+                    "union_total",
+                    "union_skipped",
                     "sem_count",
                 ],
             )
