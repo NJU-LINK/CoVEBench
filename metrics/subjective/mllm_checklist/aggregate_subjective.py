@@ -97,6 +97,14 @@ def category_text(group: dict[str, Any], question: dict[str, Any]) -> str:
 
 def classify_question(group: dict[str, Any], question: dict[str, Any]) -> str | None:
     q_type = question.get("type")
+    dimension = norm_text(question.get("dimension", ""))
+    if dimension == "execution accuracy":
+        return "IFS"
+    if dimension == "physical logic":
+        return "VRS"
+    if dimension == "semantic preservation":
+        return "SEM"
+
     text = category_text(group, question)
     compact = re.sub(r"[^a-z0-9]+", "_", text)
 
