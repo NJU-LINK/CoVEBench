@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "src"))
-from covebench_eval.common import task_id_from_path  # noqa: E402
+from covebench_eval.common import load_id_list, task_id_from_path  # noqa: E402
 
 
 def main() -> None:
@@ -21,6 +21,8 @@ def main() -> None:
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--repo", default=str(ROOT / "external" / "T2AV-Compass" / "t2av-compass" / "Objective" / "Video" / "DOVER"))
     parser.add_argument("--weight", default=str(ROOT / "weights" / "dover" / "DOVER_plus_plus.pth"))
+    parser.add_argument("--id-list")
+    parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
 
     import torch
@@ -56,19 +58,28 @@ def main() -> None:
     with open(tmp_raw, newline="", encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+    id_filter = load_id_list(args.id_list)
+    written = 0
     with open(args.output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["task_id", "score", "error"])
         writer.writeheader()
         for row in rows:
             path = Path((row.get("path") or row.get("video") or "").strip())
             task_id = task_id_from_path(path)
+            if task_id is None:
+                continue
+            if id_filter is not None and task_id not in id_filter:
+                continue
+            if args.limit and written >= args.limit:
+                break
             score = ""
             error = ""
             try:
                 score = f"{float(row.get(' technical score') or row.get('technical score') or row.get('technical_score')):.8f}"
             except Exception as exc:
                 error = f"{type(exc).__name__}: cannot parse technical score"
-            writer.writerow({"task_id": task_id if task_id is not None else "", "score": score, "error": error})
+            writer.writerow({"task_id": task_id, "score": score, "error": error})
+            written += 1
 
 
 if __name__ == "__main__":
