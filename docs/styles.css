@@ -401,6 +401,24 @@ figcaption {
   padding-top: 76px;
 }
 
+.demo-section .section-heading {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.demo-video-panel {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.demo-video-panel video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0d1513;
+}
+
 .examples > .media-panel + .media-panel {
   margin-top: 22px;
 }
