@@ -113,7 +113,7 @@ def main() -> None:
         "ids": str(id_list),
         "checklist": str(Path(args.checklist).resolve()),
         "work": str(work_dir),
-        "source_mask_root": str(Path(args.source_mask_root).resolve()),
+        "source_mask_root": str(Path(args.source_mask_root).resolve()) if args.source_mask_root else "",
     }
     manifest = {"edited_dir": str(edited), "source_dir": str(source), "task_count": len(task_ids), "metrics": []}
     for metric_name, script, out_name, arg_template in METRICS:
