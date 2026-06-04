@@ -35,6 +35,7 @@ dev = [
 [project.scripts]
 covebench-run = "covebench_eval.run_model:main"
 covebench-download = "covebench_eval.download_assets:main"
+covebench-download-data = "covebench_eval.download_dataset:main"
 
 [tool.uv]
 package = true
