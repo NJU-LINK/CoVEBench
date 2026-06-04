@@ -47,18 +47,29 @@ See the full project page in [`docs/`](docs) for qualitative examples, main resu
 
 ## Quick Start
 
-Prepare videos with matching numeric task ids:
+Prepare the checklist, source videos, and edited videos:
 
 ```text
 data/
   checklist.json
   source/
-    1.mp4
-    2.mp4
+    6.mp4
+    19.mp4
   my_model/
     1.mp4
     2.mp4
 ```
+
+`data/checklist.json` is the authoritative mapping from benchmark task id to the
+source video. Each checklist item has an `id` and a `videoA_path`; the source
+videos are resolved from `videoA_path` and do **not** need to be named by the
+task id. Edited/generated videos, however, should be named by the checklist
+task id, for example `data/my_model/1.mp4` for checklist item `"id": 1`.
+
+When running objective metrics, `scripts/run_model.py` materializes a temporary
+`source_by_task_id` directory under `--work-dir` using hardlinks, symlinks, or
+copies, so pairwise metrics such as `SSIM`, `MF`, and `SRC` can compare
+`id.mp4` source/edit pairs internally.
 
 Install the objective evaluation environment and download objective weights:
 
@@ -99,7 +110,7 @@ uv run scripts/run_subjective.py \
 
 If the judge model is already available locally, skip `--include-subjective` and pass the local checkpoint path, for example `--model-path weights/hf/subjective_judge`.
 
-The released `data/checklist.json` stores source-video paths as relative placeholders. The one-command runners match videos by numeric task id from `--source-dir` and `--edited-dir`, then write a materialized checklist under `--work-dir` with the actual paths used for evaluation.
+The released `data/checklist.json` stores source-video paths as relative placeholders. The one-command runners use checklist `id` and `videoA_path` to resolve the source video from `--source-dir`, while edited videos are matched by numeric task id from `--edited-dir`. The subjective runner writes a materialized checklist under `--work-dir` with the actual paths used for evaluation.
 
 ## Outputs
 
@@ -141,7 +152,7 @@ Metric-specific details:
 
 - Frame-level metrics use 10 equally spaced frames by default.
 - `AES`, `VQR`, and `MSM` are computed on edited videos only.
-- `SSIM`, `MF`, and `SRC` compare source and edited videos by matched task id.
+- `SSIM`, `MF`, and `SRC` compare source and edited videos by checklist task id. The source side is resolved from checklist `videoA_path`; the edited side is expected to be named by task id.
 - `SRC` can use a provided source-mask cache via `--source-mask-root`; otherwise run the SRC script directly with `--allow-llm` and `LLM_API_KEY`.
 - `TQ` uses the DOVER++ technical score, not the overall DOVER++ score.
 - Subjective `UAS`, `IFS`, `VRS`, and `SEM` are reported on a 0-100 scale by default, using global question-level aggregation.

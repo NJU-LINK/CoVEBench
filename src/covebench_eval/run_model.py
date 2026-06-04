@@ -3,6 +3,8 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
+import shutil
 import shlex
 import sys
 from pathlib import Path
@@ -29,6 +31,68 @@ def expand_args(template: list[str], values: dict[str, str]) -> list[str]:
 def write_id_list(path: Path, ids: list[int]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(str(x) for x in ids) + "\n", encoding="utf-8")
+
+
+def load_checklist_sources(checklist_path: Path, source_root: Path, project_root_path: Path) -> dict[int, Path]:
+    with open(checklist_path, encoding="utf-8-sig") as f:
+        checklist = json.load(f)
+    if not isinstance(checklist, list):
+        raise SystemExit("Checklist must be a JSON list of task objects.")
+
+    sources: dict[int, Path] = {}
+    for item in checklist:
+        try:
+            task_id = int(item["id"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        raw_path = item.get("videoA_path")
+        if not raw_path:
+            continue
+        source_path = resolve_checklist_video_path(str(raw_path), source_root, checklist_path.parent, project_root_path)
+        if source_path is not None:
+            sources[task_id] = source_path
+    return sources
+
+
+def resolve_checklist_video_path(raw_path: str, source_root: Path, checklist_dir: Path, project_root_path: Path) -> Path | None:
+    path = Path(raw_path).expanduser()
+    candidates = [path] if path.is_absolute() else [
+        source_root / raw_path,
+        source_root / path.name,
+        checklist_dir / raw_path,
+        project_root_path / raw_path,
+    ]
+    for candidate in candidates:
+        resolved = candidate.resolve()
+        if resolved.is_file():
+            return resolved
+    return None
+
+
+def link_or_copy_video(src: Path, dst: Path) -> None:
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    if dst.exists():
+        return
+    try:
+        os.link(src, dst)
+        return
+    except OSError:
+        pass
+    try:
+        os.symlink(src, dst)
+        return
+    except OSError:
+        pass
+    shutil.copy2(src, dst)
+
+
+def materialize_source_dir(source_map: dict[int, Path], task_ids: list[int], work_dir: Path) -> Path:
+    materialized = work_dir / "source_by_task_id"
+    materialized.mkdir(parents=True, exist_ok=True)
+    for task_id in task_ids:
+        source_path = source_map[task_id]
+        link_or_copy_video(source_path, materialized / f"{task_id}{source_path.suffix.lower()}")
+    return materialized
 
 
 def load_scores(work_dir: Path) -> dict[str, dict[int, str]]:
@@ -67,7 +131,7 @@ def main() -> None:
     root = project_root()
     parser = argparse.ArgumentParser(description="Run objective CoVEBench metrics for one edited-video folder.")
     parser.add_argument("--edited-dir", required=True, help="Directory containing edited videos named by task id.")
-    parser.add_argument("--source-dir", required=True, help="Directory containing source videos named by the same task ids.")
+    parser.add_argument("--source-dir", required=True, help="Root used to resolve checklist videoA_path source videos. Source files do not need to be named by task id.")
     parser.add_argument("--output-csv", required=True, help="Final user-facing CSV with metric score columns only.")
     parser.add_argument("--work-dir", default="", help="Intermediate metric CSV/log/cache directory.")
     parser.add_argument("--device", default="cuda:0")
@@ -85,29 +149,32 @@ def main() -> None:
     work_dir = Path(args.work_dir).resolve() if args.work_dir else output_csv.with_suffix("").parent / f"{output_csv.stem}_work"
     work_dir.mkdir(parents=True, exist_ok=True)
 
+    checklist_path = Path(args.checklist).resolve()
     edited_ids = {tid for tid, _ in discover_videos(edited)}
-    source_ids = {tid for tid, _ in discover_videos(source)}
+    source_map = load_checklist_sources(checklist_path, source, root)
+    source_ids = set(source_map)
     task_ids = sorted(edited_ids & source_ids)
     if args.limit:
         task_ids = task_ids[: args.limit]
     if not task_ids:
-        raise SystemExit("No matching task ids between source_dir and edited_dir.")
+        raise SystemExit("No edited videos matched checklist ids with resolvable source videoA_path files.")
     missing_sources = sorted(edited_ids - source_ids)
     missing_edits = sorted(source_ids - edited_ids)
     if missing_sources:
-        print(f"WARNING: {len(missing_sources)} edited videos have no source match. Example: {missing_sources[:10]}", file=sys.stderr)
+        print(f"WARNING: {len(missing_sources)} edited videos have no checklist source match. Example: {missing_sources[:10]}", file=sys.stderr)
     if missing_edits:
-        print(f"WARNING: {len(missing_edits)} source videos have no edited match. Example: {missing_edits[:10]}", file=sys.stderr)
+        print(f"WARNING: {len(missing_edits)} checklist tasks have no edited video named by id. Example: {missing_edits[:10]}", file=sys.stderr)
 
     id_list = work_dir / "task_ids.txt"
     write_id_list(id_list, task_ids)
+    materialized_source = materialize_source_dir(source_map, task_ids, work_dir)
     requested = {x.strip().upper() for x in args.metrics.split(",") if x.strip()}
     unknown = requested - set(DEFAULT_COLUMNS)
     if unknown:
         raise SystemExit(f"Unknown metric(s): {', '.join(sorted(unknown))}. Choose from {', '.join(DEFAULT_COLUMNS)}")
     values = {
         "edited": str(edited),
-        "source": str(source),
+        "source": str(materialized_source),
         "device": args.device,
         "frames": str(args.frames),
         "ids": str(id_list),
@@ -115,7 +182,14 @@ def main() -> None:
         "work": str(work_dir),
         "source_mask_root": str(Path(args.source_mask_root).resolve()) if args.source_mask_root else "",
     }
-    manifest = {"edited_dir": str(edited), "source_dir": str(source), "task_count": len(task_ids), "metrics": []}
+    manifest = {
+        "edited_dir": str(edited),
+        "source_dir": str(source),
+        "materialized_source_dir": str(materialized_source),
+        "checklist": str(checklist_path),
+        "task_count": len(task_ids),
+        "metrics": [],
+    }
     for metric_name, script, out_name, arg_template in METRICS:
         if metric_name not in requested:
             continue

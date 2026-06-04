@@ -21,11 +21,27 @@ def write_json(path: Path, payload: object) -> None:
 
 
 def load_checklist(path: Path) -> list[dict]:
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8-sig") as f:
         data = json.load(f)
     if not isinstance(data, list):
         raise SystemExit("Checklist must be a JSON list of task objects.")
     return data
+
+
+def resolve_checklist_video_path(raw_path: str, source_root: Path | None, checklist_dir: Path, project_root_path: Path) -> Path | None:
+    path = Path(raw_path).expanduser()
+    if path.is_absolute():
+        candidates = [path]
+    else:
+        candidates = []
+        if source_root:
+            candidates.extend([source_root / raw_path, source_root / path.name])
+        candidates.extend([checklist_dir / raw_path, project_root_path / raw_path])
+    for candidate in candidates:
+        resolved = candidate.resolve()
+        if resolved.is_file():
+            return resolved
+    return None
 
 
 def write_id_list(path: Path, ids: list[int]) -> None:
@@ -45,12 +61,13 @@ def copy_without_task_id(input_csv: Path, output_csv: Path) -> None:
 
 def materialize_checklist(
     checklist: list[dict],
+    checklist_path: Path,
     source_dir: Path | None,
     edited_dir: Path | None,
     limit: int,
 ) -> tuple[list[dict], list[int]]:
-    source_map = dict(discover_videos(source_dir)) if source_dir else {}
     edited_map = dict(discover_videos(edited_dir)) if edited_dir else {}
+    root = project_root()
 
     selected: list[dict] = []
     task_ids: list[int] = []
@@ -60,13 +77,19 @@ def materialize_checklist(
             task_id = int(raw_id)
         except (TypeError, ValueError):
             continue
-        if source_map and task_id not in source_map:
-            continue
+        source_path = None
+        if source_dir:
+            raw_source = item.get("videoA_path")
+            if not raw_source:
+                continue
+            source_path = resolve_checklist_video_path(str(raw_source), source_dir, checklist_path.parent, root)
+            if source_path is None:
+                continue
         if edited_map and task_id not in edited_map:
             continue
         copied = dict(item)
-        if source_map:
-            copied["videoA_path"] = str(source_map[task_id].resolve())
+        if source_path:
+            copied["videoA_path"] = str(source_path)
         if edited_map:
             copied["videoB_path"] = str(edited_map[task_id].resolve())
         selected.append(copied)
@@ -113,7 +136,7 @@ def main() -> None:
 
     source_dir = Path(args.source_dir).resolve() if args.source_dir else None
     edited_dir = Path(args.edited_dir).resolve() if args.edited_dir else None
-    checklist, task_ids = materialize_checklist(load_checklist(checklist_path), source_dir, edited_dir, args.limit)
+    checklist, task_ids = materialize_checklist(load_checklist(checklist_path), checklist_path, source_dir, edited_dir, args.limit)
 
     work_checklist = work_dir / "checklist.json"
     id_list = work_dir / "task_ids.txt"
