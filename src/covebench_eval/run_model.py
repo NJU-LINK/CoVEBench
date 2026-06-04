@@ -141,7 +141,7 @@ def main() -> None:
     parser.add_argument("--work-dir", default="", help="Intermediate metric CSV/log/cache directory.")
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--frames", type=int, default=10, help="Equal-spaced frame count for frame/image metrics.")
-    parser.add_argument("--metrics", default=",".join(DEFAULT_COLUMNS), help="Comma-separated subset for debugging.")
+    parser.add_argument("--metrics", default="AES,TQ,MSM,SSIM,MF,VQR", help="Comma-separated subset for debugging.")
     parser.add_argument("--checklist", default=str(root / "data" / "covebench_hf" / "checklist.json"), help="Checklist JSON required by SRC.")
     parser.add_argument("--source-mask-root", default="", help="Optional source-side SRC mask cache for SRC.")
     parser.add_argument("--limit", type=int, default=0)

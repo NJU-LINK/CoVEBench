@@ -117,9 +117,8 @@ uv run scripts/run_model.py \
   --device cuda:0
 ```
 
-This command runs the objective metrics that do not require SRC source-mask
-cache. To also run `SRC`, provide `--source-mask-root` or run the SRC script
-directly with `--allow-llm` and `LLM_API_KEY`.
+This command runs the objective metrics except `SRC`. 
+**Note:** The source-mask data required for `SRC` evaluation has not been provided yet, but will be released soon. Once available, you can run `SRC` by providing `--source-mask-root`, or you can run the SRC script directly with `--allow-llm` and `LLM_API_KEY` to generate the masks dynamically.
 
 Run subjective MLLM-checklist metrics:
 
