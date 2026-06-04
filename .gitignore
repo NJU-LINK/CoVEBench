@@ -19,6 +19,7 @@ weights/
 outputs/
 logs/
 tmp/
+data/covebench_hf/
 
 # --- macOS ---
 .DS_Store
