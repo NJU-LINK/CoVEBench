@@ -58,9 +58,9 @@ HF_ENDPOINT=https://hf-mirror.com uv run scripts/download_weights.py \
 
 ```bash
 uv run scripts/run_subjective.py \
-  --source-dir data/source \
+  --source-dir data/covebench_hf \
   --edited-dir data/my_model \
-  --checklist data/checklist.json \
+  --checklist data/covebench_hf/checklist.json \
   --output-csv outputs/my_model_subjective.csv \
   --work-dir outputs/my_model_subjective_work \
   --tensor-parallel-size 2
@@ -68,7 +68,7 @@ uv run scripts/run_subjective.py \
 
 If your released judge is already available locally, skip model download and pass that path to `--model-path`, for example `--model-path weights/hf/subjective_judge`.
 
-`data/checklist.json` keeps source-video paths as relative placeholders. During normal evaluation, `scripts/run_subjective.py` matches source and edited videos by numeric task id from `--source-dir` and `--edited-dir`, then writes the concrete paths into the work-dir checklist.
+`data/covebench_hf/checklist.json` keeps source-video paths as relative placeholders. During normal evaluation, `scripts/run_subjective.py` resolves source videos from checklist `videoA_path` under `--source-dir`, matches edited videos by numeric task id from `--edited-dir`, then writes the concrete paths into the work-dir checklist.
 
 The final user-facing CSV contains one aggregate row and only the four benchmark columns:
 
@@ -100,7 +100,7 @@ If `checklist_evaluated.json` already exists, skip MLLM inference and only rebui
 
 ```bash
 uv run scripts/run_subjective.py \
-  --checklist data/checklist.json \
+  --checklist data/covebench_hf/checklist.json \
   --output-csv outputs/my_model_subjective.csv \
   --work-dir outputs/my_model_subjective_work \
   --aggregate-only

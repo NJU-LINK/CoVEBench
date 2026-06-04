@@ -11,7 +11,7 @@ Higher is better.
 ## Inputs
 
 - `--checklist`: CoVEBench checklist JSON with `id`, `videoA_path`, and Semantic Preservation questions.
-- `--source-dir`: source videos named by task id.
+- `--source-dir`: source videos named by task id for direct metric calls. The top-level one-command runner resolves checklist `videoA_path` entries and creates this materialized layout under `--work-dir`.
 - `--video-dir`: edited videos named by task id.
 - `--source-mask-root`: optional cache of source-side SAM2 masks.
 
@@ -21,8 +21,8 @@ If source masks are missing, run with `--allow-llm` and set `LLM_API_KEY` so the
 
 ```bash
 uv run metrics/vf/src/eval_src.py \
-  --checklist data/checklist.json \
-  --source-dir data/source \
+  --checklist data/covebench_hf/checklist.json \
+  --source-dir outputs/my_model_work/source_by_task_id \
   --video-dir data/my_model \
   --output outputs/my_model_work/vf_src.csv \
   --work-dir outputs/my_model_work/src_cache \

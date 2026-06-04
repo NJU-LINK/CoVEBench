@@ -72,7 +72,12 @@ def resolve_checklist_video_path(raw_path: str, source_root: Path, checklist_dir
 def link_or_copy_video(src: Path, dst: Path) -> None:
     dst.parent.mkdir(parents=True, exist_ok=True)
     if dst.exists():
-        return
+        try:
+            if dst.samefile(src):
+                return
+        except OSError:
+            pass
+        dst.unlink()
     try:
         os.link(src, dst)
         return

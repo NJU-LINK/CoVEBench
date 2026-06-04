@@ -29,9 +29,9 @@ CHECKLIST = SCRIPT_DIR / "checklist.json"
 
 # Layout: data/ and dataset folders (wan/, kiwi/...) live as SIBLINGS of cut/
 #   parent/
-#     cut/         ← this file
-#     data/        ← source videos
-#     wan/         ← target videos (dataset)
+#     cut/         -> this file
+#     data/        -> source videos
+#     wan/         -> target videos (dataset)
 # Override with CUT_DATA_DIR / CUT_DATASETS_ROOT env vars when needed.
 import os
 DATA_DIR = Path(os.environ.get("CUT_DATA_DIR", SCRIPT_DIR.parent / "data"))
@@ -46,18 +46,18 @@ HAPPYHORSE_DIR = DATASETS_ROOT / "happyhorse"
 
 
 def choose_dataset() -> str:
-    print("请选择目标视频文件夹：")
+    print("Choose target video folder:")
     for i, name in enumerate(DATASETS, start=1):
         print(f"  {i}. {name}")
     while True:
-        choice = input("输入序号或名称: ").strip()
+        choice = input("Enter index or name: ").strip()
         if choice.isdigit():
             idx = int(choice)
             if 1 <= idx <= len(DATASETS):
                 return DATASETS[idx - 1]
         if choice in DATASETS:
             return choice
-        print("无效选择，请重新输入。")
+        print("Invalid choice, please try again.")
 
 
 def source_video_path(item: dict[str, Any]) -> Path:

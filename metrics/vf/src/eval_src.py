@@ -144,7 +144,7 @@ def compute_src_score(
 
 
 def load_checklist(path: Path) -> dict[int, dict[str, Any]]:
-    items = json.loads(path.read_text(encoding="utf-8"))
+    items = json.loads(path.read_text(encoding="utf-8-sig"))
     return {int(item["id"]): item for item in items}
 
 
@@ -201,6 +201,8 @@ def generate_source_mask(
     args: argparse.Namespace,
 ) -> dict[str, Any]:
     task_id = int(item["id"])
+    pipeline_item = dict(item)
+    pipeline_item["videoA_path"] = source_video.name
     meta = load_meta(source_mask_root, task_id)
     if meta and meta.get("status") == "completed" and source_mask_dir(source_mask_root, task_id).exists() and not args.force_source_mask:
         return meta
@@ -209,7 +211,7 @@ def generate_source_mask(
         if not args.allow_llm:
             return {"status": "source_metadata_missing", "error": "Run with --allow-llm or provide --source-mask-root cache."}
         client = pipeline._llm_client()
-        meta = pipeline.run_stage1(item, client)
+        meta = pipeline.run_stage1(pipeline_item, client)
 
     if meta.get("status") not in ("ready_for_gpu", "completed"):
         return meta
@@ -218,7 +220,7 @@ def generate_source_mask(
     meta["local_path"] = str(source_video)
     if meta.get("status") == "completed" and source_mask_dir(source_mask_root, task_id).exists() and not args.force_source_mask:
         return meta
-    return pipeline.run_stage2(item, meta, gdino_processor, gdino_model, sam2)
+    return pipeline.run_stage2(pipeline_item, meta, gdino_processor, gdino_model, sam2)
 
 
 def generate_target_mask(

@@ -95,7 +95,10 @@ Activate it with:
 Download objective weights with:
   HF_ENDPOINT=https://hf-mirror.com uv run scripts/download_weights.py
 
+Download benchmark data with:
+  HF_ENDPOINT=https://hf-mirror.com uv run scripts/download_dataset.py
+
 Run objective metrics with:
-  uv run scripts/run_model.py --source-dir data/source --edited-dir data/my_model --checklist data/checklist.json --output-csv outputs/my_model_scores.csv
+  uv run scripts/run_model.py --source-dir data/covebench_hf --edited-dir data/my_model --checklist data/covebench_hf/checklist.json --output-csv outputs/my_model_scores.csv --metrics AES,TQ,MSM,SSIM,MF,VQR
 
 EOF

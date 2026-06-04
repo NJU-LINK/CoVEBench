@@ -108,7 +108,7 @@ def main() -> None:
     parser.add_argument("--checklist", required=True, help="Original checklist JSON.")
     parser.add_argument("--output-csv", required=True, help="Final user-facing CSV with UAS, IFS, VRS, SEM columns only.")
     parser.add_argument("--work-dir", default="", help="Intermediate checklist/log/cache directory.")
-    parser.add_argument("--source-dir", help="Optional source-video directory named by task id.")
+    parser.add_argument("--source-dir", help="Optional root used to resolve checklist videoA_path source videos.")
     parser.add_argument("--edited-dir", help="Optional edited-video directory named by task id.")
     parser.add_argument(
         "--model-path",
