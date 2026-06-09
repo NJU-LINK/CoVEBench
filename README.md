@@ -18,6 +18,14 @@ https://github.com/NJU-LINK/CoVEBench/blob/main/docs/assets/videos/demo.mp4
   <a href="README.md"><img src="https://img.shields.io/badge/Docs-Usage-6a8f5f.svg" alt="Usage Docs"></a>
 </p>
 
+## Demo
+
+<p align="center">
+  <a href="docs/assets/videos/demo.mp4">
+    <strong>Watch the demo video</strong>
+  </a>
+</p>
+
 ![CoVEBench overview](docs/assets/figures/overview.png)
 
 ## What We Evaluate
