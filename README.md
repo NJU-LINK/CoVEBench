@@ -4,14 +4,10 @@
 
 **NJU-LINK Team, Nanjing University · Kling Team, Kuaishou Technology**
 
-<p align="center">
-  <strong>Demo Video</strong>
-</p>
-https://github.com/NJU-LINK/CoVEBench/blob/main/docs/assets/videos/demo.mp4
 
 **CoVEBench** is a diagnostic benchmark for compositional instruction-guided video editing. Unlike single-operation editing benchmarks, CoVEBench evaluates realistic multi-point instructions that require models to modify requested content while preserving unrelated source-video semantics and temporal coherence.
 <p align="center">
-  <!-- <a href="https://arxiv.org/abs/2606."><img src="https://img.shields.io/badge/arXiv-2606.-b31b1b.svg" alt="arXiv"></a> -->
+  <a href="https://arxiv.org/abs/2606.08415"><img src="https://img.shields.io/badge/arXiv-2606.08415-b31b1b.svg" alt="arXiv"></a>
   <a href="https://nju-link.github.io/CoVEBench/"><img src="https://img.shields.io/badge/Project-Page-4f7cba.svg" alt="Project Page"></a>
   <a href="https://huggingface.co/datasets/NJU-LINK/CoVEBench"><img src="https://img.shields.io/badge/HuggingFace-CoVEBench-f6c343.svg" alt="TELBench"></a>
   <a href="https://github.com/NJU-LINK/CoVEBench"><img src="https://img.shields.io/badge/GitHub-Code-24292f.svg" alt="GitHub"></a>
