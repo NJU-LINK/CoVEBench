@@ -199,10 +199,13 @@ Metric-specific details:
 ## Citation
 
 ```bibtex
-@misc{covebench2026,
-  title        = {CoVEBench: A Diagnostic Benchmark for Compositional Instruction-Guided Video Editing},
-  author       = {CoVEBench Team},
-  year         = {2026},
-  howpublished = {\url{https://github.com/NJU-LINK/CoVEBench}}
+@misc{wu2026covebenchvideoeditingmodels,
+      title={CoVEBench: Can Video Editing Models Handle Complex Instructions?}, 
+      author={Jiangtao Wu and Jiaming Wang and Yiwen He and Yuanxing Zhang and Shihao Li and Dunyuan Liu and Xuedong Zhao and Jialu Chen and Zekun Moore Wang and Jiaheng Liu},
+      year={2026},
+      eprint={2606.08415},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.08415}, 
 }
 ```
