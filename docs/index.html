@@ -151,10 +151,282 @@
           </p>
         </div>
 
-        <figure class="table-figure">
-          <img src="assets/tables/main_results.png" alt="Quantitative results across instruction compliance, video quality, and video fidelity" />
-          <figcaption>Quantitative comparison across closed-source and open-source video editing models.</figcaption>
-        </figure>
+        <div class="leaderboard-panel" aria-label="CoVEBench model leaderboard">
+          <div class="leaderboard-top">
+            <div>
+              <p class="leaderboard-kicker">Leaderboard</p>
+              <h3>Ranked by union accuracy on compositional edits</h3>
+            </div>
+            <div class="leaderboard-pills" aria-label="Displayed metrics">
+              <span>UAS</span>
+              <span>VQR</span>
+              <span>SEM</span>
+            </div>
+          </div>
+
+          <div class="leaderboard-podium" aria-label="Top-ranked models">
+            <article class="leader-card winner">
+              <div class="rank-badge">#1</div>
+              <p>Closed-source</p>
+              <h4>Wan2.7</h4>
+              <div class="leader-score">
+                <strong>56.89</strong>
+                <span>UAS</span>
+              </div>
+              <dl>
+                <div>
+                  <dt>IFS</dt>
+                  <dd>82.02</dd>
+                </div>
+                <div>
+                  <dt>VQR</dt>
+                  <dd>4.407</dd>
+                </div>
+                <div>
+                  <dt>SEM</dt>
+                  <dd>87.90</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="leader-card">
+              <div class="rank-badge">#2</div>
+              <p>Closed-source</p>
+              <h4>HappyHorse1.0</h4>
+              <div class="leader-score">
+                <strong>55.18</strong>
+                <span>UAS</span>
+              </div>
+              <dl>
+                <div>
+                  <dt>IFS</dt>
+                  <dd>76.54</dd>
+                </div>
+                <div>
+                  <dt>VQR</dt>
+                  <dd>4.388</dd>
+                </div>
+                <div>
+                  <dt>SEM</dt>
+                  <dd>92.73</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="leader-card">
+              <div class="rank-badge">#3</div>
+              <p>Open-source</p>
+              <h4>OmniWeaving</h4>
+              <div class="leader-score">
+                <strong>30.14</strong>
+                <span>UAS</span>
+              </div>
+              <dl>
+                <div>
+                  <dt>IFS</dt>
+                  <dd>57.18</dd>
+                </div>
+                <div>
+                  <dt>VQR</dt>
+                  <dd>3.660</dd>
+                </div>
+                <div>
+                  <dt>SEM</dt>
+                  <dd>85.05</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+          <div class="leaderboard-table-wrap">
+            <table class="leaderboard-table">
+              <caption>
+                Higher is better. Models are ordered by UAS, the strict union accuracy for satisfying every
+                checklist item in a compositional instruction.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Source</th>
+                  <th scope="col">UAS</th>
+                  <th scope="col">IFS</th>
+                  <th scope="col">VRS</th>
+                  <th scope="col">VQR</th>
+                  <th scope="col">AES</th>
+                  <th scope="col">MSM</th>
+                  <th scope="col">TQ</th>
+                  <th scope="col">SEM</th>
+                  <th scope="col">SSIM</th>
+                  <th scope="col">MF</th>
+                  <th scope="col">SRC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="top-rank">
+                  <td class="rank-cell">#1</td>
+                  <th scope="row">Wan2.7</th>
+                  <td><span class="source-pill closed">Closed</span></td>
+                  <td class="score-cell primary">56.89</td>
+                  <td class="score-cell best">82.02</td>
+                  <td>79.97</td>
+                  <td class="score-cell best">4.407</td>
+                  <td class="score-cell best">5.077</td>
+                  <td>0.692</td>
+                  <td>18.223</td>
+                  <td>87.90</td>
+                  <td>0.482</td>
+                  <td>0.896</td>
+                  <td>0.815</td>
+                </tr>
+                <tr class="top-rank">
+                  <td class="rank-cell">#2</td>
+                  <th scope="row">HappyHorse1.0</th>
+                  <td><span class="source-pill closed">Closed</span></td>
+                  <td class="score-cell primary">55.18</td>
+                  <td>76.54</td>
+                  <td class="score-cell best">84.52</td>
+                  <td>4.388</td>
+                  <td>5.070</td>
+                  <td class="score-cell best">0.710</td>
+                  <td class="score-cell best">18.414</td>
+                  <td class="score-cell best">92.73</td>
+                  <td>0.506</td>
+                  <td>0.886</td>
+                  <td>0.823</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#3</td>
+                  <th scope="row">OmniWeaving</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">30.14</td>
+                  <td>57.18</td>
+                  <td>61.75</td>
+                  <td>3.660</td>
+                  <td>4.135</td>
+                  <td>0.709</td>
+                  <td>15.092</td>
+                  <td>85.05</td>
+                  <td>0.463</td>
+                  <td>0.891</td>
+                  <td>0.781</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#4</td>
+                  <th scope="row">Kiwi</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">29.03</td>
+                  <td>53.90</td>
+                  <td>56.13</td>
+                  <td>3.670</td>
+                  <td>4.609</td>
+                  <td>0.642</td>
+                  <td>15.649</td>
+                  <td>79.51</td>
+                  <td>0.605</td>
+                  <td>0.893</td>
+                  <td>0.814</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#5</td>
+                  <th scope="row">Ditto</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">26.50</td>
+                  <td>49.45</td>
+                  <td>60.69</td>
+                  <td>3.921</td>
+                  <td>4.297</td>
+                  <td>0.639</td>
+                  <td>15.583</td>
+                  <td>58.02</td>
+                  <td>0.355</td>
+                  <td>0.907</td>
+                  <td>0.763</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#6</td>
+                  <th scope="row">Lucy</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">26.01</td>
+                  <td>50.85</td>
+                  <td>58.68</td>
+                  <td>3.688</td>
+                  <td>4.136</td>
+                  <td>0.661</td>
+                  <td>15.045</td>
+                  <td>86.13</td>
+                  <td class="score-cell best">0.762</td>
+                  <td>0.918</td>
+                  <td class="score-cell best">0.834</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#7</td>
+                  <th scope="row">ICVE</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">25.83</td>
+                  <td>53.14</td>
+                  <td>54.00</td>
+                  <td>3.277</td>
+                  <td>3.695</td>
+                  <td>0.642</td>
+                  <td>12.168</td>
+                  <td>71.02</td>
+                  <td>0.288</td>
+                  <td>0.814</td>
+                  <td>0.642</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#8</td>
+                  <th scope="row">ReCo</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">24.35</td>
+                  <td>54.16</td>
+                  <td>47.42</td>
+                  <td>3.146</td>
+                  <td>3.906</td>
+                  <td>0.625</td>
+                  <td>12.101</td>
+                  <td>70.03</td>
+                  <td>0.528</td>
+                  <td>0.870</td>
+                  <td>0.730</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#9</td>
+                  <th scope="row">InsV2V</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">14.61</td>
+                  <td>37.18</td>
+                  <td>47.36</td>
+                  <td>3.307</td>
+                  <td>4.327</td>
+                  <td>0.698</td>
+                  <td>10.501</td>
+                  <td>77.85</td>
+                  <td>0.280</td>
+                  <td>0.886</td>
+                  <td>0.740</td>
+                </tr>
+                <tr>
+                  <td class="rank-cell">#10</td>
+                  <th scope="row">VACE</th>
+                  <td><span class="source-pill open">Open</span></td>
+                  <td class="score-cell primary">9.69</td>
+                  <td>22.92</td>
+                  <td>41.35</td>
+                  <td>3.718</td>
+                  <td>5.037</td>
+                  <td>0.688</td>
+                  <td>13.637</td>
+                  <td>81.73</td>
+                  <td>0.709</td>
+                  <td class="score-cell best">0.958</td>
+                  <td>0.783</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         <div class="finding-grid">
           <article class="finding">

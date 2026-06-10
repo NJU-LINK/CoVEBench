@@ -365,6 +365,277 @@ figcaption {
   max-height: 430px;
 }
 
+.leaderboard-panel {
+  margin-top: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.leaderboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 28px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(245, 250, 248, 0.96) 0%, rgba(235, 246, 242, 0.92) 58%, rgba(255, 248, 224, 0.88) 100%),
+    #fbfdfb;
+}
+
+.leaderboard-kicker {
+  margin: 0 0 8px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.leaderboard-top h3 {
+  max-width: 680px;
+  font-size: 28px;
+}
+
+.leaderboard-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.leaderboard-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 11px;
+  border: 1px solid rgba(46, 90, 80, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.leaderboard-podium {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px;
+  background: #fbfdfb;
+}
+
+.leader-card {
+  position: relative;
+  min-height: 228px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 26px rgba(45, 74, 67, 0.07);
+}
+
+.leader-card.winner {
+  border-color: rgba(183, 144, 71, 0.46);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 232, 0.9), rgba(255, 255, 255, 0.96) 58%),
+    #ffffff;
+}
+
+.rank-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--green-dark);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.leader-card.winner .rank-badge {
+  background: var(--gold);
+}
+
+.leader-card p {
+  margin: 0 52px 8px 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.leader-card h4 {
+  margin: 0;
+  padding-right: 44px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.leader-score {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  margin-top: 18px;
+  color: var(--green-dark);
+}
+
+.leader-score strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: 0.95;
+}
+
+.leader-score span {
+  padding-bottom: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.leader-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 0;
+}
+
+.leader-card dl div {
+  padding: 10px;
+  border: 1px solid rgba(219, 229, 226, 0.78);
+  border-radius: 6px;
+  background: rgba(245, 250, 248, 0.72);
+}
+
+.leader-card dt,
+.leader-card dd {
+  margin: 0;
+}
+
+.leader-card dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.leader-card dd {
+  margin-top: 2px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.leaderboard-table-wrap {
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+}
+
+.leaderboard-table {
+  width: 100%;
+  min-width: 1220px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.leaderboard-table caption {
+  padding: 16px 22px;
+  color: var(--muted);
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.45;
+  background: #ffffff;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.leaderboard-table thead th {
+  border-top: none;
+  background: #edf5f2;
+  color: #334a46;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leaderboard-table tbody th {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.leaderboard-table tbody tr {
+  background: #ffffff;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background: #fbfdfb;
+}
+
+.leaderboard-table tbody tr.top-rank {
+  background: #fffaf0;
+}
+
+.rank-cell {
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.score-cell {
+  color: #2a3c39;
+  font-weight: 800;
+}
+
+.score-cell.primary {
+  color: var(--green-dark);
+}
+
+.score-cell.best {
+  background: rgba(71, 120, 106, 0.13);
+  color: var(--green-dark);
+}
+
+.source-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  min-height: 26px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.source-pill.closed {
+  border: 1px solid rgba(183, 144, 71, 0.3);
+  background: #fff6dc;
+  color: #785f24;
+}
+
+.source-pill.open {
+  border: 1px solid rgba(79, 114, 142, 0.28);
+  background: #eef6fb;
+  color: #365d78;
+}
+
 .finding-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -626,6 +897,19 @@ figcaption {
   .demo-video-panel {
     justify-self: start;
   }
+
+  .leaderboard-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .leaderboard-pills {
+    justify-content: flex-start;
+  }
+
+  .leaderboard-podium {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 680px) {
@@ -678,6 +962,36 @@ figcaption {
   .hero-figure img,
   .examples .media-panel img {
     min-width: 0;
+  }
+
+  .leaderboard-top {
+    padding: 22px 18px;
+  }
+
+  .leaderboard-top h3 {
+    font-size: 24px;
+  }
+
+  .leaderboard-podium {
+    padding: 16px;
+  }
+
+  .leader-card {
+    min-height: auto;
+    padding: 20px 18px;
+  }
+
+  .leader-card dl {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .leaderboard-table {
+    min-width: 1160px;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px 14px;
   }
 
   .footer {
