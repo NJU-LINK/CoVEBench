@@ -1,0 +1,74 @@
+{
+  "id": 371,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-texting-in-a-bar-321.mp4",
+  "local_path": "/root/cut/data/mixkit-man-texting-in-a-bar-321.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing the subject's pose and replacing objects (smartphone/drink with a menu) without camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's facial identity and hair style preserved?",
+    "Comparing Video A and Video B, how accurately is the black long-sleeved shirt preserved, including its fabric texture and sleeve length?",
+    "Comparing Video A and Video B, how well is the wooden table's texture and color maintained?",
+    "Comparing Video A and Video B, how well is the restaurant background (elements behind the man) preserved?",
+    "Comparing Video A and Video B, how well is the static camera composition and framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "black long-sleeved shirt"
+    },
+    {
+      "description": "wooden table"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        846.7771606445312,
+        155.91111755371094,
+        1602.4532470703125,
+        1074.1373291015625
+      ],
+      "score": 0.9003,
+      "frame_idx": 2,
+      "box_area_ratio": 0.335
+    },
+    {
+      "entity_id": 2,
+      "description": "black long-sleeved shirt",
+      "box": [
+        922.6466064453125,
+        438.104248046875,
+        1611.0469970703125,
+        1072.7286376953125
+      ],
+      "score": 0.9,
+      "frame_idx": 1,
+      "box_area_ratio": 0.211
+    },
+    {
+      "entity_id": 3,
+      "description": "wooden table",
+      "box": [
+        -11.06546401977539,
+        773.0851440429688,
+        1144.976806640625,
+        1073.8382568359375
+      ],
+      "score": 0.7735,
+      "frame_idx": 0,
+      "box_area_ratio": 0.168
+    }
+  ],
+  "matched_entities": 3
+}

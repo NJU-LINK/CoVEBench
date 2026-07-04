@@ -1,0 +1,101 @@
+{
+  "id": 537,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/25.mp4",
+  "local_path": "/root/cut/data/25.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying foreground subjects (man to cyborg), replacing objects (knife and fish), and changing the background environment without any camera movements or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the subject's kneeling posture preserved (overall body orientation and knee-on-ground stance)?",
+    "Comparing Video A and Video B, how well is the hand/arm cutting motion preserved (trajectory and rhythm of the cutting action)?",
+    "Comparing Video A and Video B, how well is the high-angle close-up camera perspective preserved (angle, framing, and distance)?",
+    "Comparing Video A and Video B, how well is the timing of tool-to-fish contact preserved (moments of contact during the cutting)?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man in black rash guard"
+    },
+    {
+      "description": "hand"
+    },
+    {
+      "description": "arm"
+    },
+    {
+      "description": "yellow knife"
+    },
+    {
+      "description": "mahi-mahi fish"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in black rash guard",
+      "box": null,
+      "score": 0.8501,
+      "frame_idx": null,
+      "box_area_ratio": 0.556,
+      "rejected_reason": "box covers 56% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "hand",
+      "box": [
+        1008.9229125976562,
+        955.6124267578125,
+        1721.0262451171875,
+        1674.7269287109375
+      ],
+      "score": 0.8991,
+      "frame_idx": 1,
+      "box_area_ratio": 0.062
+    },
+    {
+      "entity_id": 3,
+      "description": "arm",
+      "box": [
+        2799.031005859375,
+        6.720542907714844,
+        3843.337890625,
+        1328.0909423828125
+      ],
+      "score": 0.4186,
+      "frame_idx": 1,
+      "box_area_ratio": 0.166
+    },
+    {
+      "entity_id": 4,
+      "description": "yellow knife",
+      "box": [
+        2169.3505859375,
+        934.2066040039062,
+        3582.6982421875,
+        1594.36572265625
+      ],
+      "score": 0.6056,
+      "frame_idx": 1,
+      "box_area_ratio": 0.112
+    },
+    {
+      "entity_id": 5,
+      "description": "mahi-mahi fish",
+      "box": [
+        78.92589569091797,
+        625.0833740234375,
+        2524.405029296875,
+        2149.84033203125
+      ],
+      "score": 0.5784,
+      "frame_idx": 2,
+      "box_area_ratio": 0.45
+    }
+  ],
+  "matched_entities": 4
+}

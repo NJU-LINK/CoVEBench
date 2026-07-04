@@ -1,0 +1,86 @@
+{
+  "id": 348,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-fitness-influencer-in-front-of-a-camera-giving-a-tutorial-5053.mp4",
+  "local_path": "/root/cut/data/mixkit-fitness-influencer-in-front-of-a-camera-giving-a-tutorial-5053.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves modifying foreground object properties (shirt material) and changing object motion/subject action (lifting basketball instead of kettlebell).",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the mural wall in the background preserved?",
+    "Comparing Video A and Video B, how well is the camera and tripod in the foreground preserved?",
+    "Comparing Video A and Video B, how accurately is the man's facial identity and skin tone preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the lifting motion preserved?",
+    "Comparing Video A and Video B, how well is the static medium shot camera framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "mural wall"
+    },
+    {
+      "description": "camera"
+    },
+    {
+      "description": "tripod"
+    },
+    {
+      "description": "man in the center"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "mural wall",
+      "box": null,
+      "score": 0.5072,
+      "frame_idx": null,
+      "box_area_ratio": 0.987,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "camera",
+      "box": [
+        1317.5220947265625,
+        386.6153259277344,
+        1768.28564453125,
+        691.9161376953125
+      ],
+      "score": 0.4995,
+      "frame_idx": 0,
+      "box_area_ratio": 0.066
+    },
+    {
+      "entity_id": 3,
+      "description": "tripod",
+      "box": [
+        1356.09130859375,
+        680.3949584960938,
+        1792.092529296875,
+        1076.76904296875
+      ],
+      "score": 0.5518,
+      "frame_idx": 0,
+      "box_area_ratio": 0.083
+    },
+    {
+      "entity_id": 4,
+      "description": "man in the center",
+      "box": [
+        359.41107177734375,
+        92.51451873779297,
+        960.3724975585938,
+        1073.759521484375
+      ],
+      "score": 0.8646,
+      "frame_idx": 1,
+      "box_area_ratio": 0.284
+    }
+  ],
+  "matched_entities": 3
+}

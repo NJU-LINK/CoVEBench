@@ -1,0 +1,74 @@
+{
+  "id": 384,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-photo-session-of-a-girl-in-the-desert-34405.mp4",
+  "local_path": "/root/cut/data/mixkit-photo-session-of-a-girl-in-the-desert-34405.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing an object's pose and adding a new object, with no camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance, texture, and movement of the woman's black dress preserved?",
+    "Comparing Video A and Video B, how accurately is the woman's specific posing sequence and body language maintained?",
+    "Comparing Video A and Video B, how well are the unique cracks, color, and texture of the dry lake bed background preserved?",
+    "Comparing Video A and Video B, how consistently is the dusk lighting and sky gradient preserved?",
+    "Comparing Video A and Video B, how well is the static wide-shot camera framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "black dress"
+    },
+    {
+      "description": "dry lake bed"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        96.57510375976562,
+        559.3433837890625,
+        552.227294921875,
+        1701.726318359375
+      ],
+      "score": 0.8648,
+      "frame_idx": 1,
+      "box_area_ratio": 0.251
+    },
+    {
+      "entity_id": 2,
+      "description": "black dress",
+      "box": [
+        104.03390502929688,
+        565.2870483398438,
+        552.1251831054688,
+        1697.419921875
+      ],
+      "score": 0.8678,
+      "frame_idx": 1,
+      "box_area_ratio": 0.245
+    },
+    {
+      "entity_id": 3,
+      "description": "dry lake bed",
+      "box": [
+        4.363396167755127,
+        1426.3421630859375,
+        1077.1649169921875,
+        1913.5206298828125
+      ],
+      "score": 0.5583,
+      "frame_idx": 1,
+      "box_area_ratio": 0.252
+    }
+  ],
+  "matched_entities": 3
+}

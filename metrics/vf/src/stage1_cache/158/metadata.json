@@ -1,0 +1,11 @@
+{
+  "id": 158,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-comes-to-his-bed-to-sleep-3216.mp4",
+  "local_path": "/root/cut/data/mixkit-man-comes-to-his-bed-to-sleep-3216.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

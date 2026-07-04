@@ -1,0 +1,100 @@
+{
+  "id": 173,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-photo-session-with-a-girl-in-the-middle-of-a-34397.mp4",
+  "local_path": "/root/cut/data/mixkit-photo-session-with-a-girl-in-the-middle-of-a-34397.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects, changing poses and actions, and adding objects, all of which are permitted categories for mask-based evaluation.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the desert landscape, including the horizon line and ground texture, preserved?",
+    "Comparing Video A and Video B, how accurately are the studio lights and the coat rack in the background preserved in their original positions?",
+    "Comparing Video A and Video B, how well is the dusk lighting and sky color preserved?",
+    "Comparing Video A and Video B, how well is the model's facial identity and hair color preserved despite the change in her posture?",
+    "Comparing Video A and Video B, how well is the wide desert shot preserved while allowing camera movement that follows hair adjustment instead of photo-taking?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "desert ground"
+    },
+    {
+      "description": "horizon line"
+    },
+    {
+      "description": "studio lights"
+    },
+    {
+      "description": "coat rack"
+    },
+    {
+      "description": "female model"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "desert ground",
+      "box": [
+        1.3671112060546875,
+        718.0780639648438,
+        1917.2171630859375,
+        1077.5205078125
+      ],
+      "score": 0.7766,
+      "frame_idx": 2,
+      "box_area_ratio": 0.332
+    },
+    {
+      "entity_id": 2,
+      "description": "horizon line",
+      "box": [
+        2.6137161254882812,
+        588.9024658203125,
+        1915.0968017578125,
+        727.2395629882812
+      ],
+      "score": 0.4961,
+      "frame_idx": 0,
+      "box_area_ratio": 0.128
+    },
+    {
+      "entity_id": 3,
+      "description": "studio lights",
+      "box": [
+        267.3166809082031,
+        399.75787353515625,
+        412.6969909667969,
+        861.214111328125
+      ],
+      "score": 0.5515,
+      "frame_idx": 2,
+      "box_area_ratio": 0.032
+    },
+    {
+      "entity_id": 4,
+      "description": "coat rack",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "female model",
+      "box": [
+        807.6984252929688,
+        537.7315063476562,
+        1012.7325439453125,
+        869.9202270507812
+      ],
+      "score": 0.7513,
+      "frame_idx": 0,
+      "box_area_ratio": 0.033
+    }
+  ],
+  "matched_entities": 4
+}

@@ -1,0 +1,86 @@
+{
+  "id": 582,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/135.mp4",
+  "local_path": "/root/cut/data/135.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and modifying the background environment without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the wrecking ball's swing trajectory and overall speed preserved (ignoring size changes due to the zoom)?",
+    "Comparing Video A and Video B, how well is the building's damage behavior and the resulting falling debris preserved?",
+    "Comparing Video A and Video B, how well is the specific moment of impact (when the wrecking ball contacts the building) preserved in time?",
+    "Comparing Video A and Video B, how well are the dust cloud's shape, density, and expansion pattern preserved?",
+    "Comparing Video A and Video B, how well is the wrecking ball's physical appearance, including its dark color and texture, preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "dark wrecking ball"
+    },
+    {
+      "description": "concrete building"
+    },
+    {
+      "description": "debris"
+    },
+    {
+      "description": "dust cloud"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 19,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "dark wrecking ball",
+      "box": [
+        1102.4661865234375,
+        415.5267333984375,
+        3669.17041015625,
+        2156.935302734375
+      ],
+      "score": 0.4919,
+      "frame_idx": 2,
+      "box_area_ratio": 0.539
+    },
+    {
+      "entity_id": 2,
+      "description": "concrete building",
+      "box": [
+        1161.5220947265625,
+        365.9029846191406,
+        3588.0322265625,
+        2161.898193359375
+      ],
+      "score": 0.7783,
+      "frame_idx": 1,
+      "box_area_ratio": 0.525
+    },
+    {
+      "entity_id": 3,
+      "description": "debris",
+      "box": null,
+      "score": 0.6104,
+      "frame_idx": null,
+      "box_area_ratio": 0.566,
+      "rejected_reason": "box covers 57% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "dust cloud",
+      "box": [
+        1661.6097412109375,
+        626.896484375,
+        2068.453857421875,
+        1464.8941650390625
+      ],
+      "score": 0.3907,
+      "frame_idx": 2,
+      "box_area_ratio": 0.041
+    }
+  ],
+  "matched_entities": 3
+}

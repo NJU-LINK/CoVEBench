@@ -1,0 +1,117 @@
+{
+  "id": 493,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-drinking-beer-in-a-bar-on-saint-patricks-day-47431.mp4",
+  "local_path": "/root/cut/data/mixkit-drinking-beer-in-a-bar-on-saint-patricks-day-47431.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object (liquid) with another (milk) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the vibrant green color and texture of the man's suit preserved?",
+    "Comparing Video A and Video B, how accurately is the checkered pattern of the green bowtie maintained?",
+    "Comparing Video A and Video B, how well is the man's facial identity and expression preserved when he looks at the camera?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the man taking a sip from the glass preserved?",
+    "Comparing Video A and Video B, how well are the bar shelves and the arrangement of bottles preserved?",
+    "Comparing Video A and Video B, how accurately is the warm pendant lighting and its effect on the scene preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "green suit"
+    },
+    {
+      "description": "green bowtie"
+    },
+    {
+      "description": "young man"
+    },
+    {
+      "description": "glass"
+    },
+    {
+      "description": "bar shelves"
+    },
+    {
+      "description": "bottles"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green suit",
+      "box": [
+        581.9669189453125,
+        76.21900177001953,
+        1611.0518798828125,
+        1074.892333984375
+      ],
+      "score": 0.6618,
+      "frame_idx": 1,
+      "box_area_ratio": 0.496
+    },
+    {
+      "entity_id": 2,
+      "description": "green bowtie",
+      "box": [
+        564.9860229492188,
+        73.05442810058594,
+        1603.0845947265625,
+        1077.285888671875
+      ],
+      "score": 0.6892,
+      "frame_idx": 0,
+      "box_area_ratio": 0.503
+    },
+    {
+      "entity_id": 3,
+      "description": "young man",
+      "box": [
+        603.8744506835938,
+        89.94281768798828,
+        1611.551513671875,
+        1074.7232666015625
+      ],
+      "score": 0.9391,
+      "frame_idx": 2,
+      "box_area_ratio": 0.479
+    },
+    {
+      "entity_id": 4,
+      "description": "glass",
+      "box": [
+        915.2911376953125,
+        235.81163024902344,
+        1187.479736328125,
+        609.1898803710938
+      ],
+      "score": 0.7191,
+      "frame_idx": 0,
+      "box_area_ratio": 0.049
+    },
+    {
+      "entity_id": 5,
+      "description": "bar shelves",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "bottles",
+      "box": [
+        1303.2762451171875,
+        215.97267150878906,
+        1638.9676513671875,
+        554.3004150390625
+      ],
+      "score": 0.3153,
+      "frame_idx": 0,
+      "box_area_ratio": 0.055
+    }
+  ],
+  "matched_entities": 5
+}

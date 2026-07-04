@@ -1,0 +1,102 @@
+{
+  "id": 261,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_172_1.mp4",
+  "local_path": "/root/cut/data/LMArena_172_1.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background and modifying a foreground object's clothing, with no camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the cat's visual identity (black fur and large yellow eyes) preserved?",
+    "Comparing Video A and Video B, how well is the brown pitcher and the action of pouring liquid preserved?",
+    "Comparing Video A and Video B, how accurately is the growth sequence of the dragon fruit plant (from small plant to tall stalk with fruits) preserved?",
+    "Comparing Video A and Video B, how well is the exact temporal synchronization of the plant's growth relative to the pouring action preserved?",
+    "Comparing Video A and Video B, how well is the cat's standing pose and overall body movement preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "black cat"
+    },
+    {
+      "description": "brown pitcher"
+    },
+    {
+      "description": "liquid"
+    },
+    {
+      "description": "dragon fruit plant"
+    },
+    {
+      "description": "dragon fruit"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black cat",
+      "box": null,
+      "score": 0.9212,
+      "frame_idx": null,
+      "box_area_ratio": 0.706,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "brown pitcher",
+      "box": [
+        91.05355834960938,
+        825.5090942382812,
+        446.7235107421875,
+        1203.9710693359375
+      ],
+      "score": 0.7668,
+      "frame_idx": 2,
+      "box_area_ratio": 0.077
+    },
+    {
+      "entity_id": 3,
+      "description": "liquid",
+      "box": [
+        98.97206115722656,
+        828.3655395507812,
+        447.9942626953125,
+        1203.433837890625
+      ],
+      "score": 0.4131,
+      "frame_idx": 2,
+      "box_area_ratio": 0.075
+    },
+    {
+      "entity_id": 4,
+      "description": "dragon fruit plant",
+      "box": [
+        629.522705078125,
+        807.2069091796875,
+        1016.771728515625,
+        1572.8465576171875
+      ],
+      "score": 0.7365,
+      "frame_idx": 2,
+      "box_area_ratio": 0.169
+    },
+    {
+      "entity_id": 5,
+      "description": "dragon fruit",
+      "box": [
+        630.63720703125,
+        808.0397338867188,
+        1016.181884765625,
+        1568.232177734375
+      ],
+      "score": 0.6458,
+      "frame_idx": 2,
+      "box_area_ratio": 0.168
+    }
+  ],
+  "matched_entities": 4
+}

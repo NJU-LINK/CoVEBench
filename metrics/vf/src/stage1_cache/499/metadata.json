@@ -1,0 +1,102 @@
+{
+  "id": 499,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-group-of-friends-chatting-at-a-halloween-costume-gathering-34459.mp4",
+  "local_path": "/root/cut/data/mixkit-group-of-friends-chatting-at-a-halloween-costume-gathering-34459.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance, costume, and identity of the woman in the hippie costume preserved?",
+    "Comparing Video A and Video B, how accurately are the spooky decorations on the coffee table and the balloons on the floor preserved?",
+    "Comparing Video A and Video B, how well is the specific purple and orange ambient lighting of the Halloween room maintained?",
+    "Comparing Video A and Video B, how accurately is the woman's movement preserved?",
+    "Comparing Video A and Video B, how well is the texture and color of the grey couch preserved in the areas where the woman is sitting?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman in hippie costume"
+    },
+    {
+      "description": "spooky decorations"
+    },
+    {
+      "description": "coffee table"
+    },
+    {
+      "description": "balloons"
+    },
+    {
+      "description": "grey couch"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in hippie costume",
+      "box": [
+        465.5251159667969,
+        211.25038146972656,
+        950.3934326171875,
+        622.0881958007812
+      ],
+      "score": 0.7837,
+      "frame_idx": 1,
+      "box_area_ratio": 0.096
+    },
+    {
+      "entity_id": 2,
+      "description": "spooky decorations",
+      "box": [
+        439.65997314453125,
+        148.17848205566406,
+        580.6786499023438,
+        322.6814270019531
+      ],
+      "score": 0.3794,
+      "frame_idx": 2,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 3,
+      "description": "coffee table",
+      "box": [
+        -8.727378845214844,
+        612.9578857421875,
+        1092.80517578125,
+        1078.044189453125
+      ],
+      "score": 0.535,
+      "frame_idx": 1,
+      "box_area_ratio": 0.247
+    },
+    {
+      "entity_id": 4,
+      "description": "balloons",
+      "box": [
+        -0.7334518432617188,
+        762.4939575195312,
+        1919.247314453125,
+        1074.48095703125
+      ],
+      "score": 0.4287,
+      "frame_idx": 1,
+      "box_area_ratio": 0.289
+    },
+    {
+      "entity_id": 5,
+      "description": "grey couch",
+      "box": null,
+      "score": 0.8221,
+      "frame_idx": null,
+      "box_area_ratio": 0.556,
+      "rejected_reason": "box covers 56% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 4
+}

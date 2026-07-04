@@ -1,0 +1,102 @@
+{
+  "id": 368,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-eats-watching-television-on-a-rainy-night-26091.mp4",
+  "local_path": "/root/cut/data/mixkit-man-eats-watching-television-on-a-rainy-night-26091.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a subject's clothing and changing their action/pose, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's facial identity (features, hair, and expression) preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance and position of the sofa preserved?",
+    "Comparing Video A and Video B, how well is the coffee table in the foreground preserved?",
+    "Comparing Video A and Video B, how well are the background room elements (walls, decor, lighting) preserved?",
+    "Comparing Video A and Video B, how accurately is the static, eye-level camera angle preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "sofa"
+    },
+    {
+      "description": "coffee table"
+    },
+    {
+      "description": "walls"
+    },
+    {
+      "description": "decor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        2.653369903564453,
+        109.99958038330078,
+        1011.8932495117188,
+        1074.6322021484375
+      ],
+      "score": 0.8712,
+      "frame_idx": 0,
+      "box_area_ratio": 0.469
+    },
+    {
+      "entity_id": 2,
+      "description": "sofa",
+      "box": [
+        -0.06734848022460938,
+        596.4686889648438,
+        697.767578125,
+        1073.135009765625
+      ],
+      "score": 0.5081,
+      "frame_idx": 0,
+      "box_area_ratio": 0.16
+    },
+    {
+      "entity_id": 3,
+      "description": "coffee table",
+      "box": [
+        792.5467529296875,
+        928.4635009765625,
+        1720.7584228515625,
+        1079.2066650390625
+      ],
+      "score": 0.3271,
+      "frame_idx": 2,
+      "box_area_ratio": 0.067
+    },
+    {
+      "entity_id": 4,
+      "description": "walls",
+      "box": null,
+      "score": 0.3248,
+      "frame_idx": null,
+      "box_area_ratio": 0.843,
+      "rejected_reason": "box covers 84% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "decor",
+      "box": [
+        1022.8614501953125,
+        965.53955078125,
+        1231.7259521484375,
+        1005.6734619140625
+      ],
+      "score": 0.3906,
+      "frame_idx": 0,
+      "box_area_ratio": 0.004
+    }
+  ],
+  "matched_entities": 4
+}

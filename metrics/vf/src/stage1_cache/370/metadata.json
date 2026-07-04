@@ -1,0 +1,81 @@
+{
+  "id": 370,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-goes-to-sleep-after-reading-3215.mp4",
+  "local_path": "/root/cut/data/mixkit-man-goes-to-sleep-after-reading-3215.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a subject and changing their pose and action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the textures, folds, and colors of the bedsheets and pillows preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance and structure of the headboard preserved?",
+    "Comparing Video A and Video B, how well is the static medium shot camera framing preserved?",
+    "Comparing Video A and Video B, how well are the background wall details and the ambient lighting of the room (excluding the laptop glow) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "bedsheets"
+    },
+    {
+      "description": "pillows"
+    },
+    {
+      "description": "headboard"
+    },
+    {
+      "description": "background wall"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 28,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "bedsheets",
+      "box": [
+        9.541568756103516,
+        777.969482421875,
+        1042.182373046875,
+        1075.3807373046875
+      ],
+      "score": 0.5049,
+      "frame_idx": 2,
+      "box_area_ratio": 0.148
+    },
+    {
+      "entity_id": 2,
+      "description": "pillows",
+      "box": [
+        1076.53662109375,
+        556.1650390625,
+        1356.56787109375,
+        1076.73779296875
+      ],
+      "score": 0.4815,
+      "frame_idx": 0,
+      "box_area_ratio": 0.07
+    },
+    {
+      "entity_id": 3,
+      "description": "headboard",
+      "box": null,
+      "score": 0.5333,
+      "frame_idx": null,
+      "box_area_ratio": 0.586,
+      "rejected_reason": "box covers 59% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "background wall",
+      "box": null,
+      "score": 0.6351,
+      "frame_idx": null,
+      "box_area_ratio": 0.986,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

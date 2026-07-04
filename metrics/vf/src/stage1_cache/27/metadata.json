@@ -1,0 +1,70 @@
+{
+  "id": 27,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/114.mp4",
+  "local_path": "/root/cut/data/114.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object (person on a bicycle) and its motion, which is allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the architectural structure and wood texture of the multi-story building preserved?",
+    "Comparing Video A and Video B, how accurately is the white van on the right side of the frame preserved?",
+    "Comparing Video A and Video B, how well are the misty green cliffs in the background preserved?",
+    "Comparing Video A and Video B, how consistent is the falling rain effect across the entire frame?",
+    "Comparing Video A and Video B, how well is the camera movement preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "multi-story wooden building"
+    },
+    {
+      "description": "white van on the right"
+    },
+    {
+      "description": "misty green cliffs in the back"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "multi-story wooden building",
+      "box": null,
+      "score": 0.7089,
+      "frame_idx": null,
+      "box_area_ratio": 0.641,
+      "rejected_reason": "box covers 64% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "white van on the right",
+      "box": [
+        3328.830810546875,
+        1499.3170166015625,
+        3831.27001953125,
+        2145.2939453125
+      ],
+      "score": 0.8721,
+      "frame_idx": 0,
+      "box_area_ratio": 0.039
+    },
+    {
+      "entity_id": 3,
+      "description": "misty green cliffs in the back",
+      "box": [
+        6.817474365234375,
+        9.095488548278809,
+        3831.85546875,
+        826.5679321289062
+      ],
+      "score": 0.4455,
+      "frame_idx": 2,
+      "box_area_ratio": 0.377
+    }
+  ],
+  "matched_entities": 2
+}

@@ -1,0 +1,73 @@
+{
+  "id": 377,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-mother-with-her-happy-daughters-4549.mp4",
+  "local_path": "/root/cut/data/mixkit-mother-with-her-happy-daughters-4549.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's pose and action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual identity (facial features, hair, and clothing) of the two young girls preserved?",
+    "Comparing Video A and Video B, how accurately are the grey sofa and the glass-paned doors in the background preserved?",
+    "Comparing Video A and Video B, how well is the overall lighting, color temperature, and atmosphere of the living room preserved?",
+    "Comparing Video A and Video B, how well are the girls' original positions and seated postures on the sofa preserved while the woman moves?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "two young girls"
+    },
+    {
+      "description": "grey sofa"
+    },
+    {
+      "description": "glass doors in the background"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "two young girls",
+      "box": [
+        1264.5465087890625,
+        296.51361083984375,
+        1865.904052734375,
+        1074.4671630859375
+      ],
+      "score": 0.5995,
+      "frame_idx": 1,
+      "box_area_ratio": 0.226
+    },
+    {
+      "entity_id": 2,
+      "description": "grey sofa",
+      "box": [
+        4.123649597167969,
+        512.87548828125,
+        1913.6903076171875,
+        1066.6810302734375
+      ],
+      "score": 0.6628,
+      "frame_idx": 1,
+      "box_area_ratio": 0.51
+    },
+    {
+      "entity_id": 3,
+      "description": "glass doors in the background",
+      "box": [
+        3.355693817138672,
+        2.730687141418457,
+        1915.2586669921875,
+        534.863037109375
+      ],
+      "score": 0.3955,
+      "frame_idx": 1,
+      "box_area_ratio": 0.491
+    }
+  ],
+  "matched_entities": 3
+}

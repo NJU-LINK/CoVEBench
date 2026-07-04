@@ -1,0 +1,90 @@
+{
+  "id": 495,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-friends-dancing-at-a-halloween-party-34457.mp4",
+  "local_path": "/root/cut/data/mixkit-friends-dancing-at-a-halloween-party-34457.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and costume of the woman in the floral hippie dress preserved?",
+    "Comparing Video A and Video B, how accurately is the person in the cape preserved?",
+    "Comparing Video A and Video B, how well is the television screen's color cycling (green and purple) preserved in the background?",
+    "Comparing Video A and Video B, how well is the high-angle perspective maintained?",
+    "Comparing Video A and Video B, how accurately are the rhythmic dancing movements of the remaining group members preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman in floral hippie dress"
+    },
+    {
+      "description": "person in cape"
+    },
+    {
+      "description": "television screen"
+    },
+    {
+      "description": "person in black hooded robe"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in floral hippie dress",
+      "box": [
+        686.8840942382812,
+        0.6551563739776611,
+        1323.9403076171875,
+        1038.374267578125
+      ],
+      "score": 0.5101,
+      "frame_idx": 1,
+      "box_area_ratio": 0.319
+    },
+    {
+      "entity_id": 2,
+      "description": "person in cape",
+      "box": [
+        1220.8447265625,
+        4.103264808654785,
+        1831.81982421875,
+        1072.934326171875
+      ],
+      "score": 0.5548,
+      "frame_idx": 0,
+      "box_area_ratio": 0.315
+    },
+    {
+      "entity_id": 3,
+      "description": "television screen",
+      "box": [
+        125.42881774902344,
+        173.61070251464844,
+        851.385009765625,
+        787.6146850585938
+      ],
+      "score": 0.5954,
+      "frame_idx": 1,
+      "box_area_ratio": 0.215
+    },
+    {
+      "entity_id": 4,
+      "description": "person in black hooded robe",
+      "box": [
+        1221.789306640625,
+        2.359592914581299,
+        1830.83544921875,
+        1070.6663818359375
+      ],
+      "score": 0.839,
+      "frame_idx": 0,
+      "box_area_ratio": 0.314
+    }
+  ],
+  "matched_entities": 4
+}

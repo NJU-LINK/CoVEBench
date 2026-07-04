@@ -1,0 +1,73 @@
+{
+  "id": 12,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/64.mp4",
+  "local_path": "/root/cut/data/64.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground subject and an effect without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the two tall Corinthian columns on the right preserved in terms of their structure and weathered texture?",
+    "Comparing Video A and Video B, how accurately are the fluted sections of the fallen columns in the foreground preserved?",
+    "Comparing Video A and Video B, how well is the deep blue sky and the distant brown hills in the background preserved?",
+    "Comparing Video A and Video B, how well is the static wide-angle camera perspective preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "tall corinthian columns on the right"
+    },
+    {
+      "description": "fluted fallen columns in the foreground"
+    },
+    {
+      "description": "distant brown hills"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "tall corinthian columns on the right",
+      "box": [
+        2090.907958984375,
+        99.40384674072266,
+        2469.072021484375,
+        1422.006103515625
+      ],
+      "score": 0.4989,
+      "frame_idx": 0,
+      "box_area_ratio": 0.06
+    },
+    {
+      "entity_id": 2,
+      "description": "fluted fallen columns in the foreground",
+      "box": [
+        2274.582275390625,
+        27.161035537719727,
+        2453.176025390625,
+        1288.546630859375
+      ],
+      "score": 0.3554,
+      "frame_idx": 1,
+      "box_area_ratio": 0.027
+    },
+    {
+      "entity_id": 3,
+      "description": "distant brown hills",
+      "box": [
+        1592.8670654296875,
+        1523.212890625,
+        1902.99853515625,
+        1609.849365234375
+      ],
+      "score": 0.3639,
+      "frame_idx": 2,
+      "box_area_ratio": 0.003
+    }
+  ],
+  "matched_entities": 3
+}

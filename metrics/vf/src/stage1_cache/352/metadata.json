@@ -1,0 +1,89 @@
+{
+  "id": 352,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-frustrated-woman-unable-to-resolve-an-account-25595.mp4",
+  "local_path": "/root/cut/data/mixkit-frustrated-woman-unable-to-resolve-an-account-25595.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and changing the subject's actions and motion within the scene, with no mention of camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the glass table (including its transparency and reflections) preserved?",
+    "Comparing Video A and Video B, how accurately are the person's hands, skin tone, and any visible clothing preserved?",
+    "Comparing Video A and Video B, how well is the visual identity of the pencil (color, wood texture, lead) preserved before the action change occurs?",
+    "Comparing Video A and Video B, how well is the static camera angle and close-up framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "glass table"
+    },
+    {
+      "description": "hands"
+    },
+    {
+      "description": "clothing"
+    },
+    {
+      "description": "pencil"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "glass table",
+      "box": [
+        2.275257110595703,
+        701.1187744140625,
+        1914.98193359375,
+        1075.98828125
+      ],
+      "score": 0.674,
+      "frame_idx": 0,
+      "box_area_ratio": 0.346
+    },
+    {
+      "entity_id": 2,
+      "description": "hands",
+      "box": [
+        459.1010437011719,
+        442.7090148925781,
+        1042.294189453125,
+        844.9866943359375
+      ],
+      "score": 0.7281,
+      "frame_idx": 0,
+      "box_area_ratio": 0.113
+    },
+    {
+      "entity_id": 3,
+      "description": "clothing",
+      "box": [
+        247.28863525390625,
+        -0.5852794647216797,
+        1386.4862060546875,
+        484.0240478515625
+      ],
+      "score": 0.4242,
+      "frame_idx": 2,
+      "box_area_ratio": 0.266
+    },
+    {
+      "entity_id": 4,
+      "description": "pencil",
+      "box": [
+        470.2552490234375,
+        4.612937927246094,
+        1018.071533203125,
+        815.18212890625
+      ],
+      "score": 0.5365,
+      "frame_idx": 0,
+      "box_area_ratio": 0.214
+    }
+  ],
+  "matched_entities": 4
+}

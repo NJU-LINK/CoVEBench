@@ -1,0 +1,11 @@
+{
+  "id": 539,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/28.mp4",
+  "local_path": "/root/cut/data/28.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a camera zoom-in.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

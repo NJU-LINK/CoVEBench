@@ -1,0 +1,86 @@
+{
+  "id": 66,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/108.mp4",
+  "local_path": "/root/cut/data/108.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves changing the facial expression/features of a foreground subject without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific black and brown markings on the dog's head preserved?",
+    "Comparing Video A and Video B, how accurately is the texture and arrangement of the pile of dried hay preserved?",
+    "Comparing Video A and Video B, how well is the background mountain range with leafless trees preserved?",
+    "Comparing Video A and Video B, how well is the handheld camera motion preserved?",
+    "Comparing Video A and Video B, how well is the overcast lighting and heavy sky atmosphere preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "white dog on the left"
+    },
+    {
+      "description": "pile of dried hay"
+    },
+    {
+      "description": "mountain range"
+    },
+    {
+      "description": "leafless trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white dog on the left",
+      "box": [
+        232.92605590820312,
+        839.2805786132812,
+        1763.241943359375,
+        1812.681396484375
+      ],
+      "score": 0.9212,
+      "frame_idx": 0,
+      "box_area_ratio": 0.18
+    },
+    {
+      "entity_id": 2,
+      "description": "pile of dried hay",
+      "box": [
+        -16.749000549316406,
+        1407.872802734375,
+        2216.429931640625,
+        2149.28759765625
+      ],
+      "score": 0.5716,
+      "frame_idx": 0,
+      "box_area_ratio": 0.2
+    },
+    {
+      "entity_id": 3,
+      "description": "mountain range",
+      "box": null,
+      "score": 0.587,
+      "frame_idx": null,
+      "box_area_ratio": 0.659,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "leafless trees",
+      "box": [
+        3.1275558471679688,
+        -1.8788552284240723,
+        1724.7579345703125,
+        1487.518310546875
+      ],
+      "score": 0.7403,
+      "frame_idx": 0,
+      "box_area_ratio": 0.309
+    }
+  ],
+  "matched_entities": 3
+}

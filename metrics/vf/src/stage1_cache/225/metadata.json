@@ -1,0 +1,124 @@
+{
+  "id": 225,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_3739_0.mp4",
+  "local_path": "/root/cut/data/LMArena_3739_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object (text) while explicitly maintaining existing camera motion and visual style.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the girl's blonde pigtails and denim overalls preserved?",
+    "Comparing Video A and Video B, how accurately is the large, shiny red apple she is holding preserved?",
+    "Comparing Video A and Video B, how well is the action of the boy jumping with raised arms in the blurred background preserved?",
+    "Comparing Video A and Video B, how well is the bottom text overlay 'A is for Apple, shiny and red' preserved?",
+    "Comparing Video A and Video B, how accurately is the zoom-in camera motion preserved?",
+    "Comparing Video A and Video B, how well is the sunny lighting and color of the apple orchard preserved?",
+    "Comparing Video A and Video B, how well is the girl's direct eye contact with the camera preserved throughout the zoom?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "blonde pigtails"
+    },
+    {
+      "description": "denim overalls"
+    },
+    {
+      "description": "red apple"
+    },
+    {
+      "description": "boy in the back"
+    },
+    {
+      "description": "bottom text"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": [
+        272.3973083496094,
+        34.161373138427734,
+        642.128173828125,
+        701.0869140625
+      ],
+      "score": 0.8086,
+      "frame_idx": 2,
+      "box_area_ratio": 0.281
+    },
+    {
+      "entity_id": 2,
+      "description": "blonde pigtails",
+      "box": [
+        276.8125305175781,
+        30.124177932739258,
+        640.2615966796875,
+        698.123779296875
+      ],
+      "score": 0.4264,
+      "frame_idx": 2,
+      "box_area_ratio": 0.276
+    },
+    {
+      "entity_id": 3,
+      "description": "denim overalls",
+      "box": [
+        288.09796142578125,
+        277.25079345703125,
+        614.1571044921875,
+        699.594970703125
+      ],
+      "score": 0.7266,
+      "frame_idx": 1,
+      "box_area_ratio": 0.157
+    },
+    {
+      "entity_id": 4,
+      "description": "red apple",
+      "box": [
+        333.40655517578125,
+        364.5566101074219,
+        522.1299438476562,
+        553.573974609375
+      ],
+      "score": 0.5867,
+      "frame_idx": 1,
+      "box_area_ratio": 0.041
+    },
+    {
+      "entity_id": 5,
+      "description": "boy in the back",
+      "box": [
+        708.8588256835938,
+        62.81999969482422,
+        928.2963256835938,
+        608.6449584960938
+      ],
+      "score": 0.7657,
+      "frame_idx": 2,
+      "box_area_ratio": 0.136
+    },
+    {
+      "entity_id": 6,
+      "description": "bottom text",
+      "box": [
+        273.9889221191406,
+        29.196929931640625,
+        638.6922607421875,
+        700.885498046875
+      ],
+      "score": 0.4553,
+      "frame_idx": 2,
+      "box_area_ratio": 0.279
+    }
+  ],
+  "matched_entities": 6
+}

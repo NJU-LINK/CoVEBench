@@ -1,0 +1,122 @@
+{
+  "id": 153,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girl-practicing-yoga-in-a-living-room-at-home-4944.mp4",
+  "local_path": "/root/cut/data/mixkit-girl-practicing-yoga-in-a-living-room-at-home-4944.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's pose, motion, and position, and adding an object (a book), which are all permitted modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity and hair style preserved?",
+    "Comparing Video A and Video B, how accurately is the color, texture, and pattern of the yoga mat preserved?",
+    "Comparing Video A and Video B, how well are the living room background elements (furniture, wall decor, windows) preserved?",
+    "Comparing Video A and Video B, how well are the camera stability and shot scale preserved?",
+    "Comparing Video A and Video B, how well is the woman's clothing (color, style, and fit) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "yoga mat"
+    },
+    {
+      "description": "furniture"
+    },
+    {
+      "description": "wall decor"
+    },
+    {
+      "description": "windows"
+    },
+    {
+      "description": "clothing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        642.8974609375,
+        258.9075927734375,
+        1494.1058349609375,
+        1075.4119873046875
+      ],
+      "score": 0.8902,
+      "frame_idx": 1,
+      "box_area_ratio": 0.335
+    },
+    {
+      "entity_id": 2,
+      "description": "yoga mat",
+      "box": [
+        513.13134765625,
+        804.9752197265625,
+        1664.0634765625,
+        1072.8695068359375
+      ],
+      "score": 0.5148,
+      "frame_idx": 1,
+      "box_area_ratio": 0.149
+    },
+    {
+      "entity_id": 3,
+      "description": "furniture",
+      "box": [
+        1268.41943359375,
+        285.0887145996094,
+        1916.3441162109375,
+        828.8388061523438
+      ],
+      "score": 0.5712,
+      "frame_idx": 1,
+      "box_area_ratio": 0.17
+    },
+    {
+      "entity_id": 4,
+      "description": "wall decor",
+      "box": [
+        680.5009155273438,
+        0.667668879032135,
+        849.0849609375,
+        100.08554077148438
+      ],
+      "score": 0.4823,
+      "frame_idx": 1,
+      "box_area_ratio": 0.008
+    },
+    {
+      "entity_id": 5,
+      "description": "windows",
+      "box": [
+        1587.1298828125,
+        1.8441098928451538,
+        1920.3380126953125,
+        289.4053649902344
+      ],
+      "score": 0.4,
+      "frame_idx": 1,
+      "box_area_ratio": 0.046
+    },
+    {
+      "entity_id": 6,
+      "description": "clothing",
+      "box": [
+        659.79296875,
+        269.0035705566406,
+        1214.414306640625,
+        786.9774780273438
+      ],
+      "score": 0.5933,
+      "frame_idx": 0,
+      "box_area_ratio": 0.139
+    }
+  ],
+  "matched_entities": 6
+}

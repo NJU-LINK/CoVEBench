@@ -1,0 +1,113 @@
+{
+  "id": 4,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/12.mp4",
+  "local_path": "/root/cut/data/12.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing objects (strawberries with mango), swapping tools (knife with spoon), and changing object positions and hand motions, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the floral pattern and physical shape of the bowl preserved?",
+    "Comparing Video A and Video B, how accurately are the secondary fruits on the wooden cutting board (raspberries, blackberries, kiwi) preserved?",
+    "Comparing Video A and Video B, how well is the white kitchen countertop and the bright natural lighting environment preserved?",
+    "Comparing Video A and Video B, how well is the camera's close-up framing and motion preserved during the action?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "floral-patterned bowl"
+    },
+    {
+      "description": "wooden cutting board"
+    },
+    {
+      "description": "raspberries"
+    },
+    {
+      "description": "blackberries"
+    },
+    {
+      "description": "sliced kiwi"
+    },
+    {
+      "description": "white kitchen countertop"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "floral-patterned bowl",
+      "box": [
+        654.5208740234375,
+        119.90266418457031,
+        1204.339111328125,
+        565.3881225585938
+      ],
+      "score": 0.8835,
+      "frame_idx": 0,
+      "box_area_ratio": 0.266
+    },
+    {
+      "entity_id": 2,
+      "description": "wooden cutting board",
+      "box": null,
+      "score": 0.8069,
+      "frame_idx": null,
+      "box_area_ratio": 0.611,
+      "rejected_reason": "box covers 61% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "raspberries",
+      "box": [
+        82.19010162353516,
+        -0.44362664222717285,
+        396.455322265625,
+        165.78887939453125
+      ],
+      "score": 0.6341,
+      "frame_idx": 2,
+      "box_area_ratio": 0.057
+    },
+    {
+      "entity_id": 4,
+      "description": "blackberries",
+      "box": [
+        382.7882080078125,
+        13.34962272644043,
+        653.4727783203125,
+        193.60462951660156
+      ],
+      "score": 0.5285,
+      "frame_idx": 1,
+      "box_area_ratio": 0.053
+    },
+    {
+      "entity_id": 5,
+      "description": "sliced kiwi",
+      "box": [
+        3.932008743286133,
+        114.27526092529297,
+        264.6173400878906,
+        294.0418395996094
+      ],
+      "score": 0.4994,
+      "frame_idx": 0,
+      "box_area_ratio": 0.051
+    },
+    {
+      "entity_id": 6,
+      "description": "white kitchen countertop",
+      "box": null,
+      "score": 0.7275,
+      "frame_idx": null,
+      "box_area_ratio": 0.997,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 4
+}

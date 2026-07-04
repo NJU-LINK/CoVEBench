@@ -1,0 +1,82 @@
+{
+  "id": 96,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-watering-plants-in-a-garden-4776.mp4",
+  "local_path": "/root/cut/data/mixkit-watering-plants-in-a-garden-4776.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying foreground object properties (color), removing a foreground object, and changing object position and motion within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the positions and structures of the small green plants in the flower bed preserved?",
+    "Comparing Video A and Video B, how well is the static low-angle camera perspective preserved?",
+    "Comparing Video A and Video B, how well is the overall lighting and color temperature of the flower bed environment preserved?",
+    "Comparing Video A and Video B, how well are the micro-textures of the soil and the fine details of the plant leaves preserved?",
+    "Comparing Video A and Video B, how well are the overall flower-bed composition and camera viewpoint preserved while only the can color, tool presence, and pour behavior are modified?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "small green plants"
+    },
+    {
+      "description": "soil"
+    },
+    {
+      "description": "plant leaves"
+    },
+    {
+      "description": "flower bed"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 27,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "small green plants",
+      "box": [
+        219.5632781982422,
+        327.6114501953125,
+        809.0845947265625,
+        1015.4907836914062
+      ],
+      "score": 0.5592,
+      "frame_idx": 0,
+      "box_area_ratio": 0.196
+    },
+    {
+      "entity_id": 2,
+      "description": "soil",
+      "box": null,
+      "score": 0.7523,
+      "frame_idx": null,
+      "box_area_ratio": 0.595,
+      "rejected_reason": "box covers 60% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "plant leaves",
+      "box": [
+        215.65213012695312,
+        327.2746887207031,
+        808.4917602539062,
+        1014.333740234375
+      ],
+      "score": 0.6083,
+      "frame_idx": 1,
+      "box_area_ratio": 0.196
+    },
+    {
+      "entity_id": 4,
+      "description": "flower bed",
+      "box": null,
+      "score": 0.359,
+      "frame_idx": null,
+      "box_area_ratio": 0.597,
+      "rejected_reason": "box covers 60% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

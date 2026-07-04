@@ -1,0 +1,11 @@
+{
+  "id": 566,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/108.mp4",
+  "local_path": "/root/cut/data/108.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction requires maintaining original camera motion, which implies the video contains camera movement that would interfere with mask-based evaluation.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

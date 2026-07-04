@@ -1,0 +1,117 @@
+{
+  "id": 612,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/172.mp4",
+  "local_path": "/root/cut/data/172.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves removing a foreground object, adding a foreground object, and changing the subject's pose/motion without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the weathered stone building (including the arched windows and grey door) preserved?",
+    "Comparing Video A and Video B, how accurately are the dense green foliage and ferns preserved, excluding only the local area directly affected by the added bucket?",
+    "Comparing Video A and Video B, how well is the man's identity preserved (face/hair), aside from the intended changes (no backpack and different hand posture)?",
+    "Comparing Video A and Video B, how well are camera framing and camera motion preserved (wide, static, eye-level look)?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "weathered stone building"
+    },
+    {
+      "description": "arched windows"
+    },
+    {
+      "description": "grey door"
+    },
+    {
+      "description": "dense green foliage"
+    },
+    {
+      "description": "ferns"
+    },
+    {
+      "description": "man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 13,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "weathered stone building",
+      "box": null,
+      "score": 0.6092,
+      "frame_idx": null,
+      "box_area_ratio": 0.646,
+      "rejected_reason": "box covers 65% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "arched windows",
+      "box": [
+        1146.068359375,
+        876.3115234375,
+        1369.3043212890625,
+        1346.9310302734375
+      ],
+      "score": 0.4767,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    },
+    {
+      "entity_id": 3,
+      "description": "grey door",
+      "box": [
+        2030.489990234375,
+        939.476806640625,
+        2366.482421875,
+        1510.5213623046875
+      ],
+      "score": 0.7146,
+      "frame_idx": 0,
+      "box_area_ratio": 0.023
+    },
+    {
+      "entity_id": 4,
+      "description": "dense green foliage",
+      "box": [
+        2179.723876953125,
+        3.7942099571228027,
+        3851.057373046875,
+        2049.31982421875
+      ],
+      "score": 0.3813,
+      "frame_idx": 1,
+      "box_area_ratio": 0.412
+    },
+    {
+      "entity_id": 5,
+      "description": "ferns",
+      "box": [
+        2126.792236328125,
+        0.9302544593811035,
+        3853.69091796875,
+        2076.047607421875
+      ],
+      "score": 0.4521,
+      "frame_idx": 0,
+      "box_area_ratio": 0.432
+    },
+    {
+      "entity_id": 6,
+      "description": "man",
+      "box": [
+        1381.7138671875,
+        878.114013671875,
+        1893.3497314453125,
+        2138.91552734375
+      ],
+      "score": 0.9085,
+      "frame_idx": 1,
+      "box_area_ratio": 0.078
+    }
+  ],
+  "matched_entities": 5
+}

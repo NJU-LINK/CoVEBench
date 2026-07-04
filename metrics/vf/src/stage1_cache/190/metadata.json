@@ -1,0 +1,77 @@
+{
+  "id": 190,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-and-man-stretching-in-a-gym-44415.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-and-man-stretching-in-a-gym-44415.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing a foreground subject, adding an object, and modifying subject motion/pose without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity and appearance (clothing, face, hair) of the man on the left preserved?",
+    "Comparing Video A and Video B, how accurately are the background gym equipment (kettlebells and medicine balls) and their specific placements preserved?",
+    "Comparing Video A and Video B, how well is the texture and grid pattern of the black tiled gym floor preserved?",
+    "Comparing Video A and Video B, how well is the wide-shot camera framing and static camera angle preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man on the left"
+    },
+    {
+      "description": "kettlebell"
+    },
+    {
+      "description": "medicine ball"
+    },
+    {
+      "description": "black tiled floor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 33,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man on the left",
+      "box": [
+        711.8075561523438,
+        512.8016967773438,
+        982.1123046875,
+        799.8536987304688
+      ],
+      "score": 0.6056,
+      "frame_idx": 2,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 2,
+      "description": "kettlebell",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 3,
+      "description": "medicine ball",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 4,
+      "description": "black tiled floor",
+      "box": [
+        -0.019054412841796875,
+        520.1948852539062,
+        1919.24951171875,
+        1070.53466796875
+      ],
+      "score": 0.7028,
+      "frame_idx": 0,
+      "box_area_ratio": 0.509
+    }
+  ],
+  "matched_entities": 2
+}

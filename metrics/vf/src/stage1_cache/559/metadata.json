@@ -1,0 +1,90 @@
+{
+  "id": 559,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/95.mp4",
+  "local_path": "/root/cut/data/95.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object, modifying the background environment, and changing the subject's pose, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the autumn larch trees (golden/orange) preserved in placement and identity (allowing only expected partial occlusion from fog)?",
+    "Comparing Video A and Video B, how well is the large rock (shape, position, surface texture) preserved?",
+    "Comparing Video A and Video B, how well are the jagged mountain peaks preserved in shape and location (allowing visibility reduction from fog)?",
+    "Comparing Video A and Video B, how well is the calm lake surface and its overall reflection structure preserved (aside from intended fog softening)?",
+    "Comparing Video A and Video B, how well are the camera framing and high-angle wide-shot composition preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "orange larch trees"
+    },
+    {
+      "description": "large rock"
+    },
+    {
+      "description": "jagged mountain peaks"
+    },
+    {
+      "description": "calm lake"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "orange larch trees",
+      "box": [
+        621.9827270507812,
+        430.95855712890625,
+        1471.2657470703125,
+        666.5562133789062
+      ],
+      "score": 0.4514,
+      "frame_idx": 2,
+      "box_area_ratio": 0.024
+    },
+    {
+      "entity_id": 2,
+      "description": "large rock",
+      "box": [
+        1256.1329345703125,
+        1101.34716796875,
+        1589.936767578125,
+        1315.034423828125
+      ],
+      "score": 0.4823,
+      "frame_idx": 2,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 3,
+      "description": "jagged mountain peaks",
+      "box": [
+        80.42415618896484,
+        -8.828646659851074,
+        3657.291015625,
+        491.947021484375
+      ],
+      "score": 0.318,
+      "frame_idx": 2,
+      "box_area_ratio": 0.216
+    },
+    {
+      "entity_id": 4,
+      "description": "calm lake",
+      "box": [
+        7.1138763427734375,
+        666.476806640625,
+        2904.11328125,
+        2152.898681640625
+      ],
+      "score": 0.839,
+      "frame_idx": 2,
+      "box_area_ratio": 0.519
+    }
+  ],
+  "matched_entities": 4
+}

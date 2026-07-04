@@ -1,0 +1,170 @@
+{
+  "id": 254,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5643_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5643_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding an object and changing the positions of existing subjects within the scene, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the Hulk, specifically his green skin and the blue and white pattern of his lungi, preserved?",
+    "Comparing Video A and Video B, how accurately is the action of Hulk perched on the date palm tree holding a clay pot preserved?",
+    "Comparing Video A and Video B, how well are the background elements like the misty atmosphere, the huts, and the dark sky preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the elderly man's white kurta and the villagers' lanterns preserved despite their new positions?",
+    "Comparing Video A and Video B, how well is the static camera framing and eye-level wide shot perspective preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green hulk"
+    },
+    {
+      "description": "blue and white lungi"
+    },
+    {
+      "description": "date palm tree"
+    },
+    {
+      "description": "clay pot"
+    },
+    {
+      "description": "small huts"
+    },
+    {
+      "description": "elderly man"
+    },
+    {
+      "description": "white kurta"
+    },
+    {
+      "description": "villagers"
+    },
+    {
+      "description": "lanterns"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green hulk",
+      "box": [
+        406.9478759765625,
+        68.00550079345703,
+        746.5136108398438,
+        463.5079345703125
+      ],
+      "score": 0.5583,
+      "frame_idx": 2,
+      "box_area_ratio": 0.146
+    },
+    {
+      "entity_id": 2,
+      "description": "blue and white lungi",
+      "box": [
+        397.21746826171875,
+        68.33242797851562,
+        744.14013671875,
+        463.0182800292969
+      ],
+      "score": 0.5742,
+      "frame_idx": 0,
+      "box_area_ratio": 0.149
+    },
+    {
+      "entity_id": 3,
+      "description": "date palm tree",
+      "box": [
+        672.5452270507812,
+        4.885311126708984,
+        1273.5863037109375,
+        680.5198974609375
+      ],
+      "score": 0.5469,
+      "frame_idx": 2,
+      "box_area_ratio": 0.441
+    },
+    {
+      "entity_id": 4,
+      "description": "clay pot",
+      "box": [
+        454.75286865234375,
+        437.7707214355469,
+        532.154541015625,
+        520.162841796875
+      ],
+      "score": 0.7154,
+      "frame_idx": 0,
+      "box_area_ratio": 0.007
+    },
+    {
+      "entity_id": 5,
+      "description": "small huts",
+      "box": [
+        0.17569541931152344,
+        405.31805419921875,
+        307.1533508300781,
+        642.53759765625
+      ],
+      "score": 0.67,
+      "frame_idx": 0,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 6,
+      "description": "elderly man",
+      "box": [
+        621.8480224609375,
+        447.6103820800781,
+        729.6370849609375,
+        714.8262939453125
+      ],
+      "score": 0.5991,
+      "frame_idx": 0,
+      "box_area_ratio": 0.031
+    },
+    {
+      "entity_id": 7,
+      "description": "white kurta",
+      "box": [
+        636.6907348632812,
+        493.1187744140625,
+        762.6500854492188,
+        715.8566284179688
+      ],
+      "score": 0.9011,
+      "frame_idx": 2,
+      "box_area_ratio": 0.03
+    },
+    {
+      "entity_id": 8,
+      "description": "villagers",
+      "box": [
+        620.818359375,
+        445.9390563964844,
+        730.6338500976562,
+        715.1410522460938
+      ],
+      "score": 0.7752,
+      "frame_idx": 0,
+      "box_area_ratio": 0.032
+    },
+    {
+      "entity_id": 9,
+      "description": "lanterns",
+      "box": [
+        455.02130126953125,
+        438.0791015625,
+        531.4599609375,
+        519.7049560546875
+      ],
+      "score": 0.6137,
+      "frame_idx": 0,
+      "box_area_ratio": 0.007
+    }
+  ],
+  "matched_entities": 9
+}

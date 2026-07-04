@@ -1,0 +1,107 @@
+{
+  "id": 565,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/105.mp4",
+  "local_path": "/root/cut/data/105.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a subject's clothing, adding an object, and changing the motion of spectators, all of which are allowed modifications without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and density of the lush green ravine/valley preserved?",
+    "Comparing Video A and Video B, how accurately are the traditional straw-roofed buildings/thatched-roof structures preserved?",
+    "Comparing Video A and Video B, how well are the wooden platform and the original stone steps preserved in texture/shape (excluding the added handrail)?",
+    "Comparing Video A and Video B, how well is the overall bright natural daylight (exposure, color temperature, and general shadow feel) preserved?",
+    "Comparing Video A and Video B, how accurately is the rope swing's appearance and behavior preserved (rope thickness, attachment, and overall physical behavior)?",
+    "Comparing Video A and Video B, how well is the overall swinging motion preserved (timing, arc, and general speed), aside from the requested changes to clothing/handrail/spectator waving?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "lush green ravine"
+    },
+    {
+      "description": "straw-roofed buildings"
+    },
+    {
+      "description": "wooden platform"
+    },
+    {
+      "description": "stone steps"
+    },
+    {
+      "description": "rope swing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "lush green ravine",
+      "box": [
+        0.7773971557617188,
+        973.613525390625,
+        3837.484619140625,
+        2156.00048828125
+      ],
+      "score": 0.3606,
+      "frame_idx": 0,
+      "box_area_ratio": 0.547
+    },
+    {
+      "entity_id": 2,
+      "description": "straw-roofed buildings",
+      "box": [
+        2710.5234375,
+        7.3763427734375,
+        3828.955078125,
+        857.5814208984375
+      ],
+      "score": 0.4675,
+      "frame_idx": 0,
+      "box_area_ratio": 0.115
+    },
+    {
+      "entity_id": 3,
+      "description": "wooden platform",
+      "box": [
+        1844.2618408203125,
+        1056.406005859375,
+        3081.54248046875,
+        1878.6495361328125
+      ],
+      "score": 0.6577,
+      "frame_idx": 0,
+      "box_area_ratio": 0.123
+    },
+    {
+      "entity_id": 4,
+      "description": "stone steps",
+      "box": [
+        2008.45751953125,
+        699.47900390625,
+        2284.350830078125,
+        1157.3338623046875
+      ],
+      "score": 0.4893,
+      "frame_idx": 0,
+      "box_area_ratio": 0.015
+    },
+    {
+      "entity_id": 5,
+      "description": "rope swing",
+      "box": [
+        857.66650390625,
+        -10.04000186920166,
+        2564.1318359375,
+        1359.6673583984375
+      ],
+      "score": 0.4601,
+      "frame_idx": 1,
+      "box_area_ratio": 0.282
+    }
+  ],
+  "matched_entities": 5
+}

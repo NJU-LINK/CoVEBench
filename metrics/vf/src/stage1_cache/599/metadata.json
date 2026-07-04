@@ -1,0 +1,85 @@
+{
+  "id": 599,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/155.mp4",
+  "local_path": "/root/cut/data/155.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment and foreground objects without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the POV handheld perspective and general panning behavior preserved?",
+    "Comparing Video A and Video B, how well is the gesture sequence preserved, specifically pointing at the sill followed by gesturing upward?",
+    "Comparing Video A and Video B, how well is the window opening's shape and placement in the frame preserved?",
+    "Comparing Video A and Video B, how well is the overall spatial layout of the interior preserved, including the window sill location and interior depth cues?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "left arm"
+    },
+    {
+      "description": "watch"
+    },
+    {
+      "description": "white window sill"
+    },
+    {
+      "description": "concrete window frame"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "left arm",
+      "box": [
+        1663.6851806640625,
+        808.3493041992188,
+        3247.84521484375,
+        2147.8212890625
+      ],
+      "score": 0.8209,
+      "frame_idx": 0,
+      "box_area_ratio": 0.256
+    },
+    {
+      "entity_id": 2,
+      "description": "watch",
+      "box": [
+        2314.420654296875,
+        1301.7054443359375,
+        2911.09814453125,
+        1770.3392333984375
+      ],
+      "score": 0.6454,
+      "frame_idx": 0,
+      "box_area_ratio": 0.034
+    },
+    {
+      "entity_id": 3,
+      "description": "white window sill",
+      "box": [
+        1113.1397705078125,
+        293.8346252441406,
+        2663.637451171875,
+        2156.655517578125
+      ],
+      "score": 0.5665,
+      "frame_idx": 2,
+      "box_area_ratio": 0.348
+    },
+    {
+      "entity_id": 4,
+      "description": "concrete window frame",
+      "box": null,
+      "score": 0.6555,
+      "frame_idx": null,
+      "box_area_ratio": 0.618,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

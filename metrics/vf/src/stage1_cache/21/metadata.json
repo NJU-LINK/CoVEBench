@@ -1,0 +1,52 @@
+{
+  "id": 21,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/83.mp4",
+  "local_path": "/root/cut/data/83.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion and position of an object (the island) and adding environmental effects (ripples and foam) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the light fog at the top of the frame preserved?",
+    "Comparing Video A and Video B, how well is the island's visual identity (teardrop shape and green vegetation) preserved during the sinking process?",
+    "Comparing Video A and Video B, how well is the aerial camera perspective and movement preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "light fog at the top"
+    },
+    {
+      "description": "green island"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "light fog at the top",
+      "box": null,
+      "score": 0.4946,
+      "frame_idx": null,
+      "box_area_ratio": 0.976,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "green island",
+      "box": [
+        1171.5791015625,
+        446.31396484375,
+        3108.7470703125,
+        1955.5184326171875
+      ],
+      "score": 0.7312,
+      "frame_idx": 0,
+      "box_area_ratio": 0.352
+    }
+  ],
+  "matched_entities": 1
+}

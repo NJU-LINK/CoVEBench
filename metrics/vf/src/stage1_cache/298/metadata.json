@@ -1,0 +1,66 @@
+{
+  "id": 298,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/224.mp4",
+  "local_path": "/root/cut/data/224.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment by changing the season and adding snow, which is permitted as long as there is no camera movement or cinematic style change.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the structural integrity and layout of the ancient red brick ruins preserved?",
+    "Comparing Video A and Video B, how accurately are the movements and positions of the small tourist figures walking on the summit preserved?",
+    "Comparing Video A and Video B, how well is the high-angle aerial camera motion (path, tilt, and speed) preserved?",
+    "Comparing Video A and Video B, how well is the geometric shape and rugged profile of the orange-brown cliffs preserved?",
+    "Comparing Video A and Video B, how well is the horizon line and the hazy sky atmosphere preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "ancient red brick ruins"
+    },
+    {
+      "description": "small tourist figures"
+    },
+    {
+      "description": "orange-brown cliffs"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "ancient red brick ruins",
+      "box": null,
+      "score": 0.6056,
+      "frame_idx": null,
+      "box_area_ratio": 0.758,
+      "rejected_reason": "box covers 76% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "small tourist figures",
+      "box": [
+        2365.850341796875,
+        665.44873046875,
+        2423.827880859375,
+        774.7037353515625
+      ],
+      "score": 0.3748,
+      "frame_idx": 1,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 3,
+      "description": "orange-brown cliffs",
+      "box": null,
+      "score": 0.4005,
+      "frame_idx": null,
+      "box_area_ratio": 0.752,
+      "rejected_reason": "box covers 75% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

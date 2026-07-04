@@ -1,0 +1,80 @@
+{
+  "id": 383,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-person-marking-places-visited-during-their-trip-21609.mp4",
+  "local_path": "/root/cut/data/mixkit-person-marking-places-visited-during-their-trip-21609.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing and removing foreground objects and changing the motion/pose of the hand without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the details, colors, and text of the world map preserved in areas not obscured by the hand or magnifying glass?",
+    "Comparing Video A and Video B, how accurately are the camera and sunglasses preserved in their original positions?",
+    "Comparing Video A and Video B, how well is the visual identity of the hand (skin tone, size, and texture) preserved?",
+    "Comparing Video A and Video B, how well is the static, top-down camera angle preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal moment of the hand's entry into the frame preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "world map"
+    },
+    {
+      "description": "camera"
+    },
+    {
+      "description": "sunglasses"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 35,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "world map",
+      "box": null,
+      "score": 0.6373,
+      "frame_idx": null,
+      "box_area_ratio": 0.983,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "camera",
+      "box": [
+        1.5231513977050781,
+        2.1104049682617188,
+        484.9115295410156,
+        566.0601196289062
+      ],
+      "score": 0.7969,
+      "frame_idx": 2,
+      "box_area_ratio": 0.131
+    },
+    {
+      "entity_id": 3,
+      "description": "sunglasses",
+      "box": [
+        5.461993217468262,
+        544.48486328125,
+        484.0340576171875,
+        1042.39013671875
+      ],
+      "score": 0.7831,
+      "frame_idx": 1,
+      "box_area_ratio": 0.115
+    },
+    {
+      "entity_id": 4,
+      "description": "hand",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 2
+}

@@ -1,0 +1,57 @@
+{
+  "id": 180,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-student-girl-writing-in-the-gardens-of-a-college-4836.mp4",
+  "local_path": "/root/cut/data/mixkit-student-girl-writing-in-the-gardens-of-a-college-4836.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions/poses without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and structure of the large tree in the background preserved?",
+    "Comparing Video A and Video B, how well is the park bench's design and material texture preserved?",
+    "Comparing Video A and Video B, how accurately is the camera's medium shot framing and any subtle camera motion preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the scene's progression preserved despite the change in action?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "large tree in the back"
+    },
+    {
+      "description": "park bench"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 40,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "large tree in the back",
+      "box": [
+        1059.11181640625,
+        1.9764769077301025,
+        1912.9918212890625,
+        852.9129638671875
+      ],
+      "score": 0.632,
+      "frame_idx": 1,
+      "box_area_ratio": 0.35
+    },
+    {
+      "entity_id": 2,
+      "description": "park bench",
+      "box": [
+        195.05035400390625,
+        654.3646850585938,
+        1242.3475341796875,
+        1078.6680908203125
+      ],
+      "score": 0.7154,
+      "frame_idx": 0,
+      "box_area_ratio": 0.214
+    }
+  ],
+  "matched_entities": 2
+}

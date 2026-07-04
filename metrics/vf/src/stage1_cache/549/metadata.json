@@ -1,0 +1,57 @@
+{
+  "id": 549,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/58.mp4",
+  "local_path": "/root/cut/data/58.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing an object, adding an object, modifying the background environment, and changing object motion, all of which are permitted categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual identity (striped fur patterns and tufted ears) of the left marmoset preserved?",
+    "Comparing Video A and Video B, how accurately is the texture and structure of the thick tree branch preserved?",
+    "Comparing Video A and Video B, how well is the overall camera viewpoint and stability preserved?",
+    "Comparing Video A and Video B, how well is the diffused natural daylight illumination on the marmosets preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "left marmoset"
+    },
+    {
+      "description": "thick tree branch"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "left marmoset",
+      "box": [
+        231.67739868164062,
+        602.2457275390625,
+        1469.1514892578125,
+        2144.480224609375
+      ],
+      "score": 0.7264,
+      "frame_idx": 0,
+      "box_area_ratio": 0.23
+    },
+    {
+      "entity_id": 2,
+      "description": "thick tree branch",
+      "box": [
+        829.3028564453125,
+        1280.93212890625,
+        3850.3544921875,
+        2153.23095703125
+      ],
+      "score": 0.6397,
+      "frame_idx": 1,
+      "box_area_ratio": 0.318
+    }
+  ],
+  "matched_entities": 2
+}

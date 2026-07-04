@@ -1,0 +1,80 @@
+{
+  "id": 620,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/184.mp4",
+  "local_path": "/root/cut/data/184.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground subject and modifying the background environment without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the specific digging motion of the subject preserved?",
+    "Comparing Video A and Video B, how well is the high-angle camera perspective from behind the subject maintained?",
+    "Comparing Video A and Video B, how accurately is the layout and placement of the circular pits in the field preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the tool hitting the soil preserved?",
+    "Comparing Video A and Video B, how well is the shape and movement trajectory of the hand tool preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "person in brown tunic"
+    },
+    {
+      "description": "hand tool"
+    },
+    {
+      "description": "circular pits"
+    },
+    {
+      "description": "reddish soil"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "person in brown tunic",
+      "box": [
+        1696.9033203125,
+        365.15350341796875,
+        3289.5244140625,
+        2152.0234375
+      ],
+      "score": 0.8269,
+      "frame_idx": 2,
+      "box_area_ratio": 0.343
+    },
+    {
+      "entity_id": 2,
+      "description": "hand tool",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 3,
+      "description": "circular pits",
+      "box": [
+        330.7875671386719,
+        290.9691467285156,
+        972.2413940429688,
+        463.5514831542969
+      ],
+      "score": 0.3562,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    },
+    {
+      "entity_id": 4,
+      "description": "reddish soil",
+      "box": null,
+      "score": 0.8212,
+      "frame_idx": null,
+      "box_area_ratio": 0.999,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

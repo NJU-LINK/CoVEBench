@@ -1,0 +1,117 @@
+{
+  "id": 547,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/47.mp4",
+  "local_path": "/root/cut/data/47.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing clothing (object modification), changing character motion (standing to walking), and repositioning subjects within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the man's grey athletic pants preserved?",
+    "Comparing Video A and Video B, how well is the Rottweiler's appearance (breed cues, size, and black-and-tan markings) preserved?",
+    "Comparing Video A and Video B, how well is the forest path environment (paved path, trees, grass) preserved?",
+    "Comparing Video A and Video B, how well is the bright, filtered daylight (overall light level and dappled shadow feeling) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man in the center"
+    },
+    {
+      "description": "grey athletic pants"
+    },
+    {
+      "description": "black and tan rottweiler"
+    },
+    {
+      "description": "paved path"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in the center",
+      "box": [
+        1570.0865478515625,
+        562.4776611328125,
+        1967.365966796875,
+        1790.291748046875
+      ],
+      "score": 0.8376,
+      "frame_idx": 0,
+      "box_area_ratio": 0.059
+    },
+    {
+      "entity_id": 2,
+      "description": "grey athletic pants",
+      "box": [
+        1620.4117431640625,
+        1135.769775390625,
+        1905.4195556640625,
+        1713.968017578125
+      ],
+      "score": 0.571,
+      "frame_idx": 0,
+      "box_area_ratio": 0.02
+    },
+    {
+      "entity_id": 3,
+      "description": "black and tan rottweiler",
+      "box": [
+        1840.6387939453125,
+        1193.312744140625,
+        2130.3642578125,
+        1822.0372314453125
+      ],
+      "score": 0.8272,
+      "frame_idx": 2,
+      "box_area_ratio": 0.022
+    },
+    {
+      "entity_id": 4,
+      "description": "paved path",
+      "box": null,
+      "score": 0.7951,
+      "frame_idx": null,
+      "box_area_ratio": 0.607,
+      "rejected_reason": "box covers 61% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "trees",
+      "box": [
+        1193.928466796875,
+        -0.15874385833740234,
+        3862.4697265625,
+        1423.8704833984375
+      ],
+      "score": 0.3576,
+      "frame_idx": 0,
+      "box_area_ratio": 0.458
+    },
+    {
+      "entity_id": 6,
+      "description": "grass",
+      "box": [
+        -4.9156951904296875,
+        817.9674072265625,
+        1092.8172607421875,
+        2134.0478515625
+      ],
+      "score": 0.4826,
+      "frame_idx": 0,
+      "box_area_ratio": 0.174
+    }
+  ],
+  "matched_entities": 5
+}

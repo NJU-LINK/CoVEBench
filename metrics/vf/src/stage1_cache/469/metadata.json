@@ -1,0 +1,56 @@
+{
+  "id": 469,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/627_1_8.0s.mp4",
+  "local_path": "/root/cut/data/627_1_8.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves repositioning a subject, changing the background environment, and modifying object motion, all of which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's short hair style and dark hair color preserved?",
+    "Comparing Video A and Video B, how accurately is the red tunic's color and design preserved?",
+    "Comparing Video A and Video B, how well is the specific painterly, textured animation style maintained across the entire frame?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "red tunic"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": [
+        539.3775634765625,
+        56.631507873535156,
+        777.65576171875,
+        532.2034301757812
+      ],
+      "score": 0.9434,
+      "frame_idx": 1,
+      "box_area_ratio": 0.16
+    },
+    {
+      "entity_id": 2,
+      "description": "red tunic",
+      "box": [
+        534.5438232421875,
+        57.545265197753906,
+        780.956298828125,
+        532.369384765625
+      ],
+      "score": 0.6194,
+      "frame_idx": 0,
+      "box_area_ratio": 0.165
+    }
+  ],
+  "matched_entities": 2
+}

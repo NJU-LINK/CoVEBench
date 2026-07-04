@@ -1,0 +1,98 @@
+{
+  "id": 367,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-comes-to-his-bed-to-sleep-3216.mp4",
+  "local_path": "/root/cut/data/mixkit-man-comes-to-his-bed-to-sleep-3216.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's clothing and actions/poses, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the bedside table and the lamp (while turned on) preserved?",
+    "Comparing Video A and Video B, how accurately are the background wall textures and any room decor preserved?",
+    "Comparing Video A and Video B, how well is the man's facial identity and physical likeness preserved despite the change in clothing and action?",
+    "Comparing Video A and Video B, how well is the static camera angle and medium shot framing preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal start of the man's movement (getting into or moving in bed) synchronized?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "bedside table"
+    },
+    {
+      "description": "lamp"
+    },
+    {
+      "description": "background wall"
+    },
+    {
+      "description": "room decor"
+    },
+    {
+      "description": "man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "bedside table",
+      "box": [
+        5.338525772094727,
+        779.432861328125,
+        540.5567626953125,
+        1025.0032958984375
+      ],
+      "score": 0.665,
+      "frame_idx": 2,
+      "box_area_ratio": 0.063
+    },
+    {
+      "entity_id": 2,
+      "description": "lamp",
+      "box": [
+        154.07789611816406,
+        268.36102294921875,
+        354.7695007324219,
+        781.2988891601562
+      ],
+      "score": 0.6857,
+      "frame_idx": 0,
+      "box_area_ratio": 0.05
+    },
+    {
+      "entity_id": 3,
+      "description": "background wall",
+      "box": null,
+      "score": 0.6775,
+      "frame_idx": null,
+      "box_area_ratio": 0.985,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "room decor",
+      "box": null,
+      "score": 0.4884,
+      "frame_idx": null,
+      "box_area_ratio": 0.981,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "man",
+      "box": [
+        1448.0760498046875,
+        1.681809425354004,
+        1915.521484375,
+        1072.204345703125
+      ],
+      "score": 0.72,
+      "frame_idx": 2,
+      "box_area_ratio": 0.241
+    }
+  ],
+  "matched_entities": 3
+}

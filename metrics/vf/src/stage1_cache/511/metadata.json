@@ -1,0 +1,90 @@
+{
+  "id": 511,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-drinking-beer-in-a-bar-on-saint-patricks-day-47431.mp4",
+  "local_path": "/root/cut/data/mixkit-drinking-beer-in-a-bar-on-saint-patricks-day-47431.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the foreground subject's appearance (aging) and changing the motion of the subject, which are allowed edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the color and texture of the vibrant green blazer preserved?",
+    "Comparing Video A and Video B, how accurately is the plaid pattern and color of the bowtie preserved?",
+    "Comparing Video A and Video B, how well are the background elements (shelves of bottles and warm lighting) preserved?",
+    "Comparing Video A and Video B, how well is the man's 'satisfied smile' expression preserved during the transition from sipping to looking at the camera?",
+    "Comparing Video A and Video B, how accurately is the camera framing and the subject's position in the frame preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green blazer"
+    },
+    {
+      "description": "plaid bowtie"
+    },
+    {
+      "description": "bottles"
+    },
+    {
+      "description": "young man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green blazer",
+      "box": [
+        616.986572265625,
+        547.7037963867188,
+        1603.720947265625,
+        1071.16015625
+      ],
+      "score": 0.5327,
+      "frame_idx": 2,
+      "box_area_ratio": 0.249
+    },
+    {
+      "entity_id": 2,
+      "description": "plaid bowtie",
+      "box": [
+        588.8861694335938,
+        76.34568786621094,
+        1609.03857421875,
+        1076.7252197265625
+      ],
+      "score": 0.5816,
+      "frame_idx": 1,
+      "box_area_ratio": 0.492
+    },
+    {
+      "entity_id": 3,
+      "description": "bottles",
+      "box": [
+        1303.2762451171875,
+        215.97267150878906,
+        1638.9676513671875,
+        554.3004150390625
+      ],
+      "score": 0.3153,
+      "frame_idx": 0,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 4,
+      "description": "young man",
+      "box": [
+        603.8744506835938,
+        89.94281768798828,
+        1611.551513671875,
+        1074.7232666015625
+      ],
+      "score": 0.9391,
+      "frame_idx": 2,
+      "box_area_ratio": 0.479
+    }
+  ],
+  "matched_entities": 4
+}

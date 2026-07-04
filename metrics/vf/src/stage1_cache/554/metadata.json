@@ -1,0 +1,82 @@
+{
+  "id": 554,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/70.mp4",
+  "local_path": "/root/cut/data/70.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing an object, changing its motion, and modifying the background environment (adding mist) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance (shape/color/detail) of the bright yellow sunflower in the foreground preserved?",
+    "Comparing Video A and Video B, how well are the cherry tree’s leaves and the non-target cherries preserved (count/placement/overall look), aside from any local interaction near the pecked cherry?",
+    "Comparing Video A and Video B, how accurately is the background roof/structure preserved (allowing only expected softening due to mist/zoom)?",
+    "Comparing Video A and Video B, how well is the overall daylight lighting preserved on the scene (excluding the intentional mist effect)?",
+    "Comparing Video A and Video B, how well are any other background set-dressing elements suggested by the original scene (e.g., garden/orchard items such as a ladder if visible) preserved without being removed or replaced?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "bright yellow sunflower"
+    },
+    {
+      "description": "cherry tree"
+    },
+    {
+      "description": "red cherries"
+    },
+    {
+      "description": "house roof"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "bright yellow sunflower",
+      "box": [
+        1900.8673095703125,
+        1781.017822265625,
+        2284.097412109375,
+        2154.134033203125
+      ],
+      "score": 0.7707,
+      "frame_idx": 0,
+      "box_area_ratio": 0.017
+    },
+    {
+      "entity_id": 2,
+      "description": "cherry tree",
+      "box": null,
+      "score": 0.4616,
+      "frame_idx": null,
+      "box_area_ratio": 1.0,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "red cherries",
+      "box": null,
+      "score": 0.394,
+      "frame_idx": null,
+      "box_area_ratio": 0.799,
+      "rejected_reason": "box covers 80% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "house roof",
+      "box": [
+        1676.6434326171875,
+        842.3494873046875,
+        3663.925537109375,
+        1529.33935546875
+      ],
+      "score": 0.5366,
+      "frame_idx": 0,
+      "box_area_ratio": 0.165
+    }
+  ],
+  "matched_entities": 2
+}

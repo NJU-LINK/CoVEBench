@@ -1,0 +1,11 @@
+{
+  "id": 98,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-and-man-watching-the-sunset-from-a-beach-44478.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-and-man-watching-the-sunset-from-a-beach-44478.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

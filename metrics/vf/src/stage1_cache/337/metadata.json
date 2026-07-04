@@ -1,0 +1,106 @@
+{
+  "id": 337,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-in-a-kitchen-preparing-appetizers-42769.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-in-a-kitchen-preparing-appetizers-42769.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves environment lighting, removing foreground objects (chairs), and modifying a subject's attribute (coat color) without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the woman's gesturing motion with her hands preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the man opening the wine bottle preserved?",
+    "Comparing Video A and Video B, how well are the textures and structural details of the stone walls preserved?",
+    "Comparing Video A and Video B, how well is the static camera perspective preserved?",
+    "Comparing Video A and Video B, how well is the wooden shelving and the objects placed upon it preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "man"
+    },
+    {
+      "description": "wine bottle"
+    },
+    {
+      "description": "stone walls"
+    },
+    {
+      "description": "wooden shelving"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        1037.12353515625,
+        478.8772277832031,
+        1187.8504638671875,
+        744.4891967773438
+      ],
+      "score": 0.7488,
+      "frame_idx": 2,
+      "box_area_ratio": 0.019
+    },
+    {
+      "entity_id": 2,
+      "description": "man",
+      "box": [
+        1263.8282470703125,
+        448.774169921875,
+        1467.8056640625,
+        758.0957641601562
+      ],
+      "score": 0.7976,
+      "frame_idx": 1,
+      "box_area_ratio": 0.03
+    },
+    {
+      "entity_id": 3,
+      "description": "wine bottle",
+      "box": [
+        1188.5684814453125,
+        652.1021728515625,
+        1220.1282958984375,
+        778.515625
+      ],
+      "score": 0.6167,
+      "frame_idx": 1,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 4,
+      "description": "stone walls",
+      "box": [
+        -9.831304550170898,
+        128.87803649902344,
+        708.4898681640625,
+        1066.5687255859375
+      ],
+      "score": 0.4537,
+      "frame_idx": 0,
+      "box_area_ratio": 0.325
+    },
+    {
+      "entity_id": 5,
+      "description": "wooden shelving",
+      "box": [
+        928.6400756835938,
+        151.87628173828125,
+        1780.39892578125,
+        1000.260498046875
+      ],
+      "score": 0.3409,
+      "frame_idx": 1,
+      "box_area_ratio": 0.348
+    }
+  ],
+  "matched_entities": 5
+}

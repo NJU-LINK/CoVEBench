@@ -1,0 +1,122 @@
+{
+  "id": 507,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-birthday-muffin-with-a-burning-candle-5102.mp4",
+  "local_path": "/root/cut/data/mixkit-birthday-muffin-with-a-burning-candle-5102.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the material of a foreground object and changing the motion intensity of another object, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the texture and dark brown color of the chocolate cupcake base preserved?",
+    "Comparing Video A and Video B, how accurately are the positions and multicolored nature of the sprinkles preserved despite the frosting change?",
+    "Comparing Video A and Video B, how well is the white candle body (excluding the flame) preserved?",
+    "Comparing Video A and Video B, how well are the background balloons (blue, purple, yellow) and their soft-focus festive arrangement preserved?",
+    "Comparing Video A and Video B, how well is the camera's close-up framing and static/slight motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "dark brown chocolate cupcake base"
+    },
+    {
+      "description": "multicolored sprinkles"
+    },
+    {
+      "description": "white candle body"
+    },
+    {
+      "description": "blue balloon"
+    },
+    {
+      "description": "purple balloon"
+    },
+    {
+      "description": "yellow balloon"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "dark brown chocolate cupcake base",
+      "box": [
+        705.7167358398438,
+        792.217041015625,
+        1224.6651611328125,
+        1073.211669921875
+      ],
+      "score": 0.703,
+      "frame_idx": 1,
+      "box_area_ratio": 0.07
+    },
+    {
+      "entity_id": 2,
+      "description": "multicolored sprinkles",
+      "box": [
+        722.9053344726562,
+        563.5008544921875,
+        1165.9178466796875,
+        820.7346801757812
+      ],
+      "score": 0.6529,
+      "frame_idx": 1,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 3,
+      "description": "white candle body",
+      "box": [
+        910.5294799804688,
+        173.34356689453125,
+        975.866455078125,
+        573.22216796875
+      ],
+      "score": 0.6946,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    },
+    {
+      "entity_id": 4,
+      "description": "blue balloon",
+      "box": [
+        1325.918701171875,
+        0.9793388843536377,
+        1916.0108642578125,
+        804.9933471679688
+      ],
+      "score": 0.4112,
+      "frame_idx": 1,
+      "box_area_ratio": 0.229
+    },
+    {
+      "entity_id": 5,
+      "description": "purple balloon",
+      "box": [
+        133.72900390625,
+        736.599853515625,
+        490.21893310546875,
+        1056.547119140625
+      ],
+      "score": 0.4951,
+      "frame_idx": 0,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 6,
+      "description": "yellow balloon",
+      "box": [
+        1386.074462890625,
+        653.2224731445312,
+        1774.4620361328125,
+        1067.9234619140625
+      ],
+      "score": 0.4963,
+      "frame_idx": 2,
+      "box_area_ratio": 0.078
+    }
+  ],
+  "matched_entities": 6
+}

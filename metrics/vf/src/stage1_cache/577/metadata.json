@@ -1,0 +1,11 @@
+{
+  "id": 577,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/129.mp4",
+  "local_path": "/root/cut/data/129.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a visual style change (warm golden tone/tint).",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

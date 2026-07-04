@@ -1,0 +1,140 @@
+{
+  "id": 541,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/31.mp4",
+  "local_path": "/root/cut/data/31.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment by changing the season, which is explicitly allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity, clothing, and physical appearance of the man standing behind the table preserved?",
+    "Comparing Video A and Video B, how well is the texture and structure of the wooden table preserved?",
+    "Comparing Video A and Video B, how accurately are the man's subtle movements/hand gestures preserved over time (timing and motion continuity)?",
+    "Comparing Video A and Video B, how well is the building on the left side of the frame preserved?",
+    "Comparing Video A and Video B, how well are the greenhouse and white fence in the background preserved?",
+    "Comparing Video A and Video B, how well are the distant sea and sky preserved (horizon placement, overall color, and composition)?",
+    "Comparing Video A and Video B, how well is the wide, static camera framing preserved (no added pan/zoom/shake)?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "wooden table"
+    },
+    {
+      "description": "building on the left"
+    },
+    {
+      "description": "greenhouse"
+    },
+    {
+      "description": "white fence"
+    },
+    {
+      "description": "sea"
+    },
+    {
+      "description": "sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        1226.6007080078125,
+        1100.6673583984375,
+        1402.8310546875,
+        1459.1385498046875
+      ],
+      "score": 0.65,
+      "frame_idx": 1,
+      "box_area_ratio": 0.008
+    },
+    {
+      "entity_id": 2,
+      "description": "wooden table",
+      "box": [
+        965.5,
+        1218.4954833984375,
+        1460.731689453125,
+        1484.2860107421875
+      ],
+      "score": 0.8683,
+      "frame_idx": 2,
+      "box_area_ratio": 0.016
+    },
+    {
+      "entity_id": 3,
+      "description": "building on the left",
+      "box": [
+        674.04345703125,
+        790.6998291015625,
+        1540.188720703125,
+        1264.618896484375
+      ],
+      "score": 0.5837,
+      "frame_idx": 1,
+      "box_area_ratio": 0.049
+    },
+    {
+      "entity_id": 4,
+      "description": "greenhouse",
+      "box": [
+        946.8895263671875,
+        1225.220703125,
+        1459.7579345703125,
+        1502.5726318359375
+      ],
+      "score": 0.488,
+      "frame_idx": 1,
+      "box_area_ratio": 0.017
+    },
+    {
+      "entity_id": 5,
+      "description": "white fence",
+      "box": [
+        1514.4205322265625,
+        1173.0164794921875,
+        3581.481201171875,
+        1497.707275390625
+      ],
+      "score": 0.6106,
+      "frame_idx": 1,
+      "box_area_ratio": 0.081
+    },
+    {
+      "entity_id": 6,
+      "description": "sea",
+      "box": [
+        1560.5411376953125,
+        1010.7084350585938,
+        2513.155517578125,
+        1144.91748046875
+      ],
+      "score": 0.6474,
+      "frame_idx": 2,
+      "box_area_ratio": 0.015
+    },
+    {
+      "entity_id": 7,
+      "description": "sky",
+      "box": [
+        -4.131202697753906,
+        5.229535102844238,
+        3149.528564453125,
+        1078.75
+      ],
+      "score": 0.7186,
+      "frame_idx": 0,
+      "box_area_ratio": 0.408
+    }
+  ],
+  "matched_entities": 7
+}

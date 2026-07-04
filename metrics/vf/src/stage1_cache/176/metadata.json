@@ -1,0 +1,70 @@
+{
+  "id": 176,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-sick-little-girl-lying-on-a-sofa-4710.mp4",
+  "local_path": "/root/cut/data/mixkit-sick-little-girl-lying-on-a-sofa-4710.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a subject and changing their pose and action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific texture, brown color, and material appearance of the leather couch preserved?",
+    "Comparing Video A and Video B, how accurately is the plaid pattern and color scheme of the blanket preserved?",
+    "Comparing Video A and Video B, how well is the appearance and color of the pink pillow preserved?",
+    "Comparing Video A and Video B, how well is the background environment (elements behind the couch) preserved?",
+    "Comparing Video A and Video B, how well does the close-up framing adapt to a seated adult drinking while keeping couch, blanket, and room context continuous?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "brown leather couch"
+    },
+    {
+      "description": "plaid blanket"
+    },
+    {
+      "description": "pink pillow"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "brown leather couch",
+      "box": null,
+      "score": 0.5818,
+      "frame_idx": null,
+      "box_area_ratio": 0.897,
+      "rejected_reason": "box covers 90% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "plaid blanket",
+      "box": [
+        975.4236450195312,
+        403.4721374511719,
+        1921.046630859375,
+        1075.1572265625
+      ],
+      "score": 0.6901,
+      "frame_idx": 2,
+      "box_area_ratio": 0.306
+    },
+    {
+      "entity_id": 3,
+      "description": "pink pillow",
+      "box": [
+        474.5445861816406,
+        623.8717041015625,
+        1178.5513916015625,
+        1051.4764404296875
+      ],
+      "score": 0.5067,
+      "frame_idx": 2,
+      "box_area_ratio": 0.145
+    }
+  ],
+  "matched_entities": 2
+}

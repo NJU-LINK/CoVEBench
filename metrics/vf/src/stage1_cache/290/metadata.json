@@ -1,0 +1,122 @@
+{
+  "id": 290,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/200.mp4",
+  "local_path": "/root/cut/data/200.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves modifying the background environment and adding object/environment layers without any camera movement or cinematic style transformations.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the woman's green sweater and teal patterned headscarf preserved?",
+    "Comparing Video A and Video B, how well is the identity and facial features of the older woman preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the white basin and the black metal pot preserved?",
+    "Comparing Video A and Video B, how well is the structure of the bare trees in the background preserved despite the addition of snow and snowflakes?",
+    "Comparing Video A and Video B, how well is the static camera angle and medium shot framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green sweater"
+    },
+    {
+      "description": "teal patterned headscarf"
+    },
+    {
+      "description": "older woman"
+    },
+    {
+      "description": "white basin"
+    },
+    {
+      "description": "black metal pot"
+    },
+    {
+      "description": "bare trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green sweater",
+      "box": [
+        1424.718994140625,
+        553.6214599609375,
+        2265.489990234375,
+        1567.298095703125
+      ],
+      "score": 0.928,
+      "frame_idx": 2,
+      "box_area_ratio": 0.103
+    },
+    {
+      "entity_id": 2,
+      "description": "teal patterned headscarf",
+      "box": [
+        1547.0653076171875,
+        560.4024047851562,
+        1859.85107421875,
+        814.2109985351562
+      ],
+      "score": 0.4948,
+      "frame_idx": 0,
+      "box_area_ratio": 0.01
+    },
+    {
+      "entity_id": 3,
+      "description": "older woman",
+      "box": [
+        1382.7415771484375,
+        562.8214721679688,
+        2249.025390625,
+        1576.9019775390625
+      ],
+      "score": 0.9016,
+      "frame_idx": 0,
+      "box_area_ratio": 0.106
+    },
+    {
+      "entity_id": 4,
+      "description": "white basin",
+      "box": [
+        1737.250244140625,
+        952.9783935546875,
+        2442.322998046875,
+        1634.4566650390625
+      ],
+      "score": 0.5427,
+      "frame_idx": 0,
+      "box_area_ratio": 0.058
+    },
+    {
+      "entity_id": 5,
+      "description": "black metal pot",
+      "box": [
+        1495.2767333984375,
+        1523.5885009765625,
+        2377.966796875,
+        2092.916015625
+      ],
+      "score": 0.6438,
+      "frame_idx": 0,
+      "box_area_ratio": 0.061
+    },
+    {
+      "entity_id": 6,
+      "description": "bare trees",
+      "box": [
+        33.75068664550781,
+        -3.2549571990966797,
+        3200.602294921875,
+        694.0454711914062
+      ],
+      "score": 0.3722,
+      "frame_idx": 2,
+      "box_area_ratio": 0.266
+    }
+  ],
+  "matched_entities": 6
+}

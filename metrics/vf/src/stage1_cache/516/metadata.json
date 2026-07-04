@@ -1,0 +1,128 @@
+{
+  "id": 516,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-group-of-friends-chatting-at-a-halloween-costume-gathering-34459.mp4",
+  "local_path": "/root/cut/data/mixkit-group-of-friends-chatting-at-a-halloween-costume-gathering-34459.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves modifying a foreground object's material without camera movement or stylistic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's hippie outfit and her calm sitting posture preserved?",
+    "Comparing Video A and Video B, how accurately are the man's facial features and his specific talking gestures maintained?",
+    "Comparing Video A and Video B, how well are the background elements (pumpkin on the wall, balloons on the floor, dark couch) preserved?",
+    "Comparing Video A and Video B, how well is the specific purple and orange lighting atmosphere maintained?",
+    "Comparing Video A and Video B, how precisely does the timing of the man's hand gestures align between the two videos?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "hippie outfit"
+    },
+    {
+      "description": "man"
+    },
+    {
+      "description": "pumpkin"
+    },
+    {
+      "description": "balloons"
+    },
+    {
+      "description": "dark couch"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        445.757080078125,
+        212.5714874267578,
+        930.4712524414062,
+        622.2830810546875
+      ],
+      "score": 0.6121,
+      "frame_idx": 0,
+      "box_area_ratio": 0.096
+    },
+    {
+      "entity_id": 2,
+      "description": "hippie outfit",
+      "box": [
+        1018.8748168945312,
+        106.43540954589844,
+        1679.6376953125,
+        1065.9490966796875
+      ],
+      "score": 0.5106,
+      "frame_idx": 2,
+      "box_area_ratio": 0.306
+    },
+    {
+      "entity_id": 3,
+      "description": "man",
+      "box": [
+        970.3182373046875,
+        106.79618835449219,
+        1632.2646484375,
+        1074.360107421875
+      ],
+      "score": 0.9017,
+      "frame_idx": 0,
+      "box_area_ratio": 0.309
+    },
+    {
+      "entity_id": 4,
+      "description": "pumpkin",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "balloons",
+      "box": [
+        -0.7334518432617188,
+        762.4939575195312,
+        1919.247314453125,
+        1074.48095703125
+      ],
+      "score": 0.4287,
+      "frame_idx": 1,
+      "box_area_ratio": 0.289
+    },
+    {
+      "entity_id": 6,
+      "description": "dark couch",
+      "box": null,
+      "score": 0.846,
+      "frame_idx": null,
+      "box_area_ratio": 0.569,
+      "rejected_reason": "box covers 57% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 7,
+      "description": "hand",
+      "box": [
+        1009.26318359375,
+        450.19207763671875,
+        1127.044189453125,
+        522.7615966796875
+      ],
+      "score": 0.6591,
+      "frame_idx": 2,
+      "box_area_ratio": 0.004
+    }
+  ],
+  "matched_entities": 5
+}

@@ -1,0 +1,86 @@
+{
+  "id": 625,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/192.mp4",
+  "local_path": "/root/cut/data/192.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and modifying the background environment without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the secondary crocodile (partially visible behind the main subject to the left) preserved?",
+    "Comparing Video A and Video B, how accurately are the white wading birds in the background shallow water maintained?",
+    "Comparing Video A and Video B, how precisely is the timing of the main animal's action (walking onto the bank, lowering its body, and resting) preserved?",
+    "Comparing Video A and Video B, how well is the appearance and movement of the water in the background preserved?",
+    "Comparing Video A and Video B, how well is the camera perspective and any original camera motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "crocodile on the left"
+    },
+    {
+      "description": "white birds"
+    },
+    {
+      "description": "large crocodile"
+    },
+    {
+      "description": "water"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "crocodile on the left",
+      "box": [
+        752.3777465820312,
+        716.338134765625,
+        3628.942626953125,
+        1419.1678466796875
+      ],
+      "score": 0.8174,
+      "frame_idx": 2,
+      "box_area_ratio": 0.244
+    },
+    {
+      "entity_id": 2,
+      "description": "white birds",
+      "box": [
+        1824.4166259765625,
+        0.5570679903030396,
+        2062.760498046875,
+        341.98004150390625
+      ],
+      "score": 0.5854,
+      "frame_idx": 2,
+      "box_area_ratio": 0.01
+    },
+    {
+      "entity_id": 3,
+      "description": "large crocodile",
+      "box": [
+        750.2659912109375,
+        719.77978515625,
+        3634.712158203125,
+        1418.7244873046875
+      ],
+      "score": 0.932,
+      "frame_idx": 2,
+      "box_area_ratio": 0.243
+    },
+    {
+      "entity_id": 4,
+      "description": "water",
+      "box": null,
+      "score": 0.6325,
+      "frame_idx": null,
+      "box_area_ratio": 0.587,
+      "rejected_reason": "box covers 59% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

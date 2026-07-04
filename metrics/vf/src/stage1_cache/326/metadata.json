@@ -1,0 +1,107 @@
+{
+  "id": 326,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-baby-playing-while-being-cared-for-by-his-mother-49946.mp4",
+  "local_path": "/root/cut/data/mixkit-baby-playing-while-being-cared-for-by-his-mother-49946.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object (clothing) and changing the position of subjects within the scene, which are allowed edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the facial identity and physical appearance of the baby preserved?",
+    "Comparing Video A and Video B, how well is the woman's facial identity and hair preserved?",
+    "Comparing Video A and Video B, how accurately is the complex pattern on the play mat preserved?",
+    "Comparing Video A and Video B, how well is the appearance and texture of the white stuffed animal preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the baby taking the toy and putting it in his mouth preserved?",
+    "Comparing Video A and Video B, how well are the woman's blue jeans preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "baby"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "patterned play mat"
+    },
+    {
+      "description": "white stuffed animal"
+    },
+    {
+      "description": "blue jeans"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 25,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "baby",
+      "box": [
+        773.5958862304688,
+        133.37606811523438,
+        1131.3131103515625,
+        674.0291748046875
+      ],
+      "score": 0.8714,
+      "frame_idx": 1,
+      "box_area_ratio": 0.093
+    },
+    {
+      "entity_id": 2,
+      "description": "woman",
+      "box": [
+        977.6239013671875,
+        -0.6880509853363037,
+        1513.970458984375,
+        632.3519897460938
+      ],
+      "score": 0.869,
+      "frame_idx": 2,
+      "box_area_ratio": 0.164
+    },
+    {
+      "entity_id": 3,
+      "description": "patterned play mat",
+      "box": [
+        0.13200759887695312,
+        505.6285400390625,
+        1918.5560302734375,
+        1073.23779296875
+      ],
+      "score": 0.6363,
+      "frame_idx": 1,
+      "box_area_ratio": 0.525
+    },
+    {
+      "entity_id": 4,
+      "description": "white stuffed animal",
+      "box": [
+        1272.2509765625,
+        588.3389282226562,
+        1570.317138671875,
+        826.2160034179688
+      ],
+      "score": 0.5458,
+      "frame_idx": 2,
+      "box_area_ratio": 0.034
+    },
+    {
+      "entity_id": 5,
+      "description": "blue jeans",
+      "box": [
+        996.5654907226562,
+        340.03912353515625,
+        1372.105224609375,
+        631.0387573242188
+      ],
+      "score": 0.5068,
+      "frame_idx": 2,
+      "box_area_ratio": 0.053
+    }
+  ],
+  "matched_entities": 5
+}

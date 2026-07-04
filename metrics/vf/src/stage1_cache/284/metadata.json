@@ -1,0 +1,58 @@
+{
+  "id": 284,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5442_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5442_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment, replacing a foreground object (Earth to Mars), and adding a new object (spaceship) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the 3D golden appearance and metallic texture of the letters 'RENDY' preserved?",
+    "Comparing Video A and Video B, how accurately is the font and spelling of the letters 'RENDY' preserved?",
+    "Comparing Video A and Video B, how well is the spatial position of the letters 'RENDY' relative to the planet preserved?",
+    "Comparing Video A and Video B, how accurately is the rotation speed of the central planet preserved?",
+    "Comparing Video A and Video B, how well is the static camera framing and overall composition preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "golden letters"
+    },
+    {
+      "description": "planet"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "golden letters",
+      "box": [
+        231.48455810546875,
+        223.34677124023438,
+        433.5876159667969,
+        503.7623291015625
+      ],
+      "score": 0.6316,
+      "frame_idx": 2,
+      "box_area_ratio": 0.061
+    },
+    {
+      "entity_id": 2,
+      "description": "planet",
+      "box": [
+        340.2221984863281,
+        88.90153503417969,
+        945.4501342773438,
+        660.3639526367188
+      ],
+      "score": 0.84,
+      "frame_idx": 0,
+      "box_area_ratio": 0.375
+    }
+  ],
+  "matched_entities": 2
+}

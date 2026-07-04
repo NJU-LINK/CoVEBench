@@ -1,0 +1,69 @@
+{
+  "id": 196,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-falls-asleep-in-her-bed-3213.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-falls-asleep-in-her-bed-3213.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions and poses without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and texture of the wooden headboard preserved?",
+    "Comparing Video A and Video B, how accurately are the bedding and pillow textures (excluding the areas of direct interaction) preserved?",
+    "Comparing Video A and Video B, how well is the camera angle and any camera motion preserved?",
+    "Comparing Video A and Video B, how well is the overall ambient lighting and shadow environment of the room preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "wooden headboard"
+    },
+    {
+      "description": "bedding"
+    },
+    {
+      "description": "pillow"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wooden headboard",
+      "box": null,
+      "score": 0.6601,
+      "frame_idx": null,
+      "box_area_ratio": 0.87,
+      "rejected_reason": "box covers 87% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "bedding",
+      "box": [
+        11.013164520263672,
+        478.3236389160156,
+        1888.5780029296875,
+        1076.650146484375
+      ],
+      "score": 0.5295,
+      "frame_idx": 2,
+      "box_area_ratio": 0.542
+    },
+    {
+      "entity_id": 3,
+      "description": "pillow",
+      "box": [
+        1244.556640625,
+        772.2815551757812,
+        1821.1983642578125,
+        1077.2034912109375
+      ],
+      "score": 0.5049,
+      "frame_idx": 0,
+      "box_area_ratio": 0.085
+    }
+  ],
+  "matched_entities": 2
+}

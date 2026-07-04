@@ -1,0 +1,81 @@
+{
+  "id": 573,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/120.mp4",
+  "local_path": "/root/cut/data/120.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment (sky) and adding foreground objects (weeds) with motion, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the structural integrity and texture of the vertical stone slabs and the large stone wall preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance and placement of the dirt path between the stones preserved?",
+    "Comparing Video A and Video B, how well is the silhouette and detail of the background mountains preserved?",
+    "Comparing Video A and Video B, how well is the spatial relationship between the foreground stone slabs, the dirt path, and the background wall/mountains maintained"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "vertical stone slabs"
+    },
+    {
+      "description": "large stone wall"
+    },
+    {
+      "description": "dirt path"
+    },
+    {
+      "description": "background mountains"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 14,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "vertical stone slabs",
+      "box": null,
+      "score": 0.4575,
+      "frame_idx": null,
+      "box_area_ratio": 0.779,
+      "rejected_reason": "box covers 78% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "large stone wall",
+      "box": null,
+      "score": 0.4564,
+      "frame_idx": null,
+      "box_area_ratio": 0.783,
+      "rejected_reason": "box covers 78% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "dirt path",
+      "box": [
+        6.7211151123046875,
+        939.440185546875,
+        1869.595703125,
+        2159.386962890625
+      ],
+      "score": 0.3581,
+      "frame_idx": 1,
+      "box_area_ratio": 0.274
+    },
+    {
+      "entity_id": 4,
+      "description": "background mountains",
+      "box": [
+        5.404243469238281,
+        312.69622802734375,
+        3829.9296875,
+        706.880615234375
+      ],
+      "score": 0.7133,
+      "frame_idx": 2,
+      "box_area_ratio": 0.182
+    }
+  ],
+  "matched_entities": 2
+}

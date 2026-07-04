@@ -1,0 +1,53 @@
+{
+  "id": 11,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/59.mp4",
+  "local_path": "/root/cut/data/59.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object (fighter jet) and its associated motion effects (heat distortion) without camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific colors and architectural details of the multi-colored apartment buildings preserved?",
+    "Comparing Video A and Video B, how accurately are the positions and shapes of the scattered clouds in the sky maintained?",
+    "Comparing Video A and Video B, how well is the static, non-moving nature of the city (excluding the jet and the heat distortion) preserved?",
+    "Comparing Video A and Video B, how accurately is the high-angle aerial camera perspective preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "multi-colored apartment buildings"
+    },
+    {
+      "description": "scattered clouds"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "multi-colored apartment buildings",
+      "box": null,
+      "score": 0.518,
+      "frame_idx": null,
+      "box_area_ratio": 0.811,
+      "rejected_reason": "box covers 81% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "scattered clouds",
+      "box": [
+        -6.829719543457031,
+        1.6132843494415283,
+        3832.802978515625,
+        524.0039672851562
+      ],
+      "score": 0.6183,
+      "frame_idx": 0,
+      "box_area_ratio": 0.242
+    }
+  ],
+  "matched_entities": 1
+}

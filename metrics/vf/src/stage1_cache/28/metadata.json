@@ -1,0 +1,53 @@
+{
+  "id": 28,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/117.mp4",
+  "local_path": "/root/cut/data/117.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing subject action, adding a visual effect (magic aura), and removing foreground objects, none of which involve camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and texture of the dark, moist soil preserved?",
+    "Comparing Video A and Video B, how accurately is the identity and skin texture of the hands preserved?",
+    "Comparing Video A and Video B, how well is the outdoor garden background environment preserved?",
+    "Comparing Video A and Video B, how well is the camera angle and framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "dark moist soil"
+    },
+    {
+      "description": "hands"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 6,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "dark moist soil",
+      "box": null,
+      "score": 0.8644,
+      "frame_idx": null,
+      "box_area_ratio": 0.994,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "hands",
+      "box": [
+        382.1633605957031,
+        1356.4520263671875,
+        1470.3284912109375,
+        2016.28076171875
+      ],
+      "score": 0.7095,
+      "frame_idx": 2,
+      "box_area_ratio": 0.087
+    }
+  ],
+  "matched_entities": 1
+}

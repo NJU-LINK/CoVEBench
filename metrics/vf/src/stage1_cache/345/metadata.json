@@ -1,0 +1,90 @@
+{
+  "id": 345,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-elegant-woman-waiting-in-a-kiosk-2399.mp4",
+  "local_path": "/root/cut/data/mixkit-elegant-woman-waiting-in-a-kiosk-2399.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying a foreground object's garment and changing the subject's pose and motion within the scene without altering the camera movement or visual style.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's curly hair texture and volume preserved?",
+    "Comparing Video A and Video B, how accurately is the black skirt preserved?",
+    "Comparing Video A and Video B, how well are the ornate details of the metal balcony railing preserved?",
+    "Comparing Video A and Video B, how accurately is the background environment (beyond the railing) preserved?",
+    "Comparing Video A and Video B, how well is the static camera motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "curly hair"
+    },
+    {
+      "description": "black skirt"
+    },
+    {
+      "description": "metal balcony railing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        818.0478515625,
+        337.84039306640625,
+        1188.4158935546875,
+        1060.752197265625
+      ],
+      "score": 0.7929,
+      "frame_idx": 1,
+      "box_area_ratio": 0.129
+    },
+    {
+      "entity_id": 2,
+      "description": "curly hair",
+      "box": [
+        838.0430297851562,
+        293.0329895019531,
+        1141.108154296875,
+        609.7389526367188
+      ],
+      "score": 0.6231,
+      "frame_idx": 2,
+      "box_area_ratio": 0.046
+    },
+    {
+      "entity_id": 3,
+      "description": "black skirt",
+      "box": [
+        819.748046875,
+        342.836181640625,
+        1192.41845703125,
+        1063.1181640625
+      ],
+      "score": 0.4953,
+      "frame_idx": 1,
+      "box_area_ratio": 0.129
+    },
+    {
+      "entity_id": 4,
+      "description": "metal balcony railing",
+      "box": [
+        1.4820671081542969,
+        632.4295654296875,
+        1917.144287109375,
+        1075.3779296875
+      ],
+      "score": 0.8359,
+      "frame_idx": 1,
+      "box_area_ratio": 0.409
+    }
+  ],
+  "matched_entities": 4
+}

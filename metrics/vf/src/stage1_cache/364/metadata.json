@@ -1,0 +1,58 @@
+{
+  "id": 364,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-and-woman-doing-box-jump-759.mp4",
+  "local_path": "/root/cut/data/mixkit-man-and-woman-doing-box-jump-759.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing foreground garments and subject actions (pose/motion) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's shirtless appearance and physical identity preserved?",
+    "Comparing Video A and Video B, how accurately is the man's box jump action and temporal timing preserved?",
+    "Comparing Video A and Video B, how well is the appearance and position of the wooden boxes preserved?",
+    "Comparing Video A and Video B, how well is the static, eye-level camera angle preserved?",
+    "Comparing Video A and Video B, how well are the background gym elements (walls, floor, other equipment) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "shirtless man"
+    },
+    {
+      "description": "wooden boxes"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "shirtless man",
+      "box": [
+        619.853271484375,
+        279.8664855957031,
+        950.8688354492188,
+        788.5193481445312
+      ],
+      "score": 0.9369,
+      "frame_idx": 1,
+      "box_area_ratio": 0.081
+    },
+    {
+      "entity_id": 2,
+      "description": "wooden boxes",
+      "box": [
+        1044.1241455078125,
+        816.4855346679688,
+        1264.7257080078125,
+        1009.8037109375
+      ],
+      "score": 0.6071,
+      "frame_idx": 0,
+      "box_area_ratio": 0.021
+    }
+  ],
+  "matched_entities": 2
+}

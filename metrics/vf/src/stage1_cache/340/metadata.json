@@ -1,0 +1,86 @@
+{
+  "id": 340,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-sleeps-on-couch-3210.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-sleeps-on-couch-3210.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object's material and changing a person's pose, which are allowed edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's identity (facial features, hair, and clothing) preserved?",
+    "Comparing Video A and Video B, how accurately is the timing and motion of the man pointing the remote control preserved?",
+    "Comparing Video A and Video B, how well are the woman's facial features and identity preserved despite her change in posture?",
+    "Comparing Video A and Video B, how well are the background environment and the sofa's appearance (excluding the blanket) preserved?",
+    "Comparing Video A and Video B, how well is the overall lighting and color grading of the scene preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man on the left"
+    },
+    {
+      "description": "remote control"
+    },
+    {
+      "description": "woman on the right"
+    },
+    {
+      "description": "sofa"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man on the left",
+      "box": [
+        343.6192626953125,
+        225.81387329101562,
+        905.361083984375,
+        920.3591918945312
+      ],
+      "score": 0.7956,
+      "frame_idx": 2,
+      "box_area_ratio": 0.188
+    },
+    {
+      "entity_id": 2,
+      "description": "remote control",
+      "box": [
+        308.72662353515625,
+        413.4792785644531,
+        457.2690124511719,
+        547.1497802734375
+      ],
+      "score": 0.3731,
+      "frame_idx": 1,
+      "box_area_ratio": 0.01
+    },
+    {
+      "entity_id": 3,
+      "description": "woman on the right",
+      "box": [
+        869.7872314453125,
+        415.7186279296875,
+        1502.187255859375,
+        682.9700317382812
+      ],
+      "score": 0.7028,
+      "frame_idx": 0,
+      "box_area_ratio": 0.082
+    },
+    {
+      "entity_id": 4,
+      "description": "sofa",
+      "box": null,
+      "score": 0.459,
+      "frame_idx": null,
+      "box_area_ratio": 0.719,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

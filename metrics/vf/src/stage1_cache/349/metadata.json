@@ -1,0 +1,88 @@
+{
+  "id": 349,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-father-lying-playing-with-his-daughter-10465.mp4",
+  "local_path": "/root/cut/data/mixkit-father-lying-playing-with-his-daughter-10465.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object's material and changing the pose/motion of the subjects, which are allowed edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and texture of the girl's light blue dress preserved?",
+    "Comparing Video A and Video B, how accurately are the facial features and smiling expressions of both the man and the girl preserved?",
+    "Comparing Video A and Video B, how well is the background environment (bedding, headboard, room details) preserved?",
+    "Comparing Video A and Video B, how well is the static medium close-up camera framing preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal start of the girl being lowered preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "light blue dress"
+    },
+    {
+      "description": "man in blue shirt"
+    },
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "bedding"
+    },
+    {
+      "description": "headboard"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "light blue dress",
+      "box": null,
+      "score": 0.4091,
+      "frame_idx": null,
+      "box_area_ratio": 0.717,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "man in blue shirt",
+      "box": null,
+      "score": 0.6705,
+      "frame_idx": null,
+      "box_area_ratio": 0.971,
+      "rejected_reason": "box covers 97% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "young girl",
+      "box": null,
+      "score": 0.7985,
+      "frame_idx": null,
+      "box_area_ratio": 0.976,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "bedding",
+      "box": [
+        -1.8525981903076172,
+        930.5047607421875,
+        622.58984375,
+        1077.3302001953125
+      ],
+      "score": 0.44,
+      "frame_idx": 2,
+      "box_area_ratio": 0.044
+    },
+    {
+      "entity_id": 5,
+      "description": "headboard",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 1
+}

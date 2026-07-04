@@ -1,0 +1,162 @@
+{
+  "id": 391,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-people-dancing-and-drinking-at-a-halloween-party-34453.mp4",
+  "local_path": "/root/cut/data/mixkit-people-dancing-and-drinking-at-a-halloween-party-34453.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the man dressed as Dracula preserved in terms of his costume, pose, and facial features?",
+    "Comparing Video A and Video B, how well is the vibrant color-cycling behavior of the TV screen preserved?",
+    "Comparing Video A and Video B, how well is the woman wearing devil horns in the foreground preserved?",
+    "Comparing Video A and Video B, how accurately are the Halloween stickers (witches, ghosts, pumpkins) on the walls preserved?",
+    "Comparing Video A and Video B, how well are the decorations scattered on the floor preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "tv screen"
+    },
+    {
+      "description": "woman in the foreground"
+    },
+    {
+      "description": "devil horns"
+    },
+    {
+      "description": "halloween stickers"
+    },
+    {
+      "description": "witches"
+    },
+    {
+      "description": "ghosts"
+    },
+    {
+      "description": "pumpkins"
+    },
+    {
+      "description": "balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        503.9296569824219,
+        418.93157958984375,
+        1063.1866455078125,
+        1672.6370849609375
+      ],
+      "score": 0.7616,
+      "frame_idx": 1,
+      "box_area_ratio": 0.338
+    },
+    {
+      "entity_id": 2,
+      "description": "tv screen",
+      "box": [
+        859.9102172851562,
+        819.4655151367188,
+        1078.356689453125,
+        1318.021240234375
+      ],
+      "score": 0.6449,
+      "frame_idx": 1,
+      "box_area_ratio": 0.053
+    },
+    {
+      "entity_id": 3,
+      "description": "woman in the foreground",
+      "box": null,
+      "score": 0.8771,
+      "frame_idx": null,
+      "box_area_ratio": 0.624,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "devil horns",
+      "box": [
+        783.8956298828125,
+        9.735016822814941,
+        1077.205810546875,
+        452.61016845703125
+      ],
+      "score": 0.404,
+      "frame_idx": 2,
+      "box_area_ratio": 0.063
+    },
+    {
+      "entity_id": 5,
+      "description": "halloween stickers",
+      "box": [
+        454.5397644042969,
+        434.61590576171875,
+        539.2220458984375,
+        528.5750122070312
+      ],
+      "score": 0.4674,
+      "frame_idx": 2,
+      "box_area_ratio": 0.004
+    },
+    {
+      "entity_id": 6,
+      "description": "witches",
+      "box": null,
+      "score": 0.4773,
+      "frame_idx": null,
+      "box_area_ratio": 0.625,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 7,
+      "description": "ghosts",
+      "box": [
+        796.5070190429688,
+        9.237542152404785,
+        1077.0216064453125,
+        453.79498291015625
+      ],
+      "score": 0.3975,
+      "frame_idx": 2,
+      "box_area_ratio": 0.06
+    },
+    {
+      "entity_id": 8,
+      "description": "pumpkins",
+      "box": [
+        455.6135559082031,
+        435.0069274902344,
+        538.619140625,
+        529.5382080078125
+      ],
+      "score": 0.4943,
+      "frame_idx": 2,
+      "box_area_ratio": 0.004
+    },
+    {
+      "entity_id": 9,
+      "description": "balloons",
+      "box": [
+        887.6552734375,
+        1659.8995361328125,
+        1042.0821533203125,
+        1838.442626953125
+      ],
+      "score": 0.4304,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    }
+  ],
+  "matched_entities": 7
+}

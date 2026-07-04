@@ -1,0 +1,133 @@
+{
+  "id": 531,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/7.mp4",
+  "local_path": "/root/cut/data/7.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects (shirt and wrapping paper) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the wristwatch preserved?",
+    "Comparing Video A and Video B, how well is the gold wedding ring preserved?",
+    "Comparing Video A and Video B, how well are the blurred Christmas tree, glowing lights, and stacked gifts preserved?",
+    "Comparing Video A and Video B, how well is the timing of the wrapping actions preserved?",
+    "Comparing Video A and Video B, how well is the rustic wooden table preserved?",
+    "Comparing Video A and Video B, how well is the clear tape dispenser preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "wristwatch"
+    },
+    {
+      "description": "gold wedding ring"
+    },
+    {
+      "description": "christmas tree in the back"
+    },
+    {
+      "description": "lights in the back"
+    },
+    {
+      "description": "gifts in the back"
+    },
+    {
+      "description": "wooden table"
+    },
+    {
+      "description": "tape dispenser"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wristwatch",
+      "box": [
+        732.5799560546875,
+        207.83270263671875,
+        857.23828125,
+        382.6138000488281
+      ],
+      "score": 0.8081,
+      "frame_idx": 2,
+      "box_area_ratio": 0.024
+    },
+    {
+      "entity_id": 2,
+      "description": "gold wedding ring",
+      "box": [
+        828.8318481445312,
+        409.1378173828125,
+        851.3782348632812,
+        445.22894287109375
+      ],
+      "score": 0.6774,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 3,
+      "description": "christmas tree in the back",
+      "box": [
+        5.186023712158203,
+        2.38053560256958,
+        392.8466796875,
+        268.93951416015625
+      ],
+      "score": 0.5129,
+      "frame_idx": 2,
+      "box_area_ratio": 0.112
+    },
+    {
+      "entity_id": 4,
+      "description": "lights in the back",
+      "box": [
+        7.314243316650391,
+        2.808777093887329,
+        393.2161865234375,
+        253.075439453125
+      ],
+      "score": 0.4252,
+      "frame_idx": 1,
+      "box_area_ratio": 0.105
+    },
+    {
+      "entity_id": 5,
+      "description": "gifts in the back",
+      "box": [
+        265.23699951171875,
+        252.35305786132812,
+        834.7735595703125,
+        667.6911010742188
+      ],
+      "score": 0.4818,
+      "frame_idx": 1,
+      "box_area_ratio": 0.257
+    },
+    {
+      "entity_id": 6,
+      "description": "wooden table",
+      "box": [
+        1.5606689453125,
+        325.92852783203125,
+        1276.48095703125,
+        715.0775146484375
+      ],
+      "score": 0.6841,
+      "frame_idx": 0,
+      "box_area_ratio": 0.538
+    },
+    {
+      "entity_id": 7,
+      "description": "tape dispenser",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 6
+}

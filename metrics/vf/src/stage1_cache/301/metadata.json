@@ -1,0 +1,84 @@
+{
+  "id": 301,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/239.mp4",
+  "local_path": "/root/cut/data/239.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding objects and changing object motion without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the dog's specific black markings on its head and tail preserved?",
+    "Comparing Video A and Video B, how well is the structure and texture of the rustic wooden gazebo preserved?",
+    "Comparing Video A and Video B, how accurately is the background hillside, including the sparse vegetation and snow coverage, preserved?",
+    "Comparing Video A and Video B, how well is the camera's motion, angle, and framing of the scene preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the snow-dusted tree stump (excluding the added firewood) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "white dog"
+    },
+    {
+      "description": "wooden gazebo"
+    },
+    {
+      "description": "hillside"
+    },
+    {
+      "description": "tree stump"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white dog",
+      "box": [
+        1207.9989013671875,
+        972.6927490234375,
+        2291.759033203125,
+        1769.0904541015625
+      ],
+      "score": 0.9609,
+      "frame_idx": 2,
+      "box_area_ratio": 0.104
+    },
+    {
+      "entity_id": 2,
+      "description": "wooden gazebo",
+      "box": [
+        -7.133674621582031,
+        2.0959854125976562,
+        2594.423583984375,
+        1676.2667236328125
+      ],
+      "score": 0.8891,
+      "frame_idx": 0,
+      "box_area_ratio": 0.525
+    },
+    {
+      "entity_id": 3,
+      "description": "hillside",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 4,
+      "description": "tree stump",
+      "box": [
+        2930.108154296875,
+        1044.998046875,
+        3216.052490234375,
+        1343.539306640625
+      ],
+      "score": 0.4424,
+      "frame_idx": 0,
+      "box_area_ratio": 0.01
+    }
+  ],
+  "matched_entities": 3
+}

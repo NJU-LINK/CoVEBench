@@ -1,0 +1,106 @@
+{
+  "id": 398,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-by-51531.mp4",
+  "local_path": "/root/cut/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-by-51531.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object's material and changing the motion intensity of subjects, which are allowed edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man in the black suit and tie preserved?",
+    "Comparing Video A and Video B, how well is the shimmering, sequined material of the second woman's dress (not the blonde woman) preserved?",
+    "Comparing Video A and Video B, how accurately are the 'NEW YEAR' gold foil balloons in the background preserved?",
+    "Comparing Video A and Video B, how well is the grey sofa and its interaction with the subjects preserved?",
+    "Comparing Video A and Video B, how well is the warm atmospheric lighting and the slight handheld camera motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man in black suit"
+    },
+    {
+      "description": "black tie"
+    },
+    {
+      "description": "woman in sequined dress"
+    },
+    {
+      "description": "gold foil balloons"
+    },
+    {
+      "description": "grey sofa"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in black suit",
+      "box": [
+        492.98321533203125,
+        115.935546875,
+        965.5494384765625,
+        933.1669311523438
+      ],
+      "score": 0.5552,
+      "frame_idx": 2,
+      "box_area_ratio": 0.186
+    },
+    {
+      "entity_id": 2,
+      "description": "black tie",
+      "box": [
+        507.06011962890625,
+        118.32980346679688,
+        945.1585083007812,
+        935.025390625
+      ],
+      "score": 0.4582,
+      "frame_idx": 2,
+      "box_area_ratio": 0.173
+    },
+    {
+      "entity_id": 3,
+      "description": "woman in sequined dress",
+      "box": [
+        1098.860107421875,
+        223.54762268066406,
+        1713.8292236328125,
+        1074.5943603515625
+      ],
+      "score": 0.8162,
+      "frame_idx": 1,
+      "box_area_ratio": 0.252
+    },
+    {
+      "entity_id": 4,
+      "description": "gold foil balloons",
+      "box": [
+        763.7718505859375,
+        4.858923435211182,
+        1455.6123046875,
+        541.5669555664062
+      ],
+      "score": 0.5101,
+      "frame_idx": 1,
+      "box_area_ratio": 0.179
+    },
+    {
+      "entity_id": 5,
+      "description": "grey sofa",
+      "box": [
+        837.1604614257812,
+        579.2799072265625,
+        1853.8544921875,
+        1070.7833251953125
+      ],
+      "score": 0.6743,
+      "frame_idx": 1,
+      "box_area_ratio": 0.241
+    }
+  ],
+  "matched_entities": 5
+}

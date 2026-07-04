@@ -1,0 +1,143 @@
+{
+  "id": 480,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-birthday-man-blows-out-the-candles-on-his-cake-5105.mp4",
+  "local_path": "/root/cut/data/mixkit-a-birthday-man-blows-out-the-candles-on-his-cake-5105.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves removing background subjects (foreground/background modification) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the colors, density, and specific patterns of the sprinkles on the cake preserved?",
+    "Comparing Video A and Video B, how well is the appearance and number of the three white candles preserved?",
+    "Comparing Video A and Video B, how accurately is the exact temporal moment when the man leans into the frame from the right preserved?",
+    "Comparing Video A and Video B, how well is the action of the candles being blown out and the subsequent rising smoke preserved?",
+    "Comparing Video A and Video B, how well are the man's facial features and clothing preserved as he leans into the frame?",
+    "Comparing Video A and Video B, how well are the jar of lollipops and the stacked cups to the left of the cake preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "cake"
+    },
+    {
+      "description": "sprinkles"
+    },
+    {
+      "description": "white candles"
+    },
+    {
+      "description": "man on the right"
+    },
+    {
+      "description": "smoke"
+    },
+    {
+      "description": "jar"
+    },
+    {
+      "description": "lollipops"
+    },
+    {
+      "description": "cups on the left"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "cake",
+      "box": [
+        804.054931640625,
+        658.7579345703125,
+        1651.8494873046875,
+        1035.1754150390625
+      ],
+      "score": 0.5568,
+      "frame_idx": 1,
+      "box_area_ratio": 0.154
+    },
+    {
+      "entity_id": 2,
+      "description": "sprinkles",
+      "box": [
+        807.339111328125,
+        660.1456298828125,
+        1656.3126220703125,
+        1038.444580078125
+      ],
+      "score": 0.6773,
+      "frame_idx": 0,
+      "box_area_ratio": 0.155
+    },
+    {
+      "entity_id": 3,
+      "description": "white candles",
+      "box": [
+        1032.968017578125,
+        432.22894287109375,
+        1080.8992919921875,
+        702.4366455078125
+      ],
+      "score": 0.4682,
+      "frame_idx": 0,
+      "box_area_ratio": 0.006
+    },
+    {
+      "entity_id": 4,
+      "description": "man on the right",
+      "box": [
+        1361.08056640625,
+        0.026296377182006836,
+        1910.4493408203125,
+        1066.397216796875
+      ],
+      "score": 0.6371,
+      "frame_idx": 0,
+      "box_area_ratio": 0.283
+    },
+    {
+      "entity_id": 5,
+      "description": "smoke",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "jar",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 7,
+      "description": "lollipops",
+      "box": [
+        6.155805587768555,
+        36.70867919921875,
+        302.2119140625,
+        1081.9697265625
+      ],
+      "score": 0.5407,
+      "frame_idx": 0,
+      "box_area_ratio": 0.149
+    },
+    {
+      "entity_id": 8,
+      "description": "cups on the left",
+      "box": [
+        292.064208984375,
+        683.5125732421875,
+        586.828125,
+        1076.54833984375
+      ],
+      "score": 0.57,
+      "frame_idx": 2,
+      "box_area_ratio": 0.056
+    }
+  ],
+  "matched_entities": 6
+}

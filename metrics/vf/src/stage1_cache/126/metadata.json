@@ -1,0 +1,11 @@
+{
+  "id": 126,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-puts-his-cell-phone-aside-so-he-can-go-31412.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-puts-his-cell-phone-aside-so-he-can-go-31412.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

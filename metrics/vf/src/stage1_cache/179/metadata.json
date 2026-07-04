@@ -1,0 +1,86 @@
+{
+  "id": 179,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-student-girl-from-the-front-smiling-on-a-green-background-28307.mp4",
+  "local_path": "/root/cut/data/mixkit-student-girl-from-the-front-smiling-on-a-green-background-28307.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions/poses without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the solid green screen background preserved?",
+    "Comparing Video A and Video B, how well is the blue backpack preserved on the new subject?",
+    "Comparing Video A and Video B, how accurately is the subject's smiling expression preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the main action (reaching out the hand) preserved?",
+    "Comparing Video A and Video B, how well is the camera framing and static composition preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green screen"
+    },
+    {
+      "description": "blue backpack"
+    },
+    {
+      "description": "young woman"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 25,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green screen",
+      "box": null,
+      "score": 0.6916,
+      "frame_idx": null,
+      "box_area_ratio": 0.988,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "blue backpack",
+      "box": [
+        727.3270874023438,
+        421.3187561035156,
+        958.4281616210938,
+        979.1796875
+      ],
+      "score": 0.5349,
+      "frame_idx": 1,
+      "box_area_ratio": 0.062
+    },
+    {
+      "entity_id": 3,
+      "description": "young woman",
+      "box": [
+        697.2302856445312,
+        95.40843963623047,
+        1385.30078125,
+        1075.539794921875
+      ],
+      "score": 0.9528,
+      "frame_idx": 2,
+      "box_area_ratio": 0.325
+    },
+    {
+      "entity_id": 4,
+      "description": "hand",
+      "box": [
+        980.96728515625,
+        910.1898193359375,
+        1200.7490234375,
+        1027.5972900390625
+      ],
+      "score": 0.8403,
+      "frame_idx": 2,
+      "box_area_ratio": 0.012
+    }
+  ],
+  "matched_entities": 3
+}

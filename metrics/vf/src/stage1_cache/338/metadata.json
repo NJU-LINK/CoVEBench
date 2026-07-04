@@ -1,0 +1,115 @@
+{
+  "id": 338,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-in-a-cafe-connected-on-their-devices-4879.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-in-a-cafe-connected-on-their-devices-4879.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the material of a foreground object and changing the motion/pose of the subjects, which are allowed actions.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and material of the woman's white blouse preserved?",
+    "Comparing Video A and Video B, how accurately are the facial identities and expressions of both subjects preserved during the initial sequence of looking at each other and smiling?",
+    "Comparing Video A and Video B, how well is the background office environment (walls, furniture, lighting) preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal synchronization of the initial action (looking down at devices) preserved before the subjects look at each other?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "white blouse"
+    },
+    {
+      "description": "man"
+    },
+    {
+      "description": "wall"
+    },
+    {
+      "description": "long table"
+    },
+    {
+      "description": "electronic device"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 29,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        998.3883056640625,
+        209.0663299560547,
+        1873.377197265625,
+        1037.1138916015625
+      ],
+      "score": 0.8787,
+      "frame_idx": 1,
+      "box_area_ratio": 0.349
+    },
+    {
+      "entity_id": 2,
+      "description": "white blouse",
+      "box": [
+        996.2647094726562,
+        214.95803833007812,
+        1856.612548828125,
+        1037.2601318359375
+      ],
+      "score": 0.9186,
+      "frame_idx": 1,
+      "box_area_ratio": 0.341
+    },
+    {
+      "entity_id": 3,
+      "description": "man",
+      "box": [
+        -0.62713623046875,
+        31.629552841186523,
+        1021.3921508789062,
+        1036.1552734375
+      ],
+      "score": 0.8388,
+      "frame_idx": 1,
+      "box_area_ratio": 0.495
+    },
+    {
+      "entity_id": 4,
+      "description": "wall",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "long table",
+      "box": [
+        0.677490234375,
+        972.50390625,
+        1907.99462890625,
+        1078.081787109375
+      ],
+      "score": 0.6032,
+      "frame_idx": 0,
+      "box_area_ratio": 0.097
+    },
+    {
+      "entity_id": 6,
+      "description": "electronic device",
+      "box": [
+        1368.162109375,
+        653.3015747070312,
+        1660.855712890625,
+        987.9265747070312
+      ],
+      "score": 0.65,
+      "frame_idx": 0,
+      "box_area_ratio": 0.047
+    }
+  ],
+  "matched_entities": 5
+}

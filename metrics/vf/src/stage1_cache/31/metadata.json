@@ -1,0 +1,11 @@
+{
+  "id": 31,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/132.mp4",
+  "local_path": "/root/cut/data/132.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "The instruction to shift the position of the canal and path to the right of the frame implies a camera framing change or pan.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

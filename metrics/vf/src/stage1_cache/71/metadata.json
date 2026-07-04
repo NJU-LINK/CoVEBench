@@ -1,0 +1,156 @@
+{
+  "id": 71,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/126.mp4",
+  "local_path": "/root/cut/data/126.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction involves changing the facial expression (pose/motion) of a foreground subject without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the texture, color, and grooming of the man's beard preserved?",
+    "Comparing Video A and Video B, how well is the black suit and white shirt preserved?",
+    "Comparing Video A and Video B, how well is the cream-colored cabinetry and the glass doors preserved?",
+    "Comparing Video A and Video B, how accurately are the reflections in the mirrored walls preserved as the man moves?",
+    "Comparing Video A and Video B, how well is the bright, luxurious lighting of the closet preserved?",
+    "Comparing Video A and Video B, how well is the timing and trajectory of the man's hand gestures preserved?",
+    "Comparing Video A and Video B, how accurately is the man's walking gait and pace preserved?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "beard"
+    },
+    {
+      "description": "black suit"
+    },
+    {
+      "description": "white shirt"
+    },
+    {
+      "description": "cream cabinetry"
+    },
+    {
+      "description": "glass door"
+    },
+    {
+      "description": "mirrored wall"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        1566.6531982421875,
+        474.8968505859375,
+        2249.970947265625,
+        2145.018310546875
+      ],
+      "score": 0.9173,
+      "frame_idx": 0,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 2,
+      "description": "beard",
+      "box": [
+        1567.1763916015625,
+        486.3527526855469,
+        2234.444091796875,
+        2133.855224609375
+      ],
+      "score": 0.6334,
+      "frame_idx": 0,
+      "box_area_ratio": 0.133
+    },
+    {
+      "entity_id": 3,
+      "description": "black suit",
+      "box": [
+        1571.349365234375,
+        484.06622314453125,
+        2246.167724609375,
+        2159.381103515625
+      ],
+      "score": 0.8379,
+      "frame_idx": 0,
+      "box_area_ratio": 0.136
+    },
+    {
+      "entity_id": 4,
+      "description": "white shirt",
+      "box": [
+        1622.373779296875,
+        510.3196105957031,
+        2428.05712890625,
+        2138.634521484375
+      ],
+      "score": 0.9494,
+      "frame_idx": 1,
+      "box_area_ratio": 0.158
+    },
+    {
+      "entity_id": 5,
+      "description": "cream cabinetry",
+      "box": [
+        750.8162231445312,
+        356.9653625488281,
+        2664.256103515625,
+        2117.741943359375
+      ],
+      "score": 0.6674,
+      "frame_idx": 0,
+      "box_area_ratio": 0.406
+    },
+    {
+      "entity_id": 6,
+      "description": "glass door",
+      "box": [
+        802.70458984375,
+        354.3789367675781,
+        2631.561279296875,
+        2101.658447265625
+      ],
+      "score": 0.4242,
+      "frame_idx": 1,
+      "box_area_ratio": 0.385
+    },
+    {
+      "entity_id": 7,
+      "description": "mirrored wall",
+      "box": [
+        756.8380737304688,
+        350.27972412109375,
+        2665.21923828125,
+        2127.075439453125
+      ],
+      "score": 0.4428,
+      "frame_idx": 0,
+      "box_area_ratio": 0.409
+    },
+    {
+      "entity_id": 8,
+      "description": "hand",
+      "box": [
+        2167.748779296875,
+        1191.2440185546875,
+        2425.269775390625,
+        1411.3150634765625
+      ],
+      "score": 0.8007,
+      "frame_idx": 1,
+      "box_area_ratio": 0.007
+    }
+  ],
+  "matched_entities": 8
+}

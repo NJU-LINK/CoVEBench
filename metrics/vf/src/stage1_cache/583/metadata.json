@@ -1,0 +1,106 @@
+{
+  "id": 583,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/136.mp4",
+  "local_path": "/root/cut/data/136.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment and specific objects (leaves, grass) to reflect a seasonal change, which is permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the identities and clothing of the two women preserved?",
+    "Comparing Video A and Video B, how well is the appearance and silhouette of the fluffy brown dog preserved?",
+    "Comparing Video A and Video B, how well are the yellow-red fruit and the harvesting actions preserved?",
+    "Comparing Video A and Video B, how well are the static camera properties and wide-shot framing preserved?",
+    "Comparing Video A and Video B, how well are the overcast sky and the overall diffused lighting environment preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "two women"
+    },
+    {
+      "description": "clothing"
+    },
+    {
+      "description": "fluffy brown dog"
+    },
+    {
+      "description": "yellow-red fruit"
+    },
+    {
+      "description": "overcast sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "two women",
+      "box": [
+        2205.98095703125,
+        716.7847900390625,
+        2599.1767578125,
+        1661.292236328125
+      ],
+      "score": 0.6819,
+      "frame_idx": 2,
+      "box_area_ratio": 0.045
+    },
+    {
+      "entity_id": 2,
+      "description": "clothing",
+      "box": [
+        2240.400146484375,
+        801.6436157226562,
+        2613.53759765625,
+        1634.046142578125
+      ],
+      "score": 0.6308,
+      "frame_idx": 0,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 3,
+      "description": "fluffy brown dog",
+      "box": [
+        1992.5458984375,
+        1601.947998046875,
+        2365.38671875,
+        2148.3291015625
+      ],
+      "score": 0.9114,
+      "frame_idx": 1,
+      "box_area_ratio": 0.025
+    },
+    {
+      "entity_id": 4,
+      "description": "yellow-red fruit",
+      "box": [
+        1986.166015625,
+        1598.785888671875,
+        2368.859375,
+        2149.04052734375
+      ],
+      "score": 0.4149,
+      "frame_idx": 1,
+      "box_area_ratio": 0.025
+    },
+    {
+      "entity_id": 5,
+      "description": "overcast sky",
+      "box": [
+        0.25051116943359375,
+        -3.017774820327759,
+        3835.50146484375,
+        951.0460205078125
+      ],
+      "score": 0.5049,
+      "frame_idx": 2,
+      "box_area_ratio": 0.441
+    }
+  ],
+  "matched_entities": 5
+}

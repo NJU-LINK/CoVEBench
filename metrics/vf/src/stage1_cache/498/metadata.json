@@ -1,0 +1,132 @@
+{
+  "id": 498,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-group-of-friends-dancing-and-drinking-on-halloween-34452.mp4",
+  "local_path": "/root/cut/data/mixkit-group-of-friends-dancing-and-drinking-on-halloween-34452.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the dancing woman (floral dress, sunglasses, flower headband) preserved?",
+    "Comparing Video A and Video B, how accurately is the person with devil horns and a trident in the foreground preserved?",
+    "Comparing Video A and Video B, how well is the woman's dance preserved?",
+    "Comparing Video A and Video B, how accurately are the colorful balloons on the floor preserved?",
+    "Comparing Video A and Video B, how well is the vibrant purple and orange lighting atmosphere preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman in floral dress"
+    },
+    {
+      "description": "sunglasses"
+    },
+    {
+      "description": "flower headband"
+    },
+    {
+      "description": "person in the foreground"
+    },
+    {
+      "description": "devil horns"
+    },
+    {
+      "description": "trident"
+    },
+    {
+      "description": "colorful balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in floral dress",
+      "box": [
+        423.9785461425781,
+        34.80297088623047,
+        1064.5618896484375,
+        1575.73046875
+      ],
+      "score": 0.7665,
+      "frame_idx": 2,
+      "box_area_ratio": 0.476
+    },
+    {
+      "entity_id": 2,
+      "description": "sunglasses",
+      "box": [
+        460.8109130859375,
+        225.68971252441406,
+        650.9035034179688,
+        347.0744323730469
+      ],
+      "score": 0.6535,
+      "frame_idx": 0,
+      "box_area_ratio": 0.011
+    },
+    {
+      "entity_id": 3,
+      "description": "flower headband",
+      "box": [
+        419.83221435546875,
+        136.63961791992188,
+        626.6411743164062,
+        293.0098571777344
+      ],
+      "score": 0.4355,
+      "frame_idx": 0,
+      "box_area_ratio": 0.016
+    },
+    {
+      "entity_id": 4,
+      "description": "person in the foreground",
+      "box": [
+        168.61497497558594,
+        792.2164916992188,
+        1081.3194580078125,
+        1915.33740234375
+      ],
+      "score": 0.5002,
+      "frame_idx": 0,
+      "box_area_ratio": 0.494
+    },
+    {
+      "entity_id": 5,
+      "description": "devil horns",
+      "box": [
+        422.44329833984375,
+        135.2853240966797,
+        626.2701416015625,
+        288.6795959472656
+      ],
+      "score": 0.3287,
+      "frame_idx": 0,
+      "box_area_ratio": 0.015
+    },
+    {
+      "entity_id": 6,
+      "description": "trident",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 7,
+      "description": "colorful balloons",
+      "box": [
+        173.574951171875,
+        1559.0189208984375,
+        335.6707458496094,
+        1739.914306640625
+      ],
+      "score": 0.3809,
+      "frame_idx": 2,
+      "box_area_ratio": 0.014
+    }
+  ],
+  "matched_entities": 6
+}

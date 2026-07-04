@@ -1,0 +1,103 @@
+{
+  "id": 193,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-chewing-gum-43271.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-chewing-gum-43271.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a subject, replacing an object, and changing the motion/pose within the scene, without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the pink sunglasses preserved on the subject's face in terms of color, shape, and transparency?",
+    "Comparing Video A and Video B, how accurately is the background scenery and the architectural detail of the balcony railing preserved?",
+    "Comparing Video A and Video B, how well is the medium close-up framing and the specific camera motion/stability preserved?",
+    "Comparing Video A and Video B, how accurately does the timing of the man's harmonica-playing movements correspond to the timing of the woman's bubble-blowing movements?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "pink sunglasses"
+    },
+    {
+      "description": "balcony railing"
+    },
+    {
+      "description": "man"
+    },
+    {
+      "description": "harmonica"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "pink bubble"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "pink sunglasses",
+      "box": [
+        719.3118896484375,
+        117.14257049560547,
+        1291.01708984375,
+        389.9703674316406
+      ],
+      "score": 0.6428,
+      "frame_idx": 0,
+      "box_area_ratio": 0.075
+    },
+    {
+      "entity_id": 2,
+      "description": "balcony railing",
+      "box": [
+        1380.941162109375,
+        940.33349609375,
+        1921.5548095703125,
+        1078.6087646484375
+      ],
+      "score": 0.4185,
+      "frame_idx": 2,
+      "box_area_ratio": 0.036
+    },
+    {
+      "entity_id": 3,
+      "description": "man",
+      "box": null,
+      "score": 0.6757,
+      "frame_idx": null,
+      "box_area_ratio": 0.647,
+      "rejected_reason": "box covers 65% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "harmonica",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "woman",
+      "box": null,
+      "score": 0.8842,
+      "frame_idx": null,
+      "box_area_ratio": 0.655,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 6,
+      "description": "pink bubble",
+      "box": null,
+      "score": 0.5295,
+      "frame_idx": null,
+      "box_area_ratio": 0.656,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

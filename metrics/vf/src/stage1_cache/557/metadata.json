@@ -1,0 +1,89 @@
+{
+  "id": 557,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/90.mp4",
+  "local_path": "/root/cut/data/90.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying the environment and adding/replacing textures on foreground objects without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the high-angle slow forward dolly camera motion preserved?",
+    "Comparing Video A and Video B, how well are the positions and shapes of the rusted machinery and rectangular concrete basins preserved?",
+    "Comparing Video A and Video B, how well are the brick walls and large arched window structures preserved?",
+    "Comparing Video A and Video B, how well is the overall daylight directionality and shadow consistency from the windows preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "rusted machinery"
+    },
+    {
+      "description": "rectangular concrete basins"
+    },
+    {
+      "description": "brick walls"
+    },
+    {
+      "description": "large arched window"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "rusted machinery",
+      "box": [
+        1147.6976318359375,
+        765.5393676757812,
+        1983.2462158203125,
+        1293.29443359375
+      ],
+      "score": 0.3609,
+      "frame_idx": 2,
+      "box_area_ratio": 0.053
+    },
+    {
+      "entity_id": 2,
+      "description": "rectangular concrete basins",
+      "box": [
+        2354.90869140625,
+        1100.0693359375,
+        3293.299072265625,
+        1430.2109375
+      ],
+      "score": 0.5044,
+      "frame_idx": 2,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 3,
+      "description": "brick walls",
+      "box": [
+        2344.639892578125,
+        13.092891693115234,
+        3836.811767578125,
+        1347.787109375
+      ],
+      "score": 0.4291,
+      "frame_idx": 2,
+      "box_area_ratio": 0.24
+    },
+    {
+      "entity_id": 4,
+      "description": "large arched window",
+      "box": [
+        3434.347412109375,
+        207.9816131591797,
+        3834.42236328125,
+        1123.78076171875
+      ],
+      "score": 0.5073,
+      "frame_idx": 1,
+      "box_area_ratio": 0.044
+    }
+  ],
+  "matched_entities": 4
+}

@@ -1,0 +1,106 @@
+{
+  "id": 481,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-group-of-friends-wearing-elegant-dresses-and-suits-celebrate-51523.mp4",
+  "local_path": "/root/cut/data/mixkit-a-group-of-friends-wearing-elegant-dresses-and-suits-celebrate-51523.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves modifying a foreground object (replacing text) without any camera movements, framing changes, or stylistic filters.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the identities and facial features of the five friends preserved?",
+    "Comparing Video A and Video B, how accurately is the formal attire (suits, dresses) of the five friends preserved?",
+    "Comparing Video A and Video B, how well is the placement and color of the gold and black balloons on the floor preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal synchronization of the friends' laughter and interactions preserved?",
+    "Comparing Video A and Video B, how well is the modern room's background architecture and lighting preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "five friends"
+    },
+    {
+      "description": "suits"
+    },
+    {
+      "description": "dresses"
+    },
+    {
+      "description": "gold balloons"
+    },
+    {
+      "description": "black balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "five friends",
+      "box": [
+        627.0037841796875,
+        246.88809204101562,
+        1026.15771484375,
+        1073.48193359375
+      ],
+      "score": 0.5377,
+      "frame_idx": 1,
+      "box_area_ratio": 0.159
+    },
+    {
+      "entity_id": 2,
+      "description": "suits",
+      "box": [
+        1037.489501953125,
+        694.0262451171875,
+        1327.237060546875,
+        1076.7281494140625
+      ],
+      "score": 0.5907,
+      "frame_idx": 1,
+      "box_area_ratio": 0.053
+    },
+    {
+      "entity_id": 3,
+      "description": "dresses",
+      "box": [
+        654.7492065429688,
+        421.5489807128906,
+        900.5448608398438,
+        1074.8529052734375
+      ],
+      "score": 0.6536,
+      "frame_idx": 0,
+      "box_area_ratio": 0.077
+    },
+    {
+      "entity_id": 4,
+      "description": "gold balloons",
+      "box": [
+        0.19260406494140625,
+        791.811279296875,
+        700.3994750976562,
+        1078.282470703125
+      ],
+      "score": 0.4671,
+      "frame_idx": 2,
+      "box_area_ratio": 0.097
+    },
+    {
+      "entity_id": 5,
+      "description": "black balloons",
+      "box": [
+        -3.365449905395508,
+        201.79649353027344,
+        737.9307250976562,
+        1080.0426025390625
+      ],
+      "score": 0.35,
+      "frame_idx": 1,
+      "box_area_ratio": 0.314
+    }
+  ],
+  "matched_entities": 5
+}

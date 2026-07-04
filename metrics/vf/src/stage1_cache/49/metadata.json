@@ -1,0 +1,122 @@
+{
+  "id": 49,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/41.mp4",
+  "local_path": "/root/cut/data/41.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object and adding a visual effect, with no camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the first-person tracking motion (moving forward and upward) preserved?",
+    "Comparing Video A and Video B, how accurately are the distant mountains and city in the background valley preserved?",
+    "Comparing Video A and Video B, how well are the textures of the stone wall and the stone steps preserved?",
+    "Comparing Video A and Video B, how well are the tall cypress trees and the large green bush on the left preserved?",
+    "Comparing Video A and Video B, how accurately is the bright, hazy daylight atmosphere maintained?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "distant mountains"
+    },
+    {
+      "description": "city"
+    },
+    {
+      "description": "stone wall"
+    },
+    {
+      "description": "stone steps"
+    },
+    {
+      "description": "tall cypress trees"
+    },
+    {
+      "description": "large green bush on the left"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "distant mountains",
+      "box": [
+        2361.257568359375,
+        270.3678283691406,
+        3840.22119140625,
+        921.0618896484375
+      ],
+      "score": 0.7827,
+      "frame_idx": 1,
+      "box_area_ratio": 0.116
+    },
+    {
+      "entity_id": 2,
+      "description": "city",
+      "box": [
+        2760.79638671875,
+        618.4566650390625,
+        3848.82666015625,
+        1939.5516357421875
+      ],
+      "score": 0.4777,
+      "frame_idx": 1,
+      "box_area_ratio": 0.173
+    },
+    {
+      "entity_id": 3,
+      "description": "stone wall",
+      "box": [
+        521.2499389648438,
+        707.5906372070312,
+        955.1549682617188,
+        1238.0780029296875
+      ],
+      "score": 0.4371,
+      "frame_idx": 0,
+      "box_area_ratio": 0.028
+    },
+    {
+      "entity_id": 4,
+      "description": "stone steps",
+      "box": [
+        1791.7236328125,
+        615.7825317382812,
+        2323.684326171875,
+        1923.6611328125
+      ],
+      "score": 0.721,
+      "frame_idx": 1,
+      "box_area_ratio": 0.084
+    },
+    {
+      "entity_id": 5,
+      "description": "tall cypress trees",
+      "box": [
+        526.0977783203125,
+        2.7842938899993896,
+        1639.32177734375,
+        884.2339477539062
+      ],
+      "score": 0.6664,
+      "frame_idx": 1,
+      "box_area_ratio": 0.118
+    },
+    {
+      "entity_id": 6,
+      "description": "large green bush on the left",
+      "box": [
+        406.1314697265625,
+        832.1600341796875,
+        1851.56396484375,
+        1623.9970703125
+      ],
+      "score": 0.7364,
+      "frame_idx": 2,
+      "box_area_ratio": 0.138
+    }
+  ],
+  "matched_entities": 6
+}

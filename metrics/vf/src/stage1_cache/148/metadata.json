@@ -1,0 +1,90 @@
+{
+  "id": 148,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-fitness-influencer-in-front-of-a-camera-giving-a-tutorial-5053.mp4",
+  "local_path": "/root/cut/data/mixkit-fitness-influencer-in-front-of-a-camera-giving-a-tutorial-5053.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing subjects/objects and changing their motion/pose without any camera movements or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific artwork, colors, and patterns of the mural wall in the background preserved?",
+    "Comparing Video A and Video B, how accurately is the camera on the tripod in the foreground maintained in terms of its position and appearance?",
+    "Comparing Video A and Video B, how well is the overall lighting, color grading, and environmental atmosphere of the room preserved?",
+    "Comparing Video A and Video B, how well is the camera's framing (medium shot) and any subtle camera shake or movement preserved?",
+    "Comparing Video A and Video B, how well is the texture and reflection of the floor surface preserved where the action takes place?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "mural wall in the back"
+    },
+    {
+      "description": "camera in the foreground"
+    },
+    {
+      "description": "tripod in the foreground"
+    },
+    {
+      "description": "floor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "mural wall in the back",
+      "box": [
+        3.7894248962402344,
+        2.0695602893829346,
+        1915.747314453125,
+        569.9768676757812
+      ],
+      "score": 0.3929,
+      "frame_idx": 2,
+      "box_area_ratio": 0.524
+    },
+    {
+      "entity_id": 2,
+      "description": "camera in the foreground",
+      "box": [
+        1310.6591796875,
+        379.4410400390625,
+        1796.81884765625,
+        1074.6466064453125
+      ],
+      "score": 0.7341,
+      "frame_idx": 2,
+      "box_area_ratio": 0.163
+    },
+    {
+      "entity_id": 3,
+      "description": "tripod in the foreground",
+      "box": [
+        1357.529052734375,
+        683.2344970703125,
+        1791.3427734375,
+        1071.5396728515625
+      ],
+      "score": 0.6838,
+      "frame_idx": 1,
+      "box_area_ratio": 0.081
+    },
+    {
+      "entity_id": 4,
+      "description": "floor",
+      "box": [
+        6.35284423828125,
+        522.9127807617188,
+        1429.46875,
+        1079.2340087890625
+      ],
+      "score": 0.4084,
+      "frame_idx": 2,
+      "box_area_ratio": 0.382
+    }
+  ],
+  "matched_entities": 4
+}

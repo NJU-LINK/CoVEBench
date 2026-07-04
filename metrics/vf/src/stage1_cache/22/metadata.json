@@ -1,0 +1,108 @@
+{
+  "id": 22,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/90.mp4",
+  "local_path": "/root/cut/data/90.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object (drone) and defining its motion and effects without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the placement and density of the green moss and ferns preserved?",
+    "Comparing Video A and Video B, how accurately is the rusted machinery and scattered debris preserved?",
+    "Comparing Video A and Video B, how well is the side-filtering sunlight and the overall lighting of the factory hall preserved?",
+    "Comparing Video A and Video B, how accurately is the camera angle, wide shot composition and the tracking shot maintained?",
+    "Comparing Video A and Video B, how well are the fine details of the decaying factory walls and ceiling structures preserved without introducing temporal artifacts?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green moss"
+    },
+    {
+      "description": "ferns"
+    },
+    {
+      "description": "machinery"
+    },
+    {
+      "description": "debris"
+    },
+    {
+      "description": "factory walls"
+    },
+    {
+      "description": "ceiling structures"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green moss",
+      "box": [
+        1676.7330322265625,
+        656.29052734375,
+        2771.24951171875,
+        2146.348876953125
+      ],
+      "score": 0.3938,
+      "frame_idx": 0,
+      "box_area_ratio": 0.197
+    },
+    {
+      "entity_id": 2,
+      "description": "ferns",
+      "box": [
+        3084.974853515625,
+        1876.613037109375,
+        3496.986572265625,
+        2155.542236328125
+      ],
+      "score": 0.5919,
+      "frame_idx": 0,
+      "box_area_ratio": 0.014
+    },
+    {
+      "entity_id": 3,
+      "description": "machinery",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 4,
+      "description": "debris",
+      "box": null,
+      "score": 0.4103,
+      "frame_idx": null,
+      "box_area_ratio": 0.863,
+      "rejected_reason": "box covers 86% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "factory walls",
+      "box": [
+        2330.154541015625,
+        3.8388848304748535,
+        3835.798828125,
+        1240.0218505859375
+      ],
+      "score": 0.4405,
+      "frame_idx": 0,
+      "box_area_ratio": 0.224
+    },
+    {
+      "entity_id": 6,
+      "description": "ceiling structures",
+      "box": null,
+      "score": 0.3144,
+      "frame_idx": null,
+      "box_area_ratio": 0.988,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

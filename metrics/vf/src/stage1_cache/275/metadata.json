@@ -1,0 +1,90 @@
+{
+  "id": 275,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5073_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5073_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves background replacement and object modification (color change) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the airplane's blue livery accents changed to crimson red while preserving the underlying aircraft design and structure?",
+    "Comparing Video A and Video B, how accurately is the airplane's landing trajectory and horizontal movement across the frame preserved?",
+    "Comparing Video A and Video B, how well is the exact temporal moment when the fuselage and engines first make contact with the surface preserved?",
+    "Comparing Video A and Video B, how well is the scale and central positioning of the airplane within the frame preserved?",
+    "Comparing Video A and Video B, how well are the intensity and volume of the spray (originally water splashes) preserved as they erupt from the contact points?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "airplane"
+    },
+    {
+      "description": "fuselage"
+    },
+    {
+      "description": "engines"
+    },
+    {
+      "description": "spray"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "airplane",
+      "box": [
+        151.6687774658203,
+        283.0565185546875,
+        1912.0477294921875,
+        731.39990234375
+      ],
+      "score": 0.9266,
+      "frame_idx": 1,
+      "box_area_ratio": 0.381
+    },
+    {
+      "entity_id": 2,
+      "description": "fuselage",
+      "box": [
+        158.5293426513672,
+        275.0918273925781,
+        1897.66796875,
+        734.7276611328125
+      ],
+      "score": 0.6563,
+      "frame_idx": 1,
+      "box_area_ratio": 0.385
+    },
+    {
+      "entity_id": 3,
+      "description": "engines",
+      "box": [
+        918.4361572265625,
+        597.448974609375,
+        1240.6357421875,
+        732.8920288085938
+      ],
+      "score": 0.3491,
+      "frame_idx": 2,
+      "box_area_ratio": 0.021
+    },
+    {
+      "entity_id": 4,
+      "description": "spray",
+      "box": [
+        137.13392639160156,
+        284.4388427734375,
+        1892.0107421875,
+        733.1859741210938
+      ],
+      "score": 0.451,
+      "frame_idx": 2,
+      "box_area_ratio": 0.38
+    }
+  ],
+  "matched_entities": 4
+}

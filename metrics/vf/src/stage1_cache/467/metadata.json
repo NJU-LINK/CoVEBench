@@ -1,0 +1,68 @@
+{
+  "id": 467,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/607435_8s_part1_9.0s.mp4",
+  "local_path": "/root/cut/data/607435_8s_part1_9.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing a facial expression (pose/motion), replacing the background environment, and changing the object's position within the frame, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's facial identity and specific features preserved?",
+    "Comparing Video A and Video B, how well is the 'two puffs' hairstyle preserved in terms of shape and volume?",
+    "Comparing Video A and Video B, how well are the color, pattern, and texture of the girl's clothing preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "two puffs hairstyle"
+    },
+    {
+      "description": "clothing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": null,
+      "score": 0.9457,
+      "frame_idx": null,
+      "box_area_ratio": 0.557,
+      "rejected_reason": "box covers 56% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "two puffs hairstyle",
+      "box": [
+        460.9403076171875,
+        18.581850051879883,
+        976.76171875,
+        330.2641906738281
+      ],
+      "score": 0.53,
+      "frame_idx": 1,
+      "box_area_ratio": 0.174
+    },
+    {
+      "entity_id": 3,
+      "description": "clothing",
+      "box": [
+        350.2441101074219,
+        575.979736328125,
+        1092.272216796875,
+        716.381103515625
+      ],
+      "score": 0.7371,
+      "frame_idx": 2,
+      "box_area_ratio": 0.113
+    }
+  ],
+  "matched_entities": 2
+}

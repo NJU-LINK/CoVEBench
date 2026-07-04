@@ -1,0 +1,56 @@
+{
+  "id": 461,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/20776482_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/20776482_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing object position, background environment, and replacing foreground elements without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific colors, textures, and intricate details of the goddess Durga's statue preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance, pose, and facial expression of the tiger preserved?",
+    "Comparing Video A and Video B, how well is the overall scale and proportion of the statue relative to the tiger maintained?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "durga statue"
+    },
+    {
+      "description": "tiger"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "durga statue",
+      "box": [
+        709.6362915039062,
+        410.5218811035156,
+        1133.874267578125,
+        975.9278564453125
+      ],
+      "score": 0.8415,
+      "frame_idx": 1,
+      "box_area_ratio": 0.116
+    },
+    {
+      "entity_id": 2,
+      "description": "tiger",
+      "box": [
+        719.4797973632812,
+        412.3186340332031,
+        1128.70263671875,
+        955.2333374023438
+      ],
+      "score": 0.3244,
+      "frame_idx": 0,
+      "box_area_ratio": 0.107
+    }
+  ],
+  "matched_entities": 2
+}

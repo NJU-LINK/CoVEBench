@@ -1,0 +1,170 @@
+{
+  "id": 488,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-birthday-cake-on-a-table-with-candies-on-a-white-5108.mp4",
+  "local_path": "/root/cut/data/mixkit-birthday-cake-on-a-table-with-candies-on-a-white-5108.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the vibrant rainbow sprinkles on the birthday cake preserved?",
+    "Comparing Video A and Video B, how accurately is the count and appearance of the seven multi-colored candles maintained?",
+    "Comparing Video A and Video B, how well is the glass vase with swirl lollipops and gumballs on the left preserved?",
+    "Comparing Video A and Video B, how accurately is the flickering candle flames preserved?",
+    "Comparing Video A and Video B, how well is the celebratory atmosphere, specifically the blurred red and yellow balloons, preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "rainbow sprinkles"
+    },
+    {
+      "description": "birthday cake"
+    },
+    {
+      "description": "multi-colored candles"
+    },
+    {
+      "description": "glass vase on the left"
+    },
+    {
+      "description": "swirl lollipops"
+    },
+    {
+      "description": "gumballs"
+    },
+    {
+      "description": "candle flames"
+    },
+    {
+      "description": "red balloons"
+    },
+    {
+      "description": "yellow balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "rainbow sprinkles",
+      "box": [
+        502.8515625,
+        591.3057861328125,
+        1369.8426513671875,
+        1001.3978271484375
+      ],
+      "score": 0.616,
+      "frame_idx": 0,
+      "box_area_ratio": 0.171
+    },
+    {
+      "entity_id": 2,
+      "description": "birthday cake",
+      "box": [
+        489.33929443359375,
+        585.95751953125,
+        1367.677734375,
+        1004.9769287109375
+      ],
+      "score": 0.4951,
+      "frame_idx": 0,
+      "box_area_ratio": 0.177
+    },
+    {
+      "entity_id": 3,
+      "description": "multi-colored candles",
+      "box": [
+        543.0159912109375,
+        94.78009033203125,
+        773.7328491210938,
+        611.55908203125
+      ],
+      "score": 0.4458,
+      "frame_idx": 2,
+      "box_area_ratio": 0.057
+    },
+    {
+      "entity_id": 4,
+      "description": "glass vase on the left",
+      "box": [
+        1.8422985076904297,
+        341.9546813964844,
+        228.27711486816406,
+        1069.8006591796875
+      ],
+      "score": 0.6469,
+      "frame_idx": 0,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 5,
+      "description": "swirl lollipops",
+      "box": [
+        1503.686279296875,
+        547.4771118164062,
+        1917.7926025390625,
+        1075.0322265625
+      ],
+      "score": 0.4876,
+      "frame_idx": 1,
+      "box_area_ratio": 0.105
+    },
+    {
+      "entity_id": 6,
+      "description": "gumballs",
+      "box": [
+        526.8095703125,
+        586.5209350585938,
+        1363.41943359375,
+        989.5951538085938
+      ],
+      "score": 0.5479,
+      "frame_idx": 1,
+      "box_area_ratio": 0.163
+    },
+    {
+      "entity_id": 7,
+      "description": "candle flames",
+      "box": [
+        796.9039306640625,
+        57.945499420166016,
+        863.726318359375,
+        603.7890625
+      ],
+      "score": 0.5038,
+      "frame_idx": 2,
+      "box_area_ratio": 0.018
+    },
+    {
+      "entity_id": 8,
+      "description": "red balloons",
+      "box": [
+        4.3672943115234375,
+        10.994782447814941,
+        331.0053405761719,
+        850.818115234375
+      ],
+      "score": 0.3732,
+      "frame_idx": 0,
+      "box_area_ratio": 0.132
+    },
+    {
+      "entity_id": 9,
+      "description": "yellow balloons",
+      "box": [
+        -0.5744576454162598,
+        766.423583984375,
+        219.34066772460938,
+        1076.38720703125
+      ],
+      "score": 0.4257,
+      "frame_idx": 1,
+      "box_area_ratio": 0.033
+    }
+  ],
+  "matched_entities": 9
+}

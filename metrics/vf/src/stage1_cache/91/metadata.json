@@ -1,0 +1,11 @@
+{
+  "id": 91,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-student-girl-from-the-front-smiling-on-a-green-background-28307.mp4",
+  "local_path": "/root/cut/data/mixkit-student-girl-from-the-front-smiling-on-a-green-background-28307.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

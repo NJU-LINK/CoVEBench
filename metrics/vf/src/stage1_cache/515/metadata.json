@@ -1,0 +1,106 @@
+{
+  "id": 515,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-friends-laughing-and-dancing-at-a-costume-party-34450.mp4",
+  "local_path": "/root/cut/data/mixkit-friends-laughing-and-dancing-at-a-costume-party-34450.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying object materials and changing object motion intensity within the scene.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the costumes and physical appearances of the two dancing women in the center preserved?",
+    "Comparing Video A and Video B, how accurately is the person in the black hooded grim reaper robe on the right preserved?",
+    "Comparing Video A and Video B, how well is the background environment, including the bookshelf and decorative skeleton, preserved?",
+    "Comparing Video A and Video B, how accurately is the blue and purple ambient lighting of the room preserved?",
+    "Comparing Video A and Video B, how well are the specific laughing and dancing motions of the two women synchronized and preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "two women in the center"
+    },
+    {
+      "description": "person on the right"
+    },
+    {
+      "description": "black hooded robe"
+    },
+    {
+      "description": "bookshelf"
+    },
+    {
+      "description": "decorative skeleton"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "two women in the center",
+      "box": [
+        580.4979248046875,
+        262.4604187011719,
+        1338.2271728515625,
+        1071.9854736328125
+      ],
+      "score": 0.4787,
+      "frame_idx": 0,
+      "box_area_ratio": 0.296
+    },
+    {
+      "entity_id": 2,
+      "description": "person on the right",
+      "box": [
+        1423.8819580078125,
+        2.873643636703491,
+        1915.3919677734375,
+        1070.0694580078125
+      ],
+      "score": 0.7268,
+      "frame_idx": 1,
+      "box_area_ratio": 0.253
+    },
+    {
+      "entity_id": 3,
+      "description": "black hooded robe",
+      "box": [
+        145.3618621826172,
+        175.43284606933594,
+        530.5321044921875,
+        1074.098876953125
+      ],
+      "score": 0.4106,
+      "frame_idx": 0,
+      "box_area_ratio": 0.167
+    },
+    {
+      "entity_id": 4,
+      "description": "bookshelf",
+      "box": [
+        654.0934448242188,
+        247.84388732910156,
+        1290.420654296875,
+        536.3379516601562
+      ],
+      "score": 0.512,
+      "frame_idx": 0,
+      "box_area_ratio": 0.089
+    },
+    {
+      "entity_id": 5,
+      "description": "decorative skeleton",
+      "box": [
+        5.14052152633667,
+        -1.0846531391143799,
+        155.8009490966797,
+        492.3246154785156
+      ],
+      "score": 0.6051,
+      "frame_idx": 0,
+      "box_area_ratio": 0.036
+    }
+  ],
+  "matched_entities": 5
+}

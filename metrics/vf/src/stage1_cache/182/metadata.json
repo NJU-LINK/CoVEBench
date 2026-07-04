@@ -1,0 +1,11 @@
+{
+  "id": 182,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-two-friends-at-a-nice-dinner-together-with-wine-12129.mp4",
+  "local_path": "/root/cut/data/mixkit-two-friends-at-a-nice-dinner-together-with-wine-12129.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

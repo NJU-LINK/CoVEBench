@@ -1,0 +1,155 @@
+{
+  "id": 500,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-happy-lady-has-a-computer-video-call-4594.mp4",
+  "local_path": "/root/cut/data/mixkit-happy-lady-has-a-computer-video-call-4594.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's red and black plaid shirt preserved?",
+    "Comparing Video A and Video B, how accurately is the woman's action of picking up the wrapped gift and showing it to the camera preserved?",
+    "Comparing Video A and Video B, how well is the colorful chevron party hat on the woman's head preserved?",
+    "Comparing Video A and Video B, how well is the woman's facial expression and smile preserved while she talks to the laptop?",
+    "Comparing Video A and Video B, how well is the green balloon on the white tufted sofa preserved?",
+    "Comparing Video A and Video B, how well are the details of the white tufted sofa and the wire stand preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "red and black plaid shirt"
+    },
+    {
+      "description": "wrapped gift"
+    },
+    {
+      "description": "colorful chevron party hat"
+    },
+    {
+      "description": "laptop"
+    },
+    {
+      "description": "green balloon"
+    },
+    {
+      "description": "white tufted sofa"
+    },
+    {
+      "description": "wire stand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 25,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        630.6151123046875,
+        366.30084228515625,
+        1546.6336669921875,
+        932.8992919921875
+      ],
+      "score": 0.9152,
+      "frame_idx": 1,
+      "box_area_ratio": 0.25
+    },
+    {
+      "entity_id": 2,
+      "description": "red and black plaid shirt",
+      "box": [
+        727.638916015625,
+        541.5845336914062,
+        1473.9049072265625,
+        922.6199951171875
+      ],
+      "score": 0.5845,
+      "frame_idx": 1,
+      "box_area_ratio": 0.137
+    },
+    {
+      "entity_id": 3,
+      "description": "wrapped gift",
+      "box": [
+        1021.3762817382812,
+        793.6334838867188,
+        1406.117919921875,
+        994.8402099609375
+      ],
+      "score": 0.5793,
+      "frame_idx": 2,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 4,
+      "description": "colorful chevron party hat",
+      "box": [
+        693.3861083984375,
+        254.3675537109375,
+        816.373779296875,
+        442.026611328125
+      ],
+      "score": 0.8046,
+      "frame_idx": 2,
+      "box_area_ratio": 0.011
+    },
+    {
+      "entity_id": 5,
+      "description": "laptop",
+      "box": [
+        281.9961853027344,
+        680.9733276367188,
+        866.03955078125,
+        1014.8201293945312
+      ],
+      "score": 0.7433,
+      "frame_idx": 1,
+      "box_area_ratio": 0.094
+    },
+    {
+      "entity_id": 6,
+      "description": "green balloon",
+      "box": [
+        445.6446838378906,
+        318.6066589355469,
+        666.1065673828125,
+        508.6673889160156
+      ],
+      "score": 0.6913,
+      "frame_idx": 0,
+      "box_area_ratio": 0.02
+    },
+    {
+      "entity_id": 7,
+      "description": "white tufted sofa",
+      "box": [
+        54.86045837402344,
+        242.5323486328125,
+        1837.733642578125,
+        789.8663330078125
+      ],
+      "score": 0.7232,
+      "frame_idx": 2,
+      "box_area_ratio": 0.471
+    },
+    {
+      "entity_id": 8,
+      "description": "wire stand",
+      "box": [
+        1586.353515625,
+        567.5653076171875,
+        1921.424072265625,
+        761.4859008789062
+      ],
+      "score": 0.4979,
+      "frame_idx": 0,
+      "box_area_ratio": 0.031
+    }
+  ],
+  "matched_entities": 8
+}

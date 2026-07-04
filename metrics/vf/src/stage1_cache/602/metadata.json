@@ -1,0 +1,77 @@
+{
+  "id": 602,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/163.mp4",
+  "local_path": "/root/cut/data/163.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding an object, changing the background environment, modifying object motion, and changing object position, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the pergola's red color and concrete material/texture preserved, accounting for overcast lighting differences?",
+    "Comparing Video A and Video B, how well is the specific identity and placement of the climbing vines on the pergola preserved, apart from the added swaying motion?",
+    "Comparing Video A and Video B, how accurately is the tropical garden background, including the dense greenery and palm fronds, preserved in identity, excluding the new rain and wind motion?",
+    "Comparing Video A and Video B, how well is the static low-angle camera viewpoint preserved, ensuring no added pan, zoom, or follow motion occurs aside from the requested subject shift?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "red pergola"
+    },
+    {
+      "description": "green vines"
+    },
+    {
+      "description": "palm trees"
+    },
+    {
+      "description": "foliage"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "red pergola",
+      "box": null,
+      "score": 0.5539,
+      "frame_idx": null,
+      "box_area_ratio": 0.88,
+      "rejected_reason": "box covers 88% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "green vines",
+      "box": null,
+      "score": 0.5881,
+      "frame_idx": null,
+      "box_area_ratio": 0.987,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "palm trees",
+      "box": [
+        2032.858642578125,
+        -6.086339950561523,
+        3830.726318359375,
+        2152.4892578125
+      ],
+      "score": 0.3406,
+      "frame_idx": 2,
+      "box_area_ratio": 0.468
+    },
+    {
+      "entity_id": 4,
+      "description": "foliage",
+      "box": null,
+      "score": 0.594,
+      "frame_idx": null,
+      "box_area_ratio": 0.991,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

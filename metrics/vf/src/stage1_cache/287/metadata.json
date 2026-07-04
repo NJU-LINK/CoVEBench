@@ -1,0 +1,53 @@
+{
+  "id": 287,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5553_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5553_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves background replacement, object replacement, and action modification without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the base mechanical structure and articulation of the robotic arm (excluding the end-effector tool) preserved?",
+    "Comparing Video A and Video B, how accurately is the robotic arm's movement path preserved as it reaches toward the subject?",
+    "Comparing Video A and Video B, how well is the camera's framing, angle, and any subtle movement preserved?",
+    "Comparing Video A and Video B, how well is the subject's relative scale and position within the frame preserved during the transformation?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "robotic arm"
+    },
+    {
+      "description": "sheep"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "robotic arm",
+      "box": [
+        474.74688720703125,
+        194.4033203125,
+        717.369873046875,
+        556.0730590820312
+      ],
+      "score": 0.5501,
+      "frame_idx": 2,
+      "box_area_ratio": 0.095
+    },
+    {
+      "entity_id": 2,
+      "description": "sheep",
+      "box": null,
+      "score": 0.91,
+      "frame_idx": null,
+      "box_area_ratio": 0.733,
+      "rejected_reason": "box covers 73% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

@@ -1,0 +1,86 @@
+{
+  "id": 20,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/79.mp4",
+  "local_path": "/root/cut/data/79.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion and state of a foreground object (the volcano) and adding associated visual effects (lava, glow, embers) without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the layout and architectural detail of the city of Catania preserved?",
+    "Comparing Video A and Video B, how accurately are the warm lights illuminating the city streets and buildings preserved?",
+    "Comparing Video A and Video B, how well is the twilight sky, including its color gradients and cloud formations, preserved?",
+    "Comparing Video A and Video B, how well is the high-angle aerial camera perspective and any subtle camera motion preserved?",
+    "Comparing Video A and Video B, how well are the textures and silhouette of Mount Etna's slopes (excluding the active crater area) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "city buildings"
+    },
+    {
+      "description": "streets"
+    },
+    {
+      "description": "clouds"
+    },
+    {
+      "description": "mount etna"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 6,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "city buildings",
+      "box": null,
+      "score": 0.8374,
+      "frame_idx": null,
+      "box_area_ratio": 0.662,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "streets",
+      "box": [
+        1473.6053466796875,
+        908.4251098632812,
+        2124.040771484375,
+        2145.691162109375
+      ],
+      "score": 0.5392,
+      "frame_idx": 0,
+      "box_area_ratio": 0.097
+    },
+    {
+      "entity_id": 3,
+      "description": "clouds",
+      "box": [
+        1787.1783447265625,
+        24.56487274169922,
+        3828.364990234375,
+        452.2460632324219
+      ],
+      "score": 0.537,
+      "frame_idx": 1,
+      "box_area_ratio": 0.105
+    },
+    {
+      "entity_id": 4,
+      "description": "mount etna",
+      "box": [
+        140.11013793945312,
+        435.6432800292969,
+        3019.4541015625,
+        774.640869140625
+      ],
+      "score": 0.6634,
+      "frame_idx": 0,
+      "box_area_ratio": 0.118
+    }
+  ],
+  "matched_entities": 3
+}

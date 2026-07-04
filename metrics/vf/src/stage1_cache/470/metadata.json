@@ -1,0 +1,73 @@
+{
+  "id": 470,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/629_2_8.0s.mp4",
+  "local_path": "/root/cut/data/629_2_8.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment, changing object motion, and shifting object position, all of which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's short black hair style and texture preserved?",
+    "Comparing Video A and Video B, how accurately is the girl's white t-shirt preserved in terms of fit, color, and neckline?",
+    "Comparing Video A and Video B, how well is the specific anime art style (line work, shading, facial proportions) maintained?",
+    "Comparing Video A and Video B, how accurately are the girl's facial features and identity preserved despite the change in motion and camera angle?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "anime girl"
+    },
+    {
+      "description": "short black hair"
+    },
+    {
+      "description": "white t-shirt"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "anime girl",
+      "box": [
+        437.075439453125,
+        2.056940793991089,
+        920.4996948242188,
+        532.5821533203125
+      ],
+      "score": 0.7304,
+      "frame_idx": 2,
+      "box_area_ratio": 0.361
+    },
+    {
+      "entity_id": 2,
+      "description": "short black hair",
+      "box": [
+        478.17047119140625,
+        1.964939832687378,
+        845.6942138671875,
+        348.2334289550781
+      ],
+      "score": 0.7619,
+      "frame_idx": 1,
+      "box_area_ratio": 0.179
+    },
+    {
+      "entity_id": 3,
+      "description": "white t-shirt",
+      "box": [
+        447.1864318847656,
+        368.2201843261719,
+        916.0083618164062,
+        535.1740112304688
+      ],
+      "score": 0.6151,
+      "frame_idx": 2,
+      "box_area_ratio": 0.11
+    }
+  ],
+  "matched_entities": 3
+}

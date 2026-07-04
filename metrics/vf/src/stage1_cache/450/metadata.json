@@ -1,0 +1,85 @@
+{
+  "id": 450,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/19538617_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/19538617_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion (pedaling speed), modifying the background environment (rainy night), and changing object positions (pedestrians) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific green color and frame design of the shared bicycle preserved?",
+    "Comparing Video A and Video B, how accurately is the cyclist's dark clothing (style and fit) preserved despite the change to nighttime lighting?",
+    "Comparing Video A and Video B, how well are the identities and general appearances of the standing pedestrians maintained after being shifted further back?",
+    "Comparing Video A and Video B, how accurately is the geometry and layout of the city crosswalk (white lines and pavement texture) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "green bicycle"
+    },
+    {
+      "description": "person in dark clothing"
+    },
+    {
+      "description": "pedestrians in the back"
+    },
+    {
+      "description": "crosswalk"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green bicycle",
+      "box": [
+        -2.196063995361328,
+        236.29493713378906,
+        1005.02978515625,
+        982.250244140625
+      ],
+      "score": 0.9678,
+      "frame_idx": 2,
+      "box_area_ratio": 0.362
+    },
+    {
+      "entity_id": 2,
+      "description": "person in dark clothing",
+      "box": [
+        270.86676025390625,
+        1.7420625686645508,
+        786.713134765625,
+        805.6828002929688
+      ],
+      "score": 0.7168,
+      "frame_idx": 0,
+      "box_area_ratio": 0.2
+    },
+    {
+      "entity_id": 3,
+      "description": "pedestrians in the back",
+      "box": null,
+      "score": 0.4071,
+      "frame_idx": null,
+      "box_area_ratio": 0.589,
+      "rejected_reason": "box covers 59% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "crosswalk",
+      "box": [
+        -2.5081443786621094,
+        929.0514526367188,
+        1905.311767578125,
+        1077.6673583984375
+      ],
+      "score": 0.4303,
+      "frame_idx": 0,
+      "box_area_ratio": 0.137
+    }
+  ],
+  "matched_entities": 3
+}

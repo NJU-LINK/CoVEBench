@@ -1,0 +1,11 @@
+{
+  "id": 538,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/26.mp4",
+  "local_path": "/root/cut/data/26.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a global slow-motion effect, which is a cinematic style change.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,74 @@
+{
+  "id": 496,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-friends-having-fun-in-a-swimming-pool-40168.mp4",
+  "local_path": "/root/cut/data/mixkit-friends-having-fun-in-a-swimming-pool-40168.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and identity of the man with dreadlocks preserved throughout his splashing and laughing actions?",
+    "Comparing Video A and Video B, how accurately is the woman in the blue bikini preserved as she joins the frame?",
+    "Comparing Video A and Video B, how well are the identities and actions of the two men who appear later in the scene preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal synchronization of the group's collective splashing and huddling preserved?",
+    "Comparing Video A and Video B, how well is the overcast lighting and the specific color palette of the outdoor pool environment maintained?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man with dreadlocks"
+    },
+    {
+      "description": "woman in blue bikini"
+    },
+    {
+      "description": "two men"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man with dreadlocks",
+      "box": [
+        69.38919067382812,
+        8.367012023925781,
+        1022.7272338867188,
+        936.3118286132812
+      ],
+      "score": 0.8867,
+      "frame_idx": 0,
+      "box_area_ratio": 0.427
+    },
+    {
+      "entity_id": 2,
+      "description": "woman in blue bikini",
+      "box": [
+        981.7451171875,
+        362.95281982421875,
+        1915.0877685546875,
+        1075.49853515625
+      ],
+      "score": 0.7268,
+      "frame_idx": 1,
+      "box_area_ratio": 0.321
+    },
+    {
+      "entity_id": 3,
+      "description": "two men",
+      "box": [
+        67.85095977783203,
+        6.588545799255371,
+        1019.6763916015625,
+        940.517333984375
+      ],
+      "score": 0.6256,
+      "frame_idx": 0,
+      "box_area_ratio": 0.429
+    }
+  ],
+  "matched_entities": 3
+}

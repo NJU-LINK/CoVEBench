@@ -1,0 +1,113 @@
+{
+  "id": 484,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-pair-of-glasses-with-cocktails-5127.mp4",
+  "local_path": "/root/cut/data/mixkit-a-pair-of-glasses-with-cocktails-5127.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a background object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the shape, transparency, and elegant structure of the foreground wine glass preserved?",
+    "Comparing Video A and Video B, how accurately are the thin, curled green cucumber slice and the ice cubes inside the foreground glass preserved?",
+    "Comparing Video A and Video B, how well are the dynamics of the small bubbles rising through the liquid and clinging to the ice preserved?",
+    "Comparing Video A and Video B, how well is the clean, bright white background and its minimalist lighting style preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "wine glass in the foreground"
+    },
+    {
+      "description": "curled green cucumber slice"
+    },
+    {
+      "description": "ice cubes"
+    },
+    {
+      "description": "bubbles"
+    },
+    {
+      "description": "wine glass in the background"
+    },
+    {
+      "description": "lemon slice"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wine glass in the foreground",
+      "box": null,
+      "score": 0.7916,
+      "frame_idx": null,
+      "box_area_ratio": 0.64,
+      "rejected_reason": "box covers 64% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "curled green cucumber slice",
+      "box": [
+        209.8027801513672,
+        444.0220031738281,
+        647.3690185546875,
+        978.290771484375
+      ],
+      "score": 0.5735,
+      "frame_idx": 0,
+      "box_area_ratio": 0.113
+    },
+    {
+      "entity_id": 3,
+      "description": "ice cubes",
+      "box": null,
+      "score": 0.4483,
+      "frame_idx": null,
+      "box_area_ratio": 0.632,
+      "rejected_reason": "box covers 63% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "bubbles",
+      "box": [
+        154.8080596923828,
+        394.60308837890625,
+        1394.849609375,
+        1079.2510986328125
+      ],
+      "score": 0.4724,
+      "frame_idx": 2,
+      "box_area_ratio": 0.409
+    },
+    {
+      "entity_id": 5,
+      "description": "wine glass in the background",
+      "box": [
+        1196.1815185546875,
+        1.9438397884368896,
+        1907.44970703125,
+        1068.3856201171875
+      ],
+      "score": 0.5141,
+      "frame_idx": 2,
+      "box_area_ratio": 0.366
+    },
+    {
+      "entity_id": 6,
+      "description": "lemon slice",
+      "box": [
+        1553.7691650390625,
+        439.3688049316406,
+        1916.750732421875,
+        913.3952026367188
+      ],
+      "score": 0.4128,
+      "frame_idx": 1,
+      "box_area_ratio": 0.083
+    }
+  ],
+  "matched_entities": 4
+}

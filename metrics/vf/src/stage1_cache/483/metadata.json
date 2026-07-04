@@ -1,0 +1,119 @@
+{
+  "id": 483,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-group-of-friends-make-a-toast-and-drink-from-51529.mp4",
+  "local_path": "/root/cut/data/mixkit-a-group-of-friends-make-a-toast-and-drink-from-51529.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and attire of the woman in the patterned black and gold dress preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal moment and physical motion of the champagne glasses clinking preserved?",
+    "Comparing Video A and Video B, how well are the identities and laughter of the other three friends preserved?",
+    "Comparing Video A and Video B, how well are the gold and black balloons in the background preserved?",
+    "Comparing Video A and Video B, how well are the warm lighting, lens flares, and the texture of the gold wall preserved?",
+    "Comparing Video A and Video B, how well is the gold tinsel decoration on the champagne glasses preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "woman in black and gold dress"
+    },
+    {
+      "description": "champagne glasses"
+    },
+    {
+      "description": "three friends"
+    },
+    {
+      "description": "gold and black balloons"
+    },
+    {
+      "description": "gold wall"
+    },
+    {
+      "description": "gold tinsel"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 27,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in black and gold dress",
+      "box": [
+        668.9166870117188,
+        51.6781120300293,
+        1167.6068115234375,
+        1078.1641845703125
+      ],
+      "score": 0.787,
+      "frame_idx": 1,
+      "box_area_ratio": 0.247
+    },
+    {
+      "entity_id": 2,
+      "description": "champagne glasses",
+      "box": [
+        1145.7403564453125,
+        570.026123046875,
+        1239.873291015625,
+        864.8444213867188
+      ],
+      "score": 0.6341,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    },
+    {
+      "entity_id": 3,
+      "description": "three friends",
+      "box": [
+        658.5620727539062,
+        12.16736888885498,
+        1159.90185546875,
+        1077.383544921875
+      ],
+      "score": 0.5831,
+      "frame_idx": 2,
+      "box_area_ratio": 0.258
+    },
+    {
+      "entity_id": 4,
+      "description": "gold and black balloons",
+      "box": [
+        636.637939453125,
+        2.3800313472747803,
+        1208.5811767578125,
+        373.22998046875
+      ],
+      "score": 0.3596,
+      "frame_idx": 2,
+      "box_area_ratio": 0.102
+    },
+    {
+      "entity_id": 5,
+      "description": "gold wall",
+      "box": null,
+      "score": 0.338,
+      "frame_idx": null,
+      "box_area_ratio": 0.648,
+      "rejected_reason": "box covers 65% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 6,
+      "description": "gold tinsel",
+      "box": [
+        3.6725950241088867,
+        -0.22527337074279785,
+        323.424560546875,
+        302.2020263671875
+      ],
+      "score": 0.3906,
+      "frame_idx": 0,
+      "box_area_ratio": 0.047
+    }
+  ],
+  "matched_entities": 5
+}

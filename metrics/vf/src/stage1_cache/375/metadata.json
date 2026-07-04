@@ -1,0 +1,84 @@
+{
+  "id": 375,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-using-virtual-reality-glasses-263.mp4",
+  "local_path": "/root/cut/data/mixkit-man-using-virtual-reality-glasses-263.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the scale of a foreground object and changing the subject's pose and action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific pattern and color of the man's plaid shirt preserved?",
+    "Comparing Video A and Video B, how accurately are the background plants and television preserved?",
+    "Comparing Video A and Video B, how well is the static camera angle from behind the man preserved?",
+    "Comparing Video A and Video B, how well is the man's physical identity (hair color, hair style, and body build) preserved?",
+    "Comparing Video A and Video B, how well are the lighting conditions and ambient shadows of the room preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "plaid shirt"
+    },
+    {
+      "description": "plants"
+    },
+    {
+      "description": "television"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 29,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        2.6625823974609375,
+        259.3478088378906,
+        917.674072265625,
+        1079.0887451171875
+      ],
+      "score": 0.8568,
+      "frame_idx": 0,
+      "box_area_ratio": 0.362
+    },
+    {
+      "entity_id": 2,
+      "description": "plaid shirt",
+      "box": [
+        -3.4505081176757812,
+        217.3395538330078,
+        1025.380859375,
+        1076.305419921875
+      ],
+      "score": 0.9369,
+      "frame_idx": 1,
+      "box_area_ratio": 0.426
+    },
+    {
+      "entity_id": 3,
+      "description": "plants",
+      "box": [
+        716.4232788085938,
+        337.0642395019531,
+        1002.7212524414062,
+        662.5126953125
+      ],
+      "score": 0.6122,
+      "frame_idx": 0,
+      "box_area_ratio": 0.045
+    },
+    {
+      "entity_id": 4,
+      "description": "television",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 3
+}

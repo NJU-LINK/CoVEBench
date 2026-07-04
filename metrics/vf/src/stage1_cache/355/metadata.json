@@ -1,0 +1,135 @@
+{
+  "id": 355,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girl-practising-golf-2040.mp4",
+  "local_path": "/root/cut/data/mixkit-girl-practising-golf-2040.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the scale of a foreground object, changing a subject's clothing, and altering the subject's motion, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's facial identity and physical likeness preserved?",
+    "Comparing Video A and Video B, how accurately is the blue and white cap preserved on the girl's head?",
+    "Comparing Video A and Video B, how well is the specific pattern and color of the girl's skirt maintained?",
+    "Comparing Video A and Video B, how accurately are the background elements (palm trees and white buildings) preserved?",
+    "Comparing Video A and Video B, how well is the overcast sky and overall ambient lighting of the scene preserved?",
+    "Comparing Video A and Video B, how well is the texture and appearance of the green tee box grass preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "blue and white cap"
+    },
+    {
+      "description": "patterned skirt"
+    },
+    {
+      "description": "palm trees"
+    },
+    {
+      "description": "white buildings"
+    },
+    {
+      "description": "overcast sky"
+    },
+    {
+      "description": "green grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": [
+        356.9845886230469,
+        332.4261779785156,
+        579.5164184570312,
+        883.6704711914062
+      ],
+      "score": 0.9198,
+      "frame_idx": 0,
+      "box_area_ratio": 0.059
+    },
+    {
+      "entity_id": 2,
+      "description": "blue and white cap",
+      "box": [
+        404.5282897949219,
+        331.3045654296875,
+        542.1647338867188,
+        409.57818603515625
+      ],
+      "score": 0.4795,
+      "frame_idx": 0,
+      "box_area_ratio": 0.005
+    },
+    {
+      "entity_id": 3,
+      "description": "patterned skirt",
+      "box": [
+        368.24853515625,
+        341.5100402832031,
+        597.8146362304688,
+        891.6596069335938
+      ],
+      "score": 0.7839,
+      "frame_idx": 1,
+      "box_area_ratio": 0.061
+    },
+    {
+      "entity_id": 4,
+      "description": "palm trees",
+      "box": [
+        813.4666748046875,
+        353.4031982421875,
+        918.13916015625,
+        726.3314208984375
+      ],
+      "score": 0.5704,
+      "frame_idx": 2,
+      "box_area_ratio": 0.019
+    },
+    {
+      "entity_id": 5,
+      "description": "white buildings",
+      "box": [
+        155.82928466796875,
+        376.1573791503906,
+        1209.8511962890625,
+        722.345703125
+      ],
+      "score": 0.6338,
+      "frame_idx": 0,
+      "box_area_ratio": 0.176
+    },
+    {
+      "entity_id": 6,
+      "description": "overcast sky",
+      "box": null,
+      "score": 0.7029,
+      "frame_idx": null,
+      "box_area_ratio": 0.572,
+      "rejected_reason": "box covers 57% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 7,
+      "description": "green grass",
+      "box": [
+        0.4874610900878906,
+        686.691650390625,
+        1918.484619140625,
+        1078.803466796875
+      ],
+      "score": 0.703,
+      "frame_idx": 0,
+      "box_area_ratio": 0.363
+    }
+  ],
+  "matched_entities": 6
+}

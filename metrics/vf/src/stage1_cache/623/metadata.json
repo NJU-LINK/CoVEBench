@@ -1,0 +1,90 @@
+{
+  "id": 623,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/190.mp4",
+  "local_path": "/root/cut/data/190.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying the background environment by changing the season and weather conditions without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the town’s spatial layout (positions of major clusters of houses/streets) preserved?",
+    "Comparing Video A and Video B, how well is the aerial wide-shot viewpoint (framing and perspective of town, water, and mountains) preserved?",
+    "Comparing Video A and Video B, how well is the silhouette/shape of the distant mountains and horizon line preserved (aside from visibility loss inside the storm area)?",
+    "Comparing Video A and Video B, how well is the hilltop fortress structure preserved beneath/within the added snow (no warping, melting, or shape drift)?",
+    "Comparing Video A and Video B, how well is the large body of water (its placement/shape relative to the town and mountains) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "orange terracotta roofs"
+    },
+    {
+      "description": "distant mountains"
+    },
+    {
+      "description": "stone fortress wall"
+    },
+    {
+      "description": "large body of water"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "orange terracotta roofs",
+      "box": [
+        3.7812423706054688,
+        995.7323608398438,
+        3831.617431640625,
+        2141.579833984375
+      ],
+      "score": 0.6089,
+      "frame_idx": 1,
+      "box_area_ratio": 0.529
+    },
+    {
+      "entity_id": 2,
+      "description": "distant mountains",
+      "box": [
+        773.0722045898438,
+        735.5961303710938,
+        3828.462158203125,
+        942.4937133789062
+      ],
+      "score": 0.7468,
+      "frame_idx": 0,
+      "box_area_ratio": 0.076
+    },
+    {
+      "entity_id": 3,
+      "description": "stone fortress wall",
+      "box": [
+        2490.272705078125,
+        913.760986328125,
+        3662.810791015625,
+        1054.0010986328125
+      ],
+      "score": 0.7209,
+      "frame_idx": 1,
+      "box_area_ratio": 0.02
+    },
+    {
+      "entity_id": 4,
+      "description": "large body of water",
+      "box": [
+        10.724716186523438,
+        910.599609375,
+        3796.748046875,
+        1347.147705078125
+      ],
+      "score": 0.4405,
+      "frame_idx": 2,
+      "box_area_ratio": 0.199
+    }
+  ],
+  "matched_entities": 4
+}

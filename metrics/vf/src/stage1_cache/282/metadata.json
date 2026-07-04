@@ -1,0 +1,57 @@
+{
+  "id": 282,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5344_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5344_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing the background, replacing a foreground object, and modifying its motion, which are all permitted categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the camera's tracking or panning motion preserved as the subject moves toward the water?",
+    "Comparing Video A and Video B, how accurately is the temporal moment of the animal's first contact with the water preserved?",
+    "Comparing Video A and Video B, how well is the overall composition and framing (the subject's size and position relative to the frame) preserved?",
+    "Comparing Video A and Video B, how well is the horizon line's position and stability preserved throughout the duration of the video?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "golden dog"
+    },
+    {
+      "description": "lake"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "golden dog",
+      "box": [
+        255.82269287109375,
+        772.7901000976562,
+        652.406005859375,
+        1072.4281005859375
+      ],
+      "score": 0.9448,
+      "frame_idx": 1,
+      "box_area_ratio": 0.057
+    },
+    {
+      "entity_id": 2,
+      "description": "lake",
+      "box": [
+        135.35543823242188,
+        754.4697875976562,
+        1668.6849365234375,
+        1157.62255859375
+      ],
+      "score": 0.5727,
+      "frame_idx": 0,
+      "box_area_ratio": 0.298
+    }
+  ],
+  "matched_entities": 2
+}

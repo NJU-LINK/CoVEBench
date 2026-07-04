@@ -1,0 +1,56 @@
+{
+  "id": 473,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/638_1_8.0s.mp4",
+  "local_path": "/root/cut/data/638_1_8.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing object motion (waving hand), replacing the background environment (snowy hut), and changing object position (shifting to the right) without any camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's facial identity and dark hair color preserved?",
+    "Comparing Video A and Video B, how accurately is the blue color and style of the girl's dress preserved?",
+    "Comparing Video A and Video B, how well is the heavy impasto oil painting style (visible brushstrokes and thick texture) preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "blue dress"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": [
+        540.2597045898438,
+        49.65760803222656,
+        787.8683471679688,
+        531.4082641601562
+      ],
+      "score": 0.9276,
+      "frame_idx": 0,
+      "box_area_ratio": 0.168
+    },
+    {
+      "entity_id": 2,
+      "description": "blue dress",
+      "box": [
+        534.6441040039062,
+        53.911685943603516,
+        784.5215454101562,
+        531.42236328125
+      ],
+      "score": 0.7287,
+      "frame_idx": 1,
+      "box_area_ratio": 0.168
+    }
+  ],
+  "matched_entities": 2
+}

@@ -1,0 +1,106 @@
+{
+  "id": 23,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/97.mp4",
+  "local_path": "/root/cut/data/97.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the object's motion direction, position, and pose, which are permissible edits that do not involve camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the dark grey color and specific model of the car preserved?",
+    "Comparing Video A and Video B, how well is the texture and layout of the stone driveway preserved?",
+    "Comparing Video A and Video B, how well are the manicured green hedges and tall trees preserved?",
+    "Comparing Video A and Video B, how accurately is the clear, sunny sky and overall lighting environment preserved?",
+    "Comparing Video A and Video B, how well is the camera's original path, angle, and framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "dark grey car"
+    },
+    {
+      "description": "stone driveway"
+    },
+    {
+      "description": "manicured green hedges"
+    },
+    {
+      "description": "tall trees"
+    },
+    {
+      "description": "clear sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "dark grey car",
+      "box": [
+        1379.3951416015625,
+        1154.6285400390625,
+        2882.281982421875,
+        1554.2132568359375
+      ],
+      "score": 0.8576,
+      "frame_idx": 2,
+      "box_area_ratio": 0.072
+    },
+    {
+      "entity_id": 2,
+      "description": "stone driveway",
+      "box": [
+        2777.839111328125,
+        1278.4276123046875,
+        3417.519775390625,
+        1438.7454833984375
+      ],
+      "score": 0.5561,
+      "frame_idx": 0,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 3,
+      "description": "manicured green hedges",
+      "box": [
+        6.651763916015625,
+        1368.8521728515625,
+        3830.523193359375,
+        2154.5078125
+      ],
+      "score": 0.5735,
+      "frame_idx": 2,
+      "box_area_ratio": 0.362
+    },
+    {
+      "entity_id": 4,
+      "description": "tall trees",
+      "box": [
+        1537.144775390625,
+        7.329189777374268,
+        2878.801025390625,
+        1297.49609375
+      ],
+      "score": 0.4619,
+      "frame_idx": 1,
+      "box_area_ratio": 0.209
+    },
+    {
+      "entity_id": 5,
+      "description": "clear sky",
+      "box": [
+        0.8165359497070312,
+        -1.3585281372070312,
+        3838.169921875,
+        1123.0289306640625
+      ],
+      "score": 0.7889,
+      "frame_idx": 1,
+      "box_area_ratio": 0.52
+    }
+  ],
+  "matched_entities": 5
+}

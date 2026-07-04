@@ -1,0 +1,90 @@
+{
+  "id": 550,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/61.mp4",
+  "local_path": "/root/cut/data/61.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a garment, adding objects to the background, and changing the subject's motion, all of which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the woman's green pants/jeans preserved?",
+    "Comparing Video A and Video B, how accurately is the bright green painted path preserved?",
+    "Comparing Video A and Video B, how well is the wet-ground appearance, including the damp sheen and puddles, preserved?",
+    "Comparing Video A and Video B, how well are the woman's facial identity and hair preserved?",
+    "Comparing Video A and Video B, how well are the camera angle and framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green jeans"
+    },
+    {
+      "description": "bright green painted path"
+    },
+    {
+      "description": "puddles"
+    },
+    {
+      "description": "young woman"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green jeans",
+      "box": [
+        1062.6248779296875,
+        317.40350341796875,
+        2493.34228515625,
+        2150.91650390625
+      ],
+      "score": 0.668,
+      "frame_idx": 2,
+      "box_area_ratio": 0.316
+    },
+    {
+      "entity_id": 2,
+      "description": "bright green painted path",
+      "box": [
+        142.09213256835938,
+        763.5784301757812,
+        3140.804443359375,
+        2155.8203125
+      ],
+      "score": 0.6863,
+      "frame_idx": 1,
+      "box_area_ratio": 0.503
+    },
+    {
+      "entity_id": 3,
+      "description": "puddles",
+      "box": [
+        -10.729007720947266,
+        650.6559448242188,
+        1529.047119140625,
+        2162.662841796875
+      ],
+      "score": 0.3395,
+      "frame_idx": 0,
+      "box_area_ratio": 0.281
+    },
+    {
+      "entity_id": 4,
+      "description": "young woman",
+      "box": [
+        1046.7303466796875,
+        313.9150085449219,
+        2505.65185546875,
+        2154.31494140625
+      ],
+      "score": 0.9321,
+      "frame_idx": 2,
+      "box_area_ratio": 0.324
+    }
+  ],
+  "matched_entities": 4
+}

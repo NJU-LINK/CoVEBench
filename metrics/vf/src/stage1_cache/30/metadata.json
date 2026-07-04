@@ -1,0 +1,149 @@
+{
+  "id": 30,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/130.mp4",
+  "local_path": "/root/cut/data/130.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion and pose of the subjects and adding a visual effect tied to that motion, without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the woman on the left (conical hat and pink long-sleeved shirt) preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the woman on the right (colorful bucket hat and purple patterned shirt) preserved?",
+    "Comparing Video A and Video B, how well is the lush green orchard background and the fruit remaining on the trees preserved?",
+    "Comparing Video A and Video B, how accurately is the static medium-wide shot camera angle maintained?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman on the left"
+    },
+    {
+      "description": "conical hat"
+    },
+    {
+      "description": "pink shirt"
+    },
+    {
+      "description": "woman on the right"
+    },
+    {
+      "description": "bucket hat"
+    },
+    {
+      "description": "purple shirt"
+    },
+    {
+      "description": "fruit"
+    },
+    {
+      "description": "tree"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman on the left",
+      "box": [
+        1986.44091796875,
+        621.0352783203125,
+        2523.4375,
+        1809.994140625
+      ],
+      "score": 0.8695,
+      "frame_idx": 2,
+      "box_area_ratio": 0.077
+    },
+    {
+      "entity_id": 2,
+      "description": "conical hat",
+      "box": [
+        2137.258056640625,
+        612.9420776367188,
+        2459.862548828125,
+        832.0086059570312
+      ],
+      "score": 0.5435,
+      "frame_idx": 2,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 3,
+      "description": "pink shirt",
+      "box": [
+        1970.6485595703125,
+        622.6598510742188,
+        2523.01220703125,
+        1805.314697265625
+      ],
+      "score": 0.8523,
+      "frame_idx": 1,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 4,
+      "description": "woman on the right",
+      "box": [
+        2738.04052734375,
+        696.9871826171875,
+        3588.667236328125,
+        2066.572021484375
+      ],
+      "score": 0.842,
+      "frame_idx": 1,
+      "box_area_ratio": 0.14
+    },
+    {
+      "entity_id": 5,
+      "description": "bucket hat",
+      "box": [
+        2136.029052734375,
+        614.2844848632812,
+        2458.637939453125,
+        834.1226806640625
+      ],
+      "score": 0.4768,
+      "frame_idx": 2,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 6,
+      "description": "purple shirt",
+      "box": [
+        2753.024169921875,
+        702.8677978515625,
+        3576.119873046875,
+        2060.533203125
+      ],
+      "score": 0.6274,
+      "frame_idx": 1,
+      "box_area_ratio": 0.135
+    },
+    {
+      "entity_id": 7,
+      "description": "fruit",
+      "box": [
+        694.6900024414062,
+        89.46185302734375,
+        780.3198852539062,
+        169.8197479248047
+      ],
+      "score": 0.5048,
+      "frame_idx": 2,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 8,
+      "description": "tree",
+      "box": null,
+      "score": 0.6135,
+      "frame_idx": null,
+      "box_area_ratio": 0.999,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 7
+}

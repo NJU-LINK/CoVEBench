@@ -1,0 +1,11 @@
+{
+  "id": 466,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/457287_8s_part1_8.4s.mp4",
+  "local_path": "/root/cut/data/457287_8s_part1_8.4s.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

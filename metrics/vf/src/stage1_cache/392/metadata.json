@@ -1,0 +1,127 @@
+{
+  "id": 392,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-placing-a-cake-in-the-center-of-a-party-table-5117.mp4",
+  "local_path": "/root/cut/data/mixkit-placing-a-cake-in-the-center-of-a-party-table-5117.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific shade of pink and the texture of the festive table surface preserved?",
+    "Comparing Video A and Video B, how accurately are the positions and appearances of the cupcakes, macarons, and lollipops preserved?",
+    "Comparing Video A and Video B, how well is the appearance and movement of the hands placing the cake preserved?",
+    "Comparing Video A and Video B, how well is the cake (excluding the removed central candle) preserved in terms of its icing and sprinkles?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "pink table"
+    },
+    {
+      "description": "cupcakes"
+    },
+    {
+      "description": "macarons"
+    },
+    {
+      "description": "lollipops"
+    },
+    {
+      "description": "hands"
+    },
+    {
+      "description": "cake"
+    },
+    {
+      "description": "rainbow sprinkles"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "pink table",
+      "box": null,
+      "score": 0.7577,
+      "frame_idx": null,
+      "box_area_ratio": 0.989,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "cupcakes",
+      "box": [
+        988.4307861328125,
+        1.226820945739746,
+        1171.9935302734375,
+        164.79861450195312
+      ],
+      "score": 0.6975,
+      "frame_idx": 2,
+      "box_area_ratio": 0.014
+    },
+    {
+      "entity_id": 3,
+      "description": "macarons",
+      "box": [
+        989.1026611328125,
+        0.13952046632766724,
+        1174.7308349609375,
+        156.32864379882812
+      ],
+      "score": 0.4787,
+      "frame_idx": 0,
+      "box_area_ratio": 0.014
+    },
+    {
+      "entity_id": 4,
+      "description": "lollipops",
+      "box": [
+        1339.8819580078125,
+        718.2830810546875,
+        1705.7730712890625,
+        1076.254638671875
+      ],
+      "score": 0.3984,
+      "frame_idx": 1,
+      "box_area_ratio": 0.063
+    },
+    {
+      "entity_id": 5,
+      "description": "hands",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "cake",
+      "box": [
+        1612.24755859375,
+        230.80433654785156,
+        1863.62939453125,
+        451.4219970703125
+      ],
+      "score": 0.5554,
+      "frame_idx": 0,
+      "box_area_ratio": 0.027
+    },
+    {
+      "entity_id": 7,
+      "description": "rainbow sprinkles",
+      "box": [
+        723.6564331054688,
+        1.3866832256317139,
+        904.0823974609375,
+        162.31727600097656
+      ],
+      "score": 0.3305,
+      "frame_idx": 2,
+      "box_area_ratio": 0.014
+    }
+  ],
+  "matched_entities": 5
+}

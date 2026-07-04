@@ -1,0 +1,65 @@
+{
+  "id": 29,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/118.mp4",
+  "local_path": "/root/cut/data/118.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subjects' pose, motion, and position within the scene, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity and clothing of the three young men preserved despite the change in action and position?",
+    "Comparing Video A and Video B, how accurately is the jagged texture and grey color of the rock formation preserved?",
+    "Comparing Video A and Video B, how well is the mountainous background environment preserved?",
+    "Comparing Video A and Video B, how well is the camera's perspective and framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "three young men"
+    },
+    {
+      "description": "grey rock formation"
+    },
+    {
+      "description": "mountain"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "three young men",
+      "box": [
+        1926.74951171875,
+        737.3104858398438,
+        2201.873779296875,
+        1242.9664306640625
+      ],
+      "score": 0.5612,
+      "frame_idx": 1,
+      "box_area_ratio": 0.017
+    },
+    {
+      "entity_id": 2,
+      "description": "grey rock formation",
+      "box": null,
+      "score": 0.6781,
+      "frame_idx": null,
+      "box_area_ratio": 0.618,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "mountain",
+      "box": null,
+      "score": 0.4342,
+      "frame_idx": null,
+      "box_area_ratio": 0.629,
+      "rejected_reason": "box covers 63% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

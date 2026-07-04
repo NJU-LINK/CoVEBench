@@ -1,0 +1,92 @@
+{
+  "id": 388,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-scientist-mixing-liquids-in-a-laboratory-4719.mp4",
+  "local_path": "/root/cut/data/mixkit-scientist-mixing-liquids-in-a-laboratory-4719.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying object scale, changing subject pose/action, and deleting an object, without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the scientist's facial identity and hair preserved?",
+    "Comparing Video A and Video B, how accurately is the texture and appearance of the white lab coat preserved?",
+    "Comparing Video A and Video B, how well is the specific blue color and material of the gloves preserved?",
+    "Comparing Video A and Video B, how well is the background laboratory environment (shelves, equipment, lighting) preserved?",
+    "Comparing Video A and Video B, how well is the static camera angle and medium close-up framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "scientist"
+    },
+    {
+      "description": "white lab coat"
+    },
+    {
+      "description": "blue gloves"
+    },
+    {
+      "description": "shelves"
+    },
+    {
+      "description": "laboratory equipment"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 28,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "scientist",
+      "box": null,
+      "score": 0.8805,
+      "frame_idx": null,
+      "box_area_ratio": 0.983,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "white lab coat",
+      "box": [
+        6.418704986572266,
+        484.2927551269531,
+        1911.6492919921875,
+        1076.7789306640625
+      ],
+      "score": 0.6388,
+      "frame_idx": 2,
+      "box_area_ratio": 0.544
+    },
+    {
+      "entity_id": 3,
+      "description": "blue gloves",
+      "box": [
+        950.84521484375,
+        184.40615844726562,
+        1701.5013427734375,
+        710.1417236328125
+      ],
+      "score": 0.7104,
+      "frame_idx": 2,
+      "box_area_ratio": 0.19
+    },
+    {
+      "entity_id": 4,
+      "description": "shelves",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "laboratory equipment",
+      "box": null,
+      "score": 0.4473,
+      "frame_idx": null,
+      "box_area_ratio": 0.997,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

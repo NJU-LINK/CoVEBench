@@ -1,0 +1,51 @@
+{
+  "id": 462,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/393654_8s_part1_9.5s.mp4",
+  "local_path": "/root/cut/data/393654_8s_part1_9.5s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves an environment swap, object removal, motion speed adjustment, and adding subject-related details without camera movement or stylistic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the facial expressions and facial features (such as the beard) of the man in Video B preserved?",
+    "Comparing Video A and Video B, how well are the color and shape of the boxer's gloves preserved in Video B?"
+  ],
+  "sp_questions_count": 2,
+  "preserved_entities": [
+    {
+      "description": "black man with goatee"
+    },
+    {
+      "description": "boxer gloves"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 19,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black man with goatee",
+      "box": null,
+      "score": 0.5335,
+      "frame_idx": null,
+      "box_area_ratio": 0.678,
+      "rejected_reason": "box covers 68% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "boxer gloves",
+      "box": [
+        914.5540771484375,
+        268.5250549316406,
+        1275.33984375,
+        716.7901000976562
+      ],
+      "score": 0.7938,
+      "frame_idx": 2,
+      "box_area_ratio": 0.175
+    }
+  ],
+  "matched_entities": 1
+}

@@ -1,0 +1,11 @@
+{
+  "id": 125,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-surprised-by-great-news-from-his-girlfriend-8751.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-surprised-by-great-news-from-his-girlfriend-8751.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

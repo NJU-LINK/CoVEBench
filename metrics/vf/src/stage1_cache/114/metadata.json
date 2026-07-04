@@ -1,0 +1,11 @@
+{
+  "id": 114,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-affectionate-couple-in-a-car-hanging-out-together-42509.mp4",
+  "local_path": "/root/cut/data/mixkit-affectionate-couple-in-a-car-hanging-out-together-42509.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

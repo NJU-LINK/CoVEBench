@@ -1,0 +1,96 @@
+{
+  "id": 382,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-person-inside-a-tent-with-dog-576.mp4",
+  "local_path": "/root/cut/data/mixkit-person-inside-a-tent-with-dog-576.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and changing its motion/pose, with no camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the person's legs in the foreground preserved in Video B?",
+    "Comparing Video A and Video B, how accurately is the interior and structure of the tent preserved in Video B?",
+    "Comparing Video A and Video B, how well is the campfire's visual appearance and flickering behavior preserved in Video B?",
+    "Comparing Video A and Video B, how well is the background environment (trees, ground outside) preserved in Video B?",
+    "Comparing Video A and Video B, how well is the static camera perspective preserved in Video B?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "legs in the foreground"
+    },
+    {
+      "description": "tent"
+    },
+    {
+      "description": "campfire"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "ground outside"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "legs in the foreground",
+      "box": [
+        555.7911376953125,
+        460.70928955078125,
+        1899.310546875,
+        1070.4537353515625
+      ],
+      "score": 0.7595,
+      "frame_idx": 0,
+      "box_area_ratio": 0.395
+    },
+    {
+      "entity_id": 2,
+      "description": "tent",
+      "box": null,
+      "score": 0.4156,
+      "frame_idx": null,
+      "box_area_ratio": 0.81,
+      "rejected_reason": "box covers 81% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "campfire",
+      "box": [
+        417.90240478515625,
+        4.646122455596924,
+        637.4996337890625,
+        607.4627075195312
+      ],
+      "score": 0.4633,
+      "frame_idx": 0,
+      "box_area_ratio": 0.064
+    },
+    {
+      "entity_id": 4,
+      "description": "trees",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 5,
+      "description": "ground outside",
+      "box": [
+        318.58953857421875,
+        298.7315368652344,
+        1434.7835693359375,
+        754.094970703125
+      ],
+      "score": 0.4459,
+      "frame_idx": 0,
+      "box_area_ratio": 0.245
+    }
+  ],
+  "matched_entities": 3
+}

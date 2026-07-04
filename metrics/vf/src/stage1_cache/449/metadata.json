@@ -1,0 +1,138 @@
+{
+  "id": 449,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/19291949_8s_part1_6.4s.mp4",
+  "local_path": "/root/cut/data/19291949_8s_part1_6.4s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion, modifying the background environment, and shifting object position, all of which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific details of the man's clothing (grey hoodie, denim vest, and baseball cap) preserved?",
+    "Comparing Video A and Video B, how accurately is the silhouette and texture of the large mountains in the background preserved?",
+    "Comparing Video A and Video B, how well is the texture and pattern of the cracks on the asphalt road preserved as the man walks over them?",
+    "Comparing Video A and Video B, how well is the man's facial identity and physical build preserved?",
+    "Comparing Video A and Video B, how well is the appearance and placement of the dry brush in the desert landscape preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "grey hoodie"
+    },
+    {
+      "description": "denim vest"
+    },
+    {
+      "description": "baseball cap"
+    },
+    {
+      "description": "large mountains"
+    },
+    {
+      "description": "cracked asphalt road"
+    },
+    {
+      "description": "dry brush"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 13,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        667.5843505859375,
+        218.40451049804688,
+        1222.0157470703125,
+        1072.5777587890625
+      ],
+      "score": 0.906,
+      "frame_idx": 0,
+      "box_area_ratio": 0.228
+    },
+    {
+      "entity_id": 2,
+      "description": "grey hoodie",
+      "box": [
+        618.5536499023438,
+        219.45484924316406,
+        1177.6700439453125,
+        1071.1197509765625
+      ],
+      "score": 0.9165,
+      "frame_idx": 2,
+      "box_area_ratio": 0.23
+    },
+    {
+      "entity_id": 3,
+      "description": "denim vest",
+      "box": [
+        622.522216796875,
+        223.6228485107422,
+        1170.435791015625,
+        1073.100341796875
+      ],
+      "score": 0.702,
+      "frame_idx": 2,
+      "box_area_ratio": 0.224
+    },
+    {
+      "entity_id": 4,
+      "description": "baseball cap",
+      "box": [
+        668.848876953125,
+        219.23988342285156,
+        1220.22998046875,
+        1073.30078125
+      ],
+      "score": 0.4224,
+      "frame_idx": 0,
+      "box_area_ratio": 0.227
+    },
+    {
+      "entity_id": 5,
+      "description": "large mountains",
+      "box": [
+        2.1685409545898438,
+        233.58680725097656,
+        1916.4464111328125,
+        646.7014770507812
+      ],
+      "score": 0.644,
+      "frame_idx": 1,
+      "box_area_ratio": 0.381
+    },
+    {
+      "entity_id": 6,
+      "description": "cracked asphalt road",
+      "box": [
+        5.138568878173828,
+        567.1288452148438,
+        744.2137451171875,
+        1074.997802734375
+      ],
+      "score": 0.6371,
+      "frame_idx": 0,
+      "box_area_ratio": 0.181
+    },
+    {
+      "entity_id": 7,
+      "description": "dry brush",
+      "box": [
+        1172.3927001953125,
+        635.0812377929688,
+        1613.94384765625,
+        839.0567016601562
+      ],
+      "score": 0.4806,
+      "frame_idx": 2,
+      "box_area_ratio": 0.043
+    }
+  ],
+  "matched_entities": 7
+}

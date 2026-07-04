@@ -1,0 +1,53 @@
+{
+  "id": 475,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/651_1_8.0s.mp4",
+  "local_path": "/root/cut/data/651_1_8.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment (lighting and atmosphere), adding foreground objects (falling leaves), and changing the position of an object (the cabin) within the scene. It does not involve camera movement, framing changes, or purely aesthetic style transformations like color grading or LUTs.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the impressionist oil painting style with heavy brushstroke textures preserved?",
+    "Comparing Video A and Video B, how accurately are the architectural details and rustic wooden materials of the cabin preserved (ignoring its new position)?",
+    "Comparing Video A and Video B, how well is the specific layout and branch structure of the trees in the forest clearing maintained?",
+    "Comparing Video A and Video B, how well is the temporal stability of the brushstrokes maintained (i.e., avoiding 'temporal swimming' or crawling textures)?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "rustic wooden cabin"
+    },
+    {
+      "description": "trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "rustic wooden cabin",
+      "box": [
+        74.0279769897461,
+        72.36376953125,
+        638.1087646484375,
+        392.8096008300781
+      ],
+      "score": 0.9115,
+      "frame_idx": 0,
+      "box_area_ratio": 0.255
+    },
+    {
+      "entity_id": 2,
+      "description": "trees",
+      "box": null,
+      "score": 0.3895,
+      "frame_idx": null,
+      "box_area_ratio": 0.711,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

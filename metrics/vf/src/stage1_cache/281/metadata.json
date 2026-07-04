@@ -1,0 +1,57 @@
+{
+  "id": 281,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5307_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5307_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves background replacement, subject replacement, and motion modification without camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the structural geometry and design of the mobile stairs preserved?",
+    "Comparing Video A and Video B, how accurately is the camera's motion (panning, tilting, or handheld shake) preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the subject's descent (the timing of each step) preserved?",
+    "Comparing Video A and Video B, how well is the framing and composition of the subject within the frame preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "mobile stairs"
+    },
+    {
+      "description": "young man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "mobile stairs",
+      "box": [
+        505.5863037109375,
+        350.4136657714844,
+        869.1192016601562,
+        716.9183959960938
+      ],
+      "score": 0.3918,
+      "frame_idx": 1,
+      "box_area_ratio": 0.145
+    },
+    {
+      "entity_id": 2,
+      "description": "young man",
+      "box": [
+        608.3014526367188,
+        155.6782684326172,
+        764.1754150390625,
+        602.7127075195312
+      ],
+      "score": 0.9415,
+      "frame_idx": 1,
+      "box_area_ratio": 0.076
+    }
+  ],
+  "matched_entities": 2
+}

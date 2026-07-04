@@ -1,0 +1,89 @@
+{
+  "id": 478,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/993673_8s_part1_9.0s.mp4",
+  "local_path": "/root/cut/data/993673_8s_part1_9.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment (countertop), adjusting lighting intrinsic to that environment, and adding foreground objects (tomatoes and flour particles). It does not include camera movement, framing changes, or global cinematic style transformations like film grain or color grading filters.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific types and arrangements of the original vegetables (potatoes, onions, corn, bell pepper) preserved, excluding the added tomatoes?",
+    "Comparing Video A and Video B, how accurately is the slow camera pan to the left maintained?",
+    "Comparing Video A and Video B, how well is the dark, out-of-focus background preserved?",
+    "Comparing Video A and Video B, how well are the micro-textures of the original vegetable skins (e.g., the papery skin of the onion or the eyes of the potato) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "potatoes"
+    },
+    {
+      "description": "onions"
+    },
+    {
+      "description": "corn"
+    },
+    {
+      "description": "bell pepper"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "potatoes",
+      "box": [
+        -1.1786651611328125,
+        91.7448959350586,
+        678.98291015625,
+        655.0286254882812
+      ],
+      "score": 0.4221,
+      "frame_idx": 2,
+      "box_area_ratio": 0.416
+    },
+    {
+      "entity_id": 2,
+      "description": "onions",
+      "box": [
+        0.44384002685546875,
+        144.63522338867188,
+        383.12164306640625,
+        395.6290588378906
+      ],
+      "score": 0.4564,
+      "frame_idx": 1,
+      "box_area_ratio": 0.104
+    },
+    {
+      "entity_id": 3,
+      "description": "corn",
+      "box": [
+        524.0967407226562,
+        7.91515588760376,
+        1005.9418334960938,
+        565.675537109375
+      ],
+      "score": 0.7216,
+      "frame_idx": 2,
+      "box_area_ratio": 0.292
+    },
+    {
+      "entity_id": 4,
+      "description": "bell pepper",
+      "box": [
+        713.3914184570312,
+        -2.164285182952881,
+        1274.986328125,
+        563.890625
+      ],
+      "score": 0.5823,
+      "frame_idx": 0,
+      "box_area_ratio": 0.345
+    }
+  ],
+  "matched_entities": 4
+}

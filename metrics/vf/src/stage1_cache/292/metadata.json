@@ -1,0 +1,106 @@
+{
+  "id": 292,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/203.mp4",
+  "local_path": "/root/cut/data/203.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing and replacing foreground objects (sunglasses, jacket) and modifying the background environment (adding clouds) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and movement of the green mesh fishing net and its contents (seaweed and small fish) preserved?",
+    "Comparing Video A and Video B, how well are the hands of the second person on the right side of the frame preserved?",
+    "Comparing Video A and Video B, how accurately is the man's facial identity (excluding the eyes/sunglasses area) and skin texture preserved?",
+    "Comparing Video A and Video B, how well is the original camera motion and framing preserved?",
+    "Comparing Video A and Video B, how accurately is the net's swaying movement preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "green mesh fishing net"
+    },
+    {
+      "description": "seaweed"
+    },
+    {
+      "description": "small fish"
+    },
+    {
+      "description": "hands on the right"
+    },
+    {
+      "description": "man in tan outdoor jacket"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "green mesh fishing net",
+      "box": [
+        1458.5615234375,
+        892.8135986328125,
+        3562.44140625,
+        2016.4573974609375
+      ],
+      "score": 0.7105,
+      "frame_idx": 2,
+      "box_area_ratio": 0.285
+    },
+    {
+      "entity_id": 2,
+      "description": "seaweed",
+      "box": [
+        1483.4342041015625,
+        895.3688354492188,
+        3524.393310546875,
+        2018.41259765625
+      ],
+      "score": 0.3555,
+      "frame_idx": 2,
+      "box_area_ratio": 0.276
+    },
+    {
+      "entity_id": 3,
+      "description": "small fish",
+      "box": [
+        2319.716796875,
+        1523.3516845703125,
+        2450.611083984375,
+        1769.62548828125
+      ],
+      "score": 0.3995,
+      "frame_idx": 0,
+      "box_area_ratio": 0.004
+    },
+    {
+      "entity_id": 4,
+      "description": "hands on the right",
+      "box": [
+        3238.704345703125,
+        855.7807006835938,
+        3844.559814453125,
+        1845.9947509765625
+      ],
+      "score": 0.5569,
+      "frame_idx": 1,
+      "box_area_ratio": 0.072
+    },
+    {
+      "entity_id": 5,
+      "description": "man in tan outdoor jacket",
+      "box": [
+        710.4257202148438,
+        476.5596923828125,
+        1921.0233154296875,
+        2141.378662109375
+      ],
+      "score": 0.8056,
+      "frame_idx": 1,
+      "box_area_ratio": 0.243
+    }
+  ],
+  "matched_entities": 5
+}

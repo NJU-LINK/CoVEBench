@@ -1,0 +1,170 @@
+{
+  "id": 293,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/209.mp4",
+  "local_path": "/root/cut/data/209.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing an object, adding an object, and changing the position of objects within the scene, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the green sweater and patterned apron preserved?",
+    "Comparing Video A and Video B, how accurately is the background brick oven and traditional brick wall with the window preserved?",
+    "Comparing Video A and Video B, how well is the action of the woman mixing the ingredients preserved?",
+    "Comparing Video A and Video B, how well is the sequence of the woman picking up the small bowl and walking out of the frame preserved?",
+    "Comparing Video A and Video B, how well is the natural daylight and the specific lighting gradients on the rustic wooden table preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "older woman in green sweater"
+    },
+    {
+      "description": "patterned apron"
+    },
+    {
+      "description": "teal headscarf"
+    },
+    {
+      "description": "large brick oven"
+    },
+    {
+      "description": "traditional brick wall"
+    },
+    {
+      "description": "window"
+    },
+    {
+      "description": "bowl"
+    },
+    {
+      "description": "small bowl"
+    },
+    {
+      "description": "rustic wooden table"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "older woman in green sweater",
+      "box": [
+        1452.4248046875,
+        541.6544799804688,
+        2450.919189453125,
+        1813.38818359375
+      ],
+      "score": 0.8697,
+      "frame_idx": 1,
+      "box_area_ratio": 0.153
+    },
+    {
+      "entity_id": 2,
+      "description": "patterned apron",
+      "box": [
+        1476.67138671875,
+        553.1917114257812,
+        2445.70166015625,
+        1836.9117431640625
+      ],
+      "score": 0.4819,
+      "frame_idx": 1,
+      "box_area_ratio": 0.15
+    },
+    {
+      "entity_id": 3,
+      "description": "teal headscarf",
+      "box": [
+        1458.6197509765625,
+        542.4766235351562,
+        2438.327392578125,
+        1822.8365478515625
+      ],
+      "score": 0.5424,
+      "frame_idx": 1,
+      "box_area_ratio": 0.151
+    },
+    {
+      "entity_id": 4,
+      "description": "large brick oven",
+      "box": [
+        2272.544677734375,
+        5.5828142166137695,
+        3844.24169921875,
+        2017.3671875
+      ],
+      "score": 0.4963,
+      "frame_idx": 1,
+      "box_area_ratio": 0.381
+    },
+    {
+      "entity_id": 5,
+      "description": "traditional brick wall",
+      "box": [
+        -13.101139068603516,
+        445.2492370605469,
+        1728.7994384765625,
+        1699.915771484375
+      ],
+      "score": 0.4718,
+      "frame_idx": 0,
+      "box_area_ratio": 0.263
+    },
+    {
+      "entity_id": 6,
+      "description": "window",
+      "box": [
+        456.0166931152344,
+        745.4920043945312,
+        924.1265258789062,
+        1541.953125
+      ],
+      "score": 0.7654,
+      "frame_idx": 2,
+      "box_area_ratio": 0.045
+    },
+    {
+      "entity_id": 7,
+      "description": "bowl",
+      "box": [
+        583.780029296875,
+        1667.313720703125,
+        1655.7490234375,
+        2084.72314453125
+      ],
+      "score": 0.6597,
+      "frame_idx": 1,
+      "box_area_ratio": 0.054
+    },
+    {
+      "entity_id": 8,
+      "description": "small bowl",
+      "box": [
+        585.3038330078125,
+        1661.429443359375,
+        1659.4732666015625,
+        2086.0009765625
+      ],
+      "score": 0.4576,
+      "frame_idx": 1,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 9,
+      "description": "rustic wooden table",
+      "box": [
+        8.256568908691406,
+        1793.8084716796875,
+        3697.2373046875,
+        2143.295166015625
+      ],
+      "score": 0.8488,
+      "frame_idx": 0,
+      "box_area_ratio": 0.155
+    }
+  ],
+  "matched_entities": 9
+}

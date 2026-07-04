@@ -1,0 +1,11 @@
+{
+  "id": 504,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-young-cheerful-woman-with-a-radiant-smile-is-surrounded-51530.mp4",
+  "local_path": "/root/cut/data/mixkit-a-young-cheerful-woman-with-a-radiant-smile-is-surrounded-51530.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

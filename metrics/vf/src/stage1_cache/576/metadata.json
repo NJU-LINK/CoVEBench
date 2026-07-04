@@ -1,0 +1,11 @@
+{
+  "id": 576,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/128.mp4",
+  "local_path": "/root/cut/data/128.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

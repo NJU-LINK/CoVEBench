@@ -1,0 +1,90 @@
+{
+  "id": 264,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_18_0.mp4",
+  "local_path": "/root/cut/data/LMArena_18_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves background replacement, subject modification (clothing), and intrinsic environmental lighting changes without any camera movements, framing shifts, or cinematic style transformations.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the facial features and identities of the twin babies preserved?",
+    "Comparing Video A and Video B, how well is the white frosted cake and the '2024' gold topper preserved?",
+    "Comparing Video A and Video B, how well is the small wooden table's texture and appearance preserved?",
+    "Comparing Video A and Video B, how accurately are the babies' specific movements (eating, playing, hand gestures) synchronized and preserved?",
+    "Comparing Video A and Video B, how well is the original camera motion (pan, tilt, or static framing) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "twin babies"
+    },
+    {
+      "description": "white frosted cake"
+    },
+    {
+      "description": "gold topper"
+    },
+    {
+      "description": "small wooden table"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "twin babies",
+      "box": [
+        190.3180389404297,
+        759.1889038085938,
+        522.9532470703125,
+        1465.3555908203125
+      ],
+      "score": 0.6606,
+      "frame_idx": 1,
+      "box_area_ratio": 0.115
+    },
+    {
+      "entity_id": 2,
+      "description": "white frosted cake",
+      "box": [
+        398.5992126464844,
+        1040.2255859375,
+        704.4671630859375,
+        1284.5123291015625
+      ],
+      "score": 0.6893,
+      "frame_idx": 1,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 3,
+      "description": "gold topper",
+      "box": [
+        406.3197937011719,
+        1050.04638671875,
+        707.844970703125,
+        1282.9893798828125
+      ],
+      "score": 0.3708,
+      "frame_idx": 2,
+      "box_area_ratio": 0.034
+    },
+    {
+      "entity_id": 4,
+      "description": "small wooden table",
+      "box": [
+        283.1406555175781,
+        1362.19189453125,
+        828.9033203125,
+        1895.084716796875
+      ],
+      "score": 0.6812,
+      "frame_idx": 1,
+      "box_area_ratio": 0.142
+    }
+  ],
+  "matched_entities": 4
+}

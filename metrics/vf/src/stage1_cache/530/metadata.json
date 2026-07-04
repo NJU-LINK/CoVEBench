@@ -1,0 +1,106 @@
+{
+  "id": 530,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/7.mp4",
+  "local_path": "/root/cut/data/7.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object (watch) and replacing a background object (Christmas tree with a bookshelf) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the gold ring preserved?",
+    "Comparing Video A and Video B, how well are the festive paper pattern and folding action preserved apart from the requested edits?",
+    "Comparing Video A and Video B, how well is the rustic wooden table preserved?",
+    "Comparing Video A and Video B, how well is the rhythm of the hand movements preserved?",
+    "Comparing Video A and Video B, how well is the clear tape dispenser preserved when it appears?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "gold ring"
+    },
+    {
+      "description": "festive paper"
+    },
+    {
+      "description": "rustic wooden table"
+    },
+    {
+      "description": "hands"
+    },
+    {
+      "description": "clear tape dispenser"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "gold ring",
+      "box": [
+        829.0508422851562,
+        409.2135925292969,
+        851.4013061523438,
+        445.111328125
+      ],
+      "score": 0.5554,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 2,
+      "description": "festive paper",
+      "box": [
+        258.0264892578125,
+        432.5775146484375,
+        1030.5150146484375,
+        670.6633911132812
+      ],
+      "score": 0.5932,
+      "frame_idx": 0,
+      "box_area_ratio": 0.2
+    },
+    {
+      "entity_id": 3,
+      "description": "rustic wooden table",
+      "box": [
+        1.7042160034179688,
+        325.7723388671875,
+        1276.3623046875,
+        714.7874755859375
+      ],
+      "score": 0.727,
+      "frame_idx": 0,
+      "box_area_ratio": 0.538
+    },
+    {
+      "entity_id": 4,
+      "description": "hands",
+      "box": [
+        297.44586181640625,
+        235.1705322265625,
+        595.5822143554688,
+        570.2667236328125
+      ],
+      "score": 0.6491,
+      "frame_idx": 0,
+      "box_area_ratio": 0.108
+    },
+    {
+      "entity_id": 5,
+      "description": "clear tape dispenser",
+      "box": [
+        130.1892547607422,
+        245.0614013671875,
+        300.459228515625,
+        359.803466796875
+      ],
+      "score": 0.3581,
+      "frame_idx": 2,
+      "box_area_ratio": 0.021
+    }
+  ],
+  "matched_entities": 5
+}

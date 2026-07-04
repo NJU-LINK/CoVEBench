@@ -1,0 +1,11 @@
+{
+  "id": 113,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-baby-playing-while-being-cared-for-by-his-mother-49946.mp4",
+  "local_path": "/root/cut/data/mixkit-baby-playing-while-being-cared-for-by-his-mother-49946.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

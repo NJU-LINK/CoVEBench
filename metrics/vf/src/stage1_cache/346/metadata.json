@@ -1,0 +1,62 @@
+{
+  "id": 346,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-face-of-a-very-worried-girl-42270.mp4",
+  "local_path": "/root/cut/data/mixkit-face-of-a-very-worried-girl-42270.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's motion and pose within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity and specific features (eyes, nose, mouth) preserved?",
+    "Comparing Video A and Video B, how accurately is the texture, volume, and dark color of the woman's curly hair preserved?",
+    "Comparing Video A and Video B, how well is the green foliage background preserved in terms of leaf shapes and spatial arrangement?",
+    "Comparing Video A and Video B, how well is the overall lighting, color temperature, and cinematic 'look' of the shot maintained?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "dark curly hair"
+    },
+    {
+      "description": "green foliage"
+    }
+  ],
+  "status": "no_grounded_entities",
+  "num_frames": 23,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": null,
+      "score": 0.8748,
+      "frame_idx": null,
+      "box_area_ratio": 0.706,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "dark curly hair",
+      "box": null,
+      "score": 0.7616,
+      "frame_idx": null,
+      "box_area_ratio": 0.694,
+      "rejected_reason": "box covers 69% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "green foliage",
+      "box": null,
+      "score": 0.7219,
+      "frame_idx": null,
+      "box_area_ratio": 0.994,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 0,
+  "error": "Grounding DINO found no entity at score ≥ 0.25"
+}

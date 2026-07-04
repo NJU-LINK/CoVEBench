@@ -1,0 +1,81 @@
+{
+  "id": 33,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/140.mp4",
+  "local_path": "/root/cut/data/140.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object (saw blade) and adding associated particles/effects (sparks and debris) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the texture, shape, and bark detail of the large thick log preserved?",
+    "Comparing Video A and Video B, how accurately are the spectators and the fence in the background preserved?",
+    "Comparing Video A and Video B, how well is the static camera angle and side-view framing preserved?",
+    "Comparing Video A and Video B, how well is the iron carriage device holding the log (excluding the sawing mechanism) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "large thick log"
+    },
+    {
+      "description": "spectators"
+    },
+    {
+      "description": "fence"
+    },
+    {
+      "description": "iron carriage"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "large thick log",
+      "box": [
+        128.78573608398438,
+        1126.853515625,
+        2452.3466796875,
+        2046.7696533203125
+      ],
+      "score": 0.8918,
+      "frame_idx": 2,
+      "box_area_ratio": 0.258
+    },
+    {
+      "entity_id": 2,
+      "description": "spectators",
+      "box": [
+        1588.8121337890625,
+        413.52520751953125,
+        1842.82421875,
+        1258.1226806640625
+      ],
+      "score": 0.6757,
+      "frame_idx": 2,
+      "box_area_ratio": 0.026
+    },
+    {
+      "entity_id": 3,
+      "description": "fence",
+      "box": null,
+      "score": 0.4161,
+      "frame_idx": null,
+      "box_area_ratio": 0.969,
+      "rejected_reason": "box covers 97% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "iron carriage",
+      "box": null,
+      "score": 0.4815,
+      "frame_idx": null,
+      "box_area_ratio": 0.965,
+      "rejected_reason": "box covers 96% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

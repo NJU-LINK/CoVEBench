@@ -1,0 +1,65 @@
+{
+  "id": 35,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/153.mp4",
+  "local_path": "/root/cut/data/153.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion/pose of a foreground object and adding a visual effect, with no camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the texture, color, and volume of the lion's thick mane preserved throughout the video?",
+    "Comparing Video A and Video B, how accurately are the dry, tangled branches in the background maintained?",
+    "Comparing Video A and Video B, how well is the lion's initial action of looking to the side preserved before the roar begins?",
+    "Comparing Video A and Video B, how well is the camera's motion and framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "thick mane"
+    },
+    {
+      "description": "dry tangled branches"
+    },
+    {
+      "description": "male lion"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 19,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "thick mane",
+      "box": [
+        1565.8336181640625,
+        118.32533264160156,
+        3287.66015625,
+        2149.339599609375
+      ],
+      "score": 0.512,
+      "frame_idx": 2,
+      "box_area_ratio": 0.422
+    },
+    {
+      "entity_id": 2,
+      "description": "dry tangled branches",
+      "box": null,
+      "score": 0.4875,
+      "frame_idx": null,
+      "box_area_ratio": 0.99,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "male lion",
+      "box": null,
+      "score": 0.9147,
+      "frame_idx": null,
+      "box_area_ratio": 0.562,
+      "rejected_reason": "box covers 56% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

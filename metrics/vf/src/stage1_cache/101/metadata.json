@@ -1,0 +1,11 @@
+{
+  "id": 101,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-boy-and-a-girl-enjoying-a-road-trip-through-40068.mp4",
+  "local_path": "/root/cut/data/mixkit-a-boy-and-a-girl-enjoying-a-road-trip-through-40068.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

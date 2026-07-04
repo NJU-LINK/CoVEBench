@@ -1,0 +1,90 @@
+{
+  "id": 64,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/105.mp4",
+  "local_path": "/root/cut/data/105.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing foreground subjects and adding environmental elements without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the appearance and clothing of the man on the rope swing preserved?",
+    "Comparing Video A and Video B, how well is the rope swing's motion preserved?",
+    "Comparing Video A and Video B, how accurately are the thatched-roof structures and palm trees in the background preserved?",
+    "Comparing Video A and Video B, how well is the static camera perspective and overall framing preserved?",
+    "Comparing Video A and Video B, how accurately is the bright daylight lighting and color grading of the tropical resort preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "rope swing"
+    },
+    {
+      "description": "thatched-roof structures"
+    },
+    {
+      "description": "palm trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        2811.802490234375,
+        753.7189331054688,
+        2966.704345703125,
+        1226.46728515625
+      ],
+      "score": 0.6284,
+      "frame_idx": 2,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 2,
+      "description": "rope swing",
+      "box": [
+        857.66650390625,
+        -10.04000186920166,
+        2564.1318359375,
+        1359.6673583984375
+      ],
+      "score": 0.4601,
+      "frame_idx": 1,
+      "box_area_ratio": 0.282
+    },
+    {
+      "entity_id": 3,
+      "description": "thatched-roof structures",
+      "box": [
+        1654.040283203125,
+        137.1127471923828,
+        2249.029541015625,
+        576.4395141601562
+      ],
+      "score": 0.4178,
+      "frame_idx": 0,
+      "box_area_ratio": 0.032
+    },
+    {
+      "entity_id": 4,
+      "description": "palm trees",
+      "box": [
+        1657.900634765625,
+        4.513514041900635,
+        2034.074462890625,
+        196.79568481445312
+      ],
+      "score": 0.3303,
+      "frame_idx": 1,
+      "box_area_ratio": 0.009
+    }
+  ],
+  "matched_entities": 4
+}

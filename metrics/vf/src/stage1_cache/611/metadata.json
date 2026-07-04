@@ -1,0 +1,138 @@
+{
+  "id": 611,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/171.mp4",
+  "local_path": "/root/cut/data/171.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing the background environment and modifying environmental lighting/atmosphere while explicitly stating the camera viewpoint remains unchanged.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man, specifically his grey t-shirt and the sunglasses positioned on his head, preserved?",
+    "Comparing Video A and Video B, how accurately are the vehicle's interior components (black steering wheel, dashboard, and exhaust pipe) preserved?",
+    "Comparing Video A and Video B, how well is the yellow color of the construction vehicle's visible frame preserved?",
+    "Comparing Video A and Video B, how accurately is the over-the-shoulder camera perspective and its movement preserved?",
+    "Comparing Video A and Video B, how well are the man's physical actions and the temporal timing of the vehicle's operation preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "grey t-shirt"
+    },
+    {
+      "description": "sunglasses"
+    },
+    {
+      "description": "black steering wheel"
+    },
+    {
+      "description": "dashboard"
+    },
+    {
+      "description": "exhaust pipe"
+    },
+    {
+      "description": "yellow construction vehicle"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        2465.100830078125,
+        3.8622522354125977,
+        3834.59521484375,
+        2147.237060546875
+      ],
+      "score": 0.8033,
+      "frame_idx": 1,
+      "box_area_ratio": 0.354
+    },
+    {
+      "entity_id": 2,
+      "description": "grey t-shirt",
+      "box": [
+        2688.393798828125,
+        1398.1368408203125,
+        3839.041015625,
+        2146.773193359375
+      ],
+      "score": 0.6154,
+      "frame_idx": 1,
+      "box_area_ratio": 0.104
+    },
+    {
+      "entity_id": 3,
+      "description": "sunglasses",
+      "box": [
+        2668.686279296875,
+        172.0696258544922,
+        3124.29345703125,
+        519.525146484375
+      ],
+      "score": 0.5902,
+      "frame_idx": 0,
+      "box_area_ratio": 0.019
+    },
+    {
+      "entity_id": 4,
+      "description": "black steering wheel",
+      "box": [
+        1242.1468505859375,
+        1299.8662109375,
+        2501.4345703125,
+        2145.546630859375
+      ],
+      "score": 0.8824,
+      "frame_idx": 0,
+      "box_area_ratio": 0.128
+    },
+    {
+      "entity_id": 5,
+      "description": "dashboard",
+      "box": [
+        103.0975341796875,
+        1264.0146484375,
+        2318.67724609375,
+        2153.647705078125
+      ],
+      "score": 0.4226,
+      "frame_idx": 1,
+      "box_area_ratio": 0.238
+    },
+    {
+      "entity_id": 6,
+      "description": "exhaust pipe",
+      "box": [
+        1218.93310546875,
+        8.281524658203125,
+        1443.9752197265625,
+        1375.0145263671875
+      ],
+      "score": 0.3592,
+      "frame_idx": 0,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 7,
+      "description": "yellow construction vehicle",
+      "box": [
+        18.57158660888672,
+        931.9598999023438,
+        1970.035400390625,
+        2132.04150390625
+      ],
+      "score": 0.4697,
+      "frame_idx": 2,
+      "box_area_ratio": 0.282
+    }
+  ],
+  "matched_entities": 7
+}

@@ -1,0 +1,88 @@
+{
+  "id": 34,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/147.mp4",
+  "local_path": "/root/cut/data/147.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion and removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the background elements (stone wall, trees, and grassy bank) preserved?",
+    "Comparing Video A and Video B, how well is the static camera perspective maintained?",
+    "Comparing Video A and Video B, how well is the brown duck's visual identity (feather texture, color, and size) preserved during the wing-flapping phase before the spin begins?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "stone wall"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "grassy bank"
+    },
+    {
+      "description": "brown duck"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "stone wall",
+      "box": [
+        664.064697265625,
+        59.387569427490234,
+        1532.58837890625,
+        336.9485778808594
+      ],
+      "score": 0.4673,
+      "frame_idx": 2,
+      "box_area_ratio": 0.029
+    },
+    {
+      "entity_id": 2,
+      "description": "trees",
+      "box": [
+        3158.71044921875,
+        -2.771000862121582,
+        3660.42333984375,
+        683.353515625
+      ],
+      "score": 0.3771,
+      "frame_idx": 0,
+      "box_area_ratio": 0.042
+    },
+    {
+      "entity_id": 3,
+      "description": "grassy bank",
+      "box": [
+        4.39910888671875,
+        319.32598876953125,
+        3828.25048828125,
+        1139.754150390625
+      ],
+      "score": 0.5231,
+      "frame_idx": 2,
+      "box_area_ratio": 0.378
+    },
+    {
+      "entity_id": 4,
+      "description": "brown duck",
+      "box": [
+        2436.145751953125,
+        1214.160888671875,
+        2602.0634765625,
+        1316.58056640625
+      ],
+      "score": 0.8196,
+      "frame_idx": 0,
+      "box_area_ratio": 0.002
+    }
+  ],
+  "matched_entities": 4
+}

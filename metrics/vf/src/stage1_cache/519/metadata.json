@@ -1,0 +1,61 @@
+{
+  "id": 519,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-orange-twist-in-negroni-5144.mp4",
+  "local_path": "/root/cut/data/mixkit-orange-twist-in-negroni-5144.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying object materials (material swap) and changing object motion within the scene, without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the amber color, clarity, and volume of the cocktail liquid preserved?",
+    "Comparing Video A and Video B, how well is the visual identity of the hand (skin tone, texture, and size) preserved, excluding the change in motion intensity?",
+    "Comparing Video A and Video B, how well is the background environment and the lighting outside the glass preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal moment when the hand first enters the frame preserved?",
+    "Comparing Video A and Video B, how well is the specific shape, rim detail, and reflections of the cocktail glass preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "amber cocktail liquid"
+    },
+    {
+      "description": "hand"
+    },
+    {
+      "description": "cocktail glass"
+    }
+  ],
+  "status": "no_grounded_entities",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "amber cocktail liquid",
+      "box": null,
+      "score": 0.5741,
+      "frame_idx": null,
+      "box_area_ratio": 0.817,
+      "rejected_reason": "box covers 82% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "hand",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 3,
+      "description": "cocktail glass",
+      "box": null,
+      "score": 0.8265,
+      "frame_idx": null,
+      "box_area_ratio": 0.823,
+      "rejected_reason": "box covers 82% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 0,
+  "error": "Grounding DINO found no entity at score ≥ 0.25"
+}

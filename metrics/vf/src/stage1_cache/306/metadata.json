@@ -1,0 +1,105 @@
+{
+  "id": 306,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/246.mp4",
+  "local_path": "/root/cut/data/246.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing and adding foreground objects and modifying the subject's clothing, with no mention of camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the appearance of the black tongs and the small electric grill preserved?",
+    "Comparing Video A and Video B, how well is the movement of the man transferring the items preserved?",
+    "Comparing Video A and Video B, how well is the white counter and the blender on the left side of the frame preserved?",
+    "Comparing Video A and Video B, how well is the camera's motion (pan, tilt, or handheld shake) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "black tongs"
+    },
+    {
+      "description": "small electric grill"
+    },
+    {
+      "description": "man in black shirt"
+    },
+    {
+      "description": "white counter on the left"
+    },
+    {
+      "description": "blender on the left"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 6,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black tongs",
+      "box": [
+        1518.7978515625,
+        1304.237060546875,
+        1980.205810546875,
+        1435.3355712890625
+      ],
+      "score": 0.5173,
+      "frame_idx": 1,
+      "box_area_ratio": 0.007
+    },
+    {
+      "entity_id": 2,
+      "description": "small electric grill",
+      "box": [
+        1538.6544189453125,
+        960.7572021484375,
+        2864.82470703125,
+        2137.20947265625
+      ],
+      "score": 0.4187,
+      "frame_idx": 1,
+      "box_area_ratio": 0.188
+    },
+    {
+      "entity_id": 3,
+      "description": "man in black shirt",
+      "box": [
+        72.55897521972656,
+        -0.21172285079956055,
+        1687.7869873046875,
+        2142.111572265625
+      ],
+      "score": 0.7995,
+      "frame_idx": 0,
+      "box_area_ratio": 0.417
+    },
+    {
+      "entity_id": 4,
+      "description": "white counter on the left",
+      "box": [
+        1106.5767822265625,
+        1029.72607421875,
+        3108.55908203125,
+        2145.845703125
+      ],
+      "score": 0.6071,
+      "frame_idx": 1,
+      "box_area_ratio": 0.269
+    },
+    {
+      "entity_id": 5,
+      "description": "blender on the left",
+      "box": [
+        1644.80908203125,
+        497.63787841796875,
+        1933.711669921875,
+        1160.1109619140625
+      ],
+      "score": 0.4667,
+      "frame_idx": 1,
+      "box_area_ratio": 0.023
+    }
+  ],
+  "matched_entities": 5
+}

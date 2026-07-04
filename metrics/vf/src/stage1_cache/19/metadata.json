@@ -1,0 +1,170 @@
+{
+  "id": 19,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/81.mp4",
+  "local_path": "/root/cut/data/81.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's motion and adding a foreground effect (sparks) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the chef's specific attire (white toque and black apron) preserved?",
+    "Comparing Video A and Video B, how accurately is the man with long hair sitting at the smaller table on the right preserved?",
+    "Comparing Video A and Video B, how well is the background (green trees, wooden fence, glass-walled building) preserved?",
+    "Comparing Video A and Video B, how accurately is the table with the white cloth in the foreground preserved?",
+    "Comparing Video A and Video B, how well is the original camera motion and framing of the sunlit patio preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "white toque"
+    },
+    {
+      "description": "black apron"
+    },
+    {
+      "description": "long hair man on the right"
+    },
+    {
+      "description": "smaller table on the right"
+    },
+    {
+      "description": "green trees"
+    },
+    {
+      "description": "wooden fence"
+    },
+    {
+      "description": "glass-walled building"
+    },
+    {
+      "description": "table in the foreground"
+    },
+    {
+      "description": "white cloth"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white toque",
+      "box": [
+        96.68266296386719,
+        1183.60400390625,
+        1513.0211181640625,
+        1950.639892578125
+      ],
+      "score": 0.4386,
+      "frame_idx": 1,
+      "box_area_ratio": 0.131
+    },
+    {
+      "entity_id": 2,
+      "description": "black apron",
+      "box": [
+        419.9612121582031,
+        315.6745300292969,
+        1056.89892578125,
+        1969.091064453125
+      ],
+      "score": 0.4635,
+      "frame_idx": 2,
+      "box_area_ratio": 0.127
+    },
+    {
+      "entity_id": 3,
+      "description": "long hair man on the right",
+      "box": [
+        2106.552001953125,
+        814.3316040039062,
+        2722.12646484375,
+        2015.39990234375
+      ],
+      "score": 0.7951,
+      "frame_idx": 2,
+      "box_area_ratio": 0.089
+    },
+    {
+      "entity_id": 4,
+      "description": "smaller table on the right",
+      "box": [
+        1439.6416015625,
+        1275.5831298828125,
+        2260.716796875,
+        2055.94189453125
+      ],
+      "score": 0.7137,
+      "frame_idx": 1,
+      "box_area_ratio": 0.077
+    },
+    {
+      "entity_id": 5,
+      "description": "green trees",
+      "box": [
+        -1.7409896850585938,
+        -8.994712829589844,
+        2614.5859375,
+        1614.5296630859375
+      ],
+      "score": 0.3929,
+      "frame_idx": 2,
+      "box_area_ratio": 0.512
+    },
+    {
+      "entity_id": 6,
+      "description": "wooden fence",
+      "box": [
+        -3.881349563598633,
+        879.0504150390625,
+        618.3627319335938,
+        1983.51904296875
+      ],
+      "score": 0.3146,
+      "frame_idx": 1,
+      "box_area_ratio": 0.083
+    },
+    {
+      "entity_id": 7,
+      "description": "glass-walled building",
+      "box": [
+        2286.13427734375,
+        1.746053695678711,
+        3842.785888671875,
+        1703.68017578125
+      ],
+      "score": 0.5486,
+      "frame_idx": 1,
+      "box_area_ratio": 0.319
+    },
+    {
+      "entity_id": 8,
+      "description": "table in the foreground",
+      "box": [
+        1449.592041015625,
+        1263.0469970703125,
+        2264.2705078125,
+        2061.719482421875
+      ],
+      "score": 0.5318,
+      "frame_idx": 1,
+      "box_area_ratio": 0.078
+    },
+    {
+      "entity_id": 9,
+      "description": "white cloth",
+      "box": [
+        96.30563354492188,
+        1246.9615478515625,
+        1515.38037109375,
+        1921.4290771484375
+      ],
+      "score": 0.6713,
+      "frame_idx": 0,
+      "box_area_ratio": 0.115
+    }
+  ],
+  "matched_entities": 9
+}

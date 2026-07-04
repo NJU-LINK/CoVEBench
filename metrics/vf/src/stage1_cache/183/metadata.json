@@ -1,0 +1,86 @@
+{
+  "id": 183,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-two-young-people-taking-selfies-4906.mp4",
+  "local_path": "/root/cut/data/mixkit-two-young-people-taking-selfies-4906.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing a foreground subject and changing their actions and poses without any camera movements, framing changes, or cinematic style transformations.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity, facial features, and floral pattern of the blouse of the woman on the right preserved?",
+    "Comparing Video A and Video B, how accurately are the colors, shapes, and specific details of the colorful mural in the background maintained?",
+    "Comparing Video A and Video B, how well is the low-angle shot perspective and overall framing of the scene preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal movement and original pose of the woman in the floral blouse preserved while she interacts with the new book?",
+    "Comparing Video A and Video B, how well is the overall lighting atmosphere and color grade of the scene preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman on the right"
+    },
+    {
+      "description": "floral blouse"
+    },
+    {
+      "description": "colorful mural"
+    },
+    {
+      "description": "book"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman on the right",
+      "box": [
+        1358.92822265625,
+        3.257499933242798,
+        1911.3406982421875,
+        1070.3763427734375
+      ],
+      "score": 0.9095,
+      "frame_idx": 0,
+      "box_area_ratio": 0.284
+    },
+    {
+      "entity_id": 2,
+      "description": "floral blouse",
+      "box": [
+        1497.4014892578125,
+        3.4464669227600098,
+        1919.828125,
+        664.8069458007812
+      ],
+      "score": 0.568,
+      "frame_idx": 2,
+      "box_area_ratio": 0.135
+    },
+    {
+      "entity_id": 3,
+      "description": "colorful mural",
+      "box": null,
+      "score": 0.5135,
+      "frame_idx": null,
+      "box_area_ratio": 0.985,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "book",
+      "box": [
+        1228.22900390625,
+        736.9342651367188,
+        1382.3665771484375,
+        911.39013671875
+      ],
+      "score": 0.4029,
+      "frame_idx": 1,
+      "box_area_ratio": 0.013
+    }
+  ],
+  "matched_entities": 3
+}

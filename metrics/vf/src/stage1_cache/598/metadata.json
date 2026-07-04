@@ -1,0 +1,11 @@
+{
+  "id": 598,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/154.mp4",
+  "local_path": "/root/cut/data/154.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a motion blur effect, which is a photographic style transformation.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

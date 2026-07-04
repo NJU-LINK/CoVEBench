@@ -1,0 +1,138 @@
+{
+  "id": 494,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-elegant-outdoor-wedding-table-5216.mp4",
+  "local_path": "/root/cut/data/mixkit-elegant-outdoor-wedding-table-5216.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing an object from the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual appearance of the foreground martini glass (including the red liquid and lime slices) preserved?",
+    "Comparing Video A and Video B, how accurately are the white plates and pale pink napkins on the table preserved?",
+    "Comparing Video A and Video B, how well are the empty wine glasses on the table preserved during the camera movement?",
+    "Comparing Video A and Video B, how well is the palm tree trunk in the background preserved?",
+    "Comparing Video A and Video B, how well are the sky, clouds, and water body preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "martini glass in the foreground"
+    },
+    {
+      "description": "red liquid"
+    },
+    {
+      "description": "lime slices"
+    },
+    {
+      "description": "white plates"
+    },
+    {
+      "description": "pale pink napkins"
+    },
+    {
+      "description": "empty wine glasses"
+    },
+    {
+      "description": "palm tree trunk in the back"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 27,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "martini glass in the foreground",
+      "box": [
+        887.8748779296875,
+        235.62925720214844,
+        1332.822265625,
+        991.0719604492188
+      ],
+      "score": 0.7637,
+      "frame_idx": 2,
+      "box_area_ratio": 0.162
+    },
+    {
+      "entity_id": 2,
+      "description": "red liquid",
+      "box": [
+        932.606201171875,
+        244.15699768066406,
+        1360.57568359375,
+        987.9594116210938
+      ],
+      "score": 0.7076,
+      "frame_idx": 0,
+      "box_area_ratio": 0.154
+    },
+    {
+      "entity_id": 3,
+      "description": "lime slices",
+      "box": [
+        923.8681640625,
+        243.95645141601562,
+        1365.460205078125,
+        987.5616455078125
+      ],
+      "score": 0.4143,
+      "frame_idx": 0,
+      "box_area_ratio": 0.158
+    },
+    {
+      "entity_id": 4,
+      "description": "white plates",
+      "box": [
+        4.0372467041015625,
+        778.2775268554688,
+        1043.85791015625,
+        1054.1802978515625
+      ],
+      "score": 0.3947,
+      "frame_idx": 1,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 5,
+      "description": "pale pink napkins",
+      "box": [
+        0.9483718872070312,
+        775.6329345703125,
+        954.4603881835938,
+        992.6428833007812
+      ],
+      "score": 0.5661,
+      "frame_idx": 0,
+      "box_area_ratio": 0.1
+    },
+    {
+      "entity_id": 6,
+      "description": "empty wine glasses",
+      "box": [
+        593.6240234375,
+        278.96258544921875,
+        812.427734375,
+        804.7401733398438
+      ],
+      "score": 0.4529,
+      "frame_idx": 1,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 7,
+      "description": "palm tree trunk in the back",
+      "box": [
+        1225.8248291015625,
+        3.222062587738037,
+        1370.484619140625,
+        603.7423095703125
+      ],
+      "score": 0.614,
+      "frame_idx": 1,
+      "box_area_ratio": 0.042
+    }
+  ],
+  "matched_entities": 7
+}

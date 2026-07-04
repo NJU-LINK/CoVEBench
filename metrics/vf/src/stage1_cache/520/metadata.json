@@ -1,0 +1,129 @@
+{
+  "id": 520,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-people-dancing-and-drinking-at-a-halloween-party-34453.mp4",
+  "local_path": "/root/cut/data/mixkit-people-dancing-and-drinking-at-a-halloween-party-34453.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying foreground material and changing object motion/gestures within the scene.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's appearance (floral hippie-style dress and sunglasses) and her dancing motion preserved?",
+    "Comparing Video A and Video B, how accurately are the festive wall stickers (pumpkins, witches, monsters) preserved?",
+    "Comparing Video A and Video B, how well is the TV screen's color cycling (blue, pink, green) preserved?",
+    "Comparing Video A and Video B, how accurately is the slow lateral camera pan to the right maintained?",
+    "Comparing Video A and Video B, how well is the man's white shirt preserved under the new leather cape?",
+    "Comparing Video A and Video B, how well is the overall dim Halloween lighting and ambient atmosphere of the room preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "woman in floral dress"
+    },
+    {
+      "description": "sunglasses"
+    },
+    {
+      "description": "pumpkin sticker"
+    },
+    {
+      "description": "witch sticker"
+    },
+    {
+      "description": "monster sticker"
+    },
+    {
+      "description": "tv screen"
+    },
+    {
+      "description": "white shirt"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in floral dress",
+      "box": null,
+      "score": 0.8063,
+      "frame_idx": null,
+      "box_area_ratio": 0.63,
+      "rejected_reason": "box covers 63% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "sunglasses",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 3,
+      "description": "pumpkin sticker",
+      "box": [
+        455.2110900878906,
+        433.9232177734375,
+        539.9496459960938,
+        530.2959594726562
+      ],
+      "score": 0.5937,
+      "frame_idx": 2,
+      "box_area_ratio": 0.004
+    },
+    {
+      "entity_id": 4,
+      "description": "witch sticker",
+      "box": [
+        786.4756469726562,
+        11.5757417678833,
+        1077.048095703125,
+        452.5000305175781
+      ],
+      "score": 0.4958,
+      "frame_idx": 2,
+      "box_area_ratio": 0.062
+    },
+    {
+      "entity_id": 5,
+      "description": "monster sticker",
+      "box": [
+        466.153076171875,
+        357.21063232421875,
+        557.9987182617188,
+        459.10406494140625
+      ],
+      "score": 0.4809,
+      "frame_idx": 0,
+      "box_area_ratio": 0.005
+    },
+    {
+      "entity_id": 6,
+      "description": "tv screen",
+      "box": [
+        859.9102172851562,
+        819.4655151367188,
+        1078.356689453125,
+        1318.021240234375
+      ],
+      "score": 0.6449,
+      "frame_idx": 1,
+      "box_area_ratio": 0.053
+    },
+    {
+      "entity_id": 7,
+      "description": "white shirt",
+      "box": [
+        506.7154541015625,
+        418.13397216796875,
+        1062.6719970703125,
+        1649.9095458984375
+      ],
+      "score": 0.7403,
+      "frame_idx": 1,
+      "box_area_ratio": 0.33
+    }
+  ],
+  "matched_entities": 5
+}

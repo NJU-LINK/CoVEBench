@@ -1,0 +1,11 @@
+{
+  "id": 400,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-group-of-friends-make-a-toast-and-drink-from-51529.mp4",
+  "local_path": "/root/cut/data/mixkit-a-group-of-friends-make-a-toast-and-drink-from-51529.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,107 @@
+{
+  "id": 487,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-bar-with-a-man-drinking-on-st-patricks-day-47429.mp4",
+  "local_path": "/root/cut/data/mixkit-bar-with-a-man-drinking-on-st-patricks-day-47429.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object's color without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the fabric texture of the man's suit preserved?",
+    "Comparing Video A and Video B, how accurately is the man's action of taking a slow sip of beer preserved?",
+    "Comparing Video A and Video B, how well is the man's neutral facial expression and gaze maintained?",
+    "Comparing Video A and Video B, how well is the rustic pub atmosphere preserved?",
+    "Comparing Video A and Video B, how well are the wooden shelves and the specific arrangement of bottles behind the man preserved?",
+    "Comparing Video A and Video B, how accurately is the low-angle perspective and the lighting on the dark bar counter preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "man in green suit"
+    },
+    {
+      "description": "glass of beer"
+    },
+    {
+      "description": "wooden shelves"
+    },
+    {
+      "description": "bottles"
+    },
+    {
+      "description": "dark bar counter"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in green suit",
+      "box": [
+        482.5924377441406,
+        173.32647705078125,
+        1037.4619140625,
+        1072.6239013671875
+      ],
+      "score": 0.901,
+      "frame_idx": 0,
+      "box_area_ratio": 0.241
+    },
+    {
+      "entity_id": 2,
+      "description": "glass of beer",
+      "box": [
+        947.214599609375,
+        426.9132385253906,
+        1036.3453369140625,
+        536.1550903320312
+      ],
+      "score": 0.5753,
+      "frame_idx": 1,
+      "box_area_ratio": 0.005
+    },
+    {
+      "entity_id": 3,
+      "description": "wooden shelves",
+      "box": [
+        731.5690307617188,
+        7.688889980316162,
+        1929.92138671875,
+        497.52880859375
+      ],
+      "score": 0.3406,
+      "frame_idx": 1,
+      "box_area_ratio": 0.283
+    },
+    {
+      "entity_id": 4,
+      "description": "bottles",
+      "box": [
+        1726.8231201171875,
+        411.4960021972656,
+        1764.358642578125,
+        548.5878295898438
+      ],
+      "score": 0.3584,
+      "frame_idx": 1,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 5,
+      "description": "dark bar counter",
+      "box": [
+        257.4823913574219,
+        662.9690551757812,
+        1912.159423828125,
+        1073.23486328125
+      ],
+      "score": 0.6275,
+      "frame_idx": 0,
+      "box_area_ratio": 0.327
+    }
+  ],
+  "matched_entities": 5
+}

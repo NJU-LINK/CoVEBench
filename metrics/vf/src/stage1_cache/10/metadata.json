@@ -1,0 +1,118 @@
+{
+  "id": 10,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/61.mp4",
+  "local_path": "/root/cut/data/61.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing object motion (high jump), adding foreground effects (energy glow), and shifting object position within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the black Oracle jacket preserved?",
+    "Comparing Video A and Video B, how accurately are the green pants preserved?",
+    "Comparing Video A and Video B, how well is the background environment (wet trees, building, and parked bicycles) preserved?",
+    "Comparing Video A and Video B, how well is the rainy day atmosphere and the wet texture of the paved path preserved?",
+    "Comparing Video A and Video B, how well is the static nature of the camera preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "black oracle jacket"
+    },
+    {
+      "description": "green pants"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "building"
+    },
+    {
+      "description": "bicycles"
+    },
+    {
+      "description": "paved path"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black oracle jacket",
+      "box": [
+        1283.9158935546875,
+        598.8969116210938,
+        2121.786376953125,
+        1371.4306640625
+      ],
+      "score": 0.4634,
+      "frame_idx": 1,
+      "box_area_ratio": 0.078
+    },
+    {
+      "entity_id": 2,
+      "description": "green pants",
+      "box": [
+        1285.920654296875,
+        339.1219482421875,
+        2168.43408203125,
+        2154.35107421875
+      ],
+      "score": 0.9111,
+      "frame_idx": 1,
+      "box_area_ratio": 0.193
+    },
+    {
+      "entity_id": 3,
+      "description": "trees",
+      "box": [
+        81.250244140625,
+        10.008105278015137,
+        955.6025390625,
+        774.9984741210938
+      ],
+      "score": 0.4323,
+      "frame_idx": 1,
+      "box_area_ratio": 0.081
+    },
+    {
+      "entity_id": 4,
+      "description": "building",
+      "box": [
+        3021.486572265625,
+        6.327095031738281,
+        3839.173828125,
+        749.7279052734375
+      ],
+      "score": 0.5686,
+      "frame_idx": 0,
+      "box_area_ratio": 0.073
+    },
+    {
+      "entity_id": 5,
+      "description": "bicycles",
+      "box": [
+        76.21041107177734,
+        602.1634521484375,
+        299.81134033203125,
+        864.756103515625
+      ],
+      "score": 0.6408,
+      "frame_idx": 2,
+      "box_area_ratio": 0.007
+    },
+    {
+      "entity_id": 6,
+      "description": "paved path",
+      "box": null,
+      "score": 0.4688,
+      "frame_idx": null,
+      "box_area_ratio": 0.583,
+      "rejected_reason": "box covers 58% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 5
+}

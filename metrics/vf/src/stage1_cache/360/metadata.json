@@ -1,0 +1,138 @@
+{
+  "id": 360,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girls-watching-a-horror-movie-4655.mp4",
+  "local_path": "/root/cut/data/mixkit-girls-watching-a-horror-movie-4655.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object (a cat) and defining its motion, with no mention of camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the identities, facial features, and clothing of the three women preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal progression of the reaction (from shock to laughter) preserved?",
+    "Comparing Video A and Video B, how well is the blue bowl of popcorn held by the middle woman preserved?",
+    "Comparing Video A and Video B, how well is the static nature of the camera shot preserved?",
+    "Comparing Video A and Video B, how well are the background elements (wall, decor, couch texture) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "three women"
+    },
+    {
+      "description": "woman in the middle"
+    },
+    {
+      "description": "blue bowl"
+    },
+    {
+      "description": "popcorn"
+    },
+    {
+      "description": "wall"
+    },
+    {
+      "description": "decor"
+    },
+    {
+      "description": "couch"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 32,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "three women",
+      "box": [
+        82.14557647705078,
+        218.99020385742188,
+        658.1287231445312,
+        1074.567138671875
+      ],
+      "score": 0.5992,
+      "frame_idx": 0,
+      "box_area_ratio": 0.238
+    },
+    {
+      "entity_id": 2,
+      "description": "woman in the middle",
+      "box": [
+        683.0755615234375,
+        290.1842041015625,
+        1144.362548828125,
+        1067.5819091796875
+      ],
+      "score": 0.5652,
+      "frame_idx": 2,
+      "box_area_ratio": 0.173
+    },
+    {
+      "entity_id": 3,
+      "description": "blue bowl",
+      "box": [
+        781.4179077148438,
+        713.1970825195312,
+        1032.7947998046875,
+        846.566650390625
+      ],
+      "score": 0.6774,
+      "frame_idx": 0,
+      "box_area_ratio": 0.016
+    },
+    {
+      "entity_id": 4,
+      "description": "popcorn",
+      "box": [
+        817.2623901367188,
+        719.7349853515625,
+        938.2425537109375,
+        741.3734741210938
+      ],
+      "score": 0.427,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 5,
+      "description": "wall",
+      "box": [
+        67.33755493164062,
+        -4.0906476974487305,
+        1925.8787841796875,
+        588.1963500976562
+      ],
+      "score": 0.5592,
+      "frame_idx": 0,
+      "box_area_ratio": 0.531
+    },
+    {
+      "entity_id": 6,
+      "description": "decor",
+      "box": [
+        778.5197143554688,
+        713.2430419921875,
+        1031.3580322265625,
+        845.6514892578125
+      ],
+      "score": 0.3914,
+      "frame_idx": 2,
+      "box_area_ratio": 0.016
+    },
+    {
+      "entity_id": 7,
+      "description": "couch",
+      "box": [
+        -2.3040390014648438,
+        534.6998291015625,
+        1914.5711669921875,
+        1074.9063720703125
+      ],
+      "score": 0.5893,
+      "frame_idx": 2,
+      "box_area_ratio": 0.499
+    }
+  ],
+  "matched_entities": 7
+}

@@ -1,0 +1,125 @@
+{
+  "id": 302,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/239.mp4",
+  "local_path": "/root/cut/data/239.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction only involves adding, removing, and replacing objects within the scene.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the structure and texture of the wooden gazebo and its snow-covered roof preserved?",
+    "Comparing Video A and Video B, how accurately is the snowy hillside and the placement of sparse trees in the background maintained?",
+    "Comparing Video A and Video B, how well is the snow-topped tree stump on the right side of the frame preserved?",
+    "Comparing Video A and Video B, how accurately is the static, eye-level camera angle preserved?",
+    "Comparing Video A and Video B, how well are the temporal dynamics and any subtle movements (like breathing or head shifts) of the subject synchronized?",
+    "Comparing Video A and Video B, how well is the texture and sparkle of the deep snow in the foreground preserved without introducing temporal artifacts?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "wooden gazebo"
+    },
+    {
+      "description": "roof"
+    },
+    {
+      "description": "hillside"
+    },
+    {
+      "description": "trees in the back"
+    },
+    {
+      "description": "tree stump on the right"
+    },
+    {
+      "description": "large white dog"
+    },
+    {
+      "description": "snow"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wooden gazebo",
+      "box": [
+        -7.133674621582031,
+        2.0959854125976562,
+        2594.423583984375,
+        1676.2667236328125
+      ],
+      "score": 0.8891,
+      "frame_idx": 0,
+      "box_area_ratio": 0.525
+    },
+    {
+      "entity_id": 2,
+      "description": "roof",
+      "box": [
+        9.300384521484375,
+        -2.0622217655181885,
+        2641.6796875,
+        442.1463928222656
+      ],
+      "score": 0.4424,
+      "frame_idx": 0,
+      "box_area_ratio": 0.141
+    },
+    {
+      "entity_id": 3,
+      "description": "hillside",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 4,
+      "description": "trees in the back",
+      "box": null,
+      "score": 0.3647,
+      "frame_idx": null,
+      "box_area_ratio": 0.768,
+      "rejected_reason": "box covers 77% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "tree stump on the right",
+      "box": [
+        2925.836181640625,
+        1041.689697265625,
+        3220.9599609375,
+        1344.62060546875
+      ],
+      "score": 0.4583,
+      "frame_idx": 0,
+      "box_area_ratio": 0.011
+    },
+    {
+      "entity_id": 6,
+      "description": "large white dog",
+      "box": [
+        376.3126220703125,
+        629.9624633789062,
+        1537.7198486328125,
+        1616.0548095703125
+      ],
+      "score": 0.966,
+      "frame_idx": 0,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 7,
+      "description": "snow",
+      "box": null,
+      "score": 0.4842,
+      "frame_idx": null,
+      "box_area_ratio": 0.995,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 4
+}

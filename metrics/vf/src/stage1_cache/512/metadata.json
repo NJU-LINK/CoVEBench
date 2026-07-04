@@ -1,0 +1,149 @@
+{
+  "id": 512,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-elegant-outdoor-wedding-table-5216.mp4",
+  "local_path": "/root/cut/data/mixkit-elegant-outdoor-wedding-table-5216.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object's material and adding foreground elements without camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the vibrant red liquid and the lime slices inside the foreground martini glass preserved?",
+    "Comparing Video A and Video B, how accurately are the empty wine glasses, white plates, and folded napkins on the table preserved?",
+    "Comparing Video A and Video B, how well is the background coastal landscape, including the sea and sky, preserved?",
+    "Comparing Video A and Video B, how well is the camera motion and framing of the close-up shot preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "vibrant red liquid"
+    },
+    {
+      "description": "lime slices"
+    },
+    {
+      "description": "martini glass in the foreground"
+    },
+    {
+      "description": "empty wine glasses"
+    },
+    {
+      "description": "white plates"
+    },
+    {
+      "description": "folded napkins"
+    },
+    {
+      "description": "sea"
+    },
+    {
+      "description": "blue sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 27,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "vibrant red liquid",
+      "box": [
+        892.4014892578125,
+        243.41188049316406,
+        1319.173583984375,
+        991.57568359375
+      ],
+      "score": 0.4477,
+      "frame_idx": 2,
+      "box_area_ratio": 0.154
+    },
+    {
+      "entity_id": 2,
+      "description": "lime slices",
+      "box": [
+        923.8681640625,
+        243.95645141601562,
+        1365.460205078125,
+        987.5616455078125
+      ],
+      "score": 0.4143,
+      "frame_idx": 0,
+      "box_area_ratio": 0.158
+    },
+    {
+      "entity_id": 3,
+      "description": "martini glass in the foreground",
+      "box": [
+        887.8748779296875,
+        235.62925720214844,
+        1332.822265625,
+        991.0719604492188
+      ],
+      "score": 0.7637,
+      "frame_idx": 2,
+      "box_area_ratio": 0.162
+    },
+    {
+      "entity_id": 4,
+      "description": "empty wine glasses",
+      "box": [
+        593.6240234375,
+        278.96258544921875,
+        812.427734375,
+        804.7401733398438
+      ],
+      "score": 0.4529,
+      "frame_idx": 1,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 5,
+      "description": "white plates",
+      "box": [
+        4.0372467041015625,
+        778.2775268554688,
+        1043.85791015625,
+        1054.1802978515625
+      ],
+      "score": 0.3947,
+      "frame_idx": 1,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 6,
+      "description": "folded napkins",
+      "box": [
+        -1.109161376953125,
+        771.2669067382812,
+        921.18505859375,
+        1003.497314453125
+      ],
+      "score": 0.4479,
+      "frame_idx": 2,
+      "box_area_ratio": 0.103
+    },
+    {
+      "entity_id": 7,
+      "description": "sea",
+      "box": [
+        923.090576171875,
+        244.45449829101562,
+        1372.639892578125,
+        986.302734375
+      ],
+      "score": 0.321,
+      "frame_idx": 0,
+      "box_area_ratio": 0.161
+    },
+    {
+      "entity_id": 8,
+      "description": "blue sky",
+      "box": null,
+      "score": 0.7096,
+      "frame_idx": null,
+      "box_area_ratio": 0.575,
+      "rejected_reason": "box covers 58% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 7
+}

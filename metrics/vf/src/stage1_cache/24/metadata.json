@@ -1,0 +1,70 @@
+{
+  "id": 24,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/103.mp4",
+  "local_path": "/root/cut/data/103.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground object (eagle) and defining its motion and interaction with the environment (water splash) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the shape, texture, and position of the small elongated grassy island in the middle of the river preserved?",
+    "Comparing Video A and Video B, how accurately is the dense green forest on both sides of the river preserved?",
+    "Comparing Video A and Video B, how well is the forward-moving camera perspective maintained?",
+    "Comparing Video A and Video B, how well is the color of the river water preserved in Video B?",
+    "Comparing Video A and Video B, how well is the overall overcast and realistic lighting mood preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "small elongated grassy island in the center"
+    },
+    {
+      "description": "dense green forest"
+    },
+    {
+      "description": "river water"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 17,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "small elongated grassy island in the center",
+      "box": [
+        720.94287109375,
+        867.0775146484375,
+        1587.4627685546875,
+        1680.794677734375
+      ],
+      "score": 0.6024,
+      "frame_idx": 0,
+      "box_area_ratio": 0.085
+    },
+    {
+      "entity_id": 2,
+      "description": "dense green forest",
+      "box": null,
+      "score": 0.4758,
+      "frame_idx": null,
+      "box_area_ratio": 0.977,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "river water",
+      "box": [
+        11.62445068359375,
+        431.462646484375,
+        2406.602294921875,
+        2153.20654296875
+      ],
+      "score": 0.4795,
+      "frame_idx": 2,
+      "box_area_ratio": 0.497
+    }
+  ],
+  "matched_entities": 2
+}

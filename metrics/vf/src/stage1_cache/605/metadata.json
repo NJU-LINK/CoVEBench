@@ -1,0 +1,69 @@
+{
+  "id": 605,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/165.mp4",
+  "local_path": "/root/cut/data/165.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves replacing a foreground subject and modifying the background environment without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the subject's 'arms outstretched' pose preserved?",
+    "Comparing Video A and Video B, how well is the camera's forward motion past the subject preserved?",
+    "Comparing Video A and Video B, how accurately is the silhouette and large-scale structure of the background mountain range preserved?",
+    "Comparing Video A and Video B, how well is the layout of the rugged, red volcanic terrain preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man in black jacket"
+    },
+    {
+      "description": "mountain range in the back"
+    },
+    {
+      "description": "red volcanic terrain"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in black jacket",
+      "box": [
+        262.7178039550781,
+        15.998979568481445,
+        1077.6580810546875,
+        818.3740234375
+      ],
+      "score": 0.9059,
+      "frame_idx": 2,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 2,
+      "description": "mountain range in the back",
+      "box": [
+        47.81158447265625,
+        220.18746948242188,
+        3374.486572265625,
+        585.9370727539062
+      ],
+      "score": 0.5114,
+      "frame_idx": 1,
+      "box_area_ratio": 0.147
+    },
+    {
+      "entity_id": 3,
+      "description": "red volcanic terrain",
+      "box": null,
+      "score": 0.8895,
+      "frame_idx": null,
+      "box_area_ratio": 0.983,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

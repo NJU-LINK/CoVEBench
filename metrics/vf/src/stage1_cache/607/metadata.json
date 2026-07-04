@@ -1,0 +1,106 @@
+{
+  "id": 607,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/167.mp4",
+  "local_path": "/root/cut/data/167.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects (helmet, jacket) and modifying the motion of the subject, which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the pine trees lining the slope preserved in position and density?",
+    "Comparing Video A and Video B, how accurately are the clear blue sky and overall daytime lighting preserved?",
+    "Comparing Video A and Video B, how well is the distant mountain peak/background landscape preserved?",
+    "Comparing Video A and Video B, how well is the snow surface texture preserved in areas not directly affected by the new left carve?",
+    "Comparing Video A and Video B, how well is the overall scene identity preserved (same skier descending the same steep slope with poles, same general composition), aside from the requested edits?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "pine trees"
+    },
+    {
+      "description": "distant mountain peak"
+    },
+    {
+      "description": "skier"
+    },
+    {
+      "description": "ski poles"
+    },
+    {
+      "description": "blue and orange helmet"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "pine trees",
+      "box": [
+        896.9881591796875,
+        4.85321044921875,
+        1839.8162841796875,
+        853.666015625
+      ],
+      "score": 0.5223,
+      "frame_idx": 2,
+      "box_area_ratio": 0.096
+    },
+    {
+      "entity_id": 2,
+      "description": "distant mountain peak",
+      "box": [
+        1172.3212890625,
+        224.78131103515625,
+        2360.049560546875,
+        709.80712890625
+      ],
+      "score": 0.4429,
+      "frame_idx": 1,
+      "box_area_ratio": 0.069
+    },
+    {
+      "entity_id": 3,
+      "description": "skier",
+      "box": [
+        1653.9830322265625,
+        1250.177734375,
+        2137.53466796875,
+        1818.553955078125
+      ],
+      "score": 0.9394,
+      "frame_idx": 1,
+      "box_area_ratio": 0.033
+    },
+    {
+      "entity_id": 4,
+      "description": "ski poles",
+      "box": [
+        2008.169189453125,
+        1623.2769775390625,
+        2083.321533203125,
+        1868.221923828125
+      ],
+      "score": 0.4104,
+      "frame_idx": 0,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 5,
+      "description": "blue and orange helmet",
+      "box": [
+        1764.5107421875,
+        1255.6474609375,
+        2000.90283203125,
+        1569.80859375
+      ],
+      "score": 0.6309,
+      "frame_idx": 1,
+      "box_area_ratio": 0.009
+    }
+  ],
+  "matched_entities": 5
+}

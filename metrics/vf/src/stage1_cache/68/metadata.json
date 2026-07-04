@@ -1,0 +1,66 @@
+{
+  "id": 68,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/113.mp4",
+  "local_path": "/root/cut/data/113.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding foreground objects (Action VFX sparks) and changing the motion speed of objects within the scene, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the material appearance and texture of the massive steel wrecking ball preserved?",
+    "Comparing Video A and Video B, how accurately is the dilapidated state and concrete texture of the building preserved?",
+    "Comparing Video A and Video B, how well is the color and volume of the grey dust cloud preserved during the demolition?",
+    "Comparing Video A and Video B, how well is the flat, overcast sky and overall lighting environment preserved?",
+    "Comparing Video A and Video B, how well is the medium perspective camera angle and framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "massive steel wrecking ball"
+    },
+    {
+      "description": "concrete building"
+    },
+    {
+      "description": "grey dust cloud"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "massive steel wrecking ball",
+      "box": [
+        1749.77734375,
+        666.1824340820312,
+        2074.68701171875,
+        973.5445556640625
+      ],
+      "score": 0.5122,
+      "frame_idx": 2,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 2,
+      "description": "concrete building",
+      "box": null,
+      "score": 0.6546,
+      "frame_idx": null,
+      "box_area_ratio": 0.916,
+      "rejected_reason": "box covers 92% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "grey dust cloud",
+      "box": null,
+      "score": 0.3791,
+      "frame_idx": null,
+      "box_area_ratio": 0.613,
+      "rejected_reason": "box covers 61% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

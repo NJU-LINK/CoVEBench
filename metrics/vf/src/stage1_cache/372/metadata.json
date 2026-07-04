@@ -1,0 +1,82 @@
+{
+  "id": 372,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-texting-on-cell-phone-while-walking-in-park-32617.mp4",
+  "local_path": "/root/cut/data/mixkit-man-texting-on-cell-phone-while-walking-in-park-32617.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground subject (man to girl) and changing the subject's action/pose without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the specific trees, foliage, and background park elements preserved?",
+    "Comparing Video A and Video B, how well is the texture and appearance of the path or ground the subject is walking on preserved?",
+    "Comparing Video A and Video B, how accurately is the static medium shot (lack of camera movement) preserved?",
+    "Comparing Video A and Video B, how well is the walking motion preserved?",
+    "Comparing Video A and Video B, how well is the overall ambient lighting and time-of-day appearance preserved in the scene?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "trees"
+    },
+    {
+      "description": "foliage"
+    },
+    {
+      "description": "path"
+    },
+    {
+      "description": "ground"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "trees",
+      "box": null,
+      "score": 0.4645,
+      "frame_idx": null,
+      "box_area_ratio": 0.999,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "foliage",
+      "box": null,
+      "score": 0.6113,
+      "frame_idx": null,
+      "box_area_ratio": 0.997,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "path",
+      "box": [
+        957.879638671875,
+        180.7325897216797,
+        1327.162353515625,
+        1073.5457763671875
+      ],
+      "score": 0.5628,
+      "frame_idx": 1,
+      "box_area_ratio": 0.159
+    },
+    {
+      "entity_id": 4,
+      "description": "ground",
+      "box": [
+        58.557044982910156,
+        989.2662353515625,
+        519.7176513671875,
+        1076.9873046875
+      ],
+      "score": 0.3735,
+      "frame_idx": 1,
+      "box_area_ratio": 0.02
+    }
+  ],
+  "matched_entities": 2
+}

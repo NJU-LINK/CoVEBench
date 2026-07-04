@@ -1,0 +1,11 @@
+{
+  "id": 100,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-couple-goes-to-sleep-3181.mp4",
+  "local_path": "/root/cut/data/mixkit-a-couple-goes-to-sleep-3181.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

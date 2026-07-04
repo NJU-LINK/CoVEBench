@@ -1,0 +1,101 @@
+{
+  "id": 357,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girl-walking-in-a-park-smelling-a-bougainvillea-32742.mp4",
+  "local_path": "/root/cut/data/mixkit-girl-walking-in-a-park-smelling-a-bougainvillea-32742.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object's clothing and changing the subject's action and held object, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's curly hair texture and style preserved?",
+    "Comparing Video A and Video B, how well are the woman's black pants preserved?",
+    "Comparing Video A and Video B, how accurately is the park background (trees, grass, lighting) maintained?",
+    "Comparing Video A and Video B, how well is the static medium shot and camera framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "young woman"
+    },
+    {
+      "description": "curly hair"
+    },
+    {
+      "description": "black pants"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 36,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young woman",
+      "box": [
+        561.0498046875,
+        65.88919067382812,
+        1251.617919921875,
+        1075.8692626953125
+      ],
+      "score": 0.9567,
+      "frame_idx": 0,
+      "box_area_ratio": 0.336
+    },
+    {
+      "entity_id": 2,
+      "description": "curly hair",
+      "box": [
+        694.8644409179688,
+        150.45120239257812,
+        1194.7879638671875,
+        697.9841918945312
+      ],
+      "score": 0.7012,
+      "frame_idx": 2,
+      "box_area_ratio": 0.132
+    },
+    {
+      "entity_id": 3,
+      "description": "black pants",
+      "box": [
+        586.726806640625,
+        144.4260711669922,
+        1287.3125,
+        1075.6873779296875
+      ],
+      "score": 0.7745,
+      "frame_idx": 2,
+      "box_area_ratio": 0.315
+    },
+    {
+      "entity_id": 4,
+      "description": "trees",
+      "box": null,
+      "score": 0.5705,
+      "frame_idx": null,
+      "box_area_ratio": 0.997,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "grass",
+      "box": [
+        559.8142700195312,
+        66.1533203125,
+        1251.80810546875,
+        1076.423828125
+      ],
+      "score": 0.4584,
+      "frame_idx": 0,
+      "box_area_ratio": 0.337
+    }
+  ],
+  "matched_entities": 4
+}

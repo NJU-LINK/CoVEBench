@@ -1,0 +1,85 @@
+{
+  "id": 447,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/1005850_8s_part1_9.0s.mp4",
+  "local_path": "/root/cut/data/1005850_8s_part1_9.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment, changing the motion of subjects, and adjusting the position of an object within the scene, all of which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific festive holiday sweaters and Santa hats worn by the three friends preserved?",
+    "Comparing Video A and Video B, how accurately is the facial identity and the laughing expression of the three friends preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the singing action and lip-sync preserved despite the increased swaying speed?",
+    "Comparing Video A and Video B, how well is the microphone that the friends are leaning into preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "three friends"
+    },
+    {
+      "description": "festive holiday sweaters"
+    },
+    {
+      "description": "santa hats"
+    },
+    {
+      "description": "microphone"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "three friends",
+      "box": null,
+      "score": 0.4854,
+      "frame_idx": null,
+      "box_area_ratio": 0.579,
+      "rejected_reason": "box covers 58% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "festive holiday sweaters",
+      "box": [
+        825.34912109375,
+        223.64639282226562,
+        1280.7252197265625,
+        717.9259033203125
+      ],
+      "score": 0.5377,
+      "frame_idx": 0,
+      "box_area_ratio": 0.244
+    },
+    {
+      "entity_id": 3,
+      "description": "santa hats",
+      "box": [
+        135.86032104492188,
+        1.250617504119873,
+        643.9340209960938,
+        405.2768859863281
+      ],
+      "score": 0.6139,
+      "frame_idx": 2,
+      "box_area_ratio": 0.223
+    },
+    {
+      "entity_id": 4,
+      "description": "microphone",
+      "box": [
+        1000.4586181640625,
+        454.1999816894531,
+        1161.5511474609375,
+        716.3872680664062
+      ],
+      "score": 0.789,
+      "frame_idx": 2,
+      "box_area_ratio": 0.046
+    }
+  ],
+  "matched_entities": 3
+}

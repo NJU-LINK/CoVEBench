@@ -1,0 +1,42 @@
+{
+  "id": 385,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-photo-session-with-a-girl-in-the-middle-of-a-34397.mp4",
+  "local_path": "/root/cut/data/mixkit-photo-session-with-a-girl-in-the-middle-of-a-34397.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves changing object pose, action, and removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and clothing of the male photographer preserved?",
+    "Comparing Video A and Video B, how accurately is the photographer's movement path around the model preserved?",
+    "Comparing Video A and Video B, how well are the desert landscape and the specific colors of the dusk sky preserved?",
+    "Comparing Video A and Video B, how consistent is the static camera framing and wide-shot perspective?",
+    "Comparing Video A and Video B, how well is the interaction between the photographer's camera flashes (if any) and the environment lighting preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "male photographer"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "male photographer",
+      "box": [
+        365.4882507324219,
+        307.38848876953125,
+        669.3250122070312,
+        955.5713500976562
+      ],
+      "score": 0.9163,
+      "frame_idx": 1,
+      "box_area_ratio": 0.095
+    }
+  ],
+  "matched_entities": 1
+}

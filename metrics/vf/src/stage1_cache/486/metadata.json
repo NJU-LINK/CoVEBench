@@ -1,0 +1,118 @@
+{
+  "id": 486,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-young-cheerful-woman-with-a-radiant-smile-is-surrounded-51530.mp4",
+  "local_path": "/root/cut/data/mixkit-a-young-cheerful-woman-with-a-radiant-smile-is-surrounded-51530.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the details of the central woman's shimmering silver dress and hoop earrings preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance of the man in the black suit on the right preserved?",
+    "Comparing Video A and Video B, how well is the gold tinsel topper on the champagne flute preserved during the drinking action?",
+    "Comparing Video A and Video B, how accurately is the warm, blurry festive background lighting preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the group clinking their glasses and taking a drink preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman in the center"
+    },
+    {
+      "description": "silver dress"
+    },
+    {
+      "description": "hoop earrings"
+    },
+    {
+      "description": "man in black suit on the right"
+    },
+    {
+      "description": "gold tinsel topper"
+    },
+    {
+      "description": "champagne flute"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in the center",
+      "box": null,
+      "score": 0.8147,
+      "frame_idx": null,
+      "box_area_ratio": 0.718,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "silver dress",
+      "box": [
+        0.14679908752441406,
+        4.117555618286133,
+        509.5473937988281,
+        1069.8128662109375
+      ],
+      "score": 0.4871,
+      "frame_idx": 0,
+      "box_area_ratio": 0.262
+    },
+    {
+      "entity_id": 3,
+      "description": "hoop earrings",
+      "box": [
+        1109.2972412109375,
+        354.0843505859375,
+        1164.3157958984375,
+        469.2446594238281
+      ],
+      "score": 0.4569,
+      "frame_idx": 1,
+      "box_area_ratio": 0.003
+    },
+    {
+      "entity_id": 4,
+      "description": "man in black suit on the right",
+      "box": [
+        1631.050537109375,
+        2.7882206439971924,
+        1917.98828125,
+        1068.44580078125
+      ],
+      "score": 0.872,
+      "frame_idx": 0,
+      "box_area_ratio": 0.147
+    },
+    {
+      "entity_id": 5,
+      "description": "gold tinsel topper",
+      "box": [
+        344.2799987792969,
+        66.3750991821289,
+        563.8900756835938,
+        276.6736755371094
+      ],
+      "score": 0.5495,
+      "frame_idx": 2,
+      "box_area_ratio": 0.022
+    },
+    {
+      "entity_id": 6,
+      "description": "champagne flute",
+      "box": [
+        217.14996337890625,
+        216.0293731689453,
+        456.0785827636719,
+        817.9589233398438
+      ],
+      "score": 0.6986,
+      "frame_idx": 2,
+      "box_area_ratio": 0.069
+    }
+  ],
+  "matched_entities": 5
+}

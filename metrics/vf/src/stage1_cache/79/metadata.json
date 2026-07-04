@@ -1,0 +1,69 @@
+{
+  "id": 79,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/1005955_8s_part1_9.0s.mp4",
+  "local_path": "/root/cut/data/1005955_8s_part1_9.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves modifying a foreground subject by removing an object (the beard) without changing camera movement, framing, or cinematic style.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity and appearance of the Asian woman holding the microphone preserved?",
+    "Comparing Video A and Video B, how well is the identity and appearance of the blonde woman on the left preserved?",
+    "Comparing Video A and Video B, how accurately is the background environment, including the warm bokeh and indoor party setting, maintained?",
+    "Comparing Video A and Video B, how well is the close-up camera angle and framing preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "asian woman on the right"
+    },
+    {
+      "description": "microphone"
+    },
+    {
+      "description": "blonde woman on the left"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "asian woman on the right",
+      "box": null,
+      "score": 0.5203,
+      "frame_idx": null,
+      "box_area_ratio": 0.701,
+      "rejected_reason": "box covers 70% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "microphone",
+      "box": [
+        279.8585510253906,
+        311.2209167480469,
+        538.4630126953125,
+        716.3366088867188
+      ],
+      "score": 0.6858,
+      "frame_idx": 2,
+      "box_area_ratio": 0.114
+    },
+    {
+      "entity_id": 3,
+      "description": "blonde woman on the left",
+      "box": [
+        5.233917236328125,
+        2.077059745788574,
+        327.0745849609375,
+        716.8504638671875
+      ],
+      "score": 0.7974,
+      "frame_idx": 2,
+      "box_area_ratio": 0.25
+    }
+  ],
+  "matched_entities": 2
+}

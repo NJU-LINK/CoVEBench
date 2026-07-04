@@ -1,0 +1,106 @@
+{
+  "id": 283,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5403_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5403_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment and replacing foreground objects (kitten to puppy, check to trophy) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the red racing helmet on the subject's head preserved?",
+    "Comparing Video A and Video B, how accurately are the pink strawberry-patterned diapers preserved on the subject?",
+    "Comparing Video A and Video B, how well is the triumphant pose with both paws raised high preserved?",
+    "Comparing Video A and Video B, how well is the number one podium preserved?",
+    "Comparing Video A and Video B, how accurately is the falling confetti preserved in terms of density and movement?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "red racing helmet"
+    },
+    {
+      "description": "pink strawberry-patterned diapers"
+    },
+    {
+      "description": "small white kitten"
+    },
+    {
+      "description": "number one podium"
+    },
+    {
+      "description": "confetti"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "red racing helmet",
+      "box": [
+        501.4624328613281,
+        480.9952392578125,
+        803.5132446289062,
+        768.194580078125
+      ],
+      "score": 0.7732,
+      "frame_idx": 0,
+      "box_area_ratio": 0.042
+    },
+    {
+      "entity_id": 2,
+      "description": "pink strawberry-patterned diapers",
+      "box": [
+        485.9454345703125,
+        1004.392822265625,
+        789.5418701171875,
+        1245.0079345703125
+      ],
+      "score": 0.5931,
+      "frame_idx": 2,
+      "box_area_ratio": 0.035
+    },
+    {
+      "entity_id": 3,
+      "description": "small white kitten",
+      "box": [
+        339.5634765625,
+        521.6822509765625,
+        962.4911499023438,
+        1339.715087890625
+      ],
+      "score": 0.8469,
+      "frame_idx": 2,
+      "box_area_ratio": 0.246
+    },
+    {
+      "entity_id": 4,
+      "description": "number one podium",
+      "box": [
+        379.2293395996094,
+        1276.4586181640625,
+        872.041015625,
+        1482.6873779296875
+      ],
+      "score": 0.5424,
+      "frame_idx": 2,
+      "box_area_ratio": 0.049
+    },
+    {
+      "entity_id": 5,
+      "description": "confetti",
+      "box": [
+        341.80999755859375,
+        519.2972412109375,
+        955.7762451171875,
+        1336.460693359375
+      ],
+      "score": 0.3875,
+      "frame_idx": 2,
+      "box_area_ratio": 0.242
+    }
+  ],
+  "matched_entities": 5
+}

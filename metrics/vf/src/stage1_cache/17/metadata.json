@@ -1,0 +1,91 @@
+{
+  "id": 17,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/72.mp4",
+  "local_path": "/root/cut/data/72.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion of a foreground object (the boat) and adding related visual elements (wake and spray) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the red color and inflatable texture of the boat preserved?",
+    "Comparing Video A and Video B, how well are the snow-capped mountains in the background preserved?",
+    "Comparing Video A and Video B, how well is the deep blue color of the lake water (in areas not affected by the new wake) preserved?",
+    "Comparing Video A and Video B, how well are the people inside the boat preserved in terms of number and general appearance?",
+    "Comparing Video A and Video B, how well is the lighting from the bright sun and the resulting shadows on the boat's interior preserved?",
+    "Comparing Video A and Video B, how well is the static camera perspective and central framing of the shot preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "red inflatable boat"
+    },
+    {
+      "description": "snow-capped mountains"
+    },
+    {
+      "description": "lake water"
+    },
+    {
+      "description": "people"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "red inflatable boat",
+      "box": [
+        1730.2855224609375,
+        1136.9761962890625,
+        1925.2174072265625,
+        1198.771484375
+      ],
+      "score": 0.8138,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 2,
+      "description": "snow-capped mountains",
+      "box": [
+        8.343086242675781,
+        -6.506567001342773,
+        3826.45556640625,
+        1104.32861328125
+      ],
+      "score": 0.4806,
+      "frame_idx": 2,
+      "box_area_ratio": 0.511
+    },
+    {
+      "entity_id": 3,
+      "description": "lake water",
+      "box": [
+        1.6775894165039062,
+        1035.8804931640625,
+        3836.003662109375,
+        2152.02587890625
+      ],
+      "score": 0.7773,
+      "frame_idx": 0,
+      "box_area_ratio": 0.516
+    },
+    {
+      "entity_id": 4,
+      "description": "people",
+      "box": [
+        1772.935302734375,
+        1109.6339111328125,
+        1822.2353515625,
+        1170.6298828125
+      ],
+      "score": 0.4168,
+      "frame_idx": 0,
+      "box_area_ratio": 0.0
+    }
+  ],
+  "matched_entities": 4
+}

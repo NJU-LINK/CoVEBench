@@ -1,0 +1,73 @@
+{
+  "id": 457,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/20466817_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/20466817_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment, changing object motion, and changing object position, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the distant mountains preserved in terms of their silhouette and placement?",
+    "Comparing Video A and Video B, how accurately is the texture and 'mirror-like' quality of the salt flat surface preserved?",
+    "Comparing Video A and Video B, how well is the person's identity (clothing, hair color, and build) preserved despite the change in motion?",
+    "Comparing Video A and Video B, how well is the overall calm and serene atmosphere of the scene preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "distant mountains"
+    },
+    {
+      "description": "salt flat"
+    },
+    {
+      "description": "person"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "distant mountains",
+      "box": [
+        -2.780170440673828,
+        457.10919189453125,
+        1915.60498046875,
+        524.1429443359375
+      ],
+      "score": 0.623,
+      "frame_idx": 2,
+      "box_area_ratio": 0.062
+    },
+    {
+      "entity_id": 2,
+      "description": "salt flat",
+      "box": [
+        1.6505241394042969,
+        520.53955078125,
+        1916.9139404296875,
+        1074.0992431640625
+      ],
+      "score": 0.5037,
+      "frame_idx": 2,
+      "box_area_ratio": 0.511
+    },
+    {
+      "entity_id": 3,
+      "description": "person",
+      "box": [
+        941.8995361328125,
+        558.092529296875,
+        986.9028930664062,
+        678.8171997070312
+      ],
+      "score": 0.8554,
+      "frame_idx": 0,
+      "box_area_ratio": 0.003
+    }
+  ],
+  "matched_entities": 3
+}

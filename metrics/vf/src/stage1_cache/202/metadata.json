@@ -1,0 +1,11 @@
+{
+  "id": 202,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-young-man-missing-a-bowling-shot-49117.mp4",
+  "local_path": "/root/cut/data/mixkit-young-man-missing-a-bowling-shot-49117.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

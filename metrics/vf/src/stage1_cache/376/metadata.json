@@ -1,0 +1,98 @@
+{
+  "id": 376,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-mother-and-her-baby-playing-with-a-teddy-bear-49968.mp4",
+  "local_path": "/root/cut/data/mixkit-mother-and-her-baby-playing-with-a-teddy-bear-49968.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and changing the subject's motion, which are allowed actions.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the baby's facial features and identity preserved?",
+    "Comparing Video A and Video B, how well is the woman's appearance and position in the background preserved?",
+    "Comparing Video A and Video B, how accurately are the textures and colors of the bed and bedding preserved?",
+    "Comparing Video A and Video B, how well is the static camera framing and medium shot composition preserved?",
+    "Comparing Video A and Video B, how well is the baby's clothing (color, pattern, and fit) preserved while the action changes?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "baby"
+    },
+    {
+      "description": "woman in the background"
+    },
+    {
+      "description": "bed"
+    },
+    {
+      "description": "bedding"
+    },
+    {
+      "description": "baby clothing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 32,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "baby",
+      "box": [
+        468.81561279296875,
+        49.20473861694336,
+        1157.807373046875,
+        1072.2740478515625
+      ],
+      "score": 0.8926,
+      "frame_idx": 0,
+      "box_area_ratio": 0.34
+    },
+    {
+      "entity_id": 2,
+      "description": "woman in the background",
+      "box": [
+        -0.04906654357910156,
+        -0.9529781341552734,
+        681.4149780273438,
+        1076.2962646484375
+      ],
+      "score": 0.4318,
+      "frame_idx": 0,
+      "box_area_ratio": 0.354
+    },
+    {
+      "entity_id": 3,
+      "description": "bed",
+      "box": null,
+      "score": 0.5643,
+      "frame_idx": null,
+      "box_area_ratio": 0.817,
+      "rejected_reason": "box covers 82% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "bedding",
+      "box": null,
+      "score": 0.4374,
+      "frame_idx": null,
+      "box_area_ratio": 0.799,
+      "rejected_reason": "box covers 80% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "baby clothing",
+      "box": [
+        515.0283203125,
+        407.3634033203125,
+        1074.7205810546875,
+        991.7618408203125
+      ],
+      "score": 0.5717,
+      "frame_idx": 2,
+      "box_area_ratio": 0.158
+    }
+  ],
+  "matched_entities": 3
+}

@@ -1,0 +1,11 @@
+{
+  "id": 137,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-in-a-cafe-connected-on-their-devices-4879.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-in-a-cafe-connected-on-their-devices-4879.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

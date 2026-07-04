@@ -1,0 +1,74 @@
+{
+  "id": 534,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/14.mp4",
+  "local_path": "/root/cut/data/14.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object and changing the motion/pose of another object, which are allowed actions.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the adult Barbary macaque's identity preserved?",
+    "Comparing Video A and Video B, how well is the tree trunk texture preserved?",
+    "Comparing Video A and Video B, how well is the grass texture and color preserved outside the edited area?",
+    "Comparing Video A and Video B, how well is the soft natural lighting preserved?",
+    "Comparing Video A and Video B, how well is the overall close animal-scene continuity preserved outside the requested edits?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "adult barbary macaque"
+    },
+    {
+      "description": "tree trunk"
+    },
+    {
+      "description": "grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "adult barbary macaque",
+      "box": [
+        661.0415649414062,
+        87.69656372070312,
+        1208.4736328125,
+        656.133544921875
+      ],
+      "score": 0.7984,
+      "frame_idx": 2,
+      "box_area_ratio": 0.338
+    },
+    {
+      "entity_id": 2,
+      "description": "tree trunk",
+      "box": [
+        9.818305969238281,
+        4.0834808349609375,
+        883.7958984375,
+        455.448974609375
+      ],
+      "score": 0.5538,
+      "frame_idx": 1,
+      "box_area_ratio": 0.428
+    },
+    {
+      "entity_id": 3,
+      "description": "grass",
+      "box": [
+        -0.04009246826171875,
+        380.67181396484375,
+        1279.373046875,
+        719.4630126953125
+      ],
+      "score": 0.6106,
+      "frame_idx": 0,
+      "box_area_ratio": 0.47
+    }
+  ],
+  "matched_entities": 3
+}

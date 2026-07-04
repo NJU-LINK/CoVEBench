@@ -1,0 +1,88 @@
+{
+  "id": 491,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-dressed-as-a-vampire-at-a-halloween-costume-party-34448.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-dressed-as-a-vampire-at-a-halloween-costume-party-34448.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing an object from the background without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the young Black man's facial identity and skin tone preserved?",
+    "Comparing Video A and Video B, how accurately is the high-collared cape of the vampire costume preserved?",
+    "Comparing Video A and Video B, how accurately is the sequence of facial expressions (menacing stare, surprise, cheerful smile) preserved?",
+    "Comparing Video A and Video B, how well is the exact timing of the transition from the look of surprise to the cheerful smile preserved?",
+    "Comparing Video A and Video B, how well are the purple and orange lighting hues in the room preserved?",
+    "Comparing Video A and Video B, how accurately is the glass of amber liquid held by the man preserved?",
+    "Comparing Video A and Video B, how well is the texture and color of the sofa preserved?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "young black man"
+    },
+    {
+      "description": "high-collared cape"
+    },
+    {
+      "description": "glass of amber liquid"
+    },
+    {
+      "description": "sofa"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young black man",
+      "box": null,
+      "score": 0.9182,
+      "frame_idx": null,
+      "box_area_ratio": 0.776,
+      "rejected_reason": "box covers 78% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "high-collared cape",
+      "box": [
+        2.838764190673828,
+        323.91741943359375,
+        1340.9969482421875,
+        1065.7271728515625
+      ],
+      "score": 0.4529,
+      "frame_idx": 1,
+      "box_area_ratio": 0.479
+    },
+    {
+      "entity_id": 3,
+      "description": "glass of amber liquid",
+      "box": [
+        1392.509765625,
+        469.234375,
+        1529.7193603515625,
+        680.9373779296875
+      ],
+      "score": 0.8665,
+      "frame_idx": 2,
+      "box_area_ratio": 0.014
+    },
+    {
+      "entity_id": 4,
+      "description": "sofa",
+      "box": [
+        5.021839141845703,
+        610.6808471679688,
+        1609.001708984375,
+        1078.774658203125
+      ],
+      "score": 0.4522,
+      "frame_idx": 0,
+      "box_area_ratio": 0.362
+    }
+  ],
+  "matched_entities": 3
+}

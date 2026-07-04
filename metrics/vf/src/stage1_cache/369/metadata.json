@@ -1,0 +1,66 @@
+{
+  "id": 369,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-splitting-a-piece-of-log-with-an-ax-22731.mp4",
+  "local_path": "/root/cut/data/mixkit-man-splitting-a-piece-of-log-with-an-ax-22731.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects and changing the motion/action within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the background environment (ground texture, distant objects, lighting) preserved?",
+    "Comparing Video A and Video B, how well is the static camera angle and framing preserved?",
+    "Comparing Video A and Video B, how precisely is the strike preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "person"
+    },
+    {
+      "description": "wooden log"
+    },
+    {
+      "description": "axe"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "person",
+      "box": [
+        1524.7109375,
+        4.688930511474609,
+        1876.6578369140625,
+        696.63330078125
+      ],
+      "score": 0.7925,
+      "frame_idx": 0,
+      "box_area_ratio": 0.117
+    },
+    {
+      "entity_id": 2,
+      "description": "wooden log",
+      "box": [
+        587.7188720703125,
+        365.7217712402344,
+        1539.861572265625,
+        1004.3034057617188
+      ],
+      "score": 0.8644,
+      "frame_idx": 1,
+      "box_area_ratio": 0.293
+    },
+    {
+      "entity_id": 3,
+      "description": "axe",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 2
+}

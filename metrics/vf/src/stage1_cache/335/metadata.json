@@ -1,0 +1,121 @@
+{
+  "id": 335,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-having-fun-while-cooking-12157.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-having-fun-while-cooking-12157.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying foreground subjects (outfit change) and changing object motion/actions within the scene.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's physical appearance, specifically his dreadlocks and facial features, preserved?",
+    "Comparing Video A and Video B, how accurately is the woman's laughing expression and the action of dabbing the man's nose preserved?",
+    "Comparing Video A and Video B, how well is the texture and appearance of the man's cotton t-shirt preserved?",
+    "Comparing Video A and Video B, how well is the background environment, including the metal refrigerator and the glass of liquid on the counter, preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "dreadlocks"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "cotton t-shirt"
+    },
+    {
+      "description": "metal refrigerator"
+    },
+    {
+      "description": "glass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 28,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        232.12136840820312,
+        1.0331225395202637,
+        1137.9398193359375,
+        1073.469482421875
+      ],
+      "score": 0.8499,
+      "frame_idx": 2,
+      "box_area_ratio": 0.468
+    },
+    {
+      "entity_id": 2,
+      "description": "dreadlocks",
+      "box": [
+        678.9619140625,
+        2.3299331665039062,
+        1053.5177001953125,
+        349.2266540527344
+      ],
+      "score": 0.5966,
+      "frame_idx": 0,
+      "box_area_ratio": 0.063
+    },
+    {
+      "entity_id": 3,
+      "description": "woman",
+      "box": [
+        1112.2471923828125,
+        56.40843200683594,
+        1730.778564453125,
+        1077.7493896484375
+      ],
+      "score": 0.8069,
+      "frame_idx": 2,
+      "box_area_ratio": 0.305
+    },
+    {
+      "entity_id": 4,
+      "description": "cotton t-shirt",
+      "box": [
+        382.7216796875,
+        282.2803039550781,
+        1144.583984375,
+        1015.821533203125
+      ],
+      "score": 0.6303,
+      "frame_idx": 1,
+      "box_area_ratio": 0.27
+    },
+    {
+      "entity_id": 5,
+      "description": "metal refrigerator",
+      "box": [
+        0.43729305267333984,
+        344.2831115722656,
+        188.3740997314453,
+        1043.8231201171875
+      ],
+      "score": 0.3382,
+      "frame_idx": 0,
+      "box_area_ratio": 0.063
+    },
+    {
+      "entity_id": 6,
+      "description": "glass",
+      "box": [
+        1663.9698486328125,
+        902.2861938476562,
+        1840.699951171875,
+        1076.876708984375
+      ],
+      "score": 0.7072,
+      "frame_idx": 2,
+      "box_area_ratio": 0.015
+    }
+  ],
+  "matched_entities": 6
+}

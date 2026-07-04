@@ -1,0 +1,121 @@
+{
+  "id": 309,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/269.mp4",
+  "local_path": "/root/cut/data/269.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and modifying the background environment without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the specific path of the hand movement (moving the card from the bottom-right to bottom-left, then top-left, then top-right) preserved?",
+    "Comparing Video A and Video B, how well is the exact temporal timing of the card's transitions between the four panels preserved?",
+    "Comparing Video A and Video B, how well are the visual characteristics of the person's hands (skin tone, texture, and shape) preserved?",
+    "Comparing Video A and Video B, how well is the static overhead camera perspective and the overall 2x2 grid layout preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "hands"
+    },
+    {
+      "description": "small card"
+    },
+    {
+      "description": "off-white panel"
+    },
+    {
+      "description": "light beige panel"
+    },
+    {
+      "description": "red panel"
+    },
+    {
+      "description": "dark brown panel"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hands",
+      "box": [
+        233.85467529296875,
+        605.4945068359375,
+        579.8795776367188,
+        943.005859375
+      ],
+      "score": 0.678,
+      "frame_idx": 0,
+      "box_area_ratio": 0.127
+    },
+    {
+      "entity_id": 2,
+      "description": "small card",
+      "box": [
+        7.796967029571533,
+        634.725341796875,
+        628.6395874023438,
+        1026.6766357421875
+      ],
+      "score": 0.3894,
+      "frame_idx": 0,
+      "box_area_ratio": 0.264
+    },
+    {
+      "entity_id": 3,
+      "description": "off-white panel",
+      "box": [
+        160.94509887695312,
+        243.0517578125,
+        616.1885375976562,
+        590.063232421875
+      ],
+      "score": 0.3703,
+      "frame_idx": 2,
+      "box_area_ratio": 0.171
+    },
+    {
+      "entity_id": 4,
+      "description": "light beige panel",
+      "box": [
+        160.18885803222656,
+        622.2024536132812,
+        629.9736328125,
+        1035.3387451171875
+      ],
+      "score": 0.3704,
+      "frame_idx": 0,
+      "box_area_ratio": 0.211
+    },
+    {
+      "entity_id": 5,
+      "description": "red panel",
+      "box": [
+        1.8542003631591797,
+        617.893310546875,
+        170.16299438476562,
+        979.466064453125
+      ],
+      "score": 0.4743,
+      "frame_idx": 1,
+      "box_area_ratio": 0.066
+    },
+    {
+      "entity_id": 6,
+      "description": "dark brown panel",
+      "box": [
+        162.3202362060547,
+        589.6998291015625,
+        641.2749633789062,
+        969.701416015625
+      ],
+      "score": 0.5726,
+      "frame_idx": 1,
+      "box_area_ratio": 0.197
+    }
+  ],
+  "matched_entities": 6
+}

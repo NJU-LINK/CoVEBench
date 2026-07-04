@@ -1,0 +1,165 @@
+{
+  "id": 393,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-portrait-of-a-man-in-a-bar-on-saint-patricks-47434.mp4",
+  "local_path": "/root/cut/data/mixkit-portrait-of-a-man-in-a-bar-on-saint-patricks-47434.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a background element (text on a chalkboard) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's facial identity, including his calm/smug expression and gaze toward the camera, preserved?",
+    "Comparing Video A and Video B, how accurately is the man's reddish-brown hair color and short hairstyle preserved?",
+    "Comparing Video A and Video B, how well is the man's clothing, specifically the vibrant green blazer, dark bowtie, and white shirt, preserved?",
+    "Comparing Video A and Video B, how well are the foreground objects (the glass of dark stout and the green bowl of snacks) preserved?",
+    "Comparing Video A and Video B, how accurately is the background environment (shelves, bottles, and chalkboard texture) preserved, accounting for the new camera perspective?",
+    "Comparing Video A and Video B, how well is the overall lighting and atmospheric mood of the dimly lit pub preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "green blazer"
+    },
+    {
+      "description": "dark bowtie"
+    },
+    {
+      "description": "white shirt"
+    },
+    {
+      "description": "glass of dark stout"
+    },
+    {
+      "description": "green bowl"
+    },
+    {
+      "description": "shelves"
+    },
+    {
+      "description": "bottles"
+    },
+    {
+      "description": "chalkboard"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 27,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        183.29013061523438,
+        347.664306640625,
+        934.99853515625,
+        1545.301513671875
+      ],
+      "score": 0.9113,
+      "frame_idx": 1,
+      "box_area_ratio": 0.434
+    },
+    {
+      "entity_id": 2,
+      "description": "green blazer",
+      "box": [
+        187.72247314453125,
+        725.0523681640625,
+        888.8261108398438,
+        1547.5506591796875
+      ],
+      "score": 0.6243,
+      "frame_idx": 0,
+      "box_area_ratio": 0.278
+    },
+    {
+      "entity_id": 3,
+      "description": "dark bowtie",
+      "box": [
+        182.11651611328125,
+        354.7561340332031,
+        927.173828125,
+        1541.9727783203125
+      ],
+      "score": 0.6547,
+      "frame_idx": 2,
+      "box_area_ratio": 0.427
+    },
+    {
+      "entity_id": 4,
+      "description": "white shirt",
+      "box": [
+        177.5302276611328,
+        347.56158447265625,
+        909.0667114257812,
+        1540.30078125
+      ],
+      "score": 0.9269,
+      "frame_idx": 2,
+      "box_area_ratio": 0.421
+    },
+    {
+      "entity_id": 5,
+      "description": "glass of dark stout",
+      "box": [
+        736.3906860351562,
+        1197.739501953125,
+        942.2883911132812,
+        1539.1387939453125
+      ],
+      "score": 0.7897,
+      "frame_idx": 2,
+      "box_area_ratio": 0.034
+    },
+    {
+      "entity_id": 6,
+      "description": "green bowl",
+      "box": [
+        511.31646728515625,
+        1503.4361572265625,
+        907.28466796875,
+        1699.200439453125
+      ],
+      "score": 0.8477,
+      "frame_idx": 0,
+      "box_area_ratio": 0.037
+    },
+    {
+      "entity_id": 7,
+      "description": "shelves",
+      "box": [
+        169.4384307861328,
+        -4.738941192626953,
+        1074.691162109375,
+        970.5223999023438
+      ],
+      "score": 0.3022,
+      "frame_idx": 0,
+      "box_area_ratio": 0.426
+    },
+    {
+      "entity_id": 8,
+      "description": "bottles",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 9,
+      "description": "chalkboard",
+      "box": [
+        171.60049438476562,
+        331.4736022949219,
+        1079.0205078125,
+        1048.8668212890625
+      ],
+      "score": 0.5407,
+      "frame_idx": 2,
+      "box_area_ratio": 0.314
+    }
+  ],
+  "matched_entities": 8
+}

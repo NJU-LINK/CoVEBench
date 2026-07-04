@@ -1,0 +1,11 @@
+{
+  "id": 280,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5195_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5195_0.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

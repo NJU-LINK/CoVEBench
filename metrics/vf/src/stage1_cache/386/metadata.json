@@ -1,0 +1,11 @@
+{
+  "id": 386,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-portrait-of-a-girl-with-easter-eggs-40386.mp4",
+  "local_path": "/root/cut/data/mixkit-portrait-of-a-girl-with-easter-eggs-40386.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

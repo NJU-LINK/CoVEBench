@@ -1,0 +1,57 @@
+{
+  "id": 373,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-wearing-virtual-reality-glasses-176.mp4",
+  "local_path": "/root/cut/data/mixkit-man-wearing-virtual-reality-glasses-176.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and changing the subject's pose/motion, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's beard texture and shape preserved?",
+    "Comparing Video A and Video B, how accurately are the sunset colors and the lighting on the rooftop environment preserved?",
+    "Comparing Video A and Video B, how well is the static camera framing and medium close-up shot preserved?",
+    "Comparing Video A and Video B, how well is the man's clothing (excluding the hands/arms area) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "beard"
+    },
+    {
+      "description": "clothing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "beard",
+      "box": [
+        677.0020751953125,
+        387.72015380859375,
+        1081.171142578125,
+        692.9306640625
+      ],
+      "score": 0.6395,
+      "frame_idx": 2,
+      "box_area_ratio": 0.059
+    },
+    {
+      "entity_id": 2,
+      "description": "clothing",
+      "box": [
+        288.16754150390625,
+        694.9326782226562,
+        1541.960693359375,
+        1075.030029296875
+      ],
+      "score": 0.6697,
+      "frame_idx": 0,
+      "box_area_ratio": 0.23
+    }
+  ],
+  "matched_entities": 2
+}

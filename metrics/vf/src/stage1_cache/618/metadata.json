@@ -1,0 +1,11 @@
+{
+  "id": 618,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/180.mp4",
+  "local_path": "/root/cut/data/180.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a slow-motion effect, which is a cinematic style change not permitted in the exclusive list of allowed edits.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,74 @@
+{
+  "id": 542,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/33.mp4",
+  "local_path": "/root/cut/data/33.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing foreground objects, modifying the background environment, and changing object motion within the scene while explicitly maintaining the camera perspective.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the same hands (identity, skin tone, and overall shape) preserved?",
+    "Comparing Video A and Video B, how well is the glass container preserved (shape, size, transparency, and position in frame)?",
+    "Comparing Video A and Video B, how well is the clear liquid inside the container preserved in terms of presence and transparency?",
+    "Comparing Video A and Video B, how well is the top-down close-up camera angle and framing preserved?",
+    "Comparing Video A and Video B, how well are overall lighting and exposure on the hands and container preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "hands"
+    },
+    {
+      "description": "glass container"
+    },
+    {
+      "description": "clear liquid"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hands",
+      "box": [
+        1838.2069091796875,
+        5.626780986785889,
+        3846.001220703125,
+        2148.23486328125
+      ],
+      "score": 0.8379,
+      "frame_idx": 1,
+      "box_area_ratio": 0.519
+    },
+    {
+      "entity_id": 2,
+      "description": "glass container",
+      "box": [
+        1141.8736572265625,
+        189.25518798828125,
+        2776.4794921875,
+        1939.471923828125
+      ],
+      "score": 0.9134,
+      "frame_idx": 2,
+      "box_area_ratio": 0.345
+    },
+    {
+      "entity_id": 3,
+      "description": "clear liquid",
+      "box": [
+        1131.77880859375,
+        199.25289916992188,
+        2734.379638671875,
+        1928.4893798828125
+      ],
+      "score": 0.8167,
+      "frame_idx": 2,
+      "box_area_ratio": 0.334
+    }
+  ],
+  "matched_entities": 3
+}

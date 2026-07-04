@@ -1,0 +1,101 @@
+{
+  "id": 589,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/143.mp4",
+  "local_path": "/root/cut/data/143.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves adding a foreground subject and background objects (shrubs) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the weathered texture and tan color of the stone columns preserved?",
+    "Comparing Video A and Video B, how accurately is the clear, bright blue sky preserved?",
+    "Comparing Video A and Video B, how well are the sandy ground and light-colored pebble textures preserved (aside from areas occluded by the added tourist/shrubs)?",
+    "Comparing Video A and Video B, how well are the long, distinct shadows cast by the columns preserved in direction and character (aside from any new shadows introduced by the tourist/shrubs)?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "tan stone columns"
+    },
+    {
+      "description": "bright blue sky"
+    },
+    {
+      "description": "sandy ground"
+    },
+    {
+      "description": "light-colored pebbles"
+    },
+    {
+      "description": "shadows"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "tan stone columns",
+      "box": [
+        18.604660034179688,
+        -0.6716680526733398,
+        1623.4517822265625,
+        1838.79736328125
+      ],
+      "score": 0.5624,
+      "frame_idx": 2,
+      "box_area_ratio": 0.356
+    },
+    {
+      "entity_id": 2,
+      "description": "bright blue sky",
+      "box": null,
+      "score": 0.7825,
+      "frame_idx": null,
+      "box_area_ratio": 0.739,
+      "rejected_reason": "box covers 74% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "sandy ground",
+      "box": [
+        9.722557067871094,
+        1555.4334716796875,
+        3825.751708984375,
+        2161.34765625
+      ],
+      "score": 0.6985,
+      "frame_idx": 2,
+      "box_area_ratio": 0.279
+    },
+    {
+      "entity_id": 4,
+      "description": "light-colored pebbles",
+      "box": [
+        10.554885864257812,
+        1556.0343017578125,
+        3827.9150390625,
+        2158.56103515625
+      ],
+      "score": 0.4042,
+      "frame_idx": 2,
+      "box_area_ratio": 0.277
+    },
+    {
+      "entity_id": 5,
+      "description": "shadows",
+      "box": [
+        1992.98583984375,
+        1764.4521484375,
+        2589.3388671875,
+        2150.760498046875
+      ],
+      "score": 0.3568,
+      "frame_idx": 1,
+      "box_area_ratio": 0.028
+    }
+  ],
+  "matched_entities": 4
+}

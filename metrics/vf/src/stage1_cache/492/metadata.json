@@ -1,0 +1,106 @@
+{
+  "id": 492,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-dancing-and-playing-with-balloons-at-a-costume-party-34451.mp4",
+  "local_path": "/root/cut/data/mixkit-dancing-and-playing-with-balloons-at-a-costume-party-34451.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a background object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the visual details of the person's legs and the black sandals preserved?",
+    "Comparing Video A and Video B, how accurately are the pink and white balloons on the floor preserved in terms of color and relative placement?",
+    "Comparing Video A and Video B, how well is the moody neon lighting (shades of blue, purple, and green) preserved throughout the scene?",
+    "Comparing Video A and Video B, how well is the texture and appearance of the floor beneath the balloons preserved?",
+    "Comparing Video A and Video B, how well is the low-angle perspective of the shot maintained despite the new lateral camera movement?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "legs"
+    },
+    {
+      "description": "black sandals"
+    },
+    {
+      "description": "pink balloon"
+    },
+    {
+      "description": "white balloon"
+    },
+    {
+      "description": "floor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "legs",
+      "box": [
+        486.16790771484375,
+        3.442121744155884,
+        773.9347534179688,
+        941.4020385742188
+      ],
+      "score": 0.5399,
+      "frame_idx": 2,
+      "box_area_ratio": 0.13
+    },
+    {
+      "entity_id": 2,
+      "description": "black sandals",
+      "box": [
+        489.3565673828125,
+        606.2466430664062,
+        782.5386352539062,
+        948.2274169921875
+      ],
+      "score": 0.5964,
+      "frame_idx": 2,
+      "box_area_ratio": 0.048
+    },
+    {
+      "entity_id": 3,
+      "description": "pink balloon",
+      "box": [
+        767.3156127929688,
+        501.895263671875,
+        1349.0361328125,
+        1074.4210205078125
+      ],
+      "score": 0.6873,
+      "frame_idx": 0,
+      "box_area_ratio": 0.161
+    },
+    {
+      "entity_id": 4,
+      "description": "white balloon",
+      "box": [
+        765.9306030273438,
+        502.42059326171875,
+        1352.728271484375,
+        1075.9822998046875
+      ],
+      "score": 0.4557,
+      "frame_idx": 0,
+      "box_area_ratio": 0.162
+    },
+    {
+      "entity_id": 5,
+      "description": "floor",
+      "box": [
+        -0.26767730712890625,
+        707.5503540039062,
+        1919.54736328125,
+        1078.2467041015625
+      ],
+      "score": 0.5317,
+      "frame_idx": 1,
+      "box_area_ratio": 0.343
+    }
+  ],
+  "matched_entities": 5
+}

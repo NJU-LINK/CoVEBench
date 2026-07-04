@@ -1,0 +1,11 @@
+{
+  "id": 144,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-elegant-couple-in-a-kiosk-2400.mp4",
+  "local_path": "/root/cut/data/mixkit-elegant-couple-in-a-kiosk-2400.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

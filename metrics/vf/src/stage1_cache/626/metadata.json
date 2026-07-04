@@ -1,0 +1,132 @@
+{
+  "id": 626,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/195.mp4",
+  "local_path": "/root/cut/data/195.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects (windmills) and modifying the background environment (sky) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the traditional black-and-green houses preserved in architecture, color, and placement?",
+    "Comparing Video A and Video B, how accurately are the small walking tourist figures and their motion along the paths preserved?",
+    "Comparing Video A and Video B, how well are the wide river/canals preserved in shape, bank boundaries, and water surface appearance?",
+    "Comparing Video A and Video B, how well is the aerial, high-angle viewpoint and camera motion preserved?",
+    "Comparing Video A and Video B, how well are the paths, bridges, and surrounding green grass areas preserved in layout and appearance?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "black and green houses"
+    },
+    {
+      "description": "small tourist figures"
+    },
+    {
+      "description": "wide river"
+    },
+    {
+      "description": "canals"
+    },
+    {
+      "description": "paths"
+    },
+    {
+      "description": "bridges"
+    },
+    {
+      "description": "green grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black and green houses",
+      "box": [
+        1764.0570068359375,
+        1261.589599609375,
+        3644.1923828125,
+        1943.3729248046875
+      ],
+      "score": 0.4274,
+      "frame_idx": 1,
+      "box_area_ratio": 0.155
+    },
+    {
+      "entity_id": 2,
+      "description": "small tourist figures",
+      "box": [
+        1318.619873046875,
+        1849.951171875,
+        1366.8687744140625,
+        1951.359619140625
+      ],
+      "score": 0.3382,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 3,
+      "description": "wide river",
+      "box": [
+        -34.72846984863281,
+        649.4541015625,
+        3779.708251953125,
+        1193.3858642578125
+      ],
+      "score": 0.5192,
+      "frame_idx": 0,
+      "box_area_ratio": 0.25
+    },
+    {
+      "entity_id": 4,
+      "description": "canals",
+      "box": [
+        -47.74726867675781,
+        641.7110595703125,
+        3780.708740234375,
+        1192.6246337890625
+      ],
+      "score": 0.4456,
+      "frame_idx": 0,
+      "box_area_ratio": 0.254
+    },
+    {
+      "entity_id": 5,
+      "description": "paths",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "bridges",
+      "box": [
+        1096.848876953125,
+        1600.7288818359375,
+        1603.59423828125,
+        1788.34228515625
+      ],
+      "score": 0.5267,
+      "frame_idx": 2,
+      "box_area_ratio": 0.011
+    },
+    {
+      "entity_id": 7,
+      "description": "green grass",
+      "box": [
+        0.9239959716796875,
+        1059.001708984375,
+        3838.06640625,
+        2155.912109375
+      ],
+      "score": 0.3506,
+      "frame_idx": 2,
+      "box_area_ratio": 0.507
+    }
+  ],
+  "matched_entities": 6
+}

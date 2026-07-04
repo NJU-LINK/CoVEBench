@@ -1,0 +1,40 @@
+{
+  "id": 448,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/19251082_8s_part1_6.2s.mp4",
+  "local_path": "/root/cut/data/19251082_8s_part1_6.2s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment (water to stormy sea), changing object motion (zig-zags), and changing object position (relocating the boat), all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the direct top-down aerial perspective preserved?",
+    "Comparing Video A and Video B, how accurately is the visual identity of the boat (small white motorboat) preserved?",
+    "Comparing Video A and Video B, how well is the camera's static or smooth aerial motion preserved without introducing unintended jitter?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "small white motorboat"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "small white motorboat",
+      "box": [
+        792.0507202148438,
+        543.18994140625,
+        955.2274780273438,
+        1073.732177734375
+      ],
+      "score": 0.4754,
+      "frame_idx": 0,
+      "box_area_ratio": 0.042
+    }
+  ],
+  "matched_entities": 1
+}

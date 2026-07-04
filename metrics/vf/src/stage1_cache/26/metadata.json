@@ -1,0 +1,49 @@
+{
+  "id": 26,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/113.mp4",
+  "local_path": "/root/cut/data/113.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion and adding visual effects (sparks and shockwave) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the partially demolished concrete building preserved before the wrecking ball strikes it?",
+    "Comparing Video A and Video B, how accurately is the grey, overcast sky background preserved throughout the entire sequence?",
+    "Comparing Video A and Video B, how well is the static camera position preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "concrete building"
+    },
+    {
+      "description": "grey sky"
+    }
+  ],
+  "status": "no_grounded_entities",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "concrete building",
+      "box": null,
+      "score": 0.6546,
+      "frame_idx": null,
+      "box_area_ratio": 0.916,
+      "rejected_reason": "box covers 92% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "grey sky",
+      "box": null,
+      "score": 0.6982,
+      "frame_idx": null,
+      "box_area_ratio": 0.99,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 0,
+  "error": "Grounding DINO found no entity at score ≥ 0.25"
+}

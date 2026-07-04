@@ -1,0 +1,11 @@
+{
+  "id": 344,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-watching-the-sunset-on-a-beach-44477.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-watching-the-sunset-on-a-beach-44477.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

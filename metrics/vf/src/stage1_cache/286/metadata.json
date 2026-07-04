@@ -1,0 +1,41 @@
+{
+  "id": 286,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_54_0.mp4",
+  "local_path": "/root/cut/data/LMArena_54_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing the background environment and modifying/replacing foreground objects without any camera movement or stylistic changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the original camera motion (panning, tilting, or stability) preserved?",
+    "Comparing Video A and Video B, how accurately is the overall dusk lighting mood and atmosphere preserved despite the change in environment?",
+    "Comparing Video A and Video B, how well is the temporal duration and the pacing of the scene preserved?",
+    "Comparing Video A and Video B, how well is the spatial composition (the placement of the subject relative to the frame) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "rustic hut"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "rustic hut",
+      "box": [
+        252.93492126464844,
+        112.7325439453125,
+        942.0467529296875,
+        513.2672729492188
+      ],
+      "score": 0.9401,
+      "frame_idx": 0,
+      "box_area_ratio": 0.314
+    }
+  ],
+  "matched_entities": 1
+}

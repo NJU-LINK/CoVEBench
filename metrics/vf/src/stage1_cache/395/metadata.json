@@ -1,0 +1,104 @@
+{
+  "id": 395,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-taking-a-slice-of-birthday-cake-5107.mp4",
+  "local_path": "/root/cut/data/mixkit-taking-a-slice-of-birthday-cake-5107.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "Instruction exclusively involves removing a foreground object and modifying the color of another foreground object without camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and movement of the hand preserved?",
+    "Comparing Video A and Video B, how accurately are the white cake and the specific pattern of rainbow sprinkles preserved?",
+    "Comparing Video A and Video B, how well are the background party decorations and candy jars preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "hand"
+    },
+    {
+      "description": "white cake"
+    },
+    {
+      "description": "rainbow sprinkles"
+    },
+    {
+      "description": "party decorations"
+    },
+    {
+      "description": "candy jars"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hand",
+      "box": [
+        1252.1458740234375,
+        8.3880615234375,
+        1913.2601318359375,
+        579.1354370117188
+      ],
+      "score": 0.8785,
+      "frame_idx": 2,
+      "box_area_ratio": 0.182
+    },
+    {
+      "entity_id": 2,
+      "description": "white cake",
+      "box": [
+        -0.8758163452148438,
+        96.36714935302734,
+        970.2098388671875,
+        925.306884765625
+      ],
+      "score": 0.6252,
+      "frame_idx": 0,
+      "box_area_ratio": 0.388
+    },
+    {
+      "entity_id": 3,
+      "description": "rainbow sprinkles",
+      "box": [
+        -1.8995475769042969,
+        100.57350158691406,
+        962.9757080078125,
+        894.3651733398438
+      ],
+      "score": 0.5534,
+      "frame_idx": 0,
+      "box_area_ratio": 0.369
+    },
+    {
+      "entity_id": 4,
+      "description": "party decorations",
+      "box": [
+        -0.017223358154296875,
+        93.76290130615234,
+        1000.7714233398438,
+        907.534423828125
+      ],
+      "score": 0.5803,
+      "frame_idx": 1,
+      "box_area_ratio": 0.393
+    },
+    {
+      "entity_id": 5,
+      "description": "candy jars",
+      "box": [
+        -3.143463134765625,
+        97.93868255615234,
+        964.692626953125,
+        893.9156494140625
+      ],
+      "score": 0.4781,
+      "frame_idx": 0,
+      "box_area_ratio": 0.372
+    }
+  ],
+  "matched_entities": 5
+}

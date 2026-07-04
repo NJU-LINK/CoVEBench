@@ -1,0 +1,11 @@
+{
+  "id": 136,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-holding-hands-during-their-wedding-ceremony-5204.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-holding-hands-during-their-wedding-ceremony-5204.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

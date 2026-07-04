@@ -1,0 +1,105 @@
+{
+  "id": 453,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/19781936_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/19781936_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the background environment, modifying the subject's motion, and shifting the subject's position, all of which are permitted categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's clothing (grey top and black pants) preserved?",
+    "Comparing Video A and Video B, how accurately is the rocky, gravel-covered texture of the ground preserved?",
+    "Comparing Video A and Video B, how well is the specific silhouette and structure of the snow-dusted mountains in the background preserved?",
+    "Comparing Video A and Video B, how well is the woman's physical identity (hair color, build, height) preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "grey top"
+    },
+    {
+      "description": "black pants"
+    },
+    {
+      "description": "rocky ground"
+    },
+    {
+      "description": "mountains in the back"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        909.55078125,
+        545.218505859375,
+        973.8438110351562,
+        707.5912475585938
+      ],
+      "score": 0.9016,
+      "frame_idx": 2,
+      "box_area_ratio": 0.005
+    },
+    {
+      "entity_id": 2,
+      "description": "grey top",
+      "box": [
+        2.5405311584472656,
+        6.571808815002441,
+        1916.2818603515625,
+        567.7407836914062
+      ],
+      "score": 0.5235,
+      "frame_idx": 0,
+      "box_area_ratio": 0.518
+    },
+    {
+      "entity_id": 3,
+      "description": "black pants",
+      "box": [
+        952.5499267578125,
+        610.155517578125,
+        986.9573364257812,
+        686.8550415039062
+      ],
+      "score": 0.5915,
+      "frame_idx": 0,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 4,
+      "description": "rocky ground",
+      "box": [
+        2.8174209594726562,
+        550.718994140625,
+        1915.3477783203125,
+        1077.701904296875
+      ],
+      "score": 0.7217,
+      "frame_idx": 0,
+      "box_area_ratio": 0.486
+    },
+    {
+      "entity_id": 5,
+      "description": "mountains in the back",
+      "box": [
+        5.2013397216796875,
+        6.5732574462890625,
+        1912.7821044921875,
+        570.238037109375
+      ],
+      "score": 0.626,
+      "frame_idx": 0,
+      "box_area_ratio": 0.519
+    }
+  ],
+  "matched_entities": 5
+}

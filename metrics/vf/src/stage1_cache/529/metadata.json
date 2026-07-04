@@ -1,0 +1,11 @@
+{
+  "id": 529,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/6.mp4",
+  "local_path": "/root/cut/data/6.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a visual style change (warm, dim evening glow).",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

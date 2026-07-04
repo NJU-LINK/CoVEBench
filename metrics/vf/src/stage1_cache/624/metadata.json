@@ -1,0 +1,53 @@
+{
+  "id": 624,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/191.mp4",
+  "local_path": "/root/cut/data/191.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the background environment by adding snow and ice, which is an environment swap without camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the high-angle aerial camera perspective and forward-gliding motion preserved?",
+    "Comparing Video A and Video B, how well is the winding geometry and placement of the stream preserved?",
+    "Comparing Video A and Video B, how accurately are the positions and relative densities of the surrounding trees preserved (allowing for snow changing branch silhouettes)?",
+    "Comparing Video A and Video B, how well are the long-shadow lighting conditions (presence of long shadows and overall directionality) preserved aside from the snow/ice changes?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "narrow stream"
+    },
+    {
+      "description": "evergreen trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "narrow stream",
+      "box": [
+        1405.73291015625,
+        491.5472106933594,
+        2012.863037109375,
+        1016.645751953125
+      ],
+      "score": 0.3429,
+      "frame_idx": 2,
+      "box_area_ratio": 0.038
+    },
+    {
+      "entity_id": 2,
+      "description": "evergreen trees",
+      "box": null,
+      "score": 0.5042,
+      "frame_idx": null,
+      "box_area_ratio": 0.992,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

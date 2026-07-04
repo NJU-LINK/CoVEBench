@@ -1,0 +1,11 @@
+{
+  "id": 149,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-frustrated-woman-unable-to-resolve-an-account-25595.mp4",
+  "local_path": "/root/cut/data/mixkit-frustrated-woman-unable-to-resolve-an-account-25595.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

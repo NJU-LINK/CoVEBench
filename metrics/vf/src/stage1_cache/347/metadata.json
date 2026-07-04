@@ -1,0 +1,74 @@
+{
+  "id": 347,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-father-getting-his-little-daughter-ready-for-school-43349.mp4",
+  "local_path": "/root/cut/data/mixkit-father-getting-his-little-daughter-ready-for-school-43349.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's facial expression and physical motion/pose within the scene, which is allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and identity of the man preserved?",
+    "Comparing Video A and Video B, how accurately is the specific pattern and texture of the girl's cotton dress preserved?",
+    "Comparing Video A and Video B, how well is the specific pattern on the backpack preserved while it is being put on?",
+    "Comparing Video A and Video B, how well is the living room background (furniture, walls, lighting) preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the backpack straps being pulled onto the girl's shoulders preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "cotton dress"
+    },
+    {
+      "description": "patterned backpack"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 23,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        1238.1446533203125,
+        4.977869033813477,
+        1909.3946533203125,
+        1075.87060546875
+      ],
+      "score": 0.5247,
+      "frame_idx": 0,
+      "box_area_ratio": 0.347
+    },
+    {
+      "entity_id": 2,
+      "description": "cotton dress",
+      "box": [
+        800.0870361328125,
+        357.7793273925781,
+        1294.893798828125,
+        1073.1116943359375
+      ],
+      "score": 0.7523,
+      "frame_idx": 2,
+      "box_area_ratio": 0.171
+    },
+    {
+      "entity_id": 3,
+      "description": "patterned backpack",
+      "box": [
+        1154.848876953125,
+        231.41143798828125,
+        1774.5567626953125,
+        1075.9361572265625
+      ],
+      "score": 0.7781,
+      "frame_idx": 2,
+      "box_area_ratio": 0.252
+    }
+  ],
+  "matched_entities": 3
+}

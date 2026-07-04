@@ -1,0 +1,11 @@
+{
+  "id": 116,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-bartender-preparing-shots-790.mp4",
+  "local_path": "/root/cut/data/mixkit-bartender-preparing-shots-790.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

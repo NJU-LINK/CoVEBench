@@ -1,0 +1,90 @@
+{
+  "id": 58,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/75.mp4",
+  "local_path": "/root/cut/data/75.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves removing a foreground subject and adding environmental effects without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the textures and structural details of the stone steps preserved?",
+    "Comparing Video A and Video B, how well is the mossy brick wall on the left side of the frame preserved?",
+    "Comparing Video A and Video B, how well are the large rocks on the right side of the frame preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance of the lush green trees overhead preserved?",
+    "Comparing Video A and Video B, how well is the original camera motion and natural daylight lighting preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "stone steps"
+    },
+    {
+      "description": "mossy brick wall on the left"
+    },
+    {
+      "description": "large rocks on the right"
+    },
+    {
+      "description": "lush green trees"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 14,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "stone steps",
+      "box": [
+        616.2235107421875,
+        425.8379821777344,
+        2643.943115234375,
+        2153.972900390625
+      ],
+      "score": 0.8725,
+      "frame_idx": 0,
+      "box_area_ratio": 0.422
+    },
+    {
+      "entity_id": 2,
+      "description": "mossy brick wall on the left",
+      "box": [
+        -0.5574417114257812,
+        28.208900451660156,
+        2163.034423828125,
+        1953.1890869140625
+      ],
+      "score": 0.4694,
+      "frame_idx": 0,
+      "box_area_ratio": 0.502
+    },
+    {
+      "entity_id": 3,
+      "description": "large rocks on the right",
+      "box": [
+        2872.529541015625,
+        352.00897216796875,
+        3833.650146484375,
+        1483.4163818359375
+      ],
+      "score": 0.4814,
+      "frame_idx": 1,
+      "box_area_ratio": 0.131
+    },
+    {
+      "entity_id": 4,
+      "description": "lush green trees",
+      "box": [
+        2009.6640625,
+        3.2786142826080322,
+        3558.677734375,
+        419.6719055175781
+      ],
+      "score": 0.3631,
+      "frame_idx": 1,
+      "box_area_ratio": 0.078
+    }
+  ],
+  "matched_entities": 4
+}

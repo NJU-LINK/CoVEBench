@@ -1,0 +1,102 @@
+{
+  "id": 553,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/68.mp4",
+  "local_path": "/root/cut/data/68.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing foreground clothing, adding a foreground object, and modifying the background environment without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the color and texture of the climber's grey trousers preserved?",
+    "Comparing Video A and Video B, how accurately are the climber's specific hand placements and movements within the vertical crack preserved?",
+    "Comparing Video A and Video B, how well are the textures and structural details of the granite cliff and the vertical crack preserved?",
+    "Comparing Video A and Video B, how well is the red climbing rope's appearance and movement preserved?",
+    "Comparing Video A and Video B, how well is the camera's original motion and framing (high-angle wide shot) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "grey trousers"
+    },
+    {
+      "description": "climber in yellow jacket"
+    },
+    {
+      "description": "vertical crack"
+    },
+    {
+      "description": "granite cliff"
+    },
+    {
+      "description": "red climbing rope"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "grey trousers",
+      "box": [
+        1754.211669921875,
+        1036.14892578125,
+        2163.09814453125,
+        1432.4737548828125
+      ],
+      "score": 0.4195,
+      "frame_idx": 2,
+      "box_area_ratio": 0.02
+    },
+    {
+      "entity_id": 2,
+      "description": "climber in yellow jacket",
+      "box": [
+        1585.1329345703125,
+        328.29058837890625,
+        2186.9609375,
+        1477.1376953125
+      ],
+      "score": 0.7197,
+      "frame_idx": 2,
+      "box_area_ratio": 0.083
+    },
+    {
+      "entity_id": 3,
+      "description": "vertical crack",
+      "box": [
+        1436.6629638671875,
+        1085.1683349609375,
+        1840.567138671875,
+        2150.998046875
+      ],
+      "score": 0.4045,
+      "frame_idx": 2,
+      "box_area_ratio": 0.052
+    },
+    {
+      "entity_id": 4,
+      "description": "granite cliff",
+      "box": null,
+      "score": 0.5521,
+      "frame_idx": null,
+      "box_area_ratio": 0.991,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "red climbing rope",
+      "box": [
+        1573.43994140625,
+        1265.26806640625,
+        1949.9052734375,
+        2159.109375
+      ],
+      "score": 0.66,
+      "frame_idx": 0,
+      "box_area_ratio": 0.041
+    }
+  ],
+  "matched_entities": 4
+}

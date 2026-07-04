@@ -1,0 +1,79 @@
+{
+  "id": 590,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/144.mp4",
+  "local_path": "/root/cut/data/144.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object, adding a background object, and changing the subject's motion, with no camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity, hair color, and tied-back hairstyle preserved?",
+    "Comparing Video A and Video B, how accurately is the white button-down shirt, including the collar shape and button placement, preserved?",
+    "Comparing Video A and Video B, how well are the shopping cart's metal structure and its contents, including the large pack of paper plates, preserved?",
+    "Comparing Video A and Video B, how well are the warehouse background and the camera framing preserved, excluding the added 'Sale' sign?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "young woman"
+    },
+    {
+      "description": "white button-down shirt"
+    },
+    {
+      "description": "metal shopping cart"
+    },
+    {
+      "description": "paper plates"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 15,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young woman",
+      "box": null,
+      "score": 0.9123,
+      "frame_idx": null,
+      "box_area_ratio": 0.623,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "white button-down shirt",
+      "box": [
+        1866.390380859375,
+        102.13835144042969,
+        3356.76171875,
+        2125.752685546875
+      ],
+      "score": 0.7749,
+      "frame_idx": 1,
+      "box_area_ratio": 0.364
+    },
+    {
+      "entity_id": 3,
+      "description": "metal shopping cart",
+      "box": [
+        -13.311538696289062,
+        867.734619140625,
+        2016.541259765625,
+        2160.5615234375
+      ],
+      "score": 0.5638,
+      "frame_idx": 2,
+      "box_area_ratio": 0.316
+    },
+    {
+      "entity_id": 4,
+      "description": "paper plates",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 2
+}

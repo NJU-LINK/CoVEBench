@@ -1,0 +1,121 @@
+{
+  "id": 490,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-colorful-cake-while-cutting-it-with-a-knife-5118.mp4",
+  "local_path": "/root/cut/data/mixkit-colorful-cake-while-cutting-it-with-a-knife-5118.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing foreground objects without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the colors, density, and specific patterns of the multi-colored sprinkles on the cake preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance and detail of the gold bracelet on the hand preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the hand holding the cake preserved?",
+    "Comparing Video A and Video B, how well is the festive background (blurred cupcakes and decorations) preserved during the camera movement?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "multi-colored sprinkles"
+    },
+    {
+      "description": "cake"
+    },
+    {
+      "description": "gold bracelet"
+    },
+    {
+      "description": "hand"
+    },
+    {
+      "description": "cupcakes"
+    },
+    {
+      "description": "decorations"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "multi-colored sprinkles",
+      "box": [
+        16.116199493408203,
+        143.1076202392578,
+        1282.081787109375,
+        770.6105346679688
+      ],
+      "score": 0.8157,
+      "frame_idx": 0,
+      "box_area_ratio": 0.383
+    },
+    {
+      "entity_id": 2,
+      "description": "cake",
+      "box": [
+        9.868412017822266,
+        137.46641540527344,
+        1280.70556640625,
+        777.6608276367188
+      ],
+      "score": 0.7277,
+      "frame_idx": 0,
+      "box_area_ratio": 0.392
+    },
+    {
+      "entity_id": 3,
+      "description": "gold bracelet",
+      "box": [
+        870.1956787109375,
+        -1.3577797412872314,
+        1310.362060546875,
+        212.50079345703125
+      ],
+      "score": 0.5096,
+      "frame_idx": 2,
+      "box_area_ratio": 0.045
+    },
+    {
+      "entity_id": 4,
+      "description": "hand",
+      "box": [
+        506.91265869140625,
+        7.073886394500732,
+        1301.0389404296875,
+        743.4209594726562
+      ],
+      "score": 0.8558,
+      "frame_idx": 2,
+      "box_area_ratio": 0.282
+    },
+    {
+      "entity_id": 5,
+      "description": "cupcakes",
+      "box": [
+        12.277679443359375,
+        132.00363159179688,
+        1283.461669921875,
+        782.4141845703125
+      ],
+      "score": 0.6848,
+      "frame_idx": 0,
+      "box_area_ratio": 0.399
+    },
+    {
+      "entity_id": 6,
+      "description": "decorations",
+      "box": [
+        12.814407348632812,
+        138.95179748535156,
+        1280.392822265625,
+        773.72900390625
+      ],
+      "score": 0.7579,
+      "frame_idx": 0,
+      "box_area_ratio": 0.388
+    }
+  ],
+  "matched_entities": 6
+}

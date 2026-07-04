@@ -1,0 +1,74 @@
+{
+  "id": 380,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-person-eating-salad-40529.mp4",
+  "local_path": "/root/cut/data/mixkit-person-eating-salad-40529.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object (fork with chopsticks) and changing the object's motion/action within the scene, which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual appearance (color, texture, and shape) of the salad bowl preserved?",
+    "Comparing Video A and Video B, how well is the static camera composition and framing preserved?",
+    "Comparing Video A and Video B, how accurately are the other salad ingredients (excluding the target lettuce and the removed yellow food/tomato) preserved in their original positions?",
+    "Comparing Video A and Video B, how well is the hand's movement out of the frame preserved?",
+    "Comparing Video A and Video B, how well is the lighting and color grading of the overall scene preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "salad bowl"
+    },
+    {
+      "description": "lettuce"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "salad bowl",
+      "box": [
+        7.157421112060547,
+        910.3721313476562,
+        1911.488525390625,
+        1077.2772216796875
+      ],
+      "score": 0.4984,
+      "frame_idx": 2,
+      "box_area_ratio": 0.153
+    },
+    {
+      "entity_id": 2,
+      "description": "lettuce",
+      "box": [
+        147.26766967773438,
+        512.8972778320312,
+        1762.1497802734375,
+        971.5729370117188
+      ],
+      "score": 0.7037,
+      "frame_idx": 0,
+      "box_area_ratio": 0.357
+    },
+    {
+      "entity_id": 3,
+      "description": "hand",
+      "box": [
+        3.899921178817749,
+        2.377882957458496,
+        114.8309326171875,
+        194.1563262939453
+      ],
+      "score": 0.4727,
+      "frame_idx": 1,
+      "box_area_ratio": 0.01
+    }
+  ],
+  "matched_entities": 3
+}

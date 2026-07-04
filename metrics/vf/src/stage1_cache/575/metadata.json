@@ -1,0 +1,73 @@
+{
+  "id": 575,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/126.mp4",
+  "local_path": "/root/cut/data/126.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing clothing and changing the subject's motion/pose within the scene, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the marble pillars (position, veining texture) preserved?",
+    "Comparing Video A and Video B, how accurately are the glass-fronted cabinets preserved (structure, glass reflections, layout)?",
+    "Comparing Video A and Video B, how well is the man's identity preserved (face, hair, skin tone) despite the outfit and action changes?",
+    "Comparing Video A and Video B, how well is the overall ambient lighting and color grading of the luxury closet preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "marble pillars"
+    },
+    {
+      "description": "glass cabinets"
+    },
+    {
+      "description": "man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "marble pillars",
+      "box": [
+        375.5136413574219,
+        -4.665820598602295,
+        914.91552734375,
+        2153.85302734375
+      ],
+      "score": 0.5543,
+      "frame_idx": 2,
+      "box_area_ratio": 0.14
+    },
+    {
+      "entity_id": 2,
+      "description": "glass cabinets",
+      "box": [
+        749.7163696289062,
+        354.8560485839844,
+        2664.963623046875,
+        2119.929443359375
+      ],
+      "score": 0.6542,
+      "frame_idx": 0,
+      "box_area_ratio": 0.408
+    },
+    {
+      "entity_id": 3,
+      "description": "man",
+      "box": [
+        1566.6531982421875,
+        474.8968505859375,
+        2249.970947265625,
+        2145.018310546875
+      ],
+      "score": 0.9173,
+      "frame_idx": 0,
+      "box_area_ratio": 0.138
+    }
+  ],
+  "matched_entities": 3
+}

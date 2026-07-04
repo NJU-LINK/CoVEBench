@@ -1,0 +1,82 @@
+{
+  "id": 603,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/164.mp4",
+  "local_path": "/root/cut/data/164.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding specific objects (vines and moss) to the environment, which is a content-based modification suitable for mask-based evaluation.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the underlying architectural layout (e.g., niches/doorway placement and wall geometry) preserved beneath/around the added vegetation?",
+    "Comparing Video A and Video B, how well is the original camera motion preserved (same overall movement pattern, without becoming static or switching to a different move)?",
+    "Comparing Video A and Video B, how well is the clear blue sky/background preserved (aside from any occlusion by added vines)?",
+    "Comparing Video A and Video B, how consistent is the overall daylight lighting on the stone wall (direction/intensity of highlights and shadows), excluding new shadows that would plausibly come from added vegetation?",
+    "Comparing Video A and Video B, how well are the stone material details (weathering, block edges, surface roughness) preserved in areas that remain visible (not covered by vegetation)?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "ancient stone wall"
+    },
+    {
+      "description": "vertical niches"
+    },
+    {
+      "description": "doorway"
+    },
+    {
+      "description": "clear blue sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "ancient stone wall",
+      "box": null,
+      "score": 0.9137,
+      "frame_idx": null,
+      "box_area_ratio": 0.993,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "vertical niches",
+      "box": null,
+      "score": 0.5237,
+      "frame_idx": null,
+      "box_area_ratio": 0.986,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "doorway",
+      "box": [
+        3285.4404296875,
+        1642.7960205078125,
+        3646.08203125,
+        2140.1982421875
+      ],
+      "score": 0.5067,
+      "frame_idx": 2,
+      "box_area_ratio": 0.022
+    },
+    {
+      "entity_id": 4,
+      "description": "clear blue sky",
+      "box": [
+        1825.4444580078125,
+        3.9332234859466553,
+        3841.123291015625,
+        410.8367004394531
+      ],
+      "score": 0.6247,
+      "frame_idx": 0,
+      "box_area_ratio": 0.099
+    }
+  ],
+  "matched_entities": 2
+}

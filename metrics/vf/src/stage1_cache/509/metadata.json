@@ -1,0 +1,11 @@
+{
+  "id": 509,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-dressed-as-a-vampire-at-a-halloween-costume-party-34448.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-dressed-as-a-vampire-at-a-halloween-costume-party-34448.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

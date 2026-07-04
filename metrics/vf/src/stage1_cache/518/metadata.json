@@ -1,0 +1,79 @@
+{
+  "id": 518,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-martini-cocktail-with-olives-5133.mp4",
+  "local_path": "/root/cut/data/mixkit-martini-cocktail-with-olives-5133.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the material of a foreground object and changing the intensity of fluid motion/interaction, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the clean, white background preserved?",
+    "Comparing Video A and Video B, how accurately is the geometry and transparency of the martini glass preserved?",
+    "Comparing Video A and Video B, how well is the transparency and clarity of the liquid inside the glass preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal moment of the olive hitting the liquid surface synchronized?",
+    "Comparing Video A and Video B, how well is the vertical extreme close-up camera framing and lack of camera motion preserved?",
+    "Comparing Video A and Video B, how well is the initial position and state of the submerged olive at the bottom of the glass preserved before the second olive hits?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "white background"
+    },
+    {
+      "description": "martini glass"
+    },
+    {
+      "description": "liquid"
+    },
+    {
+      "description": "olive"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white background",
+      "box": null,
+      "score": 0.8665,
+      "frame_idx": null,
+      "box_area_ratio": 0.986,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "martini glass",
+      "box": null,
+      "score": 0.855,
+      "frame_idx": null,
+      "box_area_ratio": 0.893,
+      "rejected_reason": "box covers 89% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "liquid",
+      "box": null,
+      "score": 0.413,
+      "frame_idx": null,
+      "box_area_ratio": 0.854,
+      "rejected_reason": "box covers 85% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "olive",
+      "box": [
+        707.0681762695312,
+        1154.7005615234375,
+        1075.542724609375,
+        1585.1873779296875
+      ],
+      "score": 0.577,
+      "frame_idx": 1,
+      "box_area_ratio": 0.076
+    }
+  ],
+  "matched_entities": 1
+}

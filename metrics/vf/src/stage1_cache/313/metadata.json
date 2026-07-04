@@ -1,0 +1,11 @@
+{
+  "id": 313,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/1.mp4",
+  "local_path": "/root/cut/data/1.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a request for 'cool-toned' lighting, which is a visual style change/tint.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

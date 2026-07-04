@@ -1,0 +1,11 @@
+{
+  "id": 169,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-parcel-clerk-placing-boxes-on-a-loading-dolly-31267.mp4",
+  "local_path": "/root/cut/data/mixkit-parcel-clerk-placing-boxes-on-a-loading-dolly-31267.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

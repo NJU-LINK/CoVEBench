@@ -1,0 +1,53 @@
+{
+  "id": 356,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girl-working-on-the-floor-of-a-library-4518.mp4",
+  "local_path": "/root/cut/data/mixkit-girl-working-on-the-floor-of-a-library-4518.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing a foreground subject and modifying their actions/objects without any camera movements or stylistic changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the specific books and their arrangement on the bookshelf behind the subject preserved?",
+    "Comparing Video A and Video B, how accurately are the books scattered on the floor around the subject preserved?",
+    "Comparing Video A and Video B, how well is the static nature of the camera shot preserved?",
+    "Comparing Video A and Video B, how well is the overall lighting, color temperature, and atmosphere of the library interior preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "books on the bookshelf"
+    },
+    {
+      "description": "books on the floor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "books on the bookshelf",
+      "box": null,
+      "score": 0.5701,
+      "frame_idx": null,
+      "box_area_ratio": 0.7,
+      "rejected_reason": "box covers 70% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "books on the floor",
+      "box": [
+        1074.504150390625,
+        831.4901123046875,
+        1531.352294921875,
+        1057.54833984375
+      ],
+      "score": 0.4464,
+      "frame_idx": 0,
+      "box_area_ratio": 0.05
+    }
+  ],
+  "matched_entities": 1
+}

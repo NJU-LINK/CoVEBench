@@ -1,0 +1,90 @@
+{
+  "id": 361,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-heartbroken-crying-woman-slowly-sits-on-the-floor-8743.mp4",
+  "local_path": "/root/cut/data/mixkit-heartbroken-crying-woman-slowly-sits-on-the-floor-8743.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's clothing and pose/action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the structural integrity and appearance of the door frame preserved?",
+    "Comparing Video A and Video B, how well is the woman's facial identity and hair style preserved despite the change in action?",
+    "Comparing Video A and Video B, how accurately is the static camera shot preserved?",
+    "Comparing Video A and Video B, how well are the textures and colors of the walls and floor preserved?",
+    "Comparing Video A and Video B, how well is the overall ambient lighting and shadow distribution of the room preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "door frame"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "walls"
+    },
+    {
+      "description": "floor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 34,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "door frame",
+      "box": [
+        703.6575317382812,
+        -6.20452880859375,
+        1013.3355102539062,
+        1073.1636962890625
+      ],
+      "score": 0.3937,
+      "frame_idx": 1,
+      "box_area_ratio": 0.161
+    },
+    {
+      "entity_id": 2,
+      "description": "woman",
+      "box": [
+        682.4891967773438,
+        19.598751068115234,
+        1176.5400390625,
+        1075.4171142578125
+      ],
+      "score": 0.9066,
+      "frame_idx": 0,
+      "box_area_ratio": 0.252
+    },
+    {
+      "entity_id": 3,
+      "description": "walls",
+      "box": [
+        1169.400390625,
+        1.7554199695587158,
+        1919.5096435546875,
+        1080.024169921875
+      ],
+      "score": 0.384,
+      "frame_idx": 2,
+      "box_area_ratio": 0.39
+    },
+    {
+      "entity_id": 4,
+      "description": "floor",
+      "box": [
+        689.4447021484375,
+        878.7554321289062,
+        1167.67333984375,
+        1082.756103515625
+      ],
+      "score": 0.5743,
+      "frame_idx": 1,
+      "box_area_ratio": 0.047
+    }
+  ],
+  "matched_entities": 4
+}

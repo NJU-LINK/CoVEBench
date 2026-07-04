@@ -1,0 +1,134 @@
+{
+  "id": 600,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/157.mp4",
+  "local_path": "/root/cut/data/157.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects (shrimp with coins, bucket with barrel) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual identity of the man, including his red shirt and black shorts, preserved?",
+    "Comparing Video A and Video B, how accurately are the environment's details, specifically the rocky beach and the water, preserved throughout the sequence?",
+    "Comparing Video A and Video B, how well is the temporal sequence of actions—pouring from the net followed by the interaction with the container—preserved, including the addition of the lid-covering step?",
+    "Comparing Video A and Video B, how well are the visual appearance and the specific shaking motion of the black net preserved?",
+    "Comparing Video A and Video B, how well are the camera's viewpoint, eye-level perspective, and overall motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "red shirt"
+    },
+    {
+      "description": "black shorts"
+    },
+    {
+      "description": "rocky beach"
+    },
+    {
+      "description": "water"
+    },
+    {
+      "description": "black net"
+    },
+    {
+      "description": "yellow bucket"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        1526.0028076171875,
+        3.7517881393432617,
+        3543.32470703125,
+        954.4161376953125
+      ],
+      "score": 0.3966,
+      "frame_idx": 2,
+      "box_area_ratio": 0.231
+    },
+    {
+      "entity_id": 2,
+      "description": "red shirt",
+      "box": [
+        1528.4744873046875,
+        1.477811336517334,
+        3532.802734375,
+        959.3275146484375
+      ],
+      "score": 0.5406,
+      "frame_idx": 2,
+      "box_area_ratio": 0.231
+    },
+    {
+      "entity_id": 3,
+      "description": "black shorts",
+      "box": [
+        1520.3768310546875,
+        5.327478408813477,
+        3548.60498046875,
+        959.1473999023438
+      ],
+      "score": 0.645,
+      "frame_idx": 2,
+      "box_area_ratio": 0.233
+    },
+    {
+      "entity_id": 4,
+      "description": "rocky beach",
+      "box": null,
+      "score": 0.7746,
+      "frame_idx": null,
+      "box_area_ratio": 0.99,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "water",
+      "box": [
+        2698.9287109375,
+        426.76873779296875,
+        3843.439697265625,
+        1248.481689453125
+      ],
+      "score": 0.5525,
+      "frame_idx": 2,
+      "box_area_ratio": 0.113
+    },
+    {
+      "entity_id": 6,
+      "description": "black net",
+      "box": [
+        1503.1597900390625,
+        -0.03852725028991699,
+        3557.974609375,
+        956.0090942382812
+      ],
+      "score": 0.7486,
+      "frame_idx": 2,
+      "box_area_ratio": 0.237
+    },
+    {
+      "entity_id": 7,
+      "description": "yellow bucket",
+      "box": [
+        973.7547607421875,
+        701.5519409179688,
+        2785.3505859375,
+        2155.4970703125
+      ],
+      "score": 0.851,
+      "frame_idx": 0,
+      "box_area_ratio": 0.318
+    }
+  ],
+  "matched_entities": 6
+}

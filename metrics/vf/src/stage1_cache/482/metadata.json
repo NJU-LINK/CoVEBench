@@ -1,0 +1,148 @@
+{
+  "id": 482,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-and-51525.mp4",
+  "local_path": "/root/cut/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-and-51525.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing text on a foreground object, which falls under replacing or modifying foreground objects/subjects.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the identities, facial features, and formal attire of the five friends preserved?",
+    "Comparing Video A and Video B, how accurately is the timing and motion of the two women on the left blowing their party horns preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the man with blonde-tipped dreadlocks in the blue suit preserved?",
+    "Comparing Video A and Video B, how well is the modern apartment background and the view through the glass window at night preserved?",
+    "Comparing Video A and Video B, how accurately is the warm, festive lighting and the specific reflections of interior lights on the glass window preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman on the left"
+    },
+    {
+      "description": "second woman on the left"
+    },
+    {
+      "description": "party horn"
+    },
+    {
+      "description": "man in black suit in the center"
+    },
+    {
+      "description": "woman in sequined dress"
+    },
+    {
+      "description": "man with blonde-tipped dreadlocks in blue suit"
+    },
+    {
+      "description": "gold foil balloons"
+    },
+    {
+      "description": "glass window in the background"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman on the left",
+      "box": [
+        192.93447875976562,
+        188.37733459472656,
+        597.8953247070312,
+        1076.391845703125
+      ],
+      "score": 0.9048,
+      "frame_idx": 2,
+      "box_area_ratio": 0.173
+    },
+    {
+      "entity_id": 2,
+      "description": "second woman on the left",
+      "box": [
+        193.5957489013672,
+        189.41244506835938,
+        599.1917114257812,
+        1074.2601318359375
+      ],
+      "score": 0.5332,
+      "frame_idx": 2,
+      "box_area_ratio": 0.173
+    },
+    {
+      "entity_id": 3,
+      "description": "party horn",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 4,
+      "description": "man in black suit in the center",
+      "box": [
+        882.821533203125,
+        610.3367919921875,
+        1202.25146484375,
+        1072.4906005859375
+      ],
+      "score": 0.8497,
+      "frame_idx": 2,
+      "box_area_ratio": 0.071
+    },
+    {
+      "entity_id": 5,
+      "description": "woman in sequined dress",
+      "box": [
+        195.88742065429688,
+        190.6800537109375,
+        598.10595703125,
+        1076.8890380859375
+      ],
+      "score": 0.5307,
+      "frame_idx": 2,
+      "box_area_ratio": 0.172
+    },
+    {
+      "entity_id": 6,
+      "description": "man with blonde-tipped dreadlocks in blue suit",
+      "box": [
+        1544.9949951171875,
+        180.0575714111328,
+        1918.166259765625,
+        1077.3603515625
+      ],
+      "score": 0.8001,
+      "frame_idx": 1,
+      "box_area_ratio": 0.161
+    },
+    {
+      "entity_id": 7,
+      "description": "gold foil balloons",
+      "box": [
+        10.429015159606934,
+        349.717041015625,
+        362.8403015136719,
+        1079.6085205078125
+      ],
+      "score": 0.3962,
+      "frame_idx": 0,
+      "box_area_ratio": 0.124
+    },
+    {
+      "entity_id": 8,
+      "description": "glass window in the background",
+      "box": [
+        522.5154418945312,
+        140.83486938476562,
+        1048.48779296875,
+        716.60791015625
+      ],
+      "score": 0.3823,
+      "frame_idx": 1,
+      "box_area_ratio": 0.146
+    }
+  ],
+  "matched_entities": 7
+}

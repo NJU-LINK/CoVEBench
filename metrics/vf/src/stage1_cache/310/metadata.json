@@ -1,0 +1,73 @@
+{
+  "id": 310,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/270.mp4",
+  "local_path": "/root/cut/data/270.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a subject, removing an object, and changing the color of a specific object, all of which are mask-based edits without camera or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the person in blue fluffy pajamas walking away in the background preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the sharp head turn and mouth opening preserved?",
+    "Comparing Video A and Video B, how well is the appearance and motion of the hand petting the animal preserved?",
+    "Comparing Video A and Video B, how well is the camera's perspective and stability preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "person in blue fluffy pajamas"
+    },
+    {
+      "description": "orange cat"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 23,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "person in blue fluffy pajamas",
+      "box": [
+        450.6618347167969,
+        330.5638122558594,
+        716.7432250976562,
+        1045.1494140625
+      ],
+      "score": 0.7473,
+      "frame_idx": 2,
+      "box_area_ratio": 0.206
+    },
+    {
+      "entity_id": 2,
+      "description": "orange cat",
+      "box": [
+        65.52790832519531,
+        694.7537231445312,
+        442.6730651855469,
+        860.3265380859375
+      ],
+      "score": 0.935,
+      "frame_idx": 1,
+      "box_area_ratio": 0.068
+    },
+    {
+      "entity_id": 3,
+      "description": "hand",
+      "box": [
+        238.19644165039062,
+        643.8811645507812,
+        301.8138122558594,
+        721.5576782226562
+      ],
+      "score": 0.642,
+      "frame_idx": 2,
+      "box_area_ratio": 0.005
+    }
+  ],
+  "matched_entities": 3
+}

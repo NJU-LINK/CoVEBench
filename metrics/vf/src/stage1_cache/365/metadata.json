@@ -1,0 +1,108 @@
+{
+  "id": 365,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-loving-mother-and-her-baby-playing-with-soft-toys-49966.mp4",
+  "local_path": "/root/cut/data/mixkit-loving-mother-and-her-baby-playing-with-soft-toys-49966.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object and changing the subject's motion/pose, which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity, hair style, and clothing preserved?",
+    "Comparing Video A and Video B, how accurately is the baby's appearance and their reaction/movement preserved?",
+    "Comparing Video A and Video B, how well is the background environment (bed, sheets, headboard, wall) preserved?",
+    "Comparing Video A and Video B, how well is the static medium shot camera framing preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal synchronization of the woman's body movements (excluding the arms and the object) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "baby"
+    },
+    {
+      "description": "bed"
+    },
+    {
+      "description": "sheets"
+    },
+    {
+      "description": "headboard"
+    },
+    {
+      "description": "wall"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        368.9032287597656,
+        175.43777465820312,
+        1493.0650634765625,
+        970.0599365234375
+      ],
+      "score": 0.8593,
+      "frame_idx": 1,
+      "box_area_ratio": 0.431
+    },
+    {
+      "entity_id": 2,
+      "description": "baby",
+      "box": [
+        708.8389282226562,
+        416.82659912109375,
+        1361.596923828125,
+        982.452880859375
+      ],
+      "score": 0.8303,
+      "frame_idx": 0,
+      "box_area_ratio": 0.178
+    },
+    {
+      "entity_id": 3,
+      "description": "bed",
+      "box": null,
+      "score": 0.4624,
+      "frame_idx": null,
+      "box_area_ratio": 0.911,
+      "rejected_reason": "box covers 91% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "sheets",
+      "box": [
+        8.015613555908203,
+        646.241455078125,
+        1916.4600830078125,
+        1077.7969970703125
+      ],
+      "score": 0.4116,
+      "frame_idx": 2,
+      "box_area_ratio": 0.397
+    },
+    {
+      "entity_id": 5,
+      "description": "headboard",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "wall",
+      "box": null,
+      "score": 0.4837,
+      "frame_idx": null,
+      "box_area_ratio": 0.756,
+      "rejected_reason": "box covers 76% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

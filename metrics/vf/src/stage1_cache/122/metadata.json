@@ -1,0 +1,11 @@
+{
+  "id": 122,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-and-girl-practicing-skateboarding-together-1372.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-and-girl-practicing-skateboarding-together-1372.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera, Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

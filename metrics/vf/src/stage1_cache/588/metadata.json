@@ -1,0 +1,81 @@
+{
+  "id": 588,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/142.mp4",
+  "local_path": "/root/cut/data/142.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying object attributes (collar to bell), adding background elements (wooden fence), and changing the object's pose and position within the scene, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the cow's light brown color and fur texture preserved (excluding the neck accessory change)?",
+    "Comparing Video A and Video B, how accurately are the scattered white rocks preserved in appearance and position?",
+    "Comparing Video A and Video B, how well are the upper-left background legs of the other cow preserved in visibility, shape, and placement?",
+    "Comparing Video A and Video B, how well is the sunlit look of the grassy slope preserved in terms of brightness and green hue?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "light brown cow"
+    },
+    {
+      "description": "white rocks"
+    },
+    {
+      "description": "cow legs in the upper left"
+    },
+    {
+      "description": "grassy slope"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "light brown cow",
+      "box": null,
+      "score": 0.4978,
+      "frame_idx": null,
+      "box_area_ratio": 0.626,
+      "rejected_reason": "box covers 63% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "white rocks",
+      "box": [
+        16.48366928100586,
+        921.1453857421875,
+        1780.326416015625,
+        2107.066650390625
+      ],
+      "score": 0.3903,
+      "frame_idx": 0,
+      "box_area_ratio": 0.252
+    },
+    {
+      "entity_id": 3,
+      "description": "cow legs in the upper left",
+      "box": [
+        804.2769775390625,
+        6.530546188354492,
+        1504.3681640625,
+        570.1923828125
+      ],
+      "score": 0.4807,
+      "frame_idx": 2,
+      "box_area_ratio": 0.048
+    },
+    {
+      "entity_id": 4,
+      "description": "grassy slope",
+      "box": null,
+      "score": 0.7718,
+      "frame_idx": null,
+      "box_area_ratio": 0.998,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

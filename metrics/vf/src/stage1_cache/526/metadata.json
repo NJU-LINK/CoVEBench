@@ -1,0 +1,118 @@
+{
+  "id": 526,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-the-remnants-of-a-vibrant-new-years-eve-celebration-with-51543.mp4",
+  "local_path": "/root/cut/data/mixkit-the-remnants-of-a-vibrant-new-years-eve-celebration-with-51543.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the texture of a specific foreground object (balloons) without any camera movement or global cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the wooden texture and structural design of the bar cart preserved?",
+    "Comparing Video A and Video B, how well are the empty champagne glasses and the bottle on the top shelf preserved?",
+    "Comparing Video A and Video B, how accurately are the gold tinsel and hanging ribbons preserved?",
+    "Comparing Video A and Video B, how well is the warm, dim lighting atmosphere maintained throughout the scene?",
+    "Comparing Video A and Video B, how well is the spatial arrangement and density of the balloons on the bottom shelf preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "wooden bar cart"
+    },
+    {
+      "description": "empty champagne glasses"
+    },
+    {
+      "description": "bottle"
+    },
+    {
+      "description": "gold tinsel"
+    },
+    {
+      "description": "ribbons"
+    },
+    {
+      "description": "black and gold balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 23,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wooden bar cart",
+      "box": null,
+      "score": 0.364,
+      "frame_idx": null,
+      "box_area_ratio": 0.634,
+      "rejected_reason": "box covers 63% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "empty champagne glasses",
+      "box": [
+        1224.9659423828125,
+        25.886547088623047,
+        1452.8524169921875,
+        584.7979736328125
+      ],
+      "score": 0.6803,
+      "frame_idx": 2,
+      "box_area_ratio": 0.061
+    },
+    {
+      "entity_id": 3,
+      "description": "bottle",
+      "box": [
+        1387.943115234375,
+        3.990933895111084,
+        1652.1510009765625,
+        647.64892578125
+      ],
+      "score": 0.6787,
+      "frame_idx": 0,
+      "box_area_ratio": 0.082
+    },
+    {
+      "entity_id": 4,
+      "description": "gold tinsel",
+      "box": [
+        1078.0648193359375,
+        554.2900390625,
+        1908.364501953125,
+        1074.8941650390625
+      ],
+      "score": 0.577,
+      "frame_idx": 0,
+      "box_area_ratio": 0.208
+    },
+    {
+      "entity_id": 5,
+      "description": "ribbons",
+      "box": [
+        231.79330444335938,
+        554.5853881835938,
+        546.0524291992188,
+        1078.117431640625
+      ],
+      "score": 0.464,
+      "frame_idx": 1,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 6,
+      "description": "black and gold balloons",
+      "box": [
+        1393.674560546875,
+        7.316990852355957,
+        1660.060302734375,
+        507.5836181640625
+      ],
+      "score": 0.3308,
+      "frame_idx": 2,
+      "box_area_ratio": 0.064
+    }
+  ],
+  "matched_entities": 5
+}

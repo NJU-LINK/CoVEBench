@@ -1,0 +1,99 @@
+{
+  "id": 9,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/57.mp4",
+  "local_path": "/root/cut/data/57.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion (reversing direction), changing object position (centering the harvester), and modifying an object (changing text). No camera movement or style changes are requested.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual consistency of the wheat field maintained in the bottom-left area where the harvester was originally located?",
+    "Comparing Video A and Video B, how well is the appearance and position of the dark car preserved?",
+    "Comparing Video A and Video B, how accurately are the wind turbines and rolling hills in the background preserved?",
+    "Comparing Video A and Video B, how well is the clear sky and overall lighting environment preserved?",
+    "Comparing Video A and Video B, how well is the aerial camera motion and perspective preserved?",
+    "Comparing Video A and Video B, how well are the textures of the wheat field (unharvested areas) preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "wheat field"
+    },
+    {
+      "description": "dark car"
+    },
+    {
+      "description": "wind turbines"
+    },
+    {
+      "description": "rolling hills"
+    },
+    {
+      "description": "sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wheat field",
+      "box": null,
+      "score": 0.7628,
+      "frame_idx": null,
+      "box_area_ratio": 0.722,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "dark car",
+      "box": [
+        537.9976196289062,
+        1432.25146484375,
+        763.7381591796875,
+        1553.037841796875
+      ],
+      "score": 0.8268,
+      "frame_idx": 1,
+      "box_area_ratio": 0.003
+    },
+    {
+      "entity_id": 3,
+      "description": "wind turbines",
+      "box": [
+        2696.57763671875,
+        155.85516357421875,
+        2722.39306640625,
+        251.18748474121094
+      ],
+      "score": 0.3863,
+      "frame_idx": 1,
+      "box_area_ratio": 0.0
+    },
+    {
+      "entity_id": 4,
+      "description": "rolling hills",
+      "box": null,
+      "score": 0.3874,
+      "frame_idx": null,
+      "box_area_ratio": 0.721,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "sky",
+      "box": [
+        0.6354904174804688,
+        1.074337363243103,
+        3839.93212890625,
+        258.4257507324219
+      ],
+      "score": 0.6789,
+      "frame_idx": 1,
+      "box_area_ratio": 0.119
+    }
+  ],
+  "matched_entities": 3
+}

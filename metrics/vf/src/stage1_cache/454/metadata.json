@@ -1,0 +1,70 @@
+{
+  "id": 454,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/20042287_8s_part1_9.1s.mp4",
+  "local_path": "/root/cut/data/20042287_8s_part1_9.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion and replacing the background environment without any camera movements or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific white and red color scheme and design of the motorboat preserved?",
+    "Comparing Video A and Video B, how accurately is the aerial high-angle perspective maintained?",
+    "Comparing Video A and Video B, how well are the calm water surface textures (in areas not affected by the new U-turn wake) preserved?",
+    "Comparing Video A and Video B, how consistent is the scale and size of the boat relative to the frame?",
+    "Comparing Video A and Video B, how well is the temporal speed of the boat's engine/propulsion (as seen through the intensity of the wake) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "white and red motorboat"
+    },
+    {
+      "description": "calm water"
+    },
+    {
+      "description": "wake"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white and red motorboat",
+      "box": [
+        821.3131713867188,
+        641.9905395507812,
+        1076.154541015625,
+        1038.559814453125
+      ],
+      "score": 0.916,
+      "frame_idx": 2,
+      "box_area_ratio": 0.049
+    },
+    {
+      "entity_id": 2,
+      "description": "calm water",
+      "box": null,
+      "score": 0.8396,
+      "frame_idx": null,
+      "box_area_ratio": 0.819,
+      "rejected_reason": "box covers 82% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "wake",
+      "box": [
+        689.0325317382812,
+        789.9575805664062,
+        1172.91650390625,
+        1074.9130859375
+      ],
+      "score": 0.3934,
+      "frame_idx": 2,
+      "box_area_ratio": 0.066
+    }
+  ],
+  "matched_entities": 2
+}

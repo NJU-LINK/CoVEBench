@@ -1,0 +1,82 @@
+{
+  "id": 363,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-hipster-man-with-tattoos-smoking-1253.mp4",
+  "local_path": "/root/cut/data/mixkit-hipster-man-with-tattoos-smoking-1253.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying foreground objects (clothing, cigarette) and changing the subject's action/pose without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the man's tattoos (on his arms or hands) preserved in terms of placement and design?",
+    "Comparing Video A and Video B, how accurately is the man's nose ring preserved?",
+    "Comparing Video A and Video B, how well is the man's facial identity (bone structure, eyes, facial hair) maintained?",
+    "Comparing Video A and Video B, how well is the background wall with pink and blue lighting preserved?",
+    "Comparing Video A and Video B, how well is the static camera angle preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "tattoos"
+    },
+    {
+      "description": "nose ring"
+    },
+    {
+      "description": "pink and blue wall"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 29,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": null,
+      "score": 0.8416,
+      "frame_idx": null,
+      "box_area_ratio": 0.623,
+      "rejected_reason": "box covers 62% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "tattoos",
+      "box": [
+        408.0163269042969,
+        1008.7970581054688,
+        761.509033203125,
+        1467.7779541015625
+      ],
+      "score": 0.4818,
+      "frame_idx": 0,
+      "box_area_ratio": 0.078
+    },
+    {
+      "entity_id": 3,
+      "description": "nose ring",
+      "box": [
+        496.876708984375,
+        627.1742553710938,
+        555.7857055664062,
+        681.4827880859375
+      ],
+      "score": 0.4247,
+      "frame_idx": 0,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 4,
+      "description": "pink and blue wall",
+      "box": null,
+      "score": 0.6568,
+      "frame_idx": null,
+      "box_area_ratio": 0.988,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

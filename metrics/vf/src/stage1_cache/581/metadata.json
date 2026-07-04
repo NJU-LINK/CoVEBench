@@ -1,0 +1,11 @@
+{
+  "id": 581,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/133.mp4",
+  "local_path": "/root/cut/data/133.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a visual style change (changing lighting to a warm palette of sunset orange and soft yellow).",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

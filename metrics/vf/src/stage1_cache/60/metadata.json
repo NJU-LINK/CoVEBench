@@ -1,0 +1,105 @@
+{
+  "id": 60,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/81.mp4",
+  "local_path": "/root/cut/data/81.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject and adding environmental elements (flower petals) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the chef's identity, including the white toque and black apron, preserved?",
+    "Comparing Video A and Video B, how well are the background elements (lush green bamboo and modern residential building) preserved?",
+    "Comparing Video A and Video B, how accurately is the camera motion and framing maintained?",
+    "Comparing Video A and Video B, how well is the sunny, well-lit environment and overall color grade preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "chef"
+    },
+    {
+      "description": "white toque"
+    },
+    {
+      "description": "black apron"
+    },
+    {
+      "description": "lush green bamboo"
+    },
+    {
+      "description": "modern residential building"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 9,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "chef",
+      "box": [
+        401.4717102050781,
+        312.07672119140625,
+        1054.4713134765625,
+        1959.1175537109375
+      ],
+      "score": 0.5292,
+      "frame_idx": 2,
+      "box_area_ratio": 0.13
+    },
+    {
+      "entity_id": 2,
+      "description": "white toque",
+      "box": [
+        96.68266296386719,
+        1183.60400390625,
+        1513.0211181640625,
+        1950.639892578125
+      ],
+      "score": 0.4386,
+      "frame_idx": 1,
+      "box_area_ratio": 0.131
+    },
+    {
+      "entity_id": 3,
+      "description": "black apron",
+      "box": [
+        419.9612121582031,
+        315.6745300292969,
+        1056.89892578125,
+        1969.091064453125
+      ],
+      "score": 0.4635,
+      "frame_idx": 2,
+      "box_area_ratio": 0.127
+    },
+    {
+      "entity_id": 4,
+      "description": "lush green bamboo",
+      "box": [
+        -2.1984100341796875,
+        -0.6456613540649414,
+        1666.54052734375,
+        1539.1158447265625
+      ],
+      "score": 0.4141,
+      "frame_idx": 2,
+      "box_area_ratio": 0.31
+    },
+    {
+      "entity_id": 5,
+      "description": "modern residential building",
+      "box": [
+        2267.98681640625,
+        5.657358169555664,
+        3849.017578125,
+        1700.970703125
+      ],
+      "score": 0.7572,
+      "frame_idx": 1,
+      "box_area_ratio": 0.323
+    }
+  ],
+  "matched_entities": 5
+}

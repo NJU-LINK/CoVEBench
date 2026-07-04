@@ -1,0 +1,116 @@
+{
+  "id": 479,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-by-51531.mp4",
+  "local_path": "/root/cut/data/mixkit-a-cheerful-group-of-friends-celebrate-new-years-eve-by-51531.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying text on objects and adding particle effects, which are foreground object modifications and additions, without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man in the black suit preserved?",
+    "Comparing Video A and Video B, how accurately are the textures and reflections of the women's sequined dresses preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the champagne glass clinking preserved?",
+    "Comparing Video A and Video B, how well are the background city lights and bokeh effects preserved?",
+    "Comparing Video A and Video B, how well is the overall warm lighting and 'dimly lit' atmosphere of the room maintained?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man in black suit"
+    },
+    {
+      "description": "black suit"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "sequined dress"
+    },
+    {
+      "description": "champagne glass"
+    },
+    {
+      "description": "city lights"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in black suit",
+      "box": [
+        492.98321533203125,
+        115.935546875,
+        965.5494384765625,
+        933.1669311523438
+      ],
+      "score": 0.5552,
+      "frame_idx": 2,
+      "box_area_ratio": 0.186
+    },
+    {
+      "entity_id": 2,
+      "description": "black suit",
+      "box": [
+        499.14300537109375,
+        116.60975646972656,
+        956.9446411132812,
+        932.091796875
+      ],
+      "score": 0.4234,
+      "frame_idx": 2,
+      "box_area_ratio": 0.18
+    },
+    {
+      "entity_id": 3,
+      "description": "woman",
+      "box": [
+        1096.92529296875,
+        224.3529052734375,
+        1716.31689453125,
+        1075.321533203125
+      ],
+      "score": 0.7298,
+      "frame_idx": 2,
+      "box_area_ratio": 0.254
+    },
+    {
+      "entity_id": 4,
+      "description": "sequined dress",
+      "box": [
+        1120.90234375,
+        527.8633422851562,
+        1717.19287109375,
+        1070.606201171875
+      ],
+      "score": 0.5449,
+      "frame_idx": 2,
+      "box_area_ratio": 0.156
+    },
+    {
+      "entity_id": 5,
+      "description": "champagne glass",
+      "box": [
+        1241.7318115234375,
+        616.487060546875,
+        1361.89111328125,
+        939.70458984375
+      ],
+      "score": 0.6168,
+      "frame_idx": 1,
+      "box_area_ratio": 0.019
+    },
+    {
+      "entity_id": 6,
+      "description": "city lights",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    }
+  ],
+  "matched_entities": 5
+}

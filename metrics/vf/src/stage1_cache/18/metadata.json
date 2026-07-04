@@ -1,0 +1,57 @@
+{
+  "id": 18,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/80.mp4",
+  "local_path": "/root/cut/data/80.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the motion of an object (the snowmobile) and adding a related visual effect (snow spray), which falls under changing object motion and adding/modifying foreground elements.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the shapes and silhouettes of the distant mountains preserved?",
+    "Comparing Video A and Video B, how accurately is the visual identity (color, model, and gear) of the snowmobiles preserved?",
+    "Comparing Video A and Video B, how well is the first-person viewpoint (POV) perspective maintained relative to the other snowmobiles?",
+    "Comparing Video A and Video B, how well are the lighting conditions and the flat, snowy texture of the arctic landscape preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "distant mountains"
+    },
+    {
+      "description": "snowmobiles"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 6,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "distant mountains",
+      "box": [
+        1635.2279052734375,
+        845.9577026367188,
+        3830.57568359375,
+        1114.903076171875
+      ],
+      "score": 0.4371,
+      "frame_idx": 1,
+      "box_area_ratio": 0.071
+    },
+    {
+      "entity_id": 2,
+      "description": "snowmobiles",
+      "box": [
+        -3.6265182495117188,
+        1006.4859619140625,
+        1094.8984375,
+        1327.567138671875
+      ],
+      "score": 0.5664,
+      "frame_idx": 1,
+      "box_area_ratio": 0.043
+    }
+  ],
+  "matched_entities": 2
+}

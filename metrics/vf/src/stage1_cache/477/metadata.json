@@ -1,0 +1,90 @@
+{
+  "id": 477,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/855303_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/855303_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object (milk to coffee), changing object motion (faster pouring), and replacing the background environment, all of which are permitted.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual appearance (skin tone, shape, and position) of the hand preserved?",
+    "Comparing Video A and Video B, how accurately is the glass bottle's shape and transparency preserved?",
+    "Comparing Video A and Video B, how well is the texture and grain of the wooden surface preserved?",
+    "Comparing Video A and Video B, how accurately are the scattered almonds at the base of the mug preserved in their exact positions?",
+    "Comparing Video A and Video B, how well are the scattered almonds preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "hand"
+    },
+    {
+      "description": "glass bottle"
+    },
+    {
+      "description": "wooden surface"
+    },
+    {
+      "description": "almonds"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hand",
+      "box": [
+        2.397029399871826,
+        180.3766326904297,
+        170.7946319580078,
+        306.084716796875
+      ],
+      "score": 0.7775,
+      "frame_idx": 1,
+      "box_area_ratio": 0.01
+    },
+    {
+      "entity_id": 2,
+      "description": "glass bottle",
+      "box": [
+        3.2726669311523438,
+        221.81423950195312,
+        980.2323608398438,
+        729.11767578125
+      ],
+      "score": 0.7547,
+      "frame_idx": 0,
+      "box_area_ratio": 0.239
+    },
+    {
+      "entity_id": 3,
+      "description": "wooden surface",
+      "box": [
+        1.4298820495605469,
+        797.6890869140625,
+        1916.6617431640625,
+        1078.545654296875
+      ],
+      "score": 0.8151,
+      "frame_idx": 2,
+      "box_area_ratio": 0.259
+    },
+    {
+      "entity_id": 4,
+      "description": "almonds",
+      "box": [
+        1123.8197021484375,
+        937.0946655273438,
+        1232.9783935546875,
+        995.296142578125
+      ],
+      "score": 0.5645,
+      "frame_idx": 0,
+      "box_area_ratio": 0.003
+    }
+  ],
+  "matched_entities": 4
+}

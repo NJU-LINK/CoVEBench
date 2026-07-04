@@ -1,0 +1,106 @@
+{
+  "id": 568,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/112.mp4",
+  "local_path": "/root/cut/data/112.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object (cargo ship), adding background objects (shipping containers), and changing the motion of objects (slowing down the ship and the scene). These actions are explicitly permitted under the 'DO NOT SKIP' criteria.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the small foreground work boat preserved in terms of its shape and type?",
+    "Comparing Video A and Video B, how well are the two crew members on the foreground work boat preserved in terms of their count and placement?",
+    "Comparing Video A and Video B, how well is the red-and-black tugboat preserved in its identity and appearance?",
+    "Comparing Video A and Video B, how well are the industrial cranes and shipyard structures preserved, excluding the newly added containers?",
+    "Comparing Video A and Video B, how well are the cloudy sky and overall ambient lighting preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "small work boat"
+    },
+    {
+      "description": "crew members"
+    },
+    {
+      "description": "red and black tugboat"
+    },
+    {
+      "description": "industrial cranes"
+    },
+    {
+      "description": "shipyard structures"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "small work boat",
+      "box": [
+        246.21499633789062,
+        559.700927734375,
+        2019.987548828125,
+        1890.361572265625
+      ],
+      "score": 0.5853,
+      "frame_idx": 0,
+      "box_area_ratio": 0.285
+    },
+    {
+      "entity_id": 2,
+      "description": "crew members",
+      "box": [
+        2417.49951171875,
+        1681.40234375,
+        2704.869384765625,
+        1883.5052490234375
+      ],
+      "score": 0.6417,
+      "frame_idx": 0,
+      "box_area_ratio": 0.007
+    },
+    {
+      "entity_id": 3,
+      "description": "red and black tugboat",
+      "box": [
+        236.59664916992188,
+        561.244873046875,
+        2026.432373046875,
+        1893.0775146484375
+      ],
+      "score": 0.6223,
+      "frame_idx": 0,
+      "box_area_ratio": 0.287
+    },
+    {
+      "entity_id": 4,
+      "description": "industrial cranes",
+      "box": [
+        3039.158447265625,
+        692.2515869140625,
+        3482.114501953125,
+        1485.507080078125
+      ],
+      "score": 0.5408,
+      "frame_idx": 1,
+      "box_area_ratio": 0.042
+    },
+    {
+      "entity_id": 5,
+      "description": "shipyard structures",
+      "box": [
+        1128.9783935546875,
+        65.85076141357422,
+        3470.49169921875,
+        1693.599609375
+      ],
+      "score": 0.3852,
+      "frame_idx": 0,
+      "box_area_ratio": 0.46
+    }
+  ],
+  "matched_entities": 5
+}

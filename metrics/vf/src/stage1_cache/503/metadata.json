@@ -1,0 +1,102 @@
+{
+  "id": 503,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-person-takes-a-glass-of-beer-to-drink-from-47386.mp4",
+  "local_path": "/root/cut/data/mixkit-a-person-takes-a-glass-of-beer-to-drink-from-47386.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the material of a foreground object and changing its motion speed, which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man's hand and the gold mesh watch band preserved?",
+    "Comparing Video A and Video B, how accurately is the green tint of the beer and the structure of the white foam head preserved?",
+    "Comparing Video A and Video B, how well is the light-colored wooden table surface and its grain pattern preserved?",
+    "Comparing Video A and Video B, how well is the warm indoor lighting and overall color temperature preserved?",
+    "Comparing Video A and Video B, how well is the camera framing and close-up composition preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man's hand"
+    },
+    {
+      "description": "gold mesh watch band"
+    },
+    {
+      "description": "green beer"
+    },
+    {
+      "description": "white foam head"
+    },
+    {
+      "description": "light-colored wooden table"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man's hand",
+      "box": [
+        646.8673095703125,
+        79.42021179199219,
+        1921.130615234375,
+        844.3812255859375
+      ],
+      "score": 0.8393,
+      "frame_idx": 1,
+      "box_area_ratio": 0.47
+    },
+    {
+      "entity_id": 2,
+      "description": "gold mesh watch band",
+      "box": [
+        1724.818603515625,
+        359.4432678222656,
+        1921.4000244140625,
+        899.665771484375
+      ],
+      "score": 0.7465,
+      "frame_idx": 0,
+      "box_area_ratio": 0.051
+    },
+    {
+      "entity_id": 3,
+      "description": "green beer",
+      "box": [
+        262.0951232910156,
+        1.6818416118621826,
+        1121.3536376953125,
+        1073.075439453125
+      ],
+      "score": 0.8211,
+      "frame_idx": 0,
+      "box_area_ratio": 0.444
+    },
+    {
+      "entity_id": 4,
+      "description": "white foam head",
+      "box": [
+        435.4432678222656,
+        2.7806246280670166,
+        1190.9114990234375,
+        982.2756958007812
+      ],
+      "score": 0.6402,
+      "frame_idx": 2,
+      "box_area_ratio": 0.357
+    },
+    {
+      "entity_id": 5,
+      "description": "light-colored wooden table",
+      "box": null,
+      "score": 0.8199,
+      "frame_idx": null,
+      "box_area_ratio": 0.99,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 4
+}

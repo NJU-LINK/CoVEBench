@@ -1,0 +1,11 @@
+{
+  "id": 433,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/393654_8s_part1_9.5s.mp4",
+  "local_path": "/root/cut/data/393654_8s_part1_9.5s.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a cinematic style change (gritty cinematic high-contrast style).",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

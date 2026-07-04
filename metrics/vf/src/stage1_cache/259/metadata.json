@@ -1,0 +1,58 @@
+{
+  "id": 259,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_115_0.mp4",
+  "local_path": "/root/cut/data/LMArena_115_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background and modifying a foreground object (shirt to jacket) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's facial identity and the appearance of his sunglasses preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the man putting his hands in his pockets preserved?",
+    "Comparing Video A and Video B, how accurately is the moment and motion of the man crossing his arms preserved?",
+    "Comparing Video A and Video B, how well is the camera's motion and framing of the subject preserved?",
+    "Comparing Video A and Video B, how well is the man's spatial position and scale relative to the camera frame preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "young man"
+    },
+    {
+      "description": "sunglasses"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 15,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young man",
+      "box": [
+        208.07371520996094,
+        428.47686767578125,
+        549.157470703125,
+        1278.5791015625
+      ],
+      "score": 0.9558,
+      "frame_idx": 1,
+      "box_area_ratio": 0.315
+    },
+    {
+      "entity_id": 2,
+      "description": "sunglasses",
+      "box": [
+        273.2735290527344,
+        540.7680053710938,
+        403.2345886230469,
+        582.3646850585938
+      ],
+      "score": 0.7223,
+      "frame_idx": 0,
+      "box_area_ratio": 0.006
+    }
+  ],
+  "matched_entities": 2
+}

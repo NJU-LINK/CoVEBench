@@ -1,0 +1,61 @@
+{
+  "id": 278,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5234_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5234_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background, changing the subject, and modifying the subject's pose and objects, all of which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the camera's motion and angle preserved?",
+    "Comparing Video A and Video B, how accurately is the subject's hand movements preserved?",
+    "Comparing Video A and Video B, how well is the subject's overall screen position and framing (headroom, centering) preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "man in dark business suit"
+    },
+    {
+      "description": "fingers"
+    },
+    {
+      "description": "hands"
+    }
+  ],
+  "status": "no_grounded_entities",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in dark business suit",
+      "box": null,
+      "score": 0.8923,
+      "frame_idx": null,
+      "box_area_ratio": 0.71,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "fingers",
+      "box": null,
+      "score": 0.6031,
+      "frame_idx": null,
+      "box_area_ratio": 0.709,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "hands",
+      "box": null,
+      "score": 0.4885,
+      "frame_idx": null,
+      "box_area_ratio": 0.728,
+      "rejected_reason": "box covers 73% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 0,
+  "error": "Grounding DINO found no entity at score ≥ 0.25"
+}

@@ -1,0 +1,65 @@
+{
+  "id": 586,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/140.mp4",
+  "local_path": "/root/cut/data/140.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing objects, removing background elements, changing object motion, and shifting object positions without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the mechanical details, metallic textures, and structural components of the sawmill machine preserved (excluding the requested speed change)?",
+    "Comparing Video A and Video B, how accurately is the camera perspective and stationary side-view framing preserved?",
+    "Comparing Video A and Video B, how well are the outdoor industrial surroundings (ground, nearby equipment, general setting) preserved aside from removing the crowd and replacing the fence?",
+    "Comparing Video A and Video B, how consistent is the overall lighting and shadow style of the scene despite the log and background modifications?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "sawmill machine"
+    },
+    {
+      "description": "ground"
+    },
+    {
+      "description": "equipment"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "sawmill machine",
+      "box": null,
+      "score": 0.5436,
+      "frame_idx": null,
+      "box_area_ratio": 0.945,
+      "rejected_reason": "box covers 94% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "ground",
+      "box": [
+        0.1206207275390625,
+        1250.8408203125,
+        3837.718505859375,
+        2154.06689453125
+      ],
+      "score": 0.3782,
+      "frame_idx": 1,
+      "box_area_ratio": 0.418
+    },
+    {
+      "entity_id": 3,
+      "description": "equipment",
+      "box": null,
+      "score": 0.3972,
+      "frame_idx": null,
+      "box_area_ratio": 0.991,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

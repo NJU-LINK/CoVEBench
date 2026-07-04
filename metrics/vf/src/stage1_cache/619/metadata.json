@@ -1,0 +1,164 @@
+{
+  "id": 619,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/181.mp4",
+  "local_path": "/root/cut/data/181.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment (the sky) and modifying the lighting and reflections to match the new environment, which is explicitly permitted as an intrinsic part of an environment swap.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the forward-moving aerial camera trajectory preserved?",
+    "Comparing Video A and Video B, how accurately are the positions and movements of the traffic on the road preserved?",
+    "Comparing Video A and Video B, how well is the structural geometry of the high-rise buildings preserved (shape/placement), aside from the new sunset lighting?",
+    "Comparing Video A and Video B, how well is the layout of the green area, houses, and trees on the right side of the waterway preserved?",
+    "Comparing Video A and Video B, how well is the shoreline shape and the texture/detail of the sandy beach preserved (allowing only changes due to sunset lighting)?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "traffic"
+    },
+    {
+      "description": "road"
+    },
+    {
+      "description": "white high-rise buildings on the left"
+    },
+    {
+      "description": "green area on the right"
+    },
+    {
+      "description": "houses on the right"
+    },
+    {
+      "description": "trees on the right"
+    },
+    {
+      "description": "waterway"
+    },
+    {
+      "description": "shoreline"
+    },
+    {
+      "description": "sandy beach"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 15,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "traffic",
+      "box": [
+        3518.906982421875,
+        1788.337158203125,
+        3614.854736328125,
+        1837.5289306640625
+      ],
+      "score": 0.3642,
+      "frame_idx": 1,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 2,
+      "description": "road",
+      "box": [
+        67.81539916992188,
+        919.2552490234375,
+        1795.8038330078125,
+        2156.88232421875
+      ],
+      "score": 0.5381,
+      "frame_idx": 1,
+      "box_area_ratio": 0.258
+    },
+    {
+      "entity_id": 3,
+      "description": "white high-rise buildings on the left",
+      "box": [
+        1124.8880615234375,
+        773.937255859375,
+        3219.237548828125,
+        2147.552978515625
+      ],
+      "score": 0.3821,
+      "frame_idx": 1,
+      "box_area_ratio": 0.347
+    },
+    {
+      "entity_id": 4,
+      "description": "green area on the right",
+      "box": [
+        2074.724609375,
+        851.2753295898438,
+        3849.2431640625,
+        1746.589111328125
+      ],
+      "score": 0.418,
+      "frame_idx": 0,
+      "box_area_ratio": 0.192
+    },
+    {
+      "entity_id": 5,
+      "description": "houses on the right",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 6,
+      "description": "trees on the right",
+      "box": [
+        2053.7998046875,
+        843.38037109375,
+        3839.78564453125,
+        1938.075439453125
+      ],
+      "score": 0.4292,
+      "frame_idx": 2,
+      "box_area_ratio": 0.236
+    },
+    {
+      "entity_id": 7,
+      "description": "waterway",
+      "box": [
+        1935.043212890625,
+        875.2147216796875,
+        3846.097412109375,
+        2161.11376953125
+      ],
+      "score": 0.6301,
+      "frame_idx": 0,
+      "box_area_ratio": 0.296
+    },
+    {
+      "entity_id": 8,
+      "description": "shoreline",
+      "box": [
+        49.774017333984375,
+        901.3342895507812,
+        1766.02197265625,
+        2158.864501953125
+      ],
+      "score": 0.4839,
+      "frame_idx": 1,
+      "box_area_ratio": 0.26
+    },
+    {
+      "entity_id": 9,
+      "description": "sandy beach",
+      "box": [
+        62.79510498046875,
+        917.3004760742188,
+        1771.75146484375,
+        2159.84814453125
+      ],
+      "score": 0.6399,
+      "frame_idx": 1,
+      "box_area_ratio": 0.256
+    }
+  ],
+  "matched_entities": 8
+}

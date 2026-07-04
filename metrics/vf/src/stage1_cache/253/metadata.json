@@ -1,0 +1,89 @@
+{
+  "id": 253,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5535_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5535_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying text on a foreground object and adding a new foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the woman's facial features, hair color, and smile preserved?",
+    "Comparing Video A and Video B, how accurately is the navy blue color of the tracksuit and the 'WESTCOAST' text on the sweatshirt preserved?",
+    "Comparing Video A and Video B, how well is the timing and rhythm of the woman's walk and turn preserved?",
+    "Comparing Video A and Video B, how well is the plain, off-white background preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "navy blue tracksuit"
+    },
+    {
+      "description": "sweatshirt"
+    },
+    {
+      "description": "text"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        188.31179809570312,
+        120.3438949584961,
+        567.140625,
+        1177.3382568359375
+      ],
+      "score": 0.8495,
+      "frame_idx": 0,
+      "box_area_ratio": 0.434
+    },
+    {
+      "entity_id": 2,
+      "description": "navy blue tracksuit",
+      "box": [
+        175.67274475097656,
+        242.35366821289062,
+        524.7650146484375,
+        1124.7557373046875
+      ],
+      "score": 0.8567,
+      "frame_idx": 1,
+      "box_area_ratio": 0.334
+    },
+    {
+      "entity_id": 3,
+      "description": "sweatshirt",
+      "box": [
+        190.28607177734375,
+        240.79039001464844,
+        532.108154296875,
+        665.6630859375
+      ],
+      "score": 0.6194,
+      "frame_idx": 0,
+      "box_area_ratio": 0.158
+    },
+    {
+      "entity_id": 4,
+      "description": "text",
+      "box": [
+        289.3235778808594,
+        406.5604248046875,
+        414.2869567871094,
+        426.98065185546875
+      ],
+      "score": 0.4011,
+      "frame_idx": 0,
+      "box_area_ratio": 0.003
+    }
+  ],
+  "matched_entities": 4
+}

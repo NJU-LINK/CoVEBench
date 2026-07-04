@@ -1,0 +1,11 @@
+{
+  "id": 291,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/202.mp4",
+  "local_path": "/root/cut/data/202.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a visual style change involving color grading and saturation enhancement of the mural.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

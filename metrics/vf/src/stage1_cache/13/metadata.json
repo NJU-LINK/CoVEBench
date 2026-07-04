@@ -1,0 +1,66 @@
+{
+  "id": 13,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/66.mp4",
+  "local_path": "/root/cut/data/66.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion (reversing rotation) and adding foreground elements (sparks), which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the dark red color and glistening texture of the seasoned meat preserved?",
+    "Comparing Video A and Video B, how accurately is the appearance of the hot, glowing charcoal in the grill maintained?",
+    "Comparing Video A and Video B, how well is the blurry green garden background and the bright daylight lighting preserved?",
+    "Comparing Video A and Video B, how well is the close-up camera framing and rotation speed (regardless of direction) preserved?",
+    "Comparing Video A and Video B, how well are the small plumes of smoke rising from the meat preserved in terms of volume and transparency?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "meat skewers"
+    },
+    {
+      "description": "charcoal"
+    },
+    {
+      "description": "smoke"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "meat skewers",
+      "box": [
+        234.6605224609375,
+        593.569580078125,
+        3841.269287109375,
+        1745.9136962890625
+      ],
+      "score": 0.7198,
+      "frame_idx": 0,
+      "box_area_ratio": 0.501
+    },
+    {
+      "entity_id": 2,
+      "description": "charcoal",
+      "box": null,
+      "score": 0.366,
+      "frame_idx": null,
+      "box_area_ratio": 0.716,
+      "rejected_reason": "box covers 72% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "smoke",
+      "box": null,
+      "score": 0.3345,
+      "frame_idx": null,
+      "box_area_ratio": 0.661,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

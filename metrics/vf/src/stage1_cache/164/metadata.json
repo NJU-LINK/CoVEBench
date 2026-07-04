@@ -1,0 +1,57 @@
+{
+  "id": 164,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-using-virtual-reality-glasses-263.mp4",
+  "local_path": "/root/cut/data/mixkit-man-using-virtual-reality-glasses-263.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions/poses without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the plants and their specific placements in the room preserved?",
+    "Comparing Video A and Video B, how well is the camera's 'medium shot from behind' perspective preserved?",
+    "Comparing Video A and Video B, how natural is the arm motion to the head given that the VR hand-waving is replaced by headphone placement and ear-cup adjustment?",
+    "Comparing Video A and Video B, how well are the background wall textures and room lighting gradients preserved during the action?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "plants"
+    },
+    {
+      "description": "man in plaid shirt"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 29,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "plants",
+      "box": [
+        716.4232788085938,
+        337.0642395019531,
+        1002.7212524414062,
+        662.5126953125
+      ],
+      "score": 0.6122,
+      "frame_idx": 0,
+      "box_area_ratio": 0.045
+    },
+    {
+      "entity_id": 2,
+      "description": "man in plaid shirt",
+      "box": [
+        -4.333305358886719,
+        211.08790588378906,
+        1029.88134765625,
+        1072.8572998046875
+      ],
+      "score": 0.8713,
+      "frame_idx": 1,
+      "box_area_ratio": 0.43
+    }
+  ],
+  "matched_entities": 2
+}

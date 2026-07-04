@@ -1,0 +1,122 @@
+{
+  "id": 266,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_3563_0.mp4",
+  "local_path": "/root/cut/data/LMArena_3563_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background and modifying the color of a foreground object without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's physical appearance, including his beard and facial features, preserved?",
+    "Comparing Video A and Video B, how accurately is the coat recolored to dark navy while the scarf and gloves remain consistent in appearance?",
+    "Comparing Video A and Video B, how well is the rocky texture and shape of the cliff edge in the immediate foreground preserved?",
+    "Comparing Video A and Video B, how accurately is the man's pose and gaze direction preserved?",
+    "Comparing Video A and Video B, how well is the camera motion or stability preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "beard"
+    },
+    {
+      "description": "coat"
+    },
+    {
+      "description": "scarf"
+    },
+    {
+      "description": "gloves"
+    },
+    {
+      "description": "rocky cliff edge"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        3.391878604888916,
+        234.9878692626953,
+        395.9064025878906,
+        1228.885009765625
+      ],
+      "score": 0.8442,
+      "frame_idx": 2,
+      "box_area_ratio": 0.423
+    },
+    {
+      "entity_id": 2,
+      "description": "beard",
+      "box": [
+        7.67094612121582,
+        211.3402099609375,
+        378.0536804199219,
+        1251.45947265625
+      ],
+      "score": 0.4757,
+      "frame_idx": 0,
+      "box_area_ratio": 0.418
+    },
+    {
+      "entity_id": 3,
+      "description": "coat",
+      "box": [
+        7.627172470092773,
+        292.4464416503906,
+        374.2699890136719,
+        1058.133544921875
+      ],
+      "score": 0.8353,
+      "frame_idx": 0,
+      "box_area_ratio": 0.305
+    },
+    {
+      "entity_id": 4,
+      "description": "scarf",
+      "box": [
+        140.24588012695312,
+        296.0147705078125,
+        342.42645263671875,
+        606.1242065429688
+      ],
+      "score": 0.3533,
+      "frame_idx": 0,
+      "box_area_ratio": 0.068
+    },
+    {
+      "entity_id": 5,
+      "description": "gloves",
+      "box": [
+        117.97903442382812,
+        689.127685546875,
+        207.19012451171875,
+        809.0723876953125
+      ],
+      "score": 0.7272,
+      "frame_idx": 2,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 6,
+      "description": "rocky cliff edge",
+      "box": [
+        2.9053688049316406,
+        1007.6124267578125,
+        594.1093139648438,
+        1280.871337890625
+      ],
+      "score": 0.3696,
+      "frame_idx": 1,
+      "box_area_ratio": 0.175
+    }
+  ],
+  "matched_entities": 6
+}

@@ -1,0 +1,163 @@
+{
+  "id": 32,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/139.mp4",
+  "local_path": "/root/cut/data/139.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's pose/motion and adding a visual effect (glow) to a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the man's clothing (hat and vest) preserved?",
+    "Comparing Video A and Video B, how well is the visual appearance and texture of the wooden cane (excluding the added glow) preserved?",
+    "Comparing Video A and Video B, how well is the wooden bench preserved?",
+    "Comparing Video A and Video B, how accurately are the two large, leafless trees preserved?",
+    "How well is the static camera state maintained in Video B compared to Video A, without any unintended zooming or panning?",
+    "Comparing Video A and Video B, how well are the background elements (dirt path, green fields, and overcast sky) preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "elderly man"
+    },
+    {
+      "description": "hat"
+    },
+    {
+      "description": "vest"
+    },
+    {
+      "description": "wooden cane"
+    },
+    {
+      "description": "wooden bench"
+    },
+    {
+      "description": "large leafless tree"
+    },
+    {
+      "description": "dirt path"
+    },
+    {
+      "description": "green field"
+    },
+    {
+      "description": "overcast sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 13,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "elderly man",
+      "box": [
+        2021.6578369140625,
+        1070.1893310546875,
+        2445.962158203125,
+        2011.66064453125
+      ],
+      "score": 0.9478,
+      "frame_idx": 0,
+      "box_area_ratio": 0.048
+    },
+    {
+      "entity_id": 2,
+      "description": "hat",
+      "box": [
+        2195.556884765625,
+        1074.198974609375,
+        2359.73193359375,
+        1157.824462890625
+      ],
+      "score": 0.7062,
+      "frame_idx": 0,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 3,
+      "description": "vest",
+      "box": [
+        2102.920166015625,
+        1180.89306640625,
+        2444.819580078125,
+        1603.844482421875
+      ],
+      "score": 0.4557,
+      "frame_idx": 2,
+      "box_area_ratio": 0.017
+    },
+    {
+      "entity_id": 4,
+      "description": "wooden cane",
+      "box": [
+        1866.529296875,
+        1366.6097412109375,
+        2177.864990234375,
+        2006.3902587890625
+      ],
+      "score": 0.6493,
+      "frame_idx": 0,
+      "box_area_ratio": 0.024
+    },
+    {
+      "entity_id": 5,
+      "description": "wooden bench",
+      "box": [
+        1855.6185302734375,
+        1614.3892822265625,
+        2571.3388671875,
+        1986.8927001953125
+      ],
+      "score": 0.5554,
+      "frame_idx": 1,
+      "box_area_ratio": 0.032
+    },
+    {
+      "entity_id": 6,
+      "description": "large leafless tree",
+      "box": null,
+      "score": 0.7492,
+      "frame_idx": null,
+      "box_area_ratio": 0.924,
+      "rejected_reason": "box covers 92% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 7,
+      "description": "dirt path",
+      "box": [
+        388.45208740234375,
+        1336.7225341796875,
+        3847.44970703125,
+        1855.34326171875
+      ],
+      "score": 0.5124,
+      "frame_idx": 2,
+      "box_area_ratio": 0.216
+    },
+    {
+      "entity_id": 8,
+      "description": "green field",
+      "box": [
+        0.12416839599609375,
+        1302.3995361328125,
+        3837.667236328125,
+        2153.560791015625
+      ],
+      "score": 0.6165,
+      "frame_idx": 1,
+      "box_area_ratio": 0.394
+    },
+    {
+      "entity_id": 9,
+      "description": "overcast sky",
+      "box": null,
+      "score": 0.7627,
+      "frame_idx": null,
+      "box_area_ratio": 0.589,
+      "rejected_reason": "box covers 59% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 7
+}

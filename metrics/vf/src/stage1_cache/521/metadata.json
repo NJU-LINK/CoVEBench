@@ -1,0 +1,11 @@
+{
+  "id": 521,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-people-dancing-at-a-little-costume-party-34458.mp4",
+  "local_path": "/root/cut/data/mixkit-people-dancing-at-a-little-costume-party-34458.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

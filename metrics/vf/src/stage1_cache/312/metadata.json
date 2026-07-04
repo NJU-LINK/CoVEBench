@@ -1,0 +1,142 @@
+{
+  "id": 312,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/274.mp4",
+  "local_path": "/root/cut/data/274.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background environment and modifying ground textures without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific brown color, size, and breed of the dachshund preserved as it runs and is picked up?",
+    "Comparing Video A and Video B, how accurately is the red color and structural integrity of the car (hatchback) preserved?",
+    "Comparing Video A and Video B, how well are the specific details of the red cooler and the Coca-Cola bottles inside preserved?",
+    "Comparing Video A and Video B, how well is the woman's appearance, her clipboard, and her smiling expression preserved?",
+    "Comparing Video A and Video B, how accurately is the 2D animated sequence of the cartoon dog and girl preserved in its original style and timing?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the couple clinking their bottles preserved?",
+    "Comparing Video A and Video B, how well is the camera motion (panning/movement) preserved throughout the entire sequence?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "brown dachshund"
+    },
+    {
+      "description": "red hatchback"
+    },
+    {
+      "description": "red cooler"
+    },
+    {
+      "description": "coca-cola bottles"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "clipboard"
+    },
+    {
+      "description": "cartoon dog"
+    },
+    {
+      "description": "cartoon girl"
+    },
+    {
+      "description": "man"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 30,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "brown dachshund",
+      "box": null,
+      "score": 0.3879,
+      "frame_idx": null,
+      "box_area_ratio": 0.996,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "red hatchback",
+      "box": [
+        805.42724609375,
+        221.1241455078125,
+        1086.271240234375,
+        466.7283020019531
+      ],
+      "score": 0.6795,
+      "frame_idx": 2,
+      "box_area_ratio": 0.075
+    },
+    {
+      "entity_id": 3,
+      "description": "red cooler",
+      "box": [
+        804.5684814453125,
+        219.02537536621094,
+        1084.890869140625,
+        467.6851501464844
+      ],
+      "score": 0.7756,
+      "frame_idx": 2,
+      "box_area_ratio": 0.076
+    },
+    {
+      "entity_id": 4,
+      "description": "coca-cola bottles",
+      "box": null,
+      "score": 0.5436,
+      "frame_idx": null,
+      "box_area_ratio": 0.985,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 5,
+      "description": "woman",
+      "box": null,
+      "score": 0.3585,
+      "frame_idx": null,
+      "box_area_ratio": 0.997,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 6,
+      "description": "clipboard",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 7,
+      "description": "cartoon dog",
+      "box": null,
+      "score": 0.6651,
+      "frame_idx": null,
+      "box_area_ratio": 0.985,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 8,
+      "description": "cartoon girl",
+      "box": null,
+      "score": 0.6246,
+      "frame_idx": null,
+      "box_area_ratio": 0.986,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 9,
+      "description": "man",
+      "box": null,
+      "score": 0.308,
+      "frame_idx": null,
+      "box_area_ratio": 0.996,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

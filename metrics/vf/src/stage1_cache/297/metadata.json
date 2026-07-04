@@ -1,0 +1,89 @@
+{
+  "id": 297,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/217.mp4",
+  "local_path": "/root/cut/data/217.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object's color and replacing background environment elements without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the climber's specific climbing motion and sequence of moves preserved?",
+    "Comparing Video A and Video B, how accurately are the black pants and the blue ropes of the climbing harness preserved?",
+    "Comparing Video A and Video B, how well is the low-angle camera perspective looking up at the climber preserved?",
+    "Comparing Video A and Video B, how well are the metal carabiners on the waist harness preserved in terms of their count and metallic appearance?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "climber"
+    },
+    {
+      "description": "black pants"
+    },
+    {
+      "description": "blue ropes"
+    },
+    {
+      "description": "metal carabiners"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "climber",
+      "box": [
+        777.3142700195312,
+        844.2703857421875,
+        1985.2210693359375,
+        2153.742431640625
+      ],
+      "score": 0.6235,
+      "frame_idx": 2,
+      "box_area_ratio": 0.191
+    },
+    {
+      "entity_id": 2,
+      "description": "black pants",
+      "box": [
+        489.505859375,
+        1289.840576171875,
+        1421.10302734375,
+        2143.787109375
+      ],
+      "score": 0.4864,
+      "frame_idx": 0,
+      "box_area_ratio": 0.096
+    },
+    {
+      "entity_id": 3,
+      "description": "blue ropes",
+      "box": [
+        305.6263122558594,
+        1075.2059326171875,
+        1416.8348388671875,
+        2059.1787109375
+      ],
+      "score": 0.527,
+      "frame_idx": 1,
+      "box_area_ratio": 0.132
+    },
+    {
+      "entity_id": 4,
+      "description": "metal carabiners",
+      "box": [
+        658.8082885742188,
+        820.3862915039062,
+        1996.5626220703125,
+        2157.191162109375
+      ],
+      "score": 0.3312,
+      "frame_idx": 2,
+      "box_area_ratio": 0.216
+    }
+  ],
+  "matched_entities": 4
+}

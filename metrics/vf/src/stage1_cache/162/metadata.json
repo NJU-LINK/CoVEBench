@@ -1,0 +1,73 @@
+{
+  "id": 162,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-splitting-a-piece-of-log-with-an-ax-22731.mp4",
+  "local_path": "/root/cut/data/mixkit-man-splitting-a-piece-of-log-with-an-ax-22731.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object pose, replacing objects, and modifying motion within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual appearance, bark texture, and position of the log preserved?",
+    "Comparing Video A and Video B, how accurately is the bed of pine needles on the forest floor preserved?",
+    "Comparing Video A and Video B, how well is the forest background preserved while allowing for the necessary reframing to accommodate the kneeling posture?",
+    "Comparing Video A and Video B, how coherent is the overall clip pacing given the change from a single axe strike to repeated saw strokes?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "log"
+    },
+    {
+      "description": "pine needles"
+    },
+    {
+      "description": "forest"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "log",
+      "box": [
+        588.4542846679688,
+        365.95904541015625,
+        1538.83203125,
+        1004.5897216796875
+      ],
+      "score": 0.8111,
+      "frame_idx": 1,
+      "box_area_ratio": 0.293
+    },
+    {
+      "entity_id": 2,
+      "description": "pine needles",
+      "box": [
+        583.327880859375,
+        373.2243347167969,
+        1531.39013671875,
+        1002.5402221679688
+      ],
+      "score": 0.4144,
+      "frame_idx": 0,
+      "box_area_ratio": 0.288
+    },
+    {
+      "entity_id": 3,
+      "description": "forest",
+      "box": [
+        586.2297973632812,
+        368.4486999511719,
+        1534.9156494140625,
+        1001.4887084960938
+      ],
+      "score": 0.6424,
+      "frame_idx": 1,
+      "box_area_ratio": 0.29
+    }
+  ],
+  "matched_entities": 3
+}

@@ -1,0 +1,58 @@
+{
+  "id": 535,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/15.mp4",
+  "local_path": "/root/cut/data/15.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding a foreground subject (traveler) and changing environmental lighting, which are permitted editing types without camera or style transformations.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the stone-column row and its structure preserved?",
+    "Comparing Video A and Video B, how well is the hilltop castle preserved?",
+    "Comparing Video A and Video B, how well is the wide ruin layout preserved outside the requested edits?",
+    "Comparing Video A and Video B, how well is the clear-sky feeling preserved apart from the warm lighting shift?",
+    "Comparing Video A and Video B, how well is the overall ancient-site geometry preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "stone columns"
+    },
+    {
+      "description": "hilltop castle"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "stone columns",
+      "box": [
+        -9.332313537597656,
+        1080.0823974609375,
+        3389.718017578125,
+        1975.42529296875
+      ],
+      "score": 0.6077,
+      "frame_idx": 2,
+      "box_area_ratio": 0.367
+    },
+    {
+      "entity_id": 2,
+      "description": "hilltop castle",
+      "box": [
+        1810.6356201171875,
+        92.57232666015625,
+        2571.99365234375,
+        432.440673828125
+      ],
+      "score": 0.588,
+      "frame_idx": 2,
+      "box_area_ratio": 0.031
+    }
+  ],
+  "matched_entities": 2
+}

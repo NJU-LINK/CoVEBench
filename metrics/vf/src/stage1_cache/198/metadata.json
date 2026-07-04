@@ -1,0 +1,11 @@
+{
+  "id": 198,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-on-the-street-watching-head-on-in-the-foreground-4896.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-on-the-street-watching-head-on-in-the-foreground-4896.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

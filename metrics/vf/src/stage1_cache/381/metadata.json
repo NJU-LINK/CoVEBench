@@ -1,0 +1,90 @@
+{
+  "id": 381,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-person-fills-a-glass-with-cola-on-white-background-5100.mp4",
+  "local_path": "/root/cut/data/mixkit-person-fills-a-glass-with-cola-on-white-background-5100.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing a foreground object (bottle with a can) and modifying its intrinsic action without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance, skin tone, and texture of the hand preserved?",
+    "Comparing Video A and Video B, how accurately are the tall glass and the ice cubes inside it preserved?",
+    "Comparing Video A and Video B, how well is the static white background preserved?",
+    "Comparing Video A and Video B, how accurately is the temporal timing of the soda hitting the ice cubes preserved?",
+    "Comparing Video A and Video B, how well is the initial action of using tongs to place ice cubes preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "hand"
+    },
+    {
+      "description": "tall glass"
+    },
+    {
+      "description": "ice cubes"
+    },
+    {
+      "description": "tongs"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 35,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hand",
+      "box": [
+        910.3170166015625,
+        3.5770153999328613,
+        1569.0589599609375,
+        192.55992126464844
+      ],
+      "score": 0.5523,
+      "frame_idx": 1,
+      "box_area_ratio": 0.06
+    },
+    {
+      "entity_id": 2,
+      "description": "tall glass",
+      "box": [
+        676.6729125976562,
+        315.6375732421875,
+        1210.9017333984375,
+        1018.9691772460938
+      ],
+      "score": 0.9201,
+      "frame_idx": 2,
+      "box_area_ratio": 0.181
+    },
+    {
+      "entity_id": 3,
+      "description": "ice cubes",
+      "box": [
+        817.92626953125,
+        34.46444320678711,
+        1182.5318603515625,
+        419.088623046875
+      ],
+      "score": 0.6198,
+      "frame_idx": 0,
+      "box_area_ratio": 0.068
+    },
+    {
+      "entity_id": 4,
+      "description": "tongs",
+      "box": [
+        875.601318359375,
+        0.44499456882476807,
+        1254.0482177734375,
+        227.65277099609375
+      ],
+      "score": 0.5721,
+      "frame_idx": 1,
+      "box_area_ratio": 0.041
+    }
+  ],
+  "matched_entities": 4
+}

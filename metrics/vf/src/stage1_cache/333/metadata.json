@@ -1,0 +1,132 @@
+{
+  "id": 333,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-boy-surprising-his-girlfriend-with-a-rose-39966.mp4",
+  "local_path": "/root/cut/data/mixkit-boy-surprising-his-girlfriend-with-a-rose-39966.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object's attribute (color) without any camera movement or global style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's brown sweater preserved in terms of color, texture, and fit?",
+    "Comparing Video A and Video B, how accurately is the appearance and color of the pink rose preserved throughout the interaction?",
+    "Comparing Video A and Video B, how well are the facial identities and expressions of the man and woman preserved during the smile and embrace?",
+    "Comparing Video A and Video B, how accurately is the pink-themed cafe background (furniture, walls, decor) preserved?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the embrace preserved (i.e., does the embrace start and end at the exact same relative moment)?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "brown sweater"
+    },
+    {
+      "description": "pink rose"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "furniture"
+    },
+    {
+      "description": "walls"
+    },
+    {
+      "description": "decor"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        616.73046875,
+        109.11088562011719,
+        986.5758056640625,
+        1845.846923828125
+      ],
+      "score": 0.601,
+      "frame_idx": 0,
+      "box_area_ratio": 0.31
+    },
+    {
+      "entity_id": 2,
+      "description": "brown sweater",
+      "box": [
+        55.125091552734375,
+        309.0626220703125,
+        432.0081787109375,
+        1696.4556884765625
+      ],
+      "score": 0.6885,
+      "frame_idx": 2,
+      "box_area_ratio": 0.252
+    },
+    {
+      "entity_id": 3,
+      "description": "pink rose",
+      "box": [
+        54.00260543823242,
+        310.766357421875,
+        429.81005859375,
+        1619.7470703125
+      ],
+      "score": 0.4142,
+      "frame_idx": 2,
+      "box_area_ratio": 0.237
+    },
+    {
+      "entity_id": 4,
+      "description": "woman",
+      "box": [
+        55.24332809448242,
+        316.8104553222656,
+        427.9706115722656,
+        1684.1810302734375
+      ],
+      "score": 0.7364,
+      "frame_idx": 2,
+      "box_area_ratio": 0.246
+    },
+    {
+      "entity_id": 5,
+      "description": "furniture",
+      "box": [
+        894.2893676757812,
+        965.8056030273438,
+        1079.7200927734375,
+        1437.0316162109375
+      ],
+      "score": 0.3644,
+      "frame_idx": 2,
+      "box_area_ratio": 0.042
+    },
+    {
+      "entity_id": 6,
+      "description": "walls",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 7,
+      "description": "decor",
+      "box": [
+        418.812255859375,
+        677.9793090820312,
+        567.8998413085938,
+        871.2044067382812
+      ],
+      "score": 0.3234,
+      "frame_idx": 2,
+      "box_area_ratio": 0.014
+    }
+  ],
+  "matched_entities": 6
+}

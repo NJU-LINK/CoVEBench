@@ -1,0 +1,11 @@
+{
+  "id": 329,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-basketball-players-stacking-hands-4588.mp4",
+  "local_path": "/root/cut/data/mixkit-basketball-players-stacking-hands-4588.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,89 @@
+{
+  "id": 285,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_5439_0.mp4",
+  "local_path": "/root/cut/data/LMArena_5439_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing the background, replacing a foreground object, and adding a new subject, all of which are allowed categories.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the wooden texture and color of the cabin walls preserved?",
+    "Comparing Video A and Video B, how well are the bed linens and pillows preserved in the areas where the person is NOT sitting?",
+    "Comparing Video A and Video B, how accurately is the structure and frame of the sliding glass doors preserved?",
+    "Comparing Video A and Video B, how well is the camera's perspective and any movement preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "wooden cabin walls"
+    },
+    {
+      "description": "bed linens"
+    },
+    {
+      "description": "pillows"
+    },
+    {
+      "description": "sliding glass doors"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wooden cabin walls",
+      "box": [
+        3.730959892272949,
+        937.7567138671875,
+        1040.8057861328125,
+        1944.87060546875
+      ],
+      "score": 0.4427,
+      "frame_idx": 1,
+      "box_area_ratio": 0.503
+    },
+    {
+      "entity_id": 2,
+      "description": "bed linens",
+      "box": [
+        2.019620656967163,
+        1184.536376953125,
+        1046.9637451171875,
+        1947.10400390625
+      ],
+      "score": 0.7478,
+      "frame_idx": 0,
+      "box_area_ratio": 0.384
+    },
+    {
+      "entity_id": 3,
+      "description": "pillows",
+      "box": [
+        55.01390075683594,
+        1121.4453125,
+        327.2785339355469,
+        1299.1903076171875
+      ],
+      "score": 0.4683,
+      "frame_idx": 0,
+      "box_area_ratio": 0.023
+    },
+    {
+      "entity_id": 4,
+      "description": "sliding glass doors",
+      "box": [
+        686.7241821289062,
+        508.9518127441406,
+        1061.885498046875,
+        1359.1781005859375
+      ],
+      "score": 0.7084,
+      "frame_idx": 0,
+      "box_area_ratio": 0.154
+    }
+  ],
+  "matched_entities": 4
+}

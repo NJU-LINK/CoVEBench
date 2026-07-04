@@ -1,0 +1,140 @@
+{
+  "id": 489,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-birthday-muffin-with-a-burning-candle-5102.mp4",
+  "local_path": "/root/cut/data/mixkit-birthday-muffin-with-a-burning-candle-5102.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing objects from the background without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well does the lighting on the blue frosting and the cupcake base remain consistent with the glow of the candle flame as the perspective changes?",
+    "Comparing Video A and Video B, how accurately does the candle flame in Video B maintain the same flickering frequency and light intensity as shown in Video A?",
+    "Comparing Video A and Video B, how well is the appearance of the chocolate cupcake and its bright blue frosting preserved?",
+    "Comparing Video A and Video B, how accurately are the colorful sprinkles on the frosting preserved?",
+    "Comparing Video A and Video B, how well are the colors and soft-focus quality of the background balloons (blue, red, purple, yellow) preserved?",
+    "Comparing Video A and Video B, how accurately is the white birthday candle and its flickering flame preserved?",
+    "Comparing Video A and Video B, how well is the overall cheerful lighting and the specific glow on the frosting preserved?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "blue frosting"
+    },
+    {
+      "description": "cupcake base"
+    },
+    {
+      "description": "candle flame"
+    },
+    {
+      "description": "chocolate cupcake"
+    },
+    {
+      "description": "colorful sprinkles"
+    },
+    {
+      "description": "background balloons"
+    },
+    {
+      "description": "white birthday candle"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "blue frosting",
+      "box": [
+        723.837158203125,
+        565.296142578125,
+        1163.960205078125,
+        818.009521484375
+      ],
+      "score": 0.6792,
+      "frame_idx": 1,
+      "box_area_ratio": 0.054
+    },
+    {
+      "entity_id": 2,
+      "description": "cupcake base",
+      "box": [
+        704.8820190429688,
+        793.0077514648438,
+        1223.9583740234375,
+        1076.1834716796875
+      ],
+      "score": 0.4805,
+      "frame_idx": 1,
+      "box_area_ratio": 0.071
+    },
+    {
+      "entity_id": 3,
+      "description": "candle flame",
+      "box": [
+        912.2102661132812,
+        173.99655151367188,
+        974.2342529296875,
+        574.0423583984375
+      ],
+      "score": 0.6464,
+      "frame_idx": 0,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 4,
+      "description": "chocolate cupcake",
+      "box": [
+        700.4977416992188,
+        563.6511840820312,
+        1228.692138671875,
+        1074.0211181640625
+      ],
+      "score": 0.6702,
+      "frame_idx": 2,
+      "box_area_ratio": 0.13
+    },
+    {
+      "entity_id": 5,
+      "description": "colorful sprinkles",
+      "box": [
+        723.6177978515625,
+        562.9556274414062,
+        1165.31884765625,
+        821.2847900390625
+      ],
+      "score": 0.6748,
+      "frame_idx": 1,
+      "box_area_ratio": 0.055
+    },
+    {
+      "entity_id": 6,
+      "description": "background balloons",
+      "box": [
+        1381.9134521484375,
+        650.90673828125,
+        1780.89794921875,
+        1069.7962646484375
+      ],
+      "score": 0.3994,
+      "frame_idx": 2,
+      "box_area_ratio": 0.081
+    },
+    {
+      "entity_id": 7,
+      "description": "white birthday candle",
+      "box": [
+        909.87646484375,
+        172.2346649169922,
+        975.9955444335938,
+        573.7337646484375
+      ],
+      "score": 0.8086,
+      "frame_idx": 0,
+      "box_area_ratio": 0.013
+    }
+  ],
+  "matched_entities": 7
+}

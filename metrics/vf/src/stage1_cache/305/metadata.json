@@ -1,0 +1,11 @@
+{
+  "id": 305,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/242.mp4",
+  "local_path": "/root/cut/data/242.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction involves a visual style change including warm tints and color grading associated with a sunset.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

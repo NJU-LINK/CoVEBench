@@ -1,0 +1,85 @@
+{
+  "id": 471,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/634_1_8.0s.mp4",
+  "local_path": "/root/cut/data/634_1_8.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the object's position and action, and modifying the background environment. The 'warm, amber lighting' is intrinsic to the 'late afternoon sunset' environment swap, which is explicitly allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the girl's character design (dark hair, white dress, anime style) preserved?",
+    "Comparing Video A and Video B, how accurately are the vibrant pink roses and the textured yellow fence preserved?",
+    "Comparing Video A and Video B, how well is the painterly impressionist art style maintained?",
+    "Comparing Video A and Video B, how well is the temporal stability of the background textures (fence and roses) preserved during the new camera motion?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "anime girl"
+    },
+    {
+      "description": "white dress"
+    },
+    {
+      "description": "pink roses"
+    },
+    {
+      "description": "yellow fence"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "anime girl",
+      "box": [
+        260.0844421386719,
+        15.138346672058105,
+        718.7325439453125,
+        533.2593383789062
+      ],
+      "score": 0.748,
+      "frame_idx": 0,
+      "box_area_ratio": 0.335
+    },
+    {
+      "entity_id": 2,
+      "description": "white dress",
+      "box": [
+        292.53936767578125,
+        11.499975204467773,
+        760.5711669921875,
+        532.1064453125
+      ],
+      "score": 0.8575,
+      "frame_idx": 2,
+      "box_area_ratio": 0.343
+    },
+    {
+      "entity_id": 3,
+      "description": "pink roses",
+      "box": [
+        503.88165283203125,
+        269.54791259765625,
+        1285.498046875,
+        535.6898803710938
+      ],
+      "score": 0.4445,
+      "frame_idx": 1,
+      "box_area_ratio": 0.293
+    },
+    {
+      "entity_id": 4,
+      "description": "yellow fence",
+      "box": null,
+      "score": 0.6405,
+      "frame_idx": null,
+      "box_area_ratio": 0.982,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

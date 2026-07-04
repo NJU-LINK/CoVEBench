@@ -1,0 +1,57 @@
+{
+  "id": 546,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/42.mp4",
+  "local_path": "/root/cut/data/42.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing a foreground object (dog), changing its motion (walking instead of sniffing), and adding an environmental element (fence) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the wooden house in the background preserved (structure, placement, and overall look)?",
+    "Comparing Video A and Video B, how well is the overall sunny daytime lighting preserved (brightness and general sunlit feel)?",
+    "Comparing Video A and Video B, how well is the grass/backyard ground appearance preserved outside the immediate area affected by the dog/fence edit (texture stability and lack of 'boiling')?",
+    "Comparing Video A and Video B, how well is the overall framing/shot style preserved (e.g., eye-level backyard view without major reframing)?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "wooden house"
+    },
+    {
+      "description": "grass"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 14,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "wooden house",
+      "box": [
+        731.1041870117188,
+        101.50595092773438,
+        3073.3115234375,
+        1171.43017578125
+      ],
+      "score": 0.6028,
+      "frame_idx": 0,
+      "box_area_ratio": 0.302
+    },
+    {
+      "entity_id": 2,
+      "description": "grass",
+      "box": [
+        -0.24318695068359375,
+        1116.277099609375,
+        3839.24755859375,
+        2150.788330078125
+      ],
+      "score": 0.7048,
+      "frame_idx": 2,
+      "box_area_ratio": 0.479
+    }
+  ],
+  "matched_entities": 2
+}

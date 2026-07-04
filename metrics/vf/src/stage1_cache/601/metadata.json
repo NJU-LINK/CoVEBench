@@ -1,0 +1,163 @@
+{
+  "id": 601,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/160.mp4",
+  "local_path": "/root/cut/data/160.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding objects and changing the position of subjects within the scene, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's original outfit (green t-shirt and brown pants) preserved aside from the added helmet?",
+    "Comparing Video A and Video B, how accurately is the horse's appearance preserved, including its brown coat and the white star on its forehead?",
+    "Comparing Video A and Video B, how well are the background elements (wooden fence, green trees, fields, and sandy arena) preserved aside from the added bucket?",
+    "Comparing Video A and Video B, how accurately are the movements and gestures of the woman and the horse preserved (posture, hand motions, and horse stillness)?",
+    "Comparing Video A and Video B, how well is the bright direct sunlight and overall lighting character preserved, excluding shadows from the new objects?",
+    "Comparing Video A and Video B, how well is the texture and detail of the sandy arena ground preserved throughout the video?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "green t-shirt"
+    },
+    {
+      "description": "brown pants"
+    },
+    {
+      "description": "brown horse"
+    },
+    {
+      "description": "white star"
+    },
+    {
+      "description": "wooden fence"
+    },
+    {
+      "description": "green trees"
+    },
+    {
+      "description": "fields"
+    },
+    {
+      "description": "sandy arena"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 19,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        1797.5596923828125,
+        296.4174499511719,
+        2421.3515625,
+        2146.95654296875
+      ],
+      "score": 0.87,
+      "frame_idx": 0,
+      "box_area_ratio": 0.139
+    },
+    {
+      "entity_id": 2,
+      "description": "green t-shirt",
+      "box": [
+        1901.2559814453125,
+        628.6646118164062,
+        2483.95654296875,
+        1185.2025146484375
+      ],
+      "score": 0.4509,
+      "frame_idx": 1,
+      "box_area_ratio": 0.039
+    },
+    {
+      "entity_id": 3,
+      "description": "brown pants",
+      "box": [
+        1798.72509765625,
+        298.83807373046875,
+        2422.384765625,
+        2141.160888671875
+      ],
+      "score": 0.8242,
+      "frame_idx": 0,
+      "box_area_ratio": 0.139
+    },
+    {
+      "entity_id": 4,
+      "description": "brown horse",
+      "box": [
+        830.8004150390625,
+        236.57611083984375,
+        1941.7515869140625,
+        2141.607421875
+      ],
+      "score": 0.9436,
+      "frame_idx": 2,
+      "box_area_ratio": 0.255
+    },
+    {
+      "entity_id": 5,
+      "description": "white star",
+      "box": [
+        863.605224609375,
+        186.4599151611328,
+        1906.197265625,
+        2132.76611328125
+      ],
+      "score": 0.5126,
+      "frame_idx": 0,
+      "box_area_ratio": 0.245
+    },
+    {
+      "entity_id": 6,
+      "description": "wooden fence",
+      "box": [
+        16.690521240234375,
+        580.6233520507812,
+        3856.652099609375,
+        784.6392211914062
+      ],
+      "score": 0.5472,
+      "frame_idx": 2,
+      "box_area_ratio": 0.094
+    },
+    {
+      "entity_id": 7,
+      "description": "green trees",
+      "box": [
+        7.313289642333984,
+        6.183575630187988,
+        809.3943481445312,
+        706.3941040039062
+      ],
+      "score": 0.3686,
+      "frame_idx": 1,
+      "box_area_ratio": 0.068
+    },
+    {
+      "entity_id": 8,
+      "description": "fields",
+      "box": null,
+      "score": 0.5296,
+      "frame_idx": null,
+      "box_area_ratio": 0.681,
+      "rejected_reason": "box covers 68% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 9,
+      "description": "sandy arena",
+      "box": null,
+      "score": 0.7266,
+      "frame_idx": null,
+      "box_area_ratio": 0.654,
+      "rejected_reason": "box covers 65% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 7
+}

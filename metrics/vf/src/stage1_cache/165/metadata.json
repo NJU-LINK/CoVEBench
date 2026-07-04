@@ -1,0 +1,11 @@
+{
+  "id": 165,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-man-wearing-virtual-reality-glasses-176.mp4",
+  "local_path": "/root/cut/data/mixkit-man-wearing-virtual-reality-glasses-176.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

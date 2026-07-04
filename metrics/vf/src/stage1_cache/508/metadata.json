@@ -1,0 +1,123 @@
+{
+  "id": 508,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-colorful-cake-while-cutting-it-with-a-knife-5118.mp4",
+  "local_path": "/root/cut/data/mixkit-colorful-cake-while-cutting-it-with-a-knife-5118.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground object's material and changing the motion speed of a subject within the scene, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and material of the white pedestal preserved?",
+    "Comparing Video A and Video B, how well is the gold chain bracelet on the person's wrist preserved?",
+    "Comparing Video A and Video B, how well is the silver metal material of the cake server preserved?",
+    "Comparing Video A and Video B, how well are the blurred macarons and cupcakes in the background and foreground preserved?",
+    "Comparing Video A and Video B, how well is the skin tone and visual appearance of the person's hand preserved (excluding the speed of the action)?",
+    "Comparing Video A and Video B, how accurately is the overall shallow depth of field and bright lighting environment preserved?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "white pedestal"
+    },
+    {
+      "description": "gold chain bracelet"
+    },
+    {
+      "description": "silver cake server"
+    },
+    {
+      "description": "macarons"
+    },
+    {
+      "description": "cupcakes"
+    },
+    {
+      "description": "hand"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "white pedestal",
+      "box": [
+        -3.2298660278320312,
+        609.2265625,
+        1482.0750732421875,
+        928.4028930664062
+      ],
+      "score": 0.4311,
+      "frame_idx": 0,
+      "box_area_ratio": 0.229
+    },
+    {
+      "entity_id": 2,
+      "description": "gold chain bracelet",
+      "box": [
+        870.6090698242188,
+        -2.0789427757263184,
+        1309.9385986328125,
+        214.90286254882812
+      ],
+      "score": 0.602,
+      "frame_idx": 2,
+      "box_area_ratio": 0.046
+    },
+    {
+      "entity_id": 3,
+      "description": "silver cake server",
+      "box": [
+        17.859821319580078,
+        139.43228149414062,
+        1287.8267822265625,
+        777.5189819335938
+      ],
+      "score": 0.441,
+      "frame_idx": 0,
+      "box_area_ratio": 0.391
+    },
+    {
+      "entity_id": 4,
+      "description": "macarons",
+      "box": [
+        12.248554229736328,
+        134.85568237304688,
+        1281.8758544921875,
+        778.4542846679688
+      ],
+      "score": 0.741,
+      "frame_idx": 0,
+      "box_area_ratio": 0.394
+    },
+    {
+      "entity_id": 5,
+      "description": "cupcakes",
+      "box": [
+        12.277679443359375,
+        132.00363159179688,
+        1283.461669921875,
+        782.4141845703125
+      ],
+      "score": 0.6848,
+      "frame_idx": 0,
+      "box_area_ratio": 0.399
+    },
+    {
+      "entity_id": 6,
+      "description": "hand",
+      "box": [
+        506.91265869140625,
+        7.073886394500732,
+        1301.0389404296875,
+        743.4209594726562
+      ],
+      "score": 0.8558,
+      "frame_idx": 2,
+      "box_area_ratio": 0.282
+    }
+  ],
+  "matched_entities": 6
+}

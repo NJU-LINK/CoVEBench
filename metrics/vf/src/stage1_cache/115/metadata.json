@@ -1,0 +1,11 @@
+{
+  "id": 115,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-young-woman-using-skincare-cream-product-on-her-face-50422.mp4",
+  "local_path": "/root/cut/data/mixkit-a-young-woman-using-skincare-cream-product-on-her-face-50422.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Style",
+    "method": "category"
+  },
+  "status": "skipped"
+}

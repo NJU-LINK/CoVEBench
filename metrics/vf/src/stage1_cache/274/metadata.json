@@ -1,0 +1,86 @@
+{
+  "id": 274,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_4972_0.mp4",
+  "local_path": "/root/cut/data/LMArena_4972_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing the background environment and modifying a foreground object attribute without camera movement or stylistic filter changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance, skin tone, and texture of the two hands preserved?",
+    "Comparing Video A and Video B, how accurately is the white text 'it's Time FOR Coffee' and the coffee cup icon on the bag preserved?",
+    "Comparing Video A and Video B, how well is the black color of the bag's body preserved?",
+    "Comparing Video A and Video B, how accurately is the motion of the hands adjusting the bag preserved?",
+    "Comparing Video A and Video B, how well is the framing and camera motion (or lack thereof) preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "hands"
+    },
+    {
+      "description": "white text"
+    },
+    {
+      "description": "coffee cup icon"
+    },
+    {
+      "description": "black bag"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "hands",
+      "box": [
+        584.6107788085938,
+        374.2420959472656,
+        779.94189453125,
+        732.6611328125
+      ],
+      "score": 0.5868,
+      "frame_idx": 1,
+      "box_area_ratio": 0.076
+    },
+    {
+      "entity_id": 2,
+      "description": "white text",
+      "box": [
+        213.38955688476562,
+        523.9577026367188,
+        485.914306640625,
+        805.9523315429688
+      ],
+      "score": 0.7204,
+      "frame_idx": 0,
+      "box_area_ratio": 0.083
+    },
+    {
+      "entity_id": 3,
+      "description": "coffee cup icon",
+      "box": [
+        302.9485778808594,
+        505.9246520996094,
+        395.6230163574219,
+        578.3580322265625
+      ],
+      "score": 0.8965,
+      "frame_idx": 1,
+      "box_area_ratio": 0.007
+    },
+    {
+      "entity_id": 4,
+      "description": "black bag",
+      "box": null,
+      "score": 0.4475,
+      "frame_idx": null,
+      "box_area_ratio": 0.584,
+      "rejected_reason": "box covers 58% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

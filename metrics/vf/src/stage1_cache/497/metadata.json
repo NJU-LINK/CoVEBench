@@ -1,0 +1,170 @@
+{
+  "id": 497,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-friends-laughing-and-dancing-at-a-costume-party-34450.mp4",
+  "local_path": "/root/cut/data/mixkit-friends-laughing-and-dancing-at-a-costume-party-34450.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and costume of the man in the black vampire cape on the left preserved?",
+    "Comparing Video A and Video B, how accurately are the actions and expressions of the two women in the center (laughing and holding drinks) maintained?",
+    "Comparing Video A and Video B, how well is the atmospheric blue and purple lighting of the room preserved?",
+    "Comparing Video A and Video B, how well are the background decorations (bookshelf, skeleton, scattered balloons) preserved in their original positions?",
+    "Comparing Video A and Video B, how accurately is the temporal synchronization of the party guests' movements preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man on the left"
+    },
+    {
+      "description": "black vampire cape"
+    },
+    {
+      "description": "woman in black skirt"
+    },
+    {
+      "description": "woman in floral dress"
+    },
+    {
+      "description": "devil horns"
+    },
+    {
+      "description": "drinks"
+    },
+    {
+      "description": "bookshelf"
+    },
+    {
+      "description": "skeleton"
+    },
+    {
+      "description": "balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man on the left",
+      "box": [
+        139.31666564941406,
+        2.9961133003234863,
+        614.6567993164062,
+        1073.2559814453125
+      ],
+      "score": 0.9246,
+      "frame_idx": 1,
+      "box_area_ratio": 0.245
+    },
+    {
+      "entity_id": 2,
+      "description": "black vampire cape",
+      "box": [
+        131.5814971923828,
+        5.252290725708008,
+        576.7742919921875,
+        1074.5372314453125
+      ],
+      "score": 0.44,
+      "frame_idx": 2,
+      "box_area_ratio": 0.23
+    },
+    {
+      "entity_id": 3,
+      "description": "woman in black skirt",
+      "box": [
+        583.118408203125,
+        281.589111328125,
+        900.7064819335938,
+        1071.757080078125
+      ],
+      "score": 0.7071,
+      "frame_idx": 1,
+      "box_area_ratio": 0.121
+    },
+    {
+      "entity_id": 4,
+      "description": "woman in floral dress",
+      "box": [
+        1012.502197265625,
+        279.966552734375,
+        1297.369384765625,
+        1068.02490234375
+      ],
+      "score": 0.7897,
+      "frame_idx": 2,
+      "box_area_ratio": 0.108
+    },
+    {
+      "entity_id": 5,
+      "description": "devil horns",
+      "box": [
+        579.9365844726562,
+        410.79815673828125,
+        673.7776489257812,
+        547.8081665039062
+      ],
+      "score": 0.3378,
+      "frame_idx": 2,
+      "box_area_ratio": 0.006
+    },
+    {
+      "entity_id": 6,
+      "description": "drinks",
+      "box": [
+        1205.3731689453125,
+        917.3013305664062,
+        1247.3671875,
+        972.5266723632812
+      ],
+      "score": 0.5111,
+      "frame_idx": 1,
+      "box_area_ratio": 0.001
+    },
+    {
+      "entity_id": 7,
+      "description": "bookshelf",
+      "box": [
+        654.0934448242188,
+        247.84388732910156,
+        1290.420654296875,
+        536.3379516601562
+      ],
+      "score": 0.512,
+      "frame_idx": 0,
+      "box_area_ratio": 0.089
+    },
+    {
+      "entity_id": 8,
+      "description": "skeleton",
+      "box": [
+        2.360072135925293,
+        3.229883909225464,
+        147.95999145507812,
+        489.4155578613281
+      ],
+      "score": 0.435,
+      "frame_idx": 1,
+      "box_area_ratio": 0.034
+    },
+    {
+      "entity_id": 9,
+      "description": "balloons",
+      "box": [
+        1202.674072265625,
+        0.9918956756591797,
+        1327.382080078125,
+        93.80984497070312
+      ],
+      "score": 0.6882,
+      "frame_idx": 2,
+      "box_area_ratio": 0.006
+    }
+  ],
+  "matched_entities": 9
+}

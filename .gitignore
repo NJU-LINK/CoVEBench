@@ -37,3 +37,10 @@ data/covebench_hf/
 .env
 .env.*
 !.env.example
+# VF generated artifacts
+metrics/vf/src/cut_outputs/
+metrics/vf/src/cut_logs/
+metrics/vf/src/outputs/
+metrics/vf/src/checkpoints/
+metrics/vf/src/*.tar.gz
+metrics/vf/src/*.part-*

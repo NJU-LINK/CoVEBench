@@ -1,0 +1,54 @@
+{
+  "id": 201,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-woman-with-dog-sitting-on-balcony-1534.mp4",
+  "local_path": "/root/cut/data/mixkit-woman-with-dog-sitting-on-balcony-1534.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects, changing actions/poses, and shifting positions within the scene, which are all allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity and hair structure preserved?",
+    "Comparing Video A and Video B, how accurately is the woman's clothing (color, texture, and style) preserved?",
+    "Comparing Video A and Video B, how well are the specific details and textures of the metal bench preserved?",
+    "Comparing Video A and Video B, how well is the background environment (elements behind the bench) preserved?",
+    "Comparing Video A and Video B, how accurately is the camera framing and motion preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "metal bench"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 36,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        605.8836669921875,
+        275.2543640136719,
+        1066.477294921875,
+        846.9005737304688
+      ],
+      "score": 0.9109,
+      "frame_idx": 1,
+      "box_area_ratio": 0.127
+    },
+    {
+      "entity_id": 2,
+      "description": "metal bench",
+      "box": null,
+      "score": 0.5296,
+      "frame_idx": null,
+      "box_area_ratio": 0.771,
+      "rejected_reason": "box covers 77% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

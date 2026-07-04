@@ -1,0 +1,11 @@
+{
+  "id": 171,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-person-inside-a-tent-with-dog-576.mp4",
+  "local_path": "/root/cut/data/mixkit-person-inside-a-tent-with-dog-576.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

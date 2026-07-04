@@ -1,0 +1,77 @@
+{
+  "id": 353,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-girl-eating-a-glazed-donut-with-a-milkshake-40831.mp4",
+  "local_path": "/root/cut/data/mixkit-girl-eating-a-glazed-donut-with-a-milkshake-40831.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying object scale, changing clothing, and altering subject pose/action without any camera movement or stylistic changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity and features preserved?",
+    "Comparing Video A and Video B, how accurately is the color and texture of the pink background maintained?",
+    "Comparing Video A and Video B, how well is the appearance and flow of the woman's long dark hair preserved?",
+    "Comparing Video A and Video B, how well is the specific striped pattern (color, width, and spacing of stripes) preserved on the new vest compared to the original shirt?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "pink background"
+    },
+    {
+      "description": "long dark hair"
+    },
+    {
+      "description": "striped shirt"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 21,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": null,
+      "score": 0.8808,
+      "frame_idx": null,
+      "box_area_ratio": 0.733,
+      "rejected_reason": "box covers 73% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "pink background",
+      "box": null,
+      "score": 0.8358,
+      "frame_idx": null,
+      "box_area_ratio": 0.99,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "long dark hair",
+      "box": [
+        556.1729125976562,
+        3.415728807449341,
+        1485.1170654296875,
+        1075.6632080078125
+      ],
+      "score": 0.8963,
+      "frame_idx": 0,
+      "box_area_ratio": 0.48
+    },
+    {
+      "entity_id": 4,
+      "description": "striped shirt",
+      "box": null,
+      "score": 0.6555,
+      "frame_idx": null,
+      "box_area_ratio": 0.739,
+      "rejected_reason": "box covers 74% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 1
+}

@@ -1,0 +1,140 @@
+{
+  "id": 501,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-a-group-of-friends-wearing-elegant-dresses-and-suits-celebrate-51523.mp4",
+  "local_path": "/root/cut/data/mixkit-a-group-of-friends-wearing-elegant-dresses-and-suits-celebrate-51523.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying an object's material and changing the motion intensity of subjects within the scene, which are permitted edits.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity and appearance of the woman in the black and gold patterned dress preserved?",
+    "Comparing Video A and Video B, how well is the appearance of the woman in the champagne-colored dress preserved?",
+    "Comparing Video A and Video B, how well is the woman in the silver sequined dress on the couch preserved?",
+    "Comparing Video A and Video B, how well is the man in the black suit sitting on the couch preserved?",
+    "Comparing Video A and Video B, how well are the '2024' gold foil balloons in the background preserved?",
+    "Comparing Video A and Video B, how well is the dimly lit apartment environment and the large window preserved?",
+    "Comparing Video A and Video B, how well are the gold and black balloons scattered around the room preserved?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "woman in black and gold patterned dress"
+    },
+    {
+      "description": "woman in champagne-colored dress"
+    },
+    {
+      "description": "woman in silver sequined dress"
+    },
+    {
+      "description": "man in black suit"
+    },
+    {
+      "description": "2024 gold foil balloons"
+    },
+    {
+      "description": "large window"
+    },
+    {
+      "description": "gold and black balloons"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 22,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman in black and gold patterned dress",
+      "box": [
+        636.3143920898438,
+        241.70816040039062,
+        980.755126953125,
+        1071.9364013671875
+      ],
+      "score": 0.7266,
+      "frame_idx": 2,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 2,
+      "description": "woman in champagne-colored dress",
+      "box": [
+        637.147705078125,
+        240.7256317138672,
+        982.1149291992188,
+        1071.509765625
+      ],
+      "score": 0.7003,
+      "frame_idx": 2,
+      "box_area_ratio": 0.138
+    },
+    {
+      "entity_id": 3,
+      "description": "woman in silver sequined dress",
+      "box": [
+        637.6494750976562,
+        240.8698272705078,
+        981.38623046875,
+        1069.6929931640625
+      ],
+      "score": 0.6872,
+      "frame_idx": 2,
+      "box_area_ratio": 0.137
+    },
+    {
+      "entity_id": 4,
+      "description": "man in black suit",
+      "box": [
+        1046.092529296875,
+        594.9392700195312,
+        1336.030029296875,
+        1071.7572021484375
+      ],
+      "score": 0.9178,
+      "frame_idx": 0,
+      "box_area_ratio": 0.067
+    },
+    {
+      "entity_id": 5,
+      "description": "2024 gold foil balloons",
+      "box": [
+        -8.784341812133789,
+        199.10394287109375,
+        720.1764526367188,
+        1082.3021240234375
+      ],
+      "score": 0.5653,
+      "frame_idx": 0,
+      "box_area_ratio": 0.31
+    },
+    {
+      "entity_id": 6,
+      "description": "large window",
+      "box": [
+        402.7948913574219,
+        9.775589942932129,
+        1619.85009765625,
+        875.07080078125
+      ],
+      "score": 0.3322,
+      "frame_idx": 0,
+      "box_area_ratio": 0.508
+    },
+    {
+      "entity_id": 7,
+      "description": "gold and black balloons",
+      "box": [
+        -3.1530189514160156,
+        198.14793395996094,
+        725.8309326171875,
+        1077.8143310546875
+      ],
+      "score": 0.4709,
+      "frame_idx": 0,
+      "box_area_ratio": 0.309
+    }
+  ],
+  "matched_entities": 7
+}

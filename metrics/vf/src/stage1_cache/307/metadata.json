@@ -1,0 +1,102 @@
+{
+  "id": 307,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/249.mp4",
+  "local_path": "/root/cut/data/249.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground subject's outfit, replacing a foreground object, and changing the background environment, all of which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the man's facial identity, including his beard and glasses, preserved?",
+    "Comparing Video A and Video B, how accurately are the man's hand gestures and talking motions synchronized?",
+    "Comparing Video A and Video B, how well is the man's posture of leaning back against the structure preserved?",
+    "Comparing Video A and Video B, how well is the man's headwear (the cap) preserved in terms of shape and color?",
+    "Comparing Video A and Video B, how well is the camera motion and framing of the scene preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "bearded man"
+    },
+    {
+      "description": "glasses"
+    },
+    {
+      "description": "hands"
+    },
+    {
+      "description": "cap"
+    },
+    {
+      "description": "black metal railing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 16,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "bearded man",
+      "box": null,
+      "score": 0.805,
+      "frame_idx": null,
+      "box_area_ratio": 0.597,
+      "rejected_reason": "box covers 60% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "glasses",
+      "box": [
+        1631.280029296875,
+        413.38677978515625,
+        2022.502197265625,
+        545.1088256835938
+      ],
+      "score": 0.7208,
+      "frame_idx": 0,
+      "box_area_ratio": 0.006
+    },
+    {
+      "entity_id": 3,
+      "description": "hands",
+      "box": [
+        100.69234466552734,
+        1569.2498779296875,
+        445.9073181152344,
+        1856.9766845703125
+      ],
+      "score": 0.5915,
+      "frame_idx": 0,
+      "box_area_ratio": 0.012
+    },
+    {
+      "entity_id": 4,
+      "description": "cap",
+      "box": [
+        1624.3253173828125,
+        113.78671264648438,
+        2067.107666015625,
+        399.3567199707031
+      ],
+      "score": 0.6756,
+      "frame_idx": 2,
+      "box_area_ratio": 0.015
+    },
+    {
+      "entity_id": 5,
+      "description": "black metal railing",
+      "box": [
+        10.238113403320312,
+        962.8668823242188,
+        3827.73876953125,
+        2142.831787109375
+      ],
+      "score": 0.6966,
+      "frame_idx": 2,
+      "box_area_ratio": 0.543
+    }
+  ],
+  "matched_entities": 4
+}

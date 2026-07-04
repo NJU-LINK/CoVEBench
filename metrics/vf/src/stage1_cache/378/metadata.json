@@ -1,0 +1,73 @@
+{
+  "id": 378,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-parcel-clerk-placing-boxes-on-a-loading-dolly-31267.mp4",
+  "local_path": "/root/cut/data/mixkit-parcel-clerk-placing-boxes-on-a-loading-dolly-31267.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground objects and defining their motion within the scene without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the static, eye-level camera angle preserved without any introduced camera shake or movement?",
+    "Comparing Video A and Video B, how accurately is the texture, color, and pattern of the sidewalk surface preserved in areas where the subjects are not present?",
+    "Comparing Video A and Video B, how well are the background elements (such as buildings, walls, or distant objects) preserved without distortion?",
+    "Comparing Video A and Video B, how well is the overall environmental lighting and time-of-day atmosphere preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "sidewalk"
+    },
+    {
+      "description": "buildings"
+    },
+    {
+      "description": "walls"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 28,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "sidewalk",
+      "box": [
+        63.32685470581055,
+        935.7877807617188,
+        1028.2486572265625,
+        1000.4981079101562
+      ],
+      "score": 0.3826,
+      "frame_idx": 0,
+      "box_area_ratio": 0.03
+    },
+    {
+      "entity_id": 2,
+      "description": "buildings",
+      "box": [
+        94.0452880859375,
+        338.01580810546875,
+        929.1129760742188,
+        842.6908569335938
+      ],
+      "score": 0.335,
+      "frame_idx": 0,
+      "box_area_ratio": 0.203
+    },
+    {
+      "entity_id": 3,
+      "description": "walls",
+      "box": [
+        110.74537658691406,
+        475.6207275390625,
+        449.21240234375,
+        830.032958984375
+      ],
+      "score": 0.3637,
+      "frame_idx": 2,
+      "box_area_ratio": 0.058
+    }
+  ],
+  "matched_entities": 3
+}

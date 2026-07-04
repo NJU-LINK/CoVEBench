@@ -1,0 +1,137 @@
+{
+  "id": 394,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-people-dancing-at-a-little-costume-party-34458.mp4",
+  "local_path": "/root/cut/data/mixkit-people-dancing-at-a-little-costume-party-34458.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing foreground objects (the woman and the glass) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man in the Dracula costume (black cape and white shirt) preserved?",
+    "Comparing Video A and Video B, how accurately are the Halloween paper cutouts (witches and pumpkins) on the background wall preserved?",
+    "Comparing Video A and Video B, how well are the foreground silhouettes and the red plastic trident preserved?",
+    "Comparing Video A and Video B, how well is the specific blue and yellow party lighting atmosphere preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "man in center"
+    },
+    {
+      "description": "black cape"
+    },
+    {
+      "description": "white shirt"
+    },
+    {
+      "description": "witch paper cutout"
+    },
+    {
+      "description": "pumpkin paper cutout"
+    },
+    {
+      "description": "foreground silhouette"
+    },
+    {
+      "description": "red plastic trident"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 26,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in center",
+      "box": [
+        491.9900817871094,
+        193.6685028076172,
+        1064.87646484375,
+        1070.11572265625
+      ],
+      "score": 0.8296,
+      "frame_idx": 2,
+      "box_area_ratio": 0.242
+    },
+    {
+      "entity_id": 2,
+      "description": "black cape",
+      "box": [
+        491.2298583984375,
+        200.1691131591797,
+        1059.2862548828125,
+        1068.462890625
+      ],
+      "score": 0.3701,
+      "frame_idx": 2,
+      "box_area_ratio": 0.238
+    },
+    {
+      "entity_id": 3,
+      "description": "white shirt",
+      "box": [
+        488.9617614746094,
+        197.0194091796875,
+        1065.1986083984375,
+        1071.302734375
+      ],
+      "score": 0.9185,
+      "frame_idx": 2,
+      "box_area_ratio": 0.243
+    },
+    {
+      "entity_id": 4,
+      "description": "witch paper cutout",
+      "box": [
+        490.08831787109375,
+        176.4916229248047,
+        1055.956787109375,
+        1068.3712158203125
+      ],
+      "score": 0.4139,
+      "frame_idx": 1,
+      "box_area_ratio": 0.243
+    },
+    {
+      "entity_id": 5,
+      "description": "pumpkin paper cutout",
+      "box": [
+        509.69500732421875,
+        174.3429718017578,
+        601.6436157226562,
+        270.5730285644531
+      ],
+      "score": 0.508,
+      "frame_idx": 1,
+      "box_area_ratio": 0.004
+    },
+    {
+      "entity_id": 6,
+      "description": "foreground silhouette",
+      "box": [
+        487.33038330078125,
+        198.40237426757812,
+        1066.0313720703125,
+        1071.340087890625
+      ],
+      "score": 0.5725,
+      "frame_idx": 2,
+      "box_area_ratio": 0.244
+    },
+    {
+      "entity_id": 7,
+      "description": "red plastic trident",
+      "box": [
+        531.1459350585938,
+        466.0099792480469,
+        980.3002319335938,
+        990.6576538085938
+      ],
+      "score": 0.4944,
+      "frame_idx": 0,
+      "box_area_ratio": 0.114
+    }
+  ],
+  "matched_entities": 7
+}

@@ -1,0 +1,90 @@
+{
+  "id": 147,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-father-getting-his-little-daughter-ready-for-school-43349.mp4",
+  "local_path": "/root/cut/data/mixkit-father-getting-his-little-daughter-ready-for-school-43349.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions/poses without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the young girl's facial identity, smile, and laughter preserved?",
+    "Comparing Video A and Video B, how accurately is the living room background (furniture, wall decor, lighting) maintained?",
+    "Comparing Video A and Video B, how well is the temporal synchronization of the girl's movements (the way she leans or reacts) preserved?",
+    "Comparing Video A and Video B, how well is the camera's medium shot framing and motion preserved?",
+    "Comparing Video A and Video B, how well is the girl's clothing (excluding the area covered by the straps) preserved in terms of color and texture?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "young girl"
+    },
+    {
+      "description": "furniture"
+    },
+    {
+      "description": "wall decor"
+    },
+    {
+      "description": "clothing"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 23,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "young girl",
+      "box": [
+        632.7620239257812,
+        0.11587142944335938,
+        1274.8326416015625,
+        1076.345947265625
+      ],
+      "score": 0.9466,
+      "frame_idx": 1,
+      "box_area_ratio": 0.333
+    },
+    {
+      "entity_id": 2,
+      "description": "furniture",
+      "box": [
+        497.5174560546875,
+        602.9736938476562,
+        857.2706298828125,
+        1075.822021484375
+      ],
+      "score": 0.4146,
+      "frame_idx": 2,
+      "box_area_ratio": 0.082
+    },
+    {
+      "entity_id": 3,
+      "description": "wall decor",
+      "box": [
+        1.3479280471801758,
+        34.29296112060547,
+        307.8371887207031,
+        300.0892333984375
+      ],
+      "score": 0.5366,
+      "frame_idx": 0,
+      "box_area_ratio": 0.039
+    },
+    {
+      "entity_id": 4,
+      "description": "clothing",
+      "box": [
+        761.7249145507812,
+        417.92132568359375,
+        1236.2315673828125,
+        1076.839111328125
+      ],
+      "score": 0.654,
+      "frame_idx": 0,
+      "box_area_ratio": 0.151
+    }
+  ],
+  "matched_entities": 4
+}

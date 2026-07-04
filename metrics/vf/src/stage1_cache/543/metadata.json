@@ -1,0 +1,98 @@
+{
+  "id": 543,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/37.mp4",
+  "local_path": "/root/cut/data/37.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying the color of a foreground object and changing the motion/action of a subject within the scene, without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance of the man's black t-shirt and grey baseball cap preserved?",
+    "Comparing Video A and Video B, how accurately are the woman's facial features and her smiling expression preserved?",
+    "Comparing Video A and Video B, how well is the background environment (turquoise sea, horizon, and clear sky) preserved?",
+    "Comparing Video A and Video B, how well is the wooden board and the boat deck's texture preserved?",
+    "Comparing Video A and Video B, how well is the camera motion and framing preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man in black t-shirt"
+    },
+    {
+      "description": "grey baseball cap"
+    },
+    {
+      "description": "woman in blue bikini"
+    },
+    {
+      "description": "wooden board"
+    },
+    {
+      "description": "boat deck"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 11,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man in black t-shirt",
+      "box": [
+        1189.1651611328125,
+        -3.554999828338623,
+        2563.31689453125,
+        2144.19970703125
+      ],
+      "score": 0.8024,
+      "frame_idx": 2,
+      "box_area_ratio": 0.356
+    },
+    {
+      "entity_id": 2,
+      "description": "grey baseball cap",
+      "box": [
+        2756.305419921875,
+        110.15927124023438,
+        3295.595458984375,
+        454.8357238769531
+      ],
+      "score": 0.8003,
+      "frame_idx": 0,
+      "box_area_ratio": 0.022
+    },
+    {
+      "entity_id": 3,
+      "description": "woman in blue bikini",
+      "box": null,
+      "score": 0.6823,
+      "frame_idx": null,
+      "box_area_ratio": 0.664,
+      "rejected_reason": "box covers 66% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "wooden board",
+      "box": [
+        843.300048828125,
+        1662.8953857421875,
+        1553.4327392578125,
+        2155.7861328125
+      ],
+      "score": 0.5013,
+      "frame_idx": 2,
+      "box_area_ratio": 0.042
+    },
+    {
+      "entity_id": 5,
+      "description": "boat deck",
+      "box": null,
+      "score": 0.5704,
+      "frame_idx": null,
+      "box_area_ratio": 0.998,
+      "rejected_reason": "box covers 100% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 3
+}

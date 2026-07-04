@@ -1,0 +1,11 @@
+{
+  "id": 341,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-couple-taking-a-selfie-at-a-lake-in-nature-41577.mp4",
+  "local_path": "/root/cut/data/mixkit-couple-taking-a-selfie-at-a-lake-in-nature-41577.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "The instruction to change from a 'posed selfie' to 'sitting on the grass' implies a change in camera perspective and framing.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

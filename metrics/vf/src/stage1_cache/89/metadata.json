@@ -1,0 +1,11 @@
+{
+  "id": 89,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-seabird-on-the-beach-1906.mp4",
+  "local_path": "/root/cut/data/mixkit-seabird-on-the-beach-1906.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

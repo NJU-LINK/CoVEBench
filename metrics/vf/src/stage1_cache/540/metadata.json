@@ -1,0 +1,121 @@
+{
+  "id": 540,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/31.mp4",
+  "local_path": "/root/cut/data/31.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves replacing a foreground subject, adding an object (hat), changing background environment/lighting, and modifying object motion without camera movement or stylistic cinematic changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the wide, static camera framing preserved (no unintended zoom, pan, or tilt)?",
+    "Comparing Video A and Video B, how well are the table's shape, size, and position preserved (ignoring any wet or darker look from rain)?",
+    "Comparing Video A and Video B, how well is the overall garden layout preserved (lawn, stone paths, trees, and distant structures) aside from the weather and lighting change?",
+    "Comparing Video A and Video B, how well is the distant sea-view presence preserved (i.e., still a coastal garden viewpoint), aside from overcast and rain effects?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "long wooden table"
+    },
+    {
+      "description": "lawn"
+    },
+    {
+      "description": "stone paths"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "distant structures"
+    },
+    {
+      "description": "sea"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 7,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "long wooden table",
+      "box": [
+        966.4736938476562,
+        1217.28271484375,
+        1461.616943359375,
+        1485.54052734375
+      ],
+      "score": 0.8576,
+      "frame_idx": 2,
+      "box_area_ratio": 0.016
+    },
+    {
+      "entity_id": 2,
+      "description": "lawn",
+      "box": [
+        -22.191009521484375,
+        1237.743408203125,
+        3164.28759765625,
+        2159.201416015625
+      ],
+      "score": 0.4685,
+      "frame_idx": 1,
+      "box_area_ratio": 0.354
+    },
+    {
+      "entity_id": 3,
+      "description": "stone paths",
+      "box": [
+        1548.0582275390625,
+        1444.475341796875,
+        3306.053466796875,
+        2154.009521484375
+      ],
+      "score": 0.3811,
+      "frame_idx": 2,
+      "box_area_ratio": 0.15
+    },
+    {
+      "entity_id": 4,
+      "description": "trees",
+      "box": [
+        1035.468994140625,
+        415.0609130859375,
+        1598.8160400390625,
+        1214.609619140625
+      ],
+      "score": 0.6975,
+      "frame_idx": 1,
+      "box_area_ratio": 0.054
+    },
+    {
+      "entity_id": 5,
+      "description": "distant structures",
+      "box": [
+        -2.000598907470703,
+        285.2729797363281,
+        444.4889221191406,
+        1159.8092041015625
+      ],
+      "score": 0.5442,
+      "frame_idx": 1,
+      "box_area_ratio": 0.047
+    },
+    {
+      "entity_id": 6,
+      "description": "sea",
+      "box": [
+        1560.5411376953125,
+        1010.7084350585938,
+        2513.155517578125,
+        1144.91748046875
+      ],
+      "score": 0.6474,
+      "frame_idx": 2,
+      "box_area_ratio": 0.015
+    }
+  ],
+  "matched_entities": 6
+}

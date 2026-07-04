@@ -1,0 +1,102 @@
+{
+  "id": 343,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-curvy-hair-model-in-a-vehicle-43191.mp4",
+  "local_path": "/root/cut/data/mixkit-curvy-hair-model-in-a-vehicle-43191.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the subject's action and modifying the material of a foreground object, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the woman's facial identity and the specific texture of her long curly hair preserved?",
+    "Comparing Video A and Video B, how accurately is the timing of the woman turning her head toward the camera preserved?",
+    "Comparing Video A and Video B, how well is the interior of the off-road vehicle (dashboard, seats, steering wheel) preserved?",
+    "Comparing Video A and Video B, how accurately is the moment she returns her gaze to the front preserved after the arm action?",
+    "Comparing Video A and Video B, how well is the static medium shot camera angle preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman with long curly hair"
+    },
+    {
+      "description": "off-road vehicle interior"
+    },
+    {
+      "description": "dashboard"
+    },
+    {
+      "description": "seats"
+    },
+    {
+      "description": "steering wheel"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman with long curly hair",
+      "box": [
+        910.9541625976562,
+        82.7607192993164,
+        1916.6165771484375,
+        902.689697265625
+      ],
+      "score": 0.4279,
+      "frame_idx": 0,
+      "box_area_ratio": 0.398
+    },
+    {
+      "entity_id": 2,
+      "description": "off-road vehicle interior",
+      "box": null,
+      "score": 0.8206,
+      "frame_idx": null,
+      "box_area_ratio": 0.985,
+      "rejected_reason": "box covers 99% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "dashboard",
+      "box": [
+        3.7537193298339844,
+        840.835205078125,
+        1913.6107177734375,
+        1077.1722412109375
+      ],
+      "score": 0.3784,
+      "frame_idx": 2,
+      "box_area_ratio": 0.218
+    },
+    {
+      "entity_id": 4,
+      "description": "seats",
+      "box": [
+        1.4342880249023438,
+        837.5211181640625,
+        1917.9337158203125,
+        1075.82763671875
+      ],
+      "score": 0.3345,
+      "frame_idx": 2,
+      "box_area_ratio": 0.22
+    },
+    {
+      "entity_id": 5,
+      "description": "steering wheel",
+      "box": [
+        228.16693115234375,
+        807.4070434570312,
+        300.4493408203125,
+        912.3483276367188
+      ],
+      "score": 0.4279,
+      "frame_idx": 1,
+      "box_area_ratio": 0.004
+    }
+  ],
+  "matched_entities": 4
+}

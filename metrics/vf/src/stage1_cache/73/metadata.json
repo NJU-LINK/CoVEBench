@@ -1,0 +1,11 @@
+{
+  "id": 73,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/131.mp4",
+  "local_path": "/root/cut/data/131.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a visual/cinematic style change (golden lens flares).",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

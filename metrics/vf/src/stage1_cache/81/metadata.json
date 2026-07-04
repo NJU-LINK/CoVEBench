@@ -1,0 +1,39 @@
+{
+  "id": 81,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/1005959_8s_part1_9.0s.mp4",
+  "local_path": "/root/cut/data/1005959_8s_part1_9.0s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding an action/subject and modifying properties of foreground objects (microphone color, hair length) without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the background (dimly lit venue, golden hues, bokeh) preserved?",
+    "Comparing Video A and Video B, how well is the person on the left side of the screen preserved in terms of identity and motion?"
+  ],
+  "sp_questions_count": 2,
+  "preserved_entities": [
+    {
+      "description": "person on the left"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 18,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "person on the left",
+      "box": [
+        45.360870361328125,
+        5.870304107666016,
+        745.7601928710938,
+        715.9860229492188
+      ],
+      "score": 0.8862,
+      "frame_idx": 2,
+      "box_area_ratio": 0.54
+    }
+  ],
+  "matched_entities": 1
+}

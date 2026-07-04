@@ -1,0 +1,124 @@
+{
+  "id": 268,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_3653_0.mp4",
+  "local_path": "/root/cut/data/LMArena_3653_0.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves background replacement, foreground object modification (clothing color), and motion timing adjustment without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the appearance and identity of the elderly man (facial features, glasses) preserved?",
+    "Comparing Video A and Video B, how accurately is the elderly presenter's suit recolored from black to royal blue while preserving his underlying identity and the details of his glasses?",
+    "Comparing Video A and Video B, how well is the visual appearance of the golden trophy and the dessert on top of it preserved?",
+    "Comparing Video A and Video B, how accurately is the timing and choreography of the elderly man presenting the trophy preserved?",
+    "Comparing Video A and Video B, how well is the chef's reaching motion preserved in terms of speed and trajectory?",
+    "Comparing Video A and Video B, how well is the camera framing and any camera movement preserved?",
+    "Comparing Video A and Video B, how well are the boundaries and edges between the characters and the background maintained throughout the motion?"
+  ],
+  "sp_questions_count": 7,
+  "preserved_entities": [
+    {
+      "description": "elderly man on the left"
+    },
+    {
+      "description": "glasses"
+    },
+    {
+      "description": "suit"
+    },
+    {
+      "description": "golden trophy"
+    },
+    {
+      "description": "dessert"
+    },
+    {
+      "description": "chef on the right"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "elderly man on the left",
+      "box": [
+        90.38130187988281,
+        763.0045166015625,
+        597.8980712890625,
+        1934.1529541015625
+      ],
+      "score": 0.839,
+      "frame_idx": 2,
+      "box_area_ratio": 0.287
+    },
+    {
+      "entity_id": 2,
+      "description": "glasses",
+      "box": [
+        185.90240478515625,
+        919.9365234375,
+        407.4892578125,
+        1003.5686645507812
+      ],
+      "score": 0.6914,
+      "frame_idx": 2,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 3,
+      "description": "suit",
+      "box": [
+        87.59466552734375,
+        1071.964111328125,
+        468.6279602050781,
+        1930.495849609375
+      ],
+      "score": 0.6458,
+      "frame_idx": 2,
+      "box_area_ratio": 0.158
+    },
+    {
+      "entity_id": 4,
+      "description": "golden trophy",
+      "box": [
+        444.4564514160156,
+        818.0286254882812,
+        710.3980712890625,
+        1178.3380126953125
+      ],
+      "score": 0.8329,
+      "frame_idx": 2,
+      "box_area_ratio": 0.046
+    },
+    {
+      "entity_id": 5,
+      "description": "dessert",
+      "box": [
+        446.8408203125,
+        822.3889770507812,
+        704.4710083007812,
+        1172.9873046875
+      ],
+      "score": 0.4895,
+      "frame_idx": 2,
+      "box_area_ratio": 0.044
+    },
+    {
+      "entity_id": 6,
+      "description": "chef on the right",
+      "box": [
+        507.13494873046875,
+        577.7969360351562,
+        979.0000610351562,
+        1950.3809814453125
+      ],
+      "score": 0.8258,
+      "frame_idx": 2,
+      "box_area_ratio": 0.312
+    }
+  ],
+  "matched_entities": 6
+}

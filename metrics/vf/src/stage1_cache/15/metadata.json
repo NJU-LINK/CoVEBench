@@ -1,0 +1,11 @@
+{
+  "id": 15,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/70.mp4",
+  "local_path": "/root/cut/data/70.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a framing change by requiring the subject to be perfectly centered in the frame.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,148 @@
+{
+  "id": 527,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/2.mp4",
+  "local_path": "/root/cut/data/2.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding foreground objects (sandals and a sign) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well are the performer's light t-shirt, dark shorts, and overall physical appearance preserved, excluding the addition of sandals?",
+    "Comparing Video A and Video B, how well is the acoustic guitar and the performer's playing motion preserved?",
+    "Comparing Video A and Video B, how well are the background pedestrians and their walking paths preserved?",
+    "Comparing Video A and Video B, how well are the amplifier, music stand, and sheet music preserved in their original positions?",
+    "Comparing Video A and Video B, how well are the natural daylight and the overall color profile of the city sidewalk preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "man"
+    },
+    {
+      "description": "light t-shirt"
+    },
+    {
+      "description": "dark shorts"
+    },
+    {
+      "description": "acoustic guitar"
+    },
+    {
+      "description": "pedestrians in the back"
+    },
+    {
+      "description": "amplifier"
+    },
+    {
+      "description": "music stand"
+    },
+    {
+      "description": "sheet music"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "man",
+      "box": [
+        488.4521484375,
+        1.9151792526245117,
+        679.3899536132812,
+        478.83294677734375
+      ],
+      "score": 0.6601,
+      "frame_idx": 0,
+      "box_area_ratio": 0.088
+    },
+    {
+      "entity_id": 2,
+      "description": "light t-shirt",
+      "box": [
+        114.4516830444336,
+        2.1052253246307373,
+        257.6193542480469,
+        253.46389770507812
+      ],
+      "score": 0.5153,
+      "frame_idx": 0,
+      "box_area_ratio": 0.035
+    },
+    {
+      "entity_id": 3,
+      "description": "dark shorts",
+      "box": [
+        486.7641906738281,
+        1.3026928901672363,
+        690.501953125,
+        482.5505676269531
+      ],
+      "score": 0.5486,
+      "frame_idx": 0,
+      "box_area_ratio": 0.095
+    },
+    {
+      "entity_id": 4,
+      "description": "acoustic guitar",
+      "box": [
+        478.76202392578125,
+        28.847007751464844,
+        755.9542236328125,
+        229.69210815429688
+      ],
+      "score": 0.9037,
+      "frame_idx": 1,
+      "box_area_ratio": 0.054
+    },
+    {
+      "entity_id": 5,
+      "description": "pedestrians in the back",
+      "box": [
+        6.487650394439697,
+        2.729250907897949,
+        281.00408935546875,
+        247.58482360839844
+      ],
+      "score": 0.3602,
+      "frame_idx": 1,
+      "box_area_ratio": 0.065
+    },
+    {
+      "entity_id": 6,
+      "description": "amplifier",
+      "box": null,
+      "score": 0.0,
+      "frame_idx": null
+    },
+    {
+      "entity_id": 7,
+      "description": "music stand",
+      "box": [
+        648.9180297851562,
+        135.1480255126953,
+        856.8186645507812,
+        494.76397705078125
+      ],
+      "score": 0.4103,
+      "frame_idx": 0,
+      "box_area_ratio": 0.072
+    },
+    {
+      "entity_id": 8,
+      "description": "sheet music",
+      "box": [
+        698.3322143554688,
+        124.61944580078125,
+        845.0868530273438,
+        235.01119995117188
+      ],
+      "score": 0.4241,
+      "frame_idx": 2,
+      "box_area_ratio": 0.016
+    }
+  ],
+  "matched_entities": 7
+}

@@ -1,0 +1,90 @@
+{
+  "id": 587,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/141.mp4",
+  "local_path": "/root/cut/data/141.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing foreground subjects and objects without any camera movement or cinematic style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the large green bush next to where the colander is placed preserved in terms of position and overall appearance?",
+    "Comparing Video A and Video B, how well are the background elements, such as the trees and the body of water, preserved?",
+    "Comparing Video A and Video B, how well is the timing of the main action beats (walking in, bending down, setting the colander down, and walking out) preserved?",
+    "Comparing Video A and Video B, how well is the static, low-angle camera viewpoint preserved without any added movement or shaking?",
+    "Comparing Video A and Video B, how well is the dark metal colander itself preserved in terms of shape, size, and material, excluding its contents?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "large green bush"
+    },
+    {
+      "description": "trees"
+    },
+    {
+      "description": "body of water"
+    },
+    {
+      "description": "dark metal colander"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 8,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "large green bush",
+      "box": [
+        1716.8948974609375,
+        -3.3470749855041504,
+        3859.111083984375,
+        1646.5491943359375
+      ],
+      "score": 0.7763,
+      "frame_idx": 1,
+      "box_area_ratio": 0.426
+    },
+    {
+      "entity_id": 2,
+      "description": "trees",
+      "box": [
+        991.6756591796875,
+        -0.9550702571868896,
+        1921.059326171875,
+        681.45068359375
+      ],
+      "score": 0.5006,
+      "frame_idx": 0,
+      "box_area_ratio": 0.076
+    },
+    {
+      "entity_id": 3,
+      "description": "body of water",
+      "box": [
+        973.4446411132812,
+        446.1722106933594,
+        2200.09423828125,
+        983.5139770507812
+      ],
+      "score": 0.3689,
+      "frame_idx": 2,
+      "box_area_ratio": 0.079
+    },
+    {
+      "entity_id": 4,
+      "description": "dark metal colander",
+      "box": [
+        951.4513549804688,
+        449.6770324707031,
+        2234.8447265625,
+        994.772216796875
+      ],
+      "score": 0.8916,
+      "frame_idx": 2,
+      "box_area_ratio": 0.084
+    }
+  ],
+  "matched_entities": 4
+}

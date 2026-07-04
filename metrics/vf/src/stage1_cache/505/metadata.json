@@ -1,0 +1,11 @@
+{
+  "id": 505,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-birthday-cake-on-a-table-with-candies-on-a-white-5108.mp4",
+  "local_path": "/root/cut/data/mixkit-birthday-cake-on-a-table-with-candies-on-a-white-5108.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Category field contains: Camera",
+    "method": "category"
+  },
+  "status": "skipped"
+}

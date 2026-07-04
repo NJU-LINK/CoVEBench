@@ -1,0 +1,11 @@
+{
+  "id": 273,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_4964_0.mp4",
+  "local_path": "/root/cut/data/LMArena_4964_0.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "Instruction includes a slow-motion segment, which is a cinematic style/temporal transformation.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

@@ -1,0 +1,11 @@
+{
+  "id": 533,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/11.mp4",
+  "local_path": "/root/cut/data/11.mp4",
+  "stage1a": {
+    "skip": true,
+    "reason": "The instruction includes a 'slow-motion effect', which is a cinematic style/temporal transformation that typically invalidates frame-by-frame mask-based evaluation.",
+    "method": "llm"
+  },
+  "status": "skipped"
+}

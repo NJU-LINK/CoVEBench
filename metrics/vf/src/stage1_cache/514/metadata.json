@@ -1,0 +1,123 @@
+{
+  "id": 514,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-friends-having-fun-in-a-swimming-pool-40168.mp4",
+  "local_path": "/root/cut/data/mixkit-friends-having-fun-in-a-swimming-pool-40168.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction exclusively involves modifying subject attributes (aging) and their intrinsic motion within the scene without any camera movement, framing changes, or style transformations.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the identity and specific hairstyle (dreadlocks) of the Black man preserved throughout the aging process?",
+    "Comparing Video A and Video B, how accurately is the woman's blue bikini preserved in color and style?",
+    "Comparing Video A and Video B, how well is the background (white cabana and greenery) preserved without introducing artifacts or changes?",
+    "Comparing Video A and Video B, how well is the medium close-up perspective and camera motion preserved?",
+    "Comparing Video A and Video B, how well is the soft, overcast daylight lighting preserved across the scene?",
+    "Comparing Video A and Video B, how well are the exuberant facial expressions (laughing) preserved while the subjects are aged?"
+  ],
+  "sp_questions_count": 6,
+  "preserved_entities": [
+    {
+      "description": "black man"
+    },
+    {
+      "description": "dreadlocks"
+    },
+    {
+      "description": "woman"
+    },
+    {
+      "description": "blue bikini"
+    },
+    {
+      "description": "white cabana"
+    },
+    {
+      "description": "greenery"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "black man",
+      "box": [
+        69.015625,
+        8.024290084838867,
+        1018.6970825195312,
+        935.4800415039062
+      ],
+      "score": 0.9337,
+      "frame_idx": 0,
+      "box_area_ratio": 0.425
+    },
+    {
+      "entity_id": 2,
+      "description": "dreadlocks",
+      "box": [
+        70.79375457763672,
+        6.421916484832764,
+        1021.5790405273438,
+        933.3346557617188
+      ],
+      "score": 0.4306,
+      "frame_idx": 0,
+      "box_area_ratio": 0.425
+    },
+    {
+      "entity_id": 3,
+      "description": "woman",
+      "box": [
+        981.349609375,
+        361.265869140625,
+        1916.2410888671875,
+        1077.0308837890625
+      ],
+      "score": 0.6126,
+      "frame_idx": 1,
+      "box_area_ratio": 0.323
+    },
+    {
+      "entity_id": 4,
+      "description": "blue bikini",
+      "box": [
+        979.3767700195312,
+        367.94000244140625,
+        1919.175048828125,
+        1080.509033203125
+      ],
+      "score": 0.5009,
+      "frame_idx": 1,
+      "box_area_ratio": 0.323
+    },
+    {
+      "entity_id": 5,
+      "description": "white cabana",
+      "box": [
+        1067.10400390625,
+        1.5946805477142334,
+        1727.3656005859375,
+        550.2879638671875
+      ],
+      "score": 0.5629,
+      "frame_idx": 0,
+      "box_area_ratio": 0.175
+    },
+    {
+      "entity_id": 6,
+      "description": "greenery",
+      "box": [
+        1677.228515625,
+        2.217586040496826,
+        1918.758056640625,
+        464.48040771484375
+      ],
+      "score": 0.4294,
+      "frame_idx": 2,
+      "box_area_ratio": 0.054
+    }
+  ],
+  "matched_entities": 6
+}

@@ -1,0 +1,98 @@
+{
+  "id": 374,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-marriage-proposal-in-a-beautiful-garden-4507.mp4",
+  "local_path": "/root/cut/data/mixkit-marriage-proposal-in-a-beautiful-garden-4507.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing the pose and action of the subjects and the state of objects within the scene, without any camera movement or stylistic changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately is the woman's appearance and clothing preserved?",
+    "Comparing Video A and Video B, how well are the textures and color of the man's white polo shirt and beige pants preserved during the kneeling action?",
+    "Comparing Video A and Video B, how accurately is the outdoor background environment preserved?",
+    "Comparing Video A and Video B, how well is the static camera motion preserved?",
+    "Comparing Video A and Video B, how well is the visual appearance of the daisies preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "man"
+    },
+    {
+      "description": "white polo shirt"
+    },
+    {
+      "description": "beige pants"
+    },
+    {
+      "description": "daisies"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 24,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": [
+        906.755859375,
+        0.5637466907501221,
+        1918.3863525390625,
+        1074.5335693359375
+      ],
+      "score": 0.5419,
+      "frame_idx": 2,
+      "box_area_ratio": 0.524
+    },
+    {
+      "entity_id": 2,
+      "description": "man",
+      "box": null,
+      "score": 0.8289,
+      "frame_idx": null,
+      "box_area_ratio": 0.757,
+      "rejected_reason": "box covers 76% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 3,
+      "description": "white polo shirt",
+      "box": null,
+      "score": 0.541,
+      "frame_idx": null,
+      "box_area_ratio": 0.736,
+      "rejected_reason": "box covers 74% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "beige pants",
+      "box": [
+        344.5527038574219,
+        710.9613647460938,
+        1004.095703125,
+        1074.1490478515625
+      ],
+      "score": 0.5716,
+      "frame_idx": 2,
+      "box_area_ratio": 0.116
+    },
+    {
+      "entity_id": 5,
+      "description": "daisies",
+      "box": [
+        1025.695556640625,
+        135.27059936523438,
+        1432.0858154296875,
+        476.6527404785156
+      ],
+      "score": 0.4787,
+      "frame_idx": 1,
+      "box_area_ratio": 0.067
+    }
+  ],
+  "matched_entities": 3
+}

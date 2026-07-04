@@ -1,0 +1,54 @@
+{
+  "id": 387,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-portrait-of-a-happy-smiling-woman-4859.mp4",
+  "local_path": "/root/cut/data/mixkit-portrait-of-a-happy-smiling-woman-4859.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves modifying a foreground subject's clothing and changing their pose/action, which are allowed modifications.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the background outdoor plaza environment preserved?",
+    "Comparing Video A and Video B, how accurately is the woman's brown hair color, length, and texture preserved?",
+    "Comparing Video A and Video B, how well is the static camera framing and lack of camera motion preserved?",
+    "Comparing Video A and Video B, how well are the woman's facial features (eyes, nose, bone structure) preserved despite the change in expression?",
+    "Comparing Video A and Video B, how well is the overall lighting and color grading of the scene preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "woman"
+    },
+    {
+      "description": "brown hair"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 20,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "woman",
+      "box": null,
+      "score": 0.9018,
+      "frame_idx": null,
+      "box_area_ratio": 0.641,
+      "rejected_reason": "box covers 64% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 2,
+      "description": "brown hair",
+      "box": [
+        563.8123779296875,
+        -1.0589039325714111,
+        1266.0604248046875,
+        917.681884765625
+      ],
+      "score": 0.7681,
+      "frame_idx": 2,
+      "box_area_ratio": 0.311
+    }
+  ],
+  "matched_entities": 1
+}

@@ -1,0 +1,90 @@
+{
+  "id": 230,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/LMArena_3885_1.mp4",
+  "local_path": "/root/cut/data/LMArena_3885_1.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves removing a foreground subject and changing the motion/pose of another subject within the scene, without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the specific cartoon art style (line work, shading, and color palette) preserved?",
+    "Comparing Video A and Video B, how accurately are the background pedestrians and their walking paths preserved?",
+    "Comparing Video A and Video B, how well are the architectural details of the buildings lining the street preserved?",
+    "Comparing Video A and Video B, how consistent is the appearance of the cobblestone street texture throughout the sequence?",
+    "Comparing Video A and Video B, how well is the bright, cloudy sky and overall lighting environment preserved?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "pedestrians in the back"
+    },
+    {
+      "description": "buildings"
+    },
+    {
+      "description": "cobblestone street"
+    },
+    {
+      "description": "cloudy sky"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 10,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "pedestrians in the back",
+      "box": [
+        145.64926147460938,
+        479.9642333984375,
+        1167.2314453125,
+        1554.08056640625
+      ],
+      "score": 0.3052,
+      "frame_idx": 0,
+      "box_area_ratio": 0.528
+    },
+    {
+      "entity_id": 2,
+      "description": "buildings",
+      "box": [
+        4.163826942443848,
+        0.44879913330078125,
+        684.611083984375,
+        1002.0230712890625
+      ],
+      "score": 0.435,
+      "frame_idx": 2,
+      "box_area_ratio": 0.328
+    },
+    {
+      "entity_id": 3,
+      "description": "cobblestone street",
+      "box": [
+        5.686966896057129,
+        933.30908203125,
+        1240.4935302734375,
+        1656.224609375
+      ],
+      "score": 0.8111,
+      "frame_idx": 2,
+      "box_area_ratio": 0.43
+    },
+    {
+      "entity_id": 4,
+      "description": "cloudy sky",
+      "box": [
+        269.9702453613281,
+        -6.556087493896484,
+        1138.1451416015625,
+        706.7496337890625
+      ],
+      "score": 0.5833,
+      "frame_idx": 0,
+      "box_area_ratio": 0.298
+    }
+  ],
+  "matched_entities": 4
+}

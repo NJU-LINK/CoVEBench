@@ -1,0 +1,72 @@
+{
+  "id": 460,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/20728937_8s_part1_6.3s.mp4",
+  "local_path": "/root/cut/data/20728937_8s_part1_6.3s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion, replacing the background, and shifting object position, all of which are allowed.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the infant's facial identity (eye color, nose shape, hair color) preserved?",
+    "Comparing Video A and Video B, how accurately are the colors and patterns of the infant's clothing preserved?",
+    "Comparing Video A and Video B, how well is the specific colorful pattern of the mat the infant is sitting on preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [
+    {
+      "description": "infant"
+    },
+    {
+      "description": "clothing"
+    },
+    {
+      "description": "colorful patterned mat"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 13,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "infant",
+      "box": [
+        632.86181640625,
+        180.98976135253906,
+        1395.833740234375,
+        1076.1353759765625
+      ],
+      "score": 0.941,
+      "frame_idx": 2,
+      "box_area_ratio": 0.329
+    },
+    {
+      "entity_id": 2,
+      "description": "clothing",
+      "box": [
+        676.980224609375,
+        700.24853515625,
+        1268.896240234375,
+        1076.5599365234375
+      ],
+      "score": 0.7439,
+      "frame_idx": 0,
+      "box_area_ratio": 0.107
+    },
+    {
+      "entity_id": 3,
+      "description": "colorful patterned mat",
+      "box": [
+        222.0675048828125,
+        203.8421173095703,
+        1276.2462158203125,
+        948.9774169921875
+      ],
+      "score": 0.4389,
+      "frame_idx": 0,
+      "box_area_ratio": 0.379
+    }
+  ],
+  "matched_entities": 3
+}

@@ -1,0 +1,81 @@
+{
+  "id": 3,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/11.mp4",
+  "local_path": "/root/cut/data/11.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves adding foreground objects (glass cups) and modifying their content (filling with espresso) without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how accurately are the two streams of espresso pouring into the center cup preserved?",
+    "Comparing Video A and Video B, how well is the static camera framing and medium close-up shot preserved?",
+    "Comparing Video A and Video B, how well is the background (dark, charcoal-colored textured wall) preserved?",
+    "Comparing Video A and Video B, how well is the silver espresso machine's appearance and metallic texture preserved?"
+  ],
+  "sp_questions_count": 4,
+  "preserved_entities": [
+    {
+      "description": "two espresso streams"
+    },
+    {
+      "description": "cup in the center"
+    },
+    {
+      "description": "dark charcoal-colored textured wall"
+    },
+    {
+      "description": "silver espresso machine"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "two espresso streams",
+      "box": [
+        989.6550903320312,
+        650.7317504882812,
+        1378.9013671875,
+        1048.43603515625
+      ],
+      "score": 0.6923,
+      "frame_idx": 1,
+      "box_area_ratio": 0.075
+    },
+    {
+      "entity_id": 2,
+      "description": "cup in the center",
+      "box": [
+        989.0565185546875,
+        647.4756469726562,
+        1381.171630859375,
+        1048.7640380859375
+      ],
+      "score": 0.9531,
+      "frame_idx": 1,
+      "box_area_ratio": 0.076
+    },
+    {
+      "entity_id": 3,
+      "description": "dark charcoal-colored textured wall",
+      "box": null,
+      "score": 0.3767,
+      "frame_idx": null,
+      "box_area_ratio": 0.981,
+      "rejected_reason": "box covers 98% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    },
+    {
+      "entity_id": 4,
+      "description": "silver espresso machine",
+      "box": null,
+      "score": 0.5337,
+      "frame_idx": null,
+      "box_area_ratio": 0.712,
+      "rejected_reason": "box covers 71% of frame (> 55% threshold) — prompt likely pulled adjacent objects into the box"
+    }
+  ],
+  "matched_entities": 2
+}

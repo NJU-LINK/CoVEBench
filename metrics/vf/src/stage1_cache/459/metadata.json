@@ -1,0 +1,106 @@
+{
+  "id": 459,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/20701421_8s_part1_6.1s.mp4",
+  "local_path": "/root/cut/data/20701421_8s_part1_6.1s.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves changing object motion, modifying the background environment, and relocating an object without any camera movement or style changes.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the visual identity (clothing colors, group composition) of the central group of people preserved despite their new movement?",
+    "Comparing Video A and Video B, how well is the silhouette and structural detail of the distant mountain range preserved against the new sky?",
+    "Comparing Video A and Video B, how well is the specific model and color of the relocated vehicle preserved?",
+    "Comparing Video A and Video B, how well are the textures and patterns of the salt flat surface preserved in areas not occupied by the walking people?",
+    "Comparing Video A and Video B, how well are other vehicles (excluding the relocated one on the right) preserved in their original positions and states?"
+  ],
+  "sp_questions_count": 5,
+  "preserved_entities": [
+    {
+      "description": "central group of people"
+    },
+    {
+      "description": "distant mountain range"
+    },
+    {
+      "description": "relocated vehicle on the right"
+    },
+    {
+      "description": "salt flat surface"
+    },
+    {
+      "description": "off-road vehicles"
+    }
+  ],
+  "status": "completed",
+  "num_frames": 12,
+  "fps": 2,
+  "gdino_records": [
+    {
+      "entity_id": 1,
+      "description": "central group of people",
+      "box": [
+        859.3697509765625,
+        421.81915283203125,
+        891.8216552734375,
+        474.285400390625
+      ],
+      "score": 0.5354,
+      "frame_idx": 2,
+      "box_area_ratio": 0.002
+    },
+    {
+      "entity_id": 2,
+      "description": "distant mountain range",
+      "box": [
+        -12.804679870605469,
+        325.5704345703125,
+        1264.341552734375,
+        352.7893981933594
+      ],
+      "score": 0.399,
+      "frame_idx": 1,
+      "box_area_ratio": 0.038
+    },
+    {
+      "entity_id": 3,
+      "description": "relocated vehicle on the right",
+      "box": [
+        1178.144775390625,
+        396.935302734375,
+        1278.3912353515625,
+        476.7156982421875
+      ],
+      "score": 0.565,
+      "frame_idx": 1,
+      "box_area_ratio": 0.009
+    },
+    {
+      "entity_id": 4,
+      "description": "salt flat surface",
+      "box": [
+        -0.106201171875,
+        340.41900634765625,
+        1279.02978515625,
+        716.4649047851562
+      ],
+      "score": 0.6101,
+      "frame_idx": 0,
+      "box_area_ratio": 0.522
+    },
+    {
+      "entity_id": 5,
+      "description": "off-road vehicles",
+      "box": [
+        1178.8011474609375,
+        397.5117492675781,
+        1278.801513671875,
+        474.76177978515625
+      ],
+      "score": 0.5678,
+      "frame_idx": 1,
+      "box_area_ratio": 0.008
+    }
+  ],
+  "matched_entities": 5
+}

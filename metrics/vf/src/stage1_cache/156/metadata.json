@@ -1,0 +1,19 @@
+{
+  "id": 156,
+  "videoA_path": "/mnt/shared-storage-user/colab-share/liujiaheng/workspace/jiangtao/data/mixkit-little-girl-eating-an-easter-egg-with-chocolate-40393.mp4",
+  "local_path": "/root/cut/data/mixkit-little-girl-eating-an-easter-egg-with-chocolate-40393.mp4",
+  "stage1a": {
+    "skip": false,
+    "reason": "The instruction involves replacing subjects and objects and changing their actions/poses, which are allowed. No camera movement or style changes are mentioned.",
+    "method": "llm"
+  },
+  "sp_questions": [
+    "Comparing Video A and Video B, how well is the background environment (walls, furniture, or scenery) preserved?",
+    "Comparing Video A and Video B, how accurately is the camera's medium shot framing and any camera motion preserved?",
+    "Comparing Video A and Video B, how well is the overall lighting atmosphere and color grade of the scene preserved?"
+  ],
+  "sp_questions_count": 3,
+  "preserved_entities": [],
+  "status": "no_concrete_entities",
+  "error": "all SP questions are abstract (camera / lighting / etc.)"
+}
